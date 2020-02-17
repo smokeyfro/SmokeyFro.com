@@ -248,7 +248,7 @@ main ul,
 main ol {
 	@apply mb-5 ml-5
 }
-main li {
+main ul:not(.reset) li {
 	@apply mb-3;
 	list-style: circle;
 }

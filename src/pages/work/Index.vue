@@ -9,13 +9,13 @@
 			<div class="grid gap-8 mx-6 mt-10 mb-10 md:gap-8 grid-cols1 md:grid-cols-2 lg:grid-cols-3 md:mx-10">
 				<ItemWork :post="edge.node" v-for="edge in $page.posts.edges" :key="edge.node.id" />
 			</div>
+		    <pagination base="/work" :info="$page.posts.pageInfo" v-if="$page.posts.pageInfo.totalPages > 1" />
 		</template>
 	</Layout>
 </template>
-
 <page-query>
-	query Work {
-		posts: allWork (sortBy: "launch_date", order: DESC) {
+	query Work ($page: Int) {
+		posts: allWork (sortBy: "launch_date", order: DESC, page: $page, perPage: 6) @paginate {
 			totalCount
 			pageInfo {
 				totalPages
@@ -42,12 +42,14 @@
 import NavWork from "~/components/NavWork.vue";
 import Browser from "@/components/Browser";
 import ItemWork from "@/components/ItemWork";
+import Pagination from '@/components/Pagination'
 
 export default {
 	components: {
 		NavWork,
 		Browser,
-		ItemWork
+		ItemWork,
+		Pagination
 	},
 	metaInfo: {
 		title: "",

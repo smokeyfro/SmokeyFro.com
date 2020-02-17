@@ -45,14 +45,20 @@
                         </label>
                     </div>
                 </div>
-                <label class="block mt-4" v-if="radioValue === 'quote'">
-                    <span class="text-gray-700">Estimated budget (in USD)</span>
-                    <input name="budget" id="budget" v-model="budget" class="block w-full mt-1 form-input" placeholder="$5000">
-                </label>
-                <label class="block mt-4" v-if="radioValue === 'quote'">
-                    <span class="text-gray-700">Current site (if any)</span>
-                    <input name="website" id="website" v-model="website" class="block w-full mt-1 form-input" placeholder="https://your-site.com">
-                </label>
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 md:mr-5">
+                        <label class="block mt-4" v-if="radioValue === 'quote'">
+                            <span class="text-gray-700">Estimated budget (in USD)</span>
+                            <input name="budget" id="budget" v-model="budget" class="block w-full mt-1 form-input" placeholder="$5000">
+                        </label>
+                    </div>
+                    <div class="md:w-1/2">
+                        <label class="block mt-4" v-if="radioValue === 'quote'">
+                            <span class="text-gray-700">Current site (if any)</span>
+                            <input name="website" id="website" v-model="website" class="block w-full mt-1 form-input" placeholder="https://your-site.com">
+                        </label>
+                    </div>
+                </div>
                 <input type="hidden" name="_gotcha">
                 <button type="submit" class="block w-full px-10 py-6 mt-4 mb-5 text-xl font-bold bg-gray-800 rounded-md text-accent md:mt-8">
                     <span v-if="radioValue === 'quote'">Let's do this!</span>

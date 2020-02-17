@@ -70,7 +70,6 @@ export default {
 					}
 					path
 					description: excerpt
-					feature_image
 					coverImage(width: 364, height: 244, quality: 90)
 				}
 			}

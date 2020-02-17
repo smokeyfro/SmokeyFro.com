@@ -26,7 +26,7 @@
 					title
 					content
 					path
-					image
+					image(width: 364, height: 244, quality: 90)
 					excerpt
 					launch_date
 					project_type

@@ -342,12 +342,12 @@ nav a:focus svg {
 	display: none;
 }
 
-.grid .card-image,
+/* .grid .card-image,
 .grid .browser-content{
 	max-height: 200px;
 	overflow: hidden;
 	border-bottom: 1px solid #eee;
-}
+} */
 
 @media (min-width: 640px ) {
 	.primary a:not(:last-of-type) {

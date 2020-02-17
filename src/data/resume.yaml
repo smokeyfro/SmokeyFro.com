@@ -1,0 +1,204 @@
+info:
+  - name: Christopher Nicholas Rault
+    birthDate: 31/12/1980
+    nationality: South African
+    location: Hoekwil, South Africa
+    title: front-end designer
+    summary: Summary here
+    downloadLink: https://d.smokeyfro.com/resume.pdf
+    resumeImage: /sf.svg
+
+contact:
+  - handle: smokeyfro
+    email: chris@smokeyfro.com
+    website: https://smokeyfro.com
+    phone: '+27767773705'
+    mobile: '+27767773705'
+    whatsapp: '+27767773705'
+    telegram: '+27767773705'
+    skype: chris.rault.tbr
+    github: https://github.com/smokeyfro
+    twitter: https://twitter.com/smokeyfro
+    facebook: https://www.facebook.com/chris.rault
+    instagram: https://instagram.com/smokeyfro
+    youtube: smokeyfro
+    soundcloud: smokeyfro
+    linkedin: https://www.linkedin.com/in/chrisrault
+    stackoverflow: smokeyfro
+
+projects:
+  - name: Mzango
+    status: WIP
+    url: https://mzango.com
+    image: na
+    summary: Backpackers guide to South Africa where the traveller is not the product.
+
+  # - name: SmokeyFro
+  #   status: Live
+  #   url: https://smokeyfro.com
+  #   image: na
+  #   summary: Home of my portfolio, case-studies, tutorials, videos and themes.
+
+  - name: Made with Sketch
+    status: Live
+    url: https://madewithsketch.com
+    image: na
+    summary: A curated collection of Sketch.app resources optimised for download.
+
+  - name: HeadwayRocket
+    status: Retired
+    url: https://headwayrocket.com
+    image: na
+    summary: Plugins and templates for Headway, the original visual site builder for WordPress.
+
+  - name: ThemeButler
+    status: Retired
+    url: https://themebutler.com
+    image: na
+    summary: WordPress theme club for developers centered around our in-house theme framework, Beans.
+
+experience:
+- id: 7
+  company: SmokeyFro
+  role: Freelancer
+  location: Remote
+  date: Jun 2019 - Present
+  summary: I spent the past six months freelancing while I work on a number of side-projects, which include Mzango (a backpackers guide to South Africa) and setting up a tented camp on our family farm. Currently taking on new projects.
+- id: 6
+  company: WineFolly
+  role: Front-end Developer
+  location: Remote
+  date: Dec 2018 - Jun 2019
+  summary: I was initially contracted to rebuild the popular wine blog and information site WineFolly.com, but stayed on for a year and a half to work directly with WineFolly's founder, award winning book author Madeline Puckette.
+- id: 5
+  company: Web Monkeys
+  role: Creative Director
+  location: Cape Town, ZA
+  date: Apr 2007 – Dec 2018
+  summary: Apart from co-running the business, my responsibilities included desiging our web properties, themes, plugin interfaces and marketing material. I also took the lead on our product support and writing technical documentation.
+- id: 4
+  company: Nomad Studios
+  role: Partner
+  location: Remote
+  date: Aug 2005 – Apr 2007
+  summary: We started Nomad Studios to provide web design services to companies in the real-estate sector. In the two years it was operational, we worked on small agency sites, to fully-featured property portals and everything in-between.
+- id: 3
+  company: NuVue Trading
+  role: Partner
+  location: London, UK
+  date: Jul 2003 – Jul 2005
+  summary: A former collegue and I setup an e-commerce site that provided wholesale label clothing to other retailers selling on eBay. While initially profitable, we ended up shutting it down as it was too hard to manage while travelling.
+- id: 2
+  company: RPC Data
+  role: Technical Sales Consultant
+  location: George, ZA
+  date: Feb 2001 – Jun 2003
+  summary: I was recruited for a rigorous six month bootcamp then three months of Oracle training in Zimbabwe and later advanced web design at UCT. My responsibilities included building technical demos, prototypes and more.
+- id: 1
+  company: Phinda Game Reserve
+  role: Training Camp Manager
+  location: KZN, ZA
+  date: Jan 2000 – Jan 2001
+  summary: Fresh out of school and in search of an adventure, I landed a job at a prestige game reserve in KZN, South Africa. My responsibilities included camp security, maintenance, procurement and assisting with training exercises.
+
+education:
+  - topic: Advanced Web Design
+    date: Jan 2001 - June 2002
+    location: Cape Town
+    organization: University of Cape Town
+  - topic: National Senior Certificate
+    date: Jan 1995 - Dec 1999
+    location: George
+    organization: Die Bult Highschool
+  # - topic: 50+ Sef-Paced Courses
+  #   date: Jan 1995 - Dec 1999
+  #   location: Online
+  #   organization: View the courses
+  # - topic: 150+ Technical Books
+  #   date: Ongoing
+  #   location: Offline
+  #   organization: View the list
+
+references:
+
+  - name: Brandon McDonald
+    title: CEO
+    company: RPC Data
+    relation: Former Employer
+    image: /brandon-mcdonald.jpg
+    summary:
+
+  - name: Madeline Puckette
+    title: CEO
+    company: Folly Inc
+    relation: Former Employer
+    image: /madeline-puckette.jpg
+    summary:
+
+  - name: Thierry Muller
+    title: Engineer
+    company: Google
+    relation: Former Business Partner
+    image: /thierry-muller.jpg
+    summary:
+
+  - name: John Coonen
+    title: CEO
+    company: Coffee Group
+    relation: Organizer CMS Expo
+    image: /john-coonen.jpg
+    summary:
+
+skills:
+  - title: Web / UI Design
+    description: As I designer I get excited about clean, minimalistic design that is functional and centered around the person using it.
+  - title: Front-end Development
+    description: As a developer I'm obsessed with performance and building interfaces that are a pleasure to use. Tabs over spaces.
+  - title: Theme Development
+    description: I craft themes that are purpose-driven, minimal in design, easy to customise and highly optimised for mobile and performance.
+  - title: Product Management
+    description: As a product manager I thrive on building and iterating on products, coming up with growth hacks and getting the product to market.
+
+coding:
+  - title: HTML/CSS
+    description: I'd never call myself an expert at anything, but I've been teaching myself html/css for over 18 years and feel I have a pretty good grasp an the nuances of the languages.
+  - title: PHP
+    description: I've been writing PHP for close on ten years and while I'd definitely not classify myself an expert, I have a pretty solid understanding of variables, loops, funtions, classes and CMS specific implementations, such as WordPress.
+  - title: JavaScript
+    description: Like most developers who have been around for a while, I started off by using jQuery and generally am able to implement most of my ideas. These days I'm leaning more towards vanilla JavaScript and Vue.js.
+  - title: Git
+    description: I use git to version control my code and these days tend to use Github as my platform of choice. I'll eventually get around to setting up my own instance of GitLab.
+
+toolbox:
+  - title: Gridsome
+    description: My favorite static site generator that was built to consume 3rd party apis like a boss.
+    url: https://gridsome.org
+    image: /tools/gridsome.png
+  - title: Svelte
+    description: An alternative to Vue.js where the framework is just a compiler.
+    url: https://sveltejs.com
+    image: /tools/svelte.png
+  - title: Sanity
+    description: The customizable backend / data-store I use for my JAM Stack sites.
+    url: https://sanity.io
+    image: /tools/sanity.png
+  - title: Zeit
+    description: Static site hosting alternative to Netlify targeted at designers and developers.
+    url: https://zeit.co
+    image: /tools/zeit.png
+  - title: WordPress
+    description: The open-source cms I used exclusively, before I fell in love with the JAM Stack.
+    url: https://wordpress.org
+    image: /tools/wordpress.ico
+  - title: Beans
+    description: The WordPress theme framework aimed at developers I helped create.
+    url: https://getbeans.io
+    image: /tools/beans.ico
+  - title: DigitalOcean
+    description: The rock solid hosting infrastructure I use to host all of my sites on.
+    url: https://digitalocean.com
+    image: /tools/digitalocean.png
+  - title: Cloudflare
+    description: My domain, dns and cdn of choice with data centers across the globe.
+    url: https://cloudflare.com
+    image: /tools/cloudflare.png

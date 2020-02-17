@@ -1,0 +1,26 @@
+{
+    "routes": [
+        { "handle": "filesystem" },
+        { "src": "/(.*)", "status": 404, "dest": "/404.html" }
+    ],
+	"env": {
+        "SF_GA": "@sf-ga",
+        "SF_BLOG_KEY": "@sf-blog-key",
+        "SF_BLOG_URL": "@sf-blog-url",
+        "SF_TUTORIALS_SHEET_ID": "@sf-tutorials-sheet-id",
+        "SF_GOOGLE_API_KEY": "@sf-google-api-key",
+        "SF_GITHUB_AUTH_TOKEN": "@sf-github-auth-token",
+        "SF_BASE_PATH": "http://localhost:8080/"
+    },
+    "build": {
+        "env": {
+            "SF_GA": "@sf-ga",
+            "SF_BLOG_KEY": "@sf-blog-key",
+            "SF_BLOG_URL": "@sf-blog-url",
+            "SF_TUTORIALS_SHEET_ID": "@sf-tutorials-sheet-id",
+            "SF_GOOGLE_API_KEY": "@sf-google-api-key",
+            "SF_GITHUB_AUTH_TOKEN": "@sf-github-auth-token",
+            "SF_BASE_PATH": "https://smokeyfro.com"
+        }
+    }
+}

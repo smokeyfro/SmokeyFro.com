@@ -1,0 +1,33 @@
+.themes .grid {
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.themes .grid > article .card-image {
+	height: 200px;
+	overflow: hidden;
+	border-bottom: 1px solid #eee;
+}
+.main .item a.image {
+	padding: 0;
+	display: block;
+}
+.themes main article p:last-of-type {
+	margin: 0;
+}
+@media ( max-width: 480px ) {
+	.browser-content {
+		height: 200px;
+		overflow: hidden;
+		margin-bottom: 1rem;
+	}
+	.themes h2,
+	.themes h2 + p:first-of-type {
+			margin-bottom: 1rem;
+	}
+}
+
+@media ( min-width: 768px ) {
+	.themes .grid {
+		grid-gap: 40px;
+		margin-top: 2rem;
+	}
+}

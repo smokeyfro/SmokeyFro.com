@@ -1,0 +1,35 @@
+{
+	"name": "smokeyfro",
+	"license": "MIT",
+	"repository": "https://github.com/smokeyfro/site",
+	"scripts": {
+		"build": "gridsome build",
+		"develop": "gridsome develop",
+		"explore": "gridsome explore"
+	},
+	"dependencies": {
+		"@fullhuman/postcss-purgecss": "^2.0.6",
+		"@gridsome/plugin-sitemap": "^0.2.3",
+		"@gridsome/source-filesystem": "^0.6.2",
+		"@gridsome/source-ghost": "^0.3.0",
+		"@gridsome/transformer-remark": "^0.4.0",
+		"@zefman/gridsome-source-instagram": "^0.1.2",
+		"gridsome": "latest",
+		"gridsome-plugin-feed": "^1.0.2",
+		"gridsome-plugin-flexsearch": "^0.1.12",
+		"gridsome-plugin-remark-youtube": "^1.0.1",
+		"postcss-import": "^12.0.1",
+		"postcss-nested": "^4.2.1",
+		"priority-nav": "^1.0.13",
+		"vue-clickaway": "^2.2.2",
+		"vue-silentbox": "^0.1.9",
+		"vuestorage": "^19.0.1"
+	},
+	"devDependencies": {
+		"@noxify/gridsome-plugin-image-download": "git+https://github.com/noxify/gridome-plugin-image-download.git",
+		"@tailwindcss/custom-forms": "^0.2.1",
+		"gridsome-plugin-tailwindcss": "latest",
+		"gridsome-plugin-purgecss": "^1.0.12",
+		"tailwindcss-dark-mode": "^1.1.2"
+	}
+}

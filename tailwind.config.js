@@ -3,7 +3,6 @@ module.exports = {
   important: false,
   separator: ':',
   theme: {
-    darkSelector: '.dark',
     screens: {
       sm: '640px',
       md: '768px',
@@ -645,13 +644,9 @@ module.exports = {
     transitionTimingFunction: ['responsive'],
     transitionDuration: ['responsive'],
     transitionDelay: ['responsive'],
-    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover'],
-    borderColor: ['dark', 'dark-focus', 'dark-focus-within'],
-    textColor: ['dark', 'dark-hover', 'dark-active']
   },
   corePlugins: {},
   plugins: [
-    require('@tailwindcss/custom-forms'),
-    require('tailwindcss-dark-mode')()
+    require('@tailwindcss/custom-forms')
   ],
 }

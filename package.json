@@ -8,7 +8,6 @@
 		"explore": "gridsome explore"
 	},
 	"dependencies": {
-		"@fullhuman/postcss-purgecss": "^2.0.6",
 		"@gridsome/plugin-sitemap": "^0.2.3",
 		"@gridsome/source-filesystem": "^0.6.2",
 		"@gridsome/source-ghost": "^0.3.0",
@@ -23,13 +22,11 @@
 		"priority-nav": "^1.0.13",
 		"vue-clickaway": "^2.2.2",
 		"vue-silentbox": "^0.1.9",
+		"@noxify/gridsome-plugin-image-download": "git+https://github.com/noxify/gridome-plugin-image-download.git",
 		"vuestorage": "^19.0.1"
 	},
 	"devDependencies": {
-		"@noxify/gridsome-plugin-image-download": "git+https://github.com/noxify/gridome-plugin-image-download.git",
-		"@tailwindcss/custom-forms": "^0.2.1",
 		"gridsome-plugin-tailwindcss": "latest",
-		"gridsome-plugin-purgecss": "^1.0.12",
-		"tailwindcss-dark-mode": "^1.1.2"
+		"@tailwindcss/custom-forms": "^0.2.1"
 	}
 }

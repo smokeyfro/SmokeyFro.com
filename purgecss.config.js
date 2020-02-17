@@ -20,8 +20,7 @@ module.exports = {
     'a',
     'g-image',
     'g-image--lazy',
-    'g-image--loaded',
-    'dark',
+    'g-image--loaded'
   ],
   extractors: [
     {

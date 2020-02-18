@@ -53,10 +53,10 @@
 			<button v-on:click="preview = 'mobile'" v-bind:class="{ 'active': preview == 'mobile'}" title="Mobile" tabindex="33">Mobile</button>
 			<button v-on:click="showDemo = false" title="Close" class="close-button" aria-label="Close Demo" tabindex="34"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><defs/><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg></button>
 		</div>
-		<iframe v-if="preview === 'mobile'" :src="$page.post.demo_url" width="320" height="100%" class="mobile" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" />
-		<iframe v-if="preview === 'tablet'" :src="$page.post.demo_url" width="768" height="100%" class="tablet" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" />
-		<iframe v-if="preview === 'desktop'" :src="$page.post.demo_url" width="1024" height="100%" class="desktop" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" />
-		<iframe v-if="preview === 'fluid'" :src="$page.post.demo_url" width="100%" height="100%" class="fluid" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" />
+		<iframe v-if="preview === 'mobile'" :src="$page.post.demo_url" width="320" height="100%" class="mobile" sandbox="allow-scripts allow-popups allow-forms" />
+		<iframe v-if="preview === 'tablet'" :src="$page.post.demo_url" width="768" height="100%" class="tablet" sandbox="allow-scripts allow-popups allow-forms" />
+		<iframe v-if="preview === 'desktop'" :src="$page.post.demo_url" width="1024" height="100%" class="desktop" sandbox="allow-scripts allow-popups allow-forms" />
+		<iframe v-if="preview === 'fluid'" :src="$page.post.demo_url" width="100%" height="100%" class="fluid" sandbox="allow-scripts allow-popups allow-forms" />
 	</section>
 	<template slot="navgroup">
 	  Freebies

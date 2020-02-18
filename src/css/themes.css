@@ -15,7 +15,6 @@
 }
 @media ( max-width: 480px ) {
 	.browser-content {
-		height: 200px;
 		overflow: hidden;
 		margin-bottom: 1rem;
 	}

@@ -565,7 +565,6 @@ nav a:focus svg {
 }
 @media ( max-width: 480px ) {
   .cards .browser-content {
-    height: 200px;
     overflow: hidden;
     margin-bottom: 1rem;
   }

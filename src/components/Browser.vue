@@ -93,7 +93,6 @@ export default {
 }
 
 .browser-content {
-  min-height: 200px;
   background: #eee;
   padding: 1px;
 }

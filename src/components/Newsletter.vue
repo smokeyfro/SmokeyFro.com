@@ -33,7 +33,20 @@
 
 <script>
 export default {
-  name: 'Newsletter',
-  props: ['title', 'summary']
+  	name: 'Newsletter',
+	props: {
+		title: {
+			type: String,
+			required: false
+		},
+		summary: {
+			type: String,
+			required: false
+		},
+		customClass: {
+			type: String,
+			required: false
+		}
+	}
 }
 </script>

@@ -3,15 +3,15 @@
 		<article class="w-2/3">
 			<h1>{{ $page.post.title }}</h1>
 			<p v-html="$page.post.excerpt" />
-			<p class="demo-link">
+			<p class="demo-link" v-if="$page.post.group === 'beans'">
 				<a :href="$page.post.demo_url" target="_blank" title="View the theme demo">View Demo <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block w-5 h-5" viewBox="0 0 24 24"><defs/><path d="M7 17L17 7M7 7h10v10"/></svg>
 				</a>
 			</p>
 			<p class="text-sm"><strong>Requirements:</strong> {{ $page.post.requirements }} </p>
-			<div class="grid grid-cols-1 gap-8 mb-6 md:grid-cols-2">
+			<div v-if="$page.post.group === 'beans'" class="grid grid-cols-1 gap-8 mb-6 md:grid-cols-2">
 				<div class="resources">
 					<h2 class="text-2xl">Resources</h2>
-					<nav v-if="$page.post.group === 'beans'">
+					<nav>
 						<a href="https://www.sitepoint.com/faster-wordpress-theme-development-beans-framework/" class="block link" target="_blank" rel="nofollow noopener" title="Get an overview of the Beans framework for WordPress">Intro to Beans <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#999" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block w-5 h-5" viewBox="0 0 24 24"><defs/><path d="M7 17L17 7M7 7h10v10"/></svg></a>
 						<a href="https://www.getbeans.io/documentation/" class="block link" target="_blank" rel="nofollow noopener" title="Read the official Beans documentation">Beans Documentation <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block w-5 h-5" viewBox="0 0 24 24"><defs/><path d="M7 17L17 7M7 7h10v10"/></svg></a>
 						<a href="https://www.getbeans.io/code-snippets/" class="block link" target="_blank" rel="nofollow noopener" title="View code-snippets on the official Beans site">Code Snippets <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block w-5 h-5" viewBox="0 0 24 24"><defs/><path d="M7 17L17 7M7 7h10v10"/></svg></a>
@@ -38,6 +38,11 @@
 					</a>
 				</div>
 			</div>
+			<div v-if="$page.post.group === 'jamstack'" class="pt-6 mt-10 border-t-2">
+				<h2 class="2xl">Easy tiger!</h2>
+				<p>My JAMstack themes aren't quite ready yet. Subscribe to my newsletter to be notified when they are ready.</p>
+				<Newsletter :customClass="flex "/>
+			</div>
 			<div v-html="$page.post.content" />
 		</article>
 		<figure v-if="$page.post.image" class="fixed top-0 right-0 w-1/3 theme-image">
@@ -58,12 +63,14 @@
 <script>
 import NavThemes from "@/components/NavThemes";
 import Browser from '@/components/Browser'
+import Newsletter from '@/components/Newsletter'
 import { mixin as clickaway } from 'vue-clickaway'
 
 export default {
   	mixins: [ clickaway ],
 	components: {
 		NavThemes,
+		Newsletter,
 		Browser
 	},
 	metaInfo() {

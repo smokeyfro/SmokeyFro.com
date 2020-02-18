@@ -4,7 +4,7 @@
 		<p>Below is a list of the tutorials I'll be writing as I get time. Don't feel like waiting? Sponsor a tutorial to get it bumped up the queue.</p>
 		<template slot="navgroup">Tutorials</template>
 		<template slot="bottom-shelf">
-			<ul class="mx-6 md:mx-16">
+			<ul class="grid grid-cols-1 gap-0 mx-10 mt-8 reset md:grid-cols-2">
 				<li class="mb-4" v-for="edge in $page.upcoming.edges" :key="edge.node.id">
 					<span class="block text-lg font-semibold">{{ edge.node.title }}</span>
 				</li>

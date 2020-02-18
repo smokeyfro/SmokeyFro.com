@@ -425,7 +425,6 @@ nav a:focus svg {
 
 @media (min-width: 1024px ) {
 	.tertiary {
-		bottom: 30px;
 		position: relative;
 	}
 	.flex > aside {

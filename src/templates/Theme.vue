@@ -4,7 +4,7 @@
 			<h1>{{ $page.post.title }}</h1>
 			<p v-html="$page.post.excerpt" />
 			<p class="demo-link">
-				<a :href="$page.post.demo_url" v-on:click.prevent="showDemo = true" @keydown.esc.exact="showDemo = false">View Demo <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block w-5 h-5" viewBox="0 0 24 24">
+				<a :href="$page.post.demo_url">View Demo <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block w-5 h-5" viewBox="0 0 24 24">
 					<defs/>
 					<path d="M7 17L17 7M7 7h10v10"/>
 					</svg><noscript><g-image src="/external-link.svg" /></noscript>
@@ -45,7 +45,7 @@
 		<figure v-if="$page.post.image" class="theme-image">
 			<g-image :src="$page.post.image" :alt="$page.post.title" />
 		</figure>
-		<section id="demo" class="demo-wrap" v-on-clickaway="showDemo" v-if="showDemo === true">
+		<!-- <section id="demo" class="demo-wrap" v-on-clickaway="showDemo" v-if="showDemo === true">
 		<div class="device-toggle">
 			<button v-on:click="preview = 'fluid'" v-bind:class="{ 'active': preview == 'fluid'}" title="Fluid" tabindex="30">Fluid</button>
 			<button v-on:click="preview = 'desktop'" v-bind:class="{ 'active': preview == 'desktop'}" title="Desktop" tabindex="31">Desktop</button>
@@ -53,11 +53,11 @@
 			<button v-on:click="preview = 'mobile'" v-bind:class="{ 'active': preview == 'mobile'}" title="Mobile" tabindex="33">Mobile</button>
 			<button v-on:click="showDemo = false" title="Close" class="close-button" aria-label="Close Demo" tabindex="34"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><defs/><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg></button>
 		</div>
-		<iframe v-if="preview === 'mobile'" :src="$page.post.demo_url" width="320" height="100%" class="mobile" sandbox="allow-scripts allow-popups allow-forms" />
+		<!-- <iframe v-if="preview === 'mobile'" :src="$page.post.demo_url" width="320" height="100%" class="mobile" sandbox="allow-scripts allow-popups allow-forms" />
 		<iframe v-if="preview === 'tablet'" :src="$page.post.demo_url" width="768" height="100%" class="tablet" sandbox="allow-scripts allow-popups allow-forms" />
 		<iframe v-if="preview === 'desktop'" :src="$page.post.demo_url" width="1024" height="100%" class="desktop" sandbox="allow-scripts allow-popups allow-forms" />
-		<iframe v-if="preview === 'fluid'" :src="$page.post.demo_url" width="100%" height="100%" class="fluid" sandbox="allow-scripts allow-popups allow-forms" />
-	</section>
+		<iframe v-if="preview === 'fluid'" :src="$page.post.demo_url" width="100%" height="100%" class="fluid" sandbox="allow-scripts allow-popups allow-forms" /> -->
+	</section> -->
 	<template slot="navgroup">
 	  Freebies
 	</template>
@@ -89,37 +89,37 @@ export default {
 		}
 		};
 	},
-	stored: {
-		showDemo: {
-			type: String,
-			key: 'show-demo',
-			default: false
-		}
-	},
-	data () {
-		return {
-			preview: 'fluid',
-			isVisible: false,
-	  		focusedIndex: 0
-		}
-	},
-	methods: {
-		toggleVisibility() {
-			  this.isVisible = !this.isVisible
-		},
-		hideDemo() {
-	  		this.isVisible = false
-		}
-	},
-	watch: {
-		showDemo: function() {
-			if(this.showDemo){
-				document.documentElement.style.overflow = 'hidden'
-				return
-			}
-			document.documentElement.style.overflow = 'auto'
-		}
-	},
+	// stored: {
+	// 	showDemo: {
+	// 		type: String,
+	// 		key: 'show-demo',
+	// 		default: false
+	// 	}
+	// },
+	// data () {
+	// 	return {
+	// 		preview: 'fluid',
+	// 		isVisible: false,
+	//   		focusedIndex: 0
+	// 	}
+	// },
+	// methods: {
+	// 	toggleVisibility() {
+	// 		  this.isVisible = !this.isVisible
+	// 	},
+	// 	hideDemo() {
+	//   		this.isVisible = false
+	// 	}
+	// },
+	// watch: {
+	// 	showDemo: function() {
+	// 		if(this.showDemo){
+	// 			document.documentElement.style.overflow = 'hidden'
+	// 			return
+	// 		}
+	// 		document.documentElement.style.overflow = 'auto'
+	// 	}
+	// },
 	computed: {
 		config() {
 			return config;

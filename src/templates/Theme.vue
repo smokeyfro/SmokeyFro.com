@@ -1,39 +1,36 @@
 <template>
 	<Layout :sidebar="true" :top="false" :bottom="false">
-		<article>
+		<article class="w-2/3">
 			<h1>{{ $page.post.title }}</h1>
 			<p v-html="$page.post.excerpt" />
 			<p class="demo-link">
-				<a :href="$page.post.demo_url">View Demo <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block w-5 h-5" viewBox="0 0 24 24">
-					<defs/>
-					<path d="M7 17L17 7M7 7h10v10"/>
-					</svg><noscript><g-image src="/external-link.svg" /></noscript>
+				<a :href="$page.post.demo_url" target="_blank" title="View the theme demo">View Demo <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block w-5 h-5" viewBox="0 0 24 24"><defs/><path d="M7 17L17 7M7 7h10v10"/></svg>
 				</a>
 			</p>
-			<div class="meta">
+			<p class="text-sm"><strong>Requirements:</strong> {{ $page.post.requirements }} </p>
+			<div class="grid grid-cols-1 gap-8 mb-6 md:grid-cols-2">
 				<div class="resources">
-					<h2>Resources</h2>
-					<a href="">Intro to Beans</a>
-					<a href="">Setup Guide</a>
-					<a href="">Beans Documentation</a>
-					<a href="">Code Snippets</a>
-					<a href="">Beans Tutorials</a>
+					<h2 class="text-2xl">Resources</h2>
+					<nav v-if="$page.post.group === 'beans'">
+						<a href="https://www.sitepoint.com/faster-wordpress-theme-development-beans-framework/" class="block link" target="_blank" rel="nofollow noopener" title="Get an overview of the Beans framework for WordPress">Intro to Beans <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#999" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block w-5 h-5" viewBox="0 0 24 24"><defs/><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+						<a href="https://www.getbeans.io/documentation/" class="block link" target="_blank" rel="nofollow noopener" title="Read the official Beans documentation">Beans Documentation <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block w-5 h-5" viewBox="0 0 24 24"><defs/><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+						<a href="https://www.getbeans.io/code-snippets/" class="block link" target="_blank" rel="nofollow noopener" title="View code-snippets on the official Beans site">Code Snippets <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block w-5 h-5" viewBox="0 0 24 24"><defs/><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+						<a href="/tuts/beans-setup-guide" class="block link" title="Check out my general Beans setup guide">Setup Guide</a>
+						<a href="http://localhost:8080/tuts/about/beans" class="block link" title="Check out my Beans tutorials">Beans Tutorials</a>
+					</nav>
 				</div>
 				<div class="downloads">
-					<h2>Downloads</h2>
-					<a v-if="$page.post.group === 'beans'" href="http://www.getbeans.io/download-beans/?no_cache=1" download>
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-							<defs/>
-							<path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-						</svg> Beans Parent Theme
+					<h2 class="text-2xl">Downloads</h2>
+					<a v-if="$page.post.group === 'beans'" class="link" href="http://www.getbeans.io/download-beans/?no_cache=1" download>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="inline-block w-3 h-3"><defs/><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Beans Parent Theme
 					</a>
-					<a :href="$page.post.download_theme" download>
+					<a :href="$page.post.download_theme" class="link" download>
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block w-3 h-3" viewBox="0 0 24 24">
 						<defs/>
 						<path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
 						</svg> {{ $page.post.title }} <span v-if="$page.post.group === 'beans'">Child Theme</span> <span v-if="$page.post.group === 'jamstack'">Starter</span>
 					</a>
-					<a :href="$page.post.download_source" class="mr-4" download>
+					<a :href="$page.post.download_source" class="mr-4 link " download>
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block w-3 h-3" viewBox="0 0 24 24">
 							<defs/>
 							<path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
@@ -41,23 +38,11 @@
 					</a>
 				</div>
 			</div>
+			<div v-html="$page.post.content" />
 		</article>
-		<figure v-if="$page.post.image" class="theme-image">
+		<figure v-if="$page.post.image" class="fixed top-0 right-0 w-1/3 theme-image">
 			<g-image :src="$page.post.image" :alt="$page.post.title" />
-		</figure>
-		<!-- <section id="demo" class="demo-wrap" v-on-clickaway="showDemo" v-if="showDemo === true">
-		<div class="device-toggle">
-			<button v-on:click="preview = 'fluid'" v-bind:class="{ 'active': preview == 'fluid'}" title="Fluid" tabindex="30">Fluid</button>
-			<button v-on:click="preview = 'desktop'" v-bind:class="{ 'active': preview == 'desktop'}" title="Desktop" tabindex="31">Desktop</button>
-			<button v-on:click="preview = 'tablet'" v-bind:class="{ 'active': preview == 'tablet'}" title="Tablet" tabindex="32">Tablet</button>
-			<button v-on:click="preview = 'mobile'" v-bind:class="{ 'active': preview == 'mobile'}" title="Mobile" tabindex="33">Mobile</button>
-			<button v-on:click="showDemo = false" title="Close" class="close-button" aria-label="Close Demo" tabindex="34"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><defs/><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg></button>
-		</div>
-		<!-- <iframe v-if="preview === 'mobile'" :src="$page.post.demo_url" width="320" height="100%" class="mobile" sandbox="allow-scripts allow-popups allow-forms" />
-		<iframe v-if="preview === 'tablet'" :src="$page.post.demo_url" width="768" height="100%" class="tablet" sandbox="allow-scripts allow-popups allow-forms" />
-		<iframe v-if="preview === 'desktop'" :src="$page.post.demo_url" width="1024" height="100%" class="desktop" sandbox="allow-scripts allow-popups allow-forms" />
-		<iframe v-if="preview === 'fluid'" :src="$page.post.demo_url" width="100%" height="100%" class="fluid" sandbox="allow-scripts allow-popups allow-forms" /> -->
-	</section> -->
+		</figure>	
 	<template slot="navgroup">
 	  Freebies
 	</template>
@@ -89,37 +74,6 @@ export default {
 		}
 		};
 	},
-	// stored: {
-	// 	showDemo: {
-	// 		type: String,
-	// 		key: 'show-demo',
-	// 		default: false
-	// 	}
-	// },
-	// data () {
-	// 	return {
-	// 		preview: 'fluid',
-	// 		isVisible: false,
-	//   		focusedIndex: 0
-	// 	}
-	// },
-	// methods: {
-	// 	toggleVisibility() {
-	// 		  this.isVisible = !this.isVisible
-	// 	},
-	// 	hideDemo() {
-	//   		this.isVisible = false
-	// 	}
-	// },
-	// watch: {
-	// 	showDemo: function() {
-	// 		if(this.showDemo){
-	// 			document.documentElement.style.overflow = 'hidden'
-	// 			return
-	// 		}
-	// 		document.documentElement.style.overflow = 'auto'
-	// 	}
-	// },
 	computed: {
 		config() {
 			return config;
@@ -151,9 +105,12 @@ query Post ($path: String) {
 <style>
 .main {
 	position: relative;
-	/* h1 {
-		margin-top: 40px;
-	} */
+}
+main nav svg {
+    max-width: 10px;
+}
+main nav svg path {
+    stroke: #000;
 }
 .meta {
 	display: flex;
@@ -163,54 +120,8 @@ query Post ($path: String) {
 .meta > div a {
 	display: block;
 }
-.demo-wrap {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	z-index: 9999;
-	left: 83px;
-	right: 0;
-	/* width: calc(100%-81px); */
-	background: #fff;
-}
-.device-toggle {
-	background: #f7f7f7;
-	position: relative;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	width: 100%;
-	padding: 10px 5px;
-}
-.device-toggle button {
-	background: #f7f7f7;
-	border: 0;
-	padding: 0 0 0 .6rem;
-	&:focus {
-		outline: none;
-	}
-}
-.device-toggle button.active {
-	font-weight: bold;
-}
-.demo-wrap iframe {
-	border: 0;
-}
-.close-button {
-	margin: 0 15px 0 auto;
-	svg {
-		width: 20px;
-	}
-}
-@media (min-width: 480px) {
-
-}
-
-/* main {
-  height: calc(100vh - 200px);
-} */
 .downloads a {
-  display: block;
+	display: block;
 }
 .demo-link svg,
 .downloads svg {

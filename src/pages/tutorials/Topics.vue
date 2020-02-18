@@ -2,7 +2,7 @@
 	<Layout :sidebar="true" :top="false" :bottom="false">
 		<h1>Topics</h1>
 		<p>Browse my web development tutorials by topic.</p>
-		<ul class="flex flex-wrap m-0">
+		<ul class="flex flex-wrap m-0 reset">
 			<li v-for="edge in filteredData" :key="edge.node.id" class="p-0 m-0 mb-4 mr-4 list-none ">
 				<g-link :to="tagUrlPrefix +`${edge.node.slug}`" class="block px-4 py-2 text-base text-gray-700 bg-gray-100 border-b-4 rounded-sm hover:border-accent link hover:bg-black hover:text-white">
 					{{ edge.node.name }}

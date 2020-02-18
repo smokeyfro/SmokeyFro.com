@@ -1,23 +1,23 @@
 <template>
-	<Layout :sidebar="true" :top="false" :bottom="false">
-		<h1>{{ $page.topic.belongsTo.totalCount }} <span v-if="$page.topic.belongsTo.totalCount > 1">tutorials</span> <span v-if="$page.topic.belongsTo.totalCount == 1">tutorial</span> about <mark>{{ $page.topic.title }}</mark></h1>
+	<Layout :sidebar="true" :top="false" :bottom="true">
+		<h1>{{ $page.topic.belongsTo.totalCount }} <span v-if="$page.topic.belongsTo.totalCount > 1">tutorials</span> <span v-if="$page.topic.belongsTo.totalCount == 1">tutorial</span> about <mark class="p-3 py-1 bg-yellow-200">{{ $page.topic.title }}</mark></h1>
 		<p v-if="$page.topic.description">{{ $page.topic.description }}</p>
-		<div class="grid tuts grid-3">
+		<template slot="bottom-shelf">
+		<div class="grid mx-6 mt-10 mb-10 grid-gap-4 md:gap-8 grid-cols1 md:grid-cols-2 lg:grid-cols-3 md:mx-10">
 			<article v-for="edge in $page.topic.belongsTo.edges" :key="edge.node.id">
-				<figure>
-					<g-link :to="`${edge.node.path}`">
-						<g-image :src="edge.node.coverImage" />
+				<figure class="md:mb-5 card-image" v-if="edge.node.coverImage">
+					<g-link :to="`${edge.node.path}`" class="image">
+						<g-image :src="edge.node.coverImage" width="364" height="244" fit="cover" />
 					</g-link>
 				</figure>
-				<div>
-					<h2>
-						<g-link :to="`${edge.node.path}`">{{ edge.node.title }}</g-link>
-					</h2>
-					<p><span v-if="edge.node.primary_tag.title">Posted in <a :href="edge.node.primary_tag.path" class="underline">{{ edge.node.primary_tag.title }}</a></span></p> 
-					<p>{{ edge.node.description }}</p>
-				</div>
+				<h2 class="mt-3 text-2xl" v-if="edge.node.title">
+					{{ edge.node.title }}
+				</h2>
+				<p class="mb-2 text-base">{{ edge.node.description }}</p>
+				<p><g-link :to="`${edge.node.path}`" class="text-sm">Continue reading</g-link></p>
 			</article>
 		</div>
+		</template>
 		<template slot="navgroup">
 			Tuts
 		</template>
@@ -35,26 +35,26 @@ query Tag ($id: ID!) {
 	topic: ghostTag (id: $id) {
 		title: name
 		belongsTo {
-				totalCount
-				edges {
-						node {
-						...on GhostPost {
-								id
-								title
-								tags {
-									id
-									title: name
-									path
-								}
-								primary_tag {
-									title: name
-									path
-								}
-								path
-								description: excerpt
-								coverImage: feature_image
+			totalCount
+			edges {
+				node {
+					...on GhostPost {
+						id
+						title
+						tags {
+							id
+							title: name
+							path
 						}
+						primary_tag {
+							title: name
+							path
 						}
+						path
+						description: excerpt
+						coverImage: feature_image
+					}
+				}
 			}
 		}
 	}
@@ -82,33 +82,9 @@ export default {
 
 <style scoped>
 h1 strong:before {
-		content: '#';
+	content: '#';
 }
-mark {
-		background: var(--accent-color);
-		padding: 0 25px 7px;
-		display: inline-block;
-		border-radius: 2px;
-		/* font-size: 13px; */
-		margin-left: 5px;
-		line-height: 1.5;
-		font-weight: bold;
-		color: #111;
-}
-.tuts {
-	grid-gap: 40px;
-	padding-bottom: 4rem;
-}
-.tuts h2 {
-	font-size: 1.5rem;
-	margin-bottom: 0;
-}
-.tuts p:first-of-type {
-	margin-top: 0;
-	color: #555;
-	font-size: 1rem;
-}
-.tuts p:first-of-type a{
+.tuts p:first-of-type a {
 	line-height: 1;
 	margin-right: 5px;
 	font-weight: bold;
@@ -117,38 +93,13 @@ mark {
 	font-size: .9rem;
 	display: inline-block;
 }
-.tuts p:first-of-type a:before{
+.tuts p:first-of-type a:before {
 	content: '#';
 }
 .tuts figure {
 	margin: 0;
 	height: 200px;
 	overflow: hidden;
-}
-
-.grid {
-	grid-gap: 40px;
-}
-.grid h2 {
-	font-size: 1.5rem;
-	margin-bottom: .5rem;
-}
-.grid p:first-of-type {
-	margin-top: 0;
-	color: #555;
-	font-size: .7rem;
-}
-.grid p:first-of-type a {
-	line-height: 1;
-	margin-right: 5px;
-	font-weight: bold;
-	text-transform: uppercase;
-	border-radius: 2px;
-	font-size: .7rem;
-	display: inline-block;
-}
-.grid p:first-of-type a:before{
-	content: '#';
 }
 .grid figure {
 	margin: 0;

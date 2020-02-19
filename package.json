@@ -15,7 +15,7 @@
 		"@gridsome/transformer-remark": "^0.4.0",
 		"@noxify/gridsome-plugin-image-download": "git+https://github.com/noxify/gridome-plugin-image-download.git",
 		"@zefman/gridsome-source-instagram": "^0.1.2",
-		"gridsome": "latest",
+		"gridsome": "0.7.12",
 		"gridsome-plugin-feed": "^1.0.2",
 		"gridsome-plugin-flexsearch": "^0.1.12",
 		"gridsome-plugin-remark-youtube": "^1.0.1",

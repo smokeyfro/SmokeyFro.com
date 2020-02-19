@@ -8,6 +8,7 @@
 		"explore": "gridsome explore"
 	},
 	"dependencies": {
+		"@fullhuman/postcss-purgecss": "^2.0.6",
 		"@gridsome/plugin-sitemap": "^0.2.3",
 		"@gridsome/source-filesystem": "^0.6.2",
 		"@gridsome/source-ghost": "^0.3.0",

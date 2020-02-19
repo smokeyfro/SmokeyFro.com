@@ -159,53 +159,60 @@
 	.secondary a span {
 		position: relative;
 		z-index: 1;
-	}
-	header nav a {
-		position: relative;
-		z-index: 99;
-	}
-	header nav a::after {
-		position: absolute;
-		font-size: 14px;
-		font-weight: 700;
-		top: -6px;
-		left: 48px;
-		padding: 8px;
-		white-space: pre;
-		z-index: -1;
-		color: #000;
-		background-color: #ffc800;
-		z-index: 99999;
-		border-radius: 0 4px 4px 0;
-		border-left: 3px solid;
-		transition: all .3s ease-out;
-		opacity: 0;
-		content: attr(tooltip);
-	}
-	header nav a:hover::after {
-		opacity: 1;
-	}
-
-	/*  Sub Navigation  */
-	.secondary a {
-		@apply font-medium leading-loose;
-	}
-	.secondary a:after {
-		display: inline-block;
-		content: "→";
-		transition: color 0.3s ease-out;
-		color: transparent;
-	}
-	aside a:hover:after {
-		color: #000;
     }
-    /* .cards {
-        grid-gap: 40px;
-          margin-top: 2rem;
-    } */
-    .app .tertiary a svg circle,
-    .app .tertiary a svg path {
-        stroke: #fff;
+    header {
+        nav {
+            a {
+                position: relative;
+                z-index: 99;
+            }
+            a::after {
+                position: absolute;
+                font-size: 14px;
+                font-weight: 700;
+                top: -6px;
+                left: 48px;
+                padding: 8px;
+                white-space: pre;
+                z-index: -1;
+                color: #000;
+                background-color: #ffc800;
+                z-index: 99999;
+                border-radius: 0 4px 4px 0;
+                border-left: 3px solid;
+                transition: all .3s ease-out;
+                opacity: 0;
+                content: attr(tooltip);
+            }
+            a:hover::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    /*  Sub Navigation  */
+    .secondary {
+        a {
+            @apply font-medium leading-loose;
+        }
+        a:after {
+            display: inline-block;
+            content: "→";
+            transition: color 0.3s ease-out;
+            color: transparent;
+        }
+        a:hover:after {
+            color: #000;
+        }
+    }
+    
+    /* Utility Navigation */
+    .tertiary {
+        a {
+            circle, path {
+                stroke: #fff;
+            }
+        }
     }
 }
 @media (min-width: 1024px ) {

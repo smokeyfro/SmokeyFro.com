@@ -1,0 +1,239 @@
+/* Media Queries
+****************************************************/
+@media ( max-width: 480px ) {
+    /* .cards .browser-content {
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+    .cards  h2,
+    .cards  h2 + p {
+        margin-bottom: 1rem;
+    } */
+        .mobile > a:last-of-type {
+          margin-left: auto;
+          margin: 0 .7rem 0 .3rem;
+          display: flex;
+          align-items: center;	
+      }
+      .mobile a.tablet {
+          display: none;
+      }
+  }
+  @media ( min-width: 481px ) {
+      .mobile > a:last-of-type {
+          display: none;
+      }
+  }
+  @media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px)  {
+      .primary a {
+          padding: 5px;
+      }
+      header nav a svg {
+          width: 22px;
+      }
+      .secondary a:after {
+          display: none;
+      }
+      header nav a::after {
+          left: 55px;
+      }
+  }
+
+@media ( max-width: 640px ) {
+	.logo {
+
+		margin-left: -3px;
+	}
+	.logo svg {
+		width: 30px;
+		height: 30px; 
+	}
+	header {
+		padding: 10px;
+		align-items: center;
+    	justify-content: flex-start;
+	}
+	.mobile {
+		margin: 0;
+		width: 100%;
+		margin-right: 65px;
+	}
+	.tertiary {
+		position: absolute;
+		right: 0;
+		width: 65px;
+	}
+	.tertiary .connect {
+		display: none;
+	}
+	.mobile > a {
+		color: rgba(255,255,255,0.7);
+		line-height: 2;
+	}
+	.mobile > a.active {
+		color: #ffc800;
+	}
+	.mobile > a:not(:last-of-type) {
+		margin-left: .8rem;
+	}
+	.secondary {
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		overflow-x: auto;
+	}
+	.secondary a {
+		margin: 0 .5rem 0 .7rem;
+		padding: .5rem 0;
+		white-space: pre;
+	}
+	.secondary a:last-of-type {
+		margin-right: 1rem;
+	}
+	.secondary a.active:before {
+		height: 3px;
+		left: 0;
+		width: 100%;
+		bottom: 11px;
+		transform: skewX(-30deg);
+	}
+	.secondary a:after {
+		display: none;
+	}
+}
+@media (min-width: 640px ) {
+	.primary a:not(:last-of-type) {
+		@apply mb-5;
+	}
+}
+@media ( min-width: 640px ) and ( max-width: 768px ) {
+	div.app {
+		display: grid;
+		grid-template-columns: 80px 1fr;
+		grid-template-rows: 50px 1fr;
+		grid-template-areas:
+		"header aside aside"
+		"header main main";
+	}
+	.app header {
+		grid-area: header;
+		grid-column: 80px;
+		grid-row: 80px;
+		height: 100vh;
+	}
+	.app aside {
+		grid-area: aside;
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+	}
+	.app .secondary {
+		flex-direction: row;
+		justify-content: flex-start;
+		padding: 0!important;
+	}
+	.app .secondary a {
+		height: 50px;
+		line-height: 50px;
+		margin-left: 1.2rem;
+	}
+	.app .secondary .active {
+		height: 48px;
+		line-height: 48px;
+		/* margin-left: 1.5rem; */
+	}
+	.app main {
+		grid-area: main;
+	}
+}
+@media (min-width: 768px ) {
+    .app {
+		display: grid;
+		grid-template-columns: 80px 200px 1fr;
+	}
+	.flex > header {
+		width: 80px;
+	}
+	.secondary a span {
+		position: relative;
+		z-index: 1;
+	}
+	header nav a {
+		position: relative;
+		z-index: 99;
+	}
+	header nav a::after {
+		position: absolute;
+		font-size: 14px;
+		font-weight: 700;
+		top: -6px;
+		left: 48px;
+		padding: 8px;
+		white-space: pre;
+		z-index: -1;
+		color: #000;
+		background-color: #ffc800;
+		z-index: 99999;
+		border-radius: 0 4px 4px 0;
+		border-left: 3px solid;
+		transition: all .3s ease-out;
+		opacity: 0;
+		content: attr(tooltip);
+	}
+	header nav a:hover::after {
+		opacity: 1;
+	}
+
+	/*  Sub Navigation  */
+	.secondary a {
+		@apply font-medium leading-loose;
+	}
+	.secondary a:after {
+		display: inline-block;
+		content: "→";
+		transition: color 0.3s ease-out;
+		color: transparent;
+	}
+	aside a:hover:after {
+		color: #000;
+    }
+    /* .cards {
+        grid-gap: 40px;
+          margin-top: 2rem;
+    } */
+    .app .tertiary a svg circle,
+    .app .tertiary a svg path {
+        stroke: #fff;
+    }
+}
+@media (min-width: 1024px ) {
+    header {
+		height: 100vh;
+	}
+	main h1 {
+		@apply mb-2 text-5xl;
+	}
+	main h2 {
+		@apply mb-2 text-4xl;
+	}
+	main h3 {
+		@apply mb-2 text-3xl;
+	}
+	main h1 + p {
+		@apply mb-5 text-2xl;
+	}
+	main p {
+		@apply mb-5 text-xl;
+	}
+	.tertiary {
+		position: relative;
+	}
+	.flex > aside {
+		width: 250px;
+	}
+	.about main > div > div {
+		padding-bottom: 30px;
+	}
+}

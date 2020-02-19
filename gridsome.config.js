@@ -1,11 +1,8 @@
-// const purgecss = require('@fullhuman/postcss-purgecss')
-// const tailwind = require('tailwindcss')
-
-// const postcssPlugins = [
-//   tailwind('./tailwind.config.js'),
-// ]
-
-// if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
+  }
+}
 
 module.exports = {
   siteName: "SmokeyFro",
@@ -79,9 +76,6 @@ module.exports = {
     }
   },
   plugins: [
-    {
-      use: "gridsome-plugin-tailwindcss"
-    },
     {
       use: '@zefman/gridsome-source-instagram',
       options: {
@@ -256,6 +250,52 @@ module.exports = {
       }
     }
   ],
+  chainWebpack: config => {
+    config.module
+      .rule('css')
+      .oneOf('normal')
+      .use('postcss-loader')
+      .tap(options => {
+        options.plugins.unshift(...[
+          require('postcss-import'),
+          require('postcss-nested'),
+          require('tailwindcss')('tailwind.config.js'),
+        ])
+
+        if (process.env.NODE_ENV === 'production') {
+          options.plugins.push(...[
+            require('@fullhuman/postcss-purgecss')({
+              content: [
+                './src/**/*.css',
+                './src/**/*.vue',
+                './src/**/*.js',
+                './src/**/*.jsx',
+                './src/**/*.html',
+                './src/**/*.pug',
+                './src/**/*.md',
+              ],
+              extractors: [
+                {
+                  extractor: TailwindExtractor,
+                  extensions: ['vue', 'js', 'jsx', 'md', 'html', 'pug'],
+                },
+              ],
+              whitelistPatterns: [
+                'body',
+                'html',
+                'img',
+                'a',
+                'g-image',
+                'g-image--lazy',
+                'g-image--loaded'
+              ]
+            }),
+          ])
+        }
+
+        return options
+      })
+  },
   // css: {
   //   loaderOptions: {
   //     postcss: {

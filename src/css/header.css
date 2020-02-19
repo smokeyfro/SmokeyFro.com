@@ -1,0 +1,49 @@
+/* Header
+****************************************************/
+header {
+    background: #1C2F39;
+    svg, a {
+        transition: all .3s ease-out;
+    }
+    nav {
+        a {
+            @apply transition-opacity duration-100 ease-out;
+	        color: rgba(255,255,255,0.7);
+        }
+        .active {
+            color: #fff;
+            path, circle {
+                stroke: #ffc800;
+            }
+        }
+        svg {
+            width: 16px;
+        }
+        path, circle {
+            stroke: rgba(255,255,255,0.7);
+        }
+        
+    }
+    .primary a {
+        @apply mx-auto;
+    }
+    .mobile-links .active {
+        color: #000;
+        font-weight: bold;
+    }
+    .logo:focus,
+    nav a:focus {
+    outline: none transparent;
+    box-shadow: 0 0;
+    }
+    nav a:focus svg path,
+    nav a:focus svg circle {
+        stroke: #fff         ;
+    }
+    nav a:focus svg {
+        transform: scale(1.2);
+    }
+    .logo:focus svg {
+        transform: scale(.8);
+    }
+}

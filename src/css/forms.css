@@ -1,0 +1,23 @@
+/* Forms
+****************************************************/
+a:focus,
+.form-textarea:focus,
+.form-radio:focus,
+button:focus,
+.form-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #f6ad5529;
+    border-color: #ffc800;
+	border-style: solid;
+}
+button:focus {
+    box-shadow: 0 0 0 3px #ffc800;
+}
+.contact form {
+	margin-bottom: 3rem;
+}
+.contact form input:not(type="radio"),
+.contact form textarea {
+	background: #fafafa;
+	border: 1px dashed #ddd;
+}

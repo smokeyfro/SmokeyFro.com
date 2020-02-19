@@ -1,0 +1,121 @@
+/* Dark Mode
+****************************************************/
+[data-theme=dark] {
+
+    /* Header */
+    header {
+        background-color: rgba(0, 0, 0, 0.95);
+        border-right: 1px solid #000;
+    }
+    .mobile-links {
+        background: #fff;
+        a {
+            color: #111;
+            border-color: #ddd;
+        }
+    }
+
+    /* Sub-Navigation */
+    aside {
+        background-color: rgba(9, 9, 9, 0.95);
+    }
+    .secondary {
+        a {
+            @apply text-gray-500;
+        }
+        .active span {
+            @apply text-white;
+            text-shadow: 1px 1px 0 #000;
+            font-weight: bold;
+        }
+        a:not(.active):hover:after {
+            color: #fff;
+        }
+        img {
+            filter: invert(1);
+        }
+    }
+
+    /* Main Body */
+    main {
+        filter:drop-shadow(0 0 14px black);
+        background-color: rgb(19, 19, 19);
+        background-image: url(/topography.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        h1 {
+            @apply text-white;
+            text-shadow: 1px 1px 0 rgba(0,0,0,1);
+        }
+        h2 {
+            @apply text-gray-100;
+        }
+        h3 {
+            @apply text-white;
+        }
+        h4 {
+            @apply text-white;
+        }
+        h5 {
+            @apply text-white;
+        }
+        p, li {
+            color: #888;
+        }
+        h1 + p {
+            color: #eee;
+        }
+        a:not(.image):not(.link) {
+            @apply px-2 py-1 text-sm text-black uppercase border-b bg-accent border-accent;
+        }
+    }
+
+    /* Forms */
+    .form-input,
+    .form-select,
+    textarea,
+    .form-textarea {
+        @apply bg-gray-900 border-black;
+    }
+    .form-input:focus,
+     .form-textarea:focus {
+        color: #000;
+    }
+    label {
+        @apply text-white;
+        span {
+            @apply text-gray-300;
+        }
+    }
+    form {
+        button[type="submit"] {
+            @apply text-black bg-accent;
+        }
+    }
+    .form-input:focus,
+    .form-textarea:focus {
+        @apply bg-white border-accent;
+    }
+
+    /* Cards */
+    .card-image {
+        filter: saturate(0);
+        opacity: .5;
+        transition: all .3s ease-out;
+        border-bottom: 0;
+    }
+    .work .card-image:hover {
+        filter: saturate(1);
+        opacity: 1;
+    }
+
+    /* SVG's */
+    &.home, &.about {
+        main {
+            path {
+                fill: #ffc800;
+            }
+        }
+    }
+}

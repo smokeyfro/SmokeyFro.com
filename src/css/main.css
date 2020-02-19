@@ -1,0 +1,46 @@
+/* Main Body
+****************************************************/
+main {
+	background: #fff;
+    
+    h1, h2, h3, h4, h5 {
+        color: #1C2F39;
+    }
+    h1 {
+        @apply mb-2 text-3xl font-bold leading-snug;
+    }
+    h2 {
+        @apply mb-2 text-2xl font-bold;
+    }
+    h3 {
+        @apply mb-2 text-xl font-bold;
+    }
+    h1 + p {
+        @apply mb-5 text-lg;
+    }
+    p {
+        @apply mb-5;
+    }
+    ul, ol {
+        @apply mb-5 ml-5
+    }
+    :not(.reset) li {
+        @apply mb-3;
+        list-style: circle;
+    }
+    a:not(.image):not(.link) {
+        text-decoration: none;
+        font-weight: 700;
+        background-color: rgba(255,200,0,.25);
+        padding: 0 5px;
+    }
+}
+
+/* SVG's */
+.home, .about {
+    main {
+        path {
+            fill: #1C2F39;
+        }
+    }
+}

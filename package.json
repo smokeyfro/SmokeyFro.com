@@ -23,7 +23,10 @@
 		"vuestorage": "^19.0.1"
 	},
 	"devDependencies": {
-		"gridsome-plugin-tailwindcss": "latest",
-		"@tailwindcss/custom-forms": "^0.2.1"
+		"@tailwindcss/custom-forms": "^0.2.1",
+		"postcss-import": "^12.0.1",
+		"postcss-loader": "^3.0.0",
+		"postcss-nested": "^4.2.1",
+		"tailwindcss": "^1.2.0"
 	}
 }

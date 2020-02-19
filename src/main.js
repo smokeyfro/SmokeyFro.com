@@ -1,6 +1,6 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import VueStorage from 'vuestorage'
-
+import '~/css/global.css'
 
 export default function(Vue, { isClient }) {
 

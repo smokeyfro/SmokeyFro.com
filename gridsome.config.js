@@ -27,12 +27,6 @@ module.exports = {
         component: './src/templates/Design.vue'
       }
     ],
-    Work: [
-      {
-        path: '/work/:slug',
-        component: './src/templates/Work.vue'
-      }
-    ],
     Service: [
       {
         path: '/services/:slug',
@@ -43,6 +37,12 @@ module.exports = {
       {
         path: '/projects/:slug',
         component: './src/templates/Project.vue'
+      }
+    ],
+    CockpitWork: [
+      {
+        path: '/work/:slug',
+        component: './src/templates/CockpitWork.vue'
       }
     ],
     Video: [
@@ -72,7 +72,12 @@ module.exports = {
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
-      externalLinksRel: ['nofollow', 'noopener', 'noreferrer']
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      plugins: [
+        ['@noxify/gridsome-plugin-remark-image-download', {
+          targetPath: './media'
+        }]
+      ]
     }
   },
   plugins: [
@@ -118,9 +123,9 @@ module.exports = {
             fields: ['title', 'excerpt', 'description']
           },
           {
-            typeName: 'Work',
+            typeName: 'CockpitWork',
             indexName: 'Portfolio',
-            fields: ['title', 'excerpt', 'description']
+            fields: ['title', 'fields.excerpt', 'fields.content']
           },
           {
             typeName: 'Service',
@@ -182,6 +187,16 @@ module.exports = {
       }
     },
     {
+      use: '~/src/plugins/source-cockpit',
+        options: {
+          accessToken: process.env.SF_ACCESS_TOKEN,
+          host: process.env.SF_API_HOST,
+          routes: {
+            CockpitWork: '/work/:slug'
+          }
+        }
+    },
+    {
       use: '@gridsome/source-ghost',
       options: {
         typeName: 'Ghost',
@@ -196,32 +211,15 @@ module.exports = {
       }
     },
     {
-      use: "@gridsome/source-filesystem",
-      options: {
-        path: "content/work/**/*.md",
-        typeName: "Work",
-        resolveAbsolutePaths: true,
-      }
-    },
-    {
       use: '@gridsome/plugin-sitemap',
       options: {
         cacheTime: 600000,
       }
     },
     {
-      use: '@noxify/gridsome-plugin-image-download',
-      options: {
-        'typeName' : 'GhostPost',
-        'sourceField': 'feature_image',
-        'targetField': 'coverImage',
-        'targetPath': 'media/tuts'
-      }
-    },
-    {
       use: 'gridsome-plugin-feed',
       options: {
-        contentTypes: ['GhostPost', 'GhostPage', 'Theme', 'Work'],
+        contentTypes: ['GhostPost', 'GhostPage', 'Theme', 'CockpitWork'],
         feedOptions: {
           title: 'SmokeyFro - Syndicate',
           description: 'Web Development Tutorials, JAMStack themes and more'

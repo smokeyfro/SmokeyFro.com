@@ -20,7 +20,7 @@
 </template>
 <page-query>
 	query Work ($page: Int) {
-		posts: allWork (sortBy: "launch_date", order: DESC, page: $page, perPage: 6) @paginate {
+		posts: allCockpitWork (sortBy: "date", order: DESC, page: $page, perPage: 6) @paginate {
 			totalCount
 			pageInfo {
 				totalPages
@@ -29,14 +29,13 @@
 			edges {
 				node {
 					title
-					content
 					path
-					image(width: 364, height: 200, quality: 90, fit: cover)
-					excerpt
-					launch_date
-					project_type
-					services
-					status
+					fields {
+						excerpt
+						image {
+							path
+						}
+					}
 				}
 			}
 		}

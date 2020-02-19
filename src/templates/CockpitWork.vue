@@ -2,9 +2,9 @@
 	<Layout :sidebar="true" :top="true" :bottom="true">
 		<template slot="top-shelf">
 			<div class="pt-4 mx-6 md:pt-6 md:mx-10">
-				<h1>{{ $page.post.title }}</h1>
-				<p>{{ $page.post.excerpt }}</p>
-				<p>Client: {{ $page.post.client }}<span class="block h-2 text-transparent md:inline"> &middot; </span>{{ $page.post.url }}</p>
+				<h1 v-if="$page.post.title">{{ $page.post.title }}</h1>
+				<p v-if="$page.post.fields.excerpt">{{ $page.post.fields.excerpt }}</p>
+				<p>Client: <span class="block h-2 text-transparent md:inline"> &middot; </span>{{ $page.post.fields.website }}</p>
 			</div>
 		</template>
 		<article> 
@@ -15,24 +15,24 @@
 						<li v-for="service in $page.post.services" :key="service">{{ service }}</li>
 					</ul>
 				</div>
-				<div v-if="$page.post.stack">
+				<!-- <div v-if="$page.post.stack">
 					<h2>Stack</h2>
 					<ul>
 						<li v-for="stack in $page.post.stack" :key="stack">{{ stack }}</li>
 					</ul>
-				</div>
+				</div> -->
 			</div>
-			<div class="markdown" v-if="$page.post.content != false">
+			<div class="markdown" v-if="$page.post.fields.content != false">
 				<h2>About the Project</h2>
-				<div class="cols" v-html="$page.post.content" />
+				<div class="cols" v-html="$page.post.fields.content" />
 			</div>
 		</article>
 		<template slot="bottom-shelf">
 			<div v-if="$page.post.gallery != ''" class="mx-6 mb-24 md:mx-10">
 				<h2>Screenshots</h2>
 				<silentbox-group class="grid grid-cols-2 row-gap-6 col-gap-4 mt-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gallery">
-					<silentbox-item v-for="(photo, $index) in $page.post.gallery" :key="$index" :src="photo.full.src" :description="photo.title" class="border border-gray-300">
-						<g-image v-if="photo.thumb.src" :src="photo.thumb" :alt="photo.alt" width="265" height="200" />
+					<silentbox-item v-for="(photo, $index) in $page.post.fields.gallery" :key="$index" :src="`https://cockpit.smokeyfro.com/` + photo.path" class="border border-gray-300">
+						<g-image v-if="photo.path" :src="`https://cockpit.smokeyfro.com/` + photo.path" width="265" height="200" />
 					</silentbox-item>
 				</silentbox-group>
 			</div>
@@ -58,7 +58,7 @@ export default {
 	},
 	metaInfo() {
 		return {
-			title: `${this.$page.post.title}`,
+			// title: `${this.$page.post.title}`,
 			bodyAttrs: {
 				class: "project single"
 			}
@@ -74,28 +74,27 @@ export default {
 
 <page-query>
 query Post ($path: String) {
-	post: work(path: $path) {
+	post: cockpitWork(path: $path) {
 		title
 		slug
-		project_type
-		client
-		url
-		status
-		services
-		stack
-		launch_date
-		excerpt
-		content
 		path
-		gallery {
-			thumb
-			full
-			alt
-			title
+		fields {
+			excerpt
+			content
+			highlights
+			website
+			services
+			image {
+				path
+			}
+			gallery {
+				path
+			}
 		}
 	}
 }
 </page-query>
+
 <style src="../css/lightbox.css"></style>
 
 <style scoped>

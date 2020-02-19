@@ -1,0 +1,28 @@
+{
+  "version": "0.0.0",
+  "name": "@gridsome/source-cockpit",
+  "description": "Cockpit source for Gridsome",
+  "homepage": "https://github.com/gridsome/gridsome/tree/master/packages/source-cockpit#readme",
+  "repository": "https://github.com/gridsome/gridsome/tree/master/packages/source-cockpit",
+  "main": "index.js",
+  "keywords": [
+    "gridsome",
+    "gridsome-plugin",
+    "gridsome-source",
+    "cockpit"
+  ],
+  "dependencies": {
+    "cockpit-sdk": "^0.15.1",
+    "deepmerge": "^3.2.0",
+    "camelcase": "^5.0.0"
+  },
+  "peerDependencies": {
+    "gridsome": "0.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=8"
+  }
+}

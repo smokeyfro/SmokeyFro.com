@@ -259,48 +259,24 @@ module.exports = {
         options.plugins.unshift(...[
           require('postcss-import'),
           require('postcss-nested'),
-          require('tailwindcss')('tailwind.config.js'),
+          require('tailwindcss'),
         ])
 
         if (process.env.NODE_ENV === 'production') {
           options.plugins.push(...[
             require('@fullhuman/postcss-purgecss')({
               content: [
-                './src/**/*.css',
-                './src/**/*.vue',
-                './src/**/*.js',
-                './src/**/*.jsx',
-                './src/**/*.html',
-                './src/**/*.pug',
-                './src/**/*.md',
+                'src/assets/**/*.css',
+                'src/**/*.vue',
+                'src/**/*.js'
               ],
-              extractors: [
-                {
-                  extractor: TailwindExtractor,
-                  extensions: ['vue', 'js', 'jsx', 'md', 'html', 'pug'],
-                },
-              ],
-              whitelistPatterns: [
-                'body',
-                'html',
-                'img',
-                'a',
-                'g-image',
-                'g-image--lazy',
-                'g-image--loaded'
-              ]
+              defaultExtractor: content => content.match(/[\w-/:%]+(?<!:)/g) || [],
+              whitelistPatterns: [/shiki/]
             }),
           ])
         }
 
         return options
       })
-  },
-  // css: {
-  //   loaderOptions: {
-  //     postcss: {
-  //       plugins: postcssPlugins,
-  //     },
-  //   },
-  // },
+  }
 }

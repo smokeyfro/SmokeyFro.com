@@ -50,7 +50,7 @@ class CockpitSource {
     const typeName = store.makeTypeName('asset')
     const route = this.options.routes.asset || '/asset/:id'
 
-    const contentType = store.addContentType({ typeName, route })
+    const contentType = store.addCollection({ typeName, route })
 
     for (const asset of assets.assets) {
       const { _id: id, title, created, ...fields } = asset
@@ -70,7 +70,7 @@ class CockpitSource {
       const typeName = store.makeTypeName(collectionType)
 
       data.entries.forEach(entry => {
-        const collection = store.getContentType(typeName)
+        const collection = store.getCollection(typeName)
         const fieldsSpec = {}
 
         // Prepare the fields specifications and clone any fields

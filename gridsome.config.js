@@ -33,10 +33,10 @@ module.exports = {
         component: './src/templates/Service.vue'
       }
     ],
-    Project: [
+    CockpitProjects: [
       {
         path: '/projects/:slug',
-        component: './src/templates/Project.vue'
+        component: './src/templates/CockpitProject.vue'
       }
     ],
     CockpitWork: [
@@ -72,22 +72,44 @@ module.exports = {
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
-      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-      plugins: [
-        ['@noxify/gridsome-plugin-remark-image-download', {
-          targetPath: './media'
-        }]
-      ]
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer']
     }
   },
   plugins: [
     {
-      use: '@zefman/gridsome-source-instagram',
+      use: '~/src/plugins/gridsome-source-instagram',
       options: {
         username: 'smokeyfro',
         typeName: 'Photo'
       }
     },
+    {
+      use: '~/plugins/gridsome-plugin-remote-image-feature-nested-fields',
+      options: {
+        'typeName' : 'GhostPost',
+        'sourceField': 'feature_image',
+        'targetField': 'coverImage',
+        'targetPath': './media/tuts'
+      }
+    },
+    // {
+    //   use: '~/plugins/gridsome-plugin-remote-image-feature-nested-fields',
+    //   options: {
+    //     'typeName' : 'CockpitProjects',
+    //     'sourceField': 'fields.image.path',
+    //     'targetField': 'coverImage',
+    //     'targetPath': './media/work-images'
+    //   }
+    // },
+    // {
+    //   use: '@noxify/gridsome-plugin-image-download',
+    //   options: {
+    //     'typeName' : 'GhostPost',
+    //     'sourceField': 'feature_image',
+    //     'targetField': 'coverImage',
+    //     'targetPath': './media/tuts'
+    //   }
+    // },
     {
       use: 'gridsome-plugin-flexsearch',
       options: {
@@ -179,20 +201,13 @@ module.exports = {
       }
     },
     {
-      use: "@gridsome/source-filesystem",
-      options: {
-        path: "content/projects/**/*.md",
-        typeName: "Project",
-        resolveAbsolutePaths: true
-      }
-    },
-    {
       use: '~/src/plugins/source-cockpit',
         options: {
           accessToken: process.env.SF_ACCESS_TOKEN,
           host: process.env.SF_API_HOST,
           routes: {
-            CockpitWork: '/work/:slug'
+            CockpitWork: '/work/:slug',
+            CockpitProjects: '/projects/:slug'
           }
         }
     },

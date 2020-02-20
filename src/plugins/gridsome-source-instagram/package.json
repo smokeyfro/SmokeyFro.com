@@ -1,0 +1,28 @@
+{
+  "name": "@zefman/gridsome-source-instagram",
+  "version": "0.1.2",
+  "description": "Gridsome source plugin to load data from Instagram",
+  "main": "index.js",
+  "keywords": [
+    "gridsome",
+    "gridsome-plugin",
+    "instagram",
+    "vue"
+  ],
+  "author": "Jozef Maxted <hello@jozefmaxted.co.uk>",
+  "license": "MIT",
+  "homepage": "https://github.com/zefman/gridsome-source-instagram",
+  "repository": "https://github.com/zefman/gridsome-source-instagram",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.3"
+  },
+  "peerDependencies": {
+    "gridsome": "0.x"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3"
+  }
+}

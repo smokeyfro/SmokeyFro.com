@@ -9,8 +9,11 @@ module.exports = {
   siteUrl: "https://smokeyfro.com",
   titleTemplate: "%s - SmokeyFro",
   siteDescription: "Chris Rault, aka SmokeyFro - a designer, front-end developer and oocassional entrepreneur from South Africa.",
-  icon: 'src/favicon.png',
-  trailingSlash: false,
+  icon: 'src/favicon.svg',
+  //trailingSlash: false,
+  permalinks: { 
+    trailingSlash: false 
+  },
   prefetch: {
     mask: '^$',
   },
@@ -83,27 +86,27 @@ module.exports = {
         typeName: 'Photo'
       }
     },
-    {
-      use: '~/plugins/gridsome-plugin-remote-image-feature-nested-fields',
-      options: {
-        'typeName' : 'GhostPost',
-        'sourceField': 'feature_image',
-        'targetField': 'coverImage',
-        'targetPath': './media/tuts'
-      }
-    },
     // {
-    //   use: '~/plugins/gridsome-plugin-remote-image-feature-nested-fields',
+    //   use: '~/src/plugins/gridsome-plugin-remote-image',
     //   options: {
-    //     'typeName' : 'CockpitProjects',
-    //     'sourceField': 'fields.image.path',
-    //     'targetField': 'coverImage',
-    //     'targetPath': './media/work-images'
+    //     'typeName' : 'ghostPost',
+    //     'sourceField': 'feature_image',
+    //     'targetField': 'cover',
+    //     'targetPath': './media/tuts'
     //   }
     // },
     // {
-    //   use: '@noxify/gridsome-plugin-image-download',
+    //   use: '~/src/plugins/gridsome-plugin-remote-image',
     //   options: {
+    //     'typeName' : 'CockpitProjects',
+    //     'sourceField': 'fields.image.path',
+    //     'targetField': 'cover',
+    //     'targetPath': './media/work-images'
+    //   }
+    // },
+    //{
+    // use: '~/src/plugins/gridsome-plugin-remote-image',
+    // options: {
     //     'typeName' : 'GhostPost',
     //     'sourceField': 'feature_image',
     //     'targetField': 'coverImage',

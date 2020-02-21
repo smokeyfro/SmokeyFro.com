@@ -128,7 +128,7 @@ class ImageDownloader {
     getFieldType(actions) {
 
         const nodeCollection = actions.getCollection(this.options.typeName);
-
+        console.log(nodeCollection); 
         
 
         let findQuery = {};

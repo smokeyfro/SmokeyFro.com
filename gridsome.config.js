@@ -87,26 +87,8 @@ module.exports = {
       }
     },
     // {
-    //   use: '~/src/plugins/gridsome-plugin-remote-image',
+    //   use: '@noxify/gridsome-plugin-remote-image',
     //   options: {
-    //     'typeName' : 'ghostPost',
-    //     'sourceField': 'feature_image',
-    //     'targetField': 'cover',
-    //     'targetPath': './media/tuts'
-    //   }
-    // },
-    // {
-    //   use: '~/src/plugins/gridsome-plugin-remote-image',
-    //   options: {
-    //     'typeName' : 'CockpitProjects',
-    //     'sourceField': 'fields.image.path',
-    //     'targetField': 'cover',
-    //     'targetPath': './media/work-images'
-    //   }
-    // },
-    //{
-    // use: '~/src/plugins/gridsome-plugin-remote-image',
-    // options: {
     //     'typeName' : 'GhostPost',
     //     'sourceField': 'feature_image',
     //     'targetField': 'coverImage',
@@ -275,19 +257,18 @@ module.exports = {
         options.plugins.unshift(...[
           require('postcss-import'),
           require('postcss-nested'),
-          require('tailwindcss'),
+          require('tailwindcss')
         ])
 
         if (process.env.NODE_ENV === 'production') {
           options.plugins.push(...[
             require('@fullhuman/postcss-purgecss')({
               content: [
-                'src/assets/**/*.css',
-                'src/**/*.vue',
-                'src/**/*.js'
+                './../src/**/*.css',
+                './../src/**/*.vue',
+                './../src/**/*.js'
               ],
-              defaultExtractor: content => content.match(/[\w-/:%]+(?<!:)/g) || [],
-              whitelistPatterns: [/shiki/]
+              defaultExtractor: content => content.match(/[\w-/:%]+(?<!:)/g) || []
             }),
           ])
         }

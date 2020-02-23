@@ -10,7 +10,7 @@ repo_url: https://github.com/ThemeButler/tbr-banks
 requirements: WordPress 4.x
 type: Blog
 release_date: July, 2015
-image: /media/themes/banks-1-frontpage.jpg
+image: /media/themes/banks-thumb.jpg
 download_theme: "https://github.com/smokeyfro/sf-files/raw/master/sf-banks.zip"
 download_source: "https://github.com/smokeyfro/sf-files/raw/master/sf-banks-source.zip"
 gallery:

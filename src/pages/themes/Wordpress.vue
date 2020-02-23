@@ -3,7 +3,7 @@
 		<h1>WordPress</h1>
 		<p>These are the free WordPress themes I created using Beans that were previously available on ThemeButler.com</p> 
 		<template slot="bottom-shelf">
-			<div class="grid mx-6 mt-10 mb-10 grid-gap-4 md:gap-8 grid-cols1 md:grid-cols-2 lg:grid-cols-3 md:mx-10">
+			<div class="grid grid-cols-2 gap-6 mx-6 mt-10 mb-10 md:gap-8 lg:grid-cols-3 md:mx-10">
 				<ItemTheme :post="edge.node" v-for="edge in $page.posts.edges" :key="edge.node.id" />
 			</div>
 		</template>
@@ -57,9 +57,3 @@ export default {
 		}
 	}
 </page-query>
-
-<style scoped>
-.themes .item:not(.beans) {
-	display: none;
-}
-</style>

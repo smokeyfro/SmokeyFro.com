@@ -13,9 +13,11 @@
 		"@gridsome/source-filesystem": "^0.6.2",
 		"@gridsome/source-ghost": "^0.3.1",
 		"@gridsome/transformer-remark": "^0.5.0",
+		"@noxify/gridsome-plugin-remote-image": "https://github.com/noxify/gridsome-plugin-remote-image.git",
 		"@zefman/gridsome-source-instagram": "^0.1.2",
 		"cockpit-sdk": "^0.15.1",
-		"gridsome": "0.7.12",
+		"core-js": "3.6.4",
+		"gridsome": "0.7.13",
 		"gridsome-plugin-feed": "^1.0.2",
 		"gridsome-plugin-flexsearch": "^0.1.12",
 		"gridsome-plugin-remark-youtube": "^1.0.1",
@@ -29,5 +31,10 @@
 		"postcss-loader": "^3.0.0",
 		"postcss-nested": "^4.2.1",
 		"tailwindcss": "^1.2.0"
+	},
+	"resolutions": {
+		"**/core-js": "3.6.2",
+		"@vue/babel-preset-app/**/core-js": "3.6.2",
+		"gridsome/**/core-js": "3.6.2"
 	}
 }

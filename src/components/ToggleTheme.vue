@@ -26,18 +26,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.toggle-theme {
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-}
-  .toggle-theme:hover {
-    opacity: .8
-  }
-  /* .toggle-theme:focus {
-    outline: none;
-  } */
-
-</style>

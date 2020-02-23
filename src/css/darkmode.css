@@ -38,9 +38,7 @@
 
     /* Main Body */
     main {
-        filter:drop-shadow(0 0 14px black);
-        background-color: rgb(19, 19, 19);
-        background-image: url(/topography.svg);
+        background-color: rgba(19, 19, 19, 0.95);
         background-repeat: no-repeat;
         background-size: cover;
     
@@ -99,13 +97,13 @@
     }
 
     /* Cards */
-    .card-image {
+    .card-image a img {
         filter: saturate(0);
-        opacity: .5;
+        opacity: .9;
         transition: all .3s ease-out;
         border-bottom: 0;
     }
-    .work .card-image:hover {
+    .card-image a:hover img {
         filter: saturate(1);
         opacity: 1;
     }

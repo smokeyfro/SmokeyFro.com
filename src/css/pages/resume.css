@@ -1,0 +1,57 @@
+.resume {
+	h1 {
+		@apply px-5 py-2 text-white border-l-8 rounded-tl-lg rounded-br-lg border-accent ;
+		background: #1C2F39;
+	}
+	h3 {
+		@apply text-xl;
+	}
+	p {
+		@apply text-base;
+	}
+	.date {
+		white-space: nowrap;
+		margin: .2rem 0 0 0;
+		min-width: 160px;
+		display: block;
+		@apply text-sm text-gray-700;
+	}
+	.download {
+		bottom: 5rem;
+		right: 0rem;
+	}
+	.resume-body {
+		h2 {
+			@apply inline-block text-base uppercase border-b-4 border-solid border-accent;
+		}
+		a {
+			background: transparent;
+			padding: 0;
+			color: #777;
+			font-weight: normal;
+		}
+	}
+	.contact-info,
+	.contact-info li {
+		list-style: none;
+		margin-left: 0;
+		padding: 0;
+	}
+	.contact-info li {
+		margin: 0;
+	}
+	.contact-info strong {
+		display: block;
+	}
+}
+
+:root [data-theme=dark].resume .resume-body a {
+	background: transparent;
+	color: #fff;
+}
+:root [data-theme=dark].resume figure svg {
+	fill: #fff;
+} 
+:root [data-theme=dark].resume h1 {
+	@apply px-5 py-2 text-black bg-white border-l-8 rounded-tl-lg rounded-br-lg border-accent ;
+}

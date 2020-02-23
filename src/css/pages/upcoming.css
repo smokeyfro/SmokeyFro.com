@@ -1,0 +1,8 @@
+@media (min-width: 768px) {
+	.upcoming.grid {
+		grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+	}
+}
+.upcoming > li {
+	border-color: #ffd166;
+}

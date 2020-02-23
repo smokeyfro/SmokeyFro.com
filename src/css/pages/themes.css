@@ -13,6 +13,10 @@
 .themes main article p:last-of-type {
 	margin: 0;
 }
+.themes .item:not(.beans) {
+	display: none;
+}
+
 @media ( max-width: 480px ) {
 	.browser-content {
 		overflow: hidden;

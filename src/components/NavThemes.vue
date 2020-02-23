@@ -11,9 +11,3 @@ export default {
   name: "NavThemes"
 };
 </script>
-
-<style scoped>
-/* .aside nav.side a:last-of-type {
-	padding-right: 0;
-} */
-</style>

@@ -5,8 +5,8 @@
 			<p>Know what you're looking for? Type a search term or phrase.</p>
 			<div class="search">
 				<div class="block w-full mt-6">
-					<input id="search" v-model="searchTerm" :v-bind="searchTerm" type="search" results="5" v-focus class="block w-full mt-2 form-input" placeholder="Type in a phrase or search term...">
-					<p class="flex-row mt-5 text-sm text-gray-600 md:mt-3 examples">Or try one of these: <button v-on:click="searchTerm = 'themes'">themes</button>, <button v-on:click="searchTerm = 'jamstack'">jamstack</button>, <button v-on:click="searchTerm = 'vue'">vue</button>, <button v-on:click="searchTerm = 'wordpress'">wordpress</button>, <button v-on:click="searchTerm = 'beans'">beans</button></p>
+					<input id="search" v-model="searchTerm" :v-bind="searchTerm" type="search" results="10" v-focus class="block w-full mt-2 form-input" placeholder="Type in a phrase or search term...">
+					<p class="flex-row mt-2 text-sm text-gray-600 md:mt-3 examples">Or try one of these: <button v-on:click="searchTerm = 'themes'">themes</button>, <button v-on:click="searchTerm = 'jamstack'">jamstack</button>, <button v-on:click="searchTerm = 'vue'">vue</button>, <button v-on:click="searchTerm = 'wordpress'">wordpress</button>, <button v-on:click="searchTerm = 'beans'">beans</button></p>
 				</div>
 				<div class="results">
 					<div v-for="item in searchResults" :key="item.id">
@@ -55,42 +55,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.examples button {
-	@apply bg-yellow-200 px-2 py-1 inline-block text-gray-800
-}
-.badge {
-	top: -1px;
-}
-.badge.services {
-    @apply bg-green-300;
-}
-.badge.themes {
-    @apply bg-orange-300;
-}
-.badge.designs {
-    @apply bg-blue-300;
-}
-.badge.tuts {
-    @apply bg-purple-300;
-}
-.badge.journal {
-    @apply bg-red-300;
-}
-.search .app {
-	grid-template-columns: 80px 1fr;
-	grid-template-areas:
-	"header main main"
-	"header main main";
-}
-.search main {
-	background: #f3f7f9;
-	padding: 0;
-}
-@media ( max-width: 640px ) {
-	.search main {
-		height: calc(100vh - 52px);
-	}
-}
-</style>

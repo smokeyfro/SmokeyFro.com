@@ -1,15 +1,13 @@
 <template>
 	<Layout :sidebar="true" :top="false" :bottom="false">
-		<article>
+		<article class="mb-12">
 			<h1>{{ $page.post.title }}</h1>
 			<p v-html="$page.post.description" />
 			<div v-html="$page.post.html" />
 			<nav>
-					<g-link :to="tag.path" v-for="tag in $page.post.tags" v-bind:key="tag.id">#{{ tag.name }}</g-link>
+				<g-link :to="tag.path" v-for="tag in $page.post.tags" v-bind:key="tag.id">#{{ tag.name }}</g-link>
 			</nav>
-			<!-- <h2>Comments</h2>
-			<div id="commento"></div> -->
-			<Newsletter title="Never miss a post" summary="Signup below to be notified when new posts are posted" />
+			<Newsletter class="pt-10 mt-24 border-t-2" title="Never miss a post" summary="Signup below to be notified when new posts are posted" />
 		</article>
 		<template slot="navgroup">
 			Journal

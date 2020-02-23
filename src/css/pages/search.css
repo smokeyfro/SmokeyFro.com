@@ -1,0 +1,37 @@
+.examples button {
+	@apply bg-yellow-200 px-1 py-0 inline-block text-xs text-gray-800
+}
+.badge {
+	top: -1px;
+}
+.badge.services {
+    @apply bg-green-300;
+}
+.badge.themes {
+    @apply bg-orange-300;
+}
+.badge.designs {
+    @apply bg-blue-300;
+}
+.badge.tuts {
+    @apply bg-purple-300;
+}
+.badge.journal {
+    @apply bg-red-300;
+}
+.search .app {
+	grid-template-columns: 80px 1fr;
+	grid-template-areas:
+	"header main main"
+	"header main main";
+}
+.search main {
+	background: #f3f7f9f7;
+	padding: 50px 0 0 0;
+	height: 100vh;
+}
+/* @media ( max-width: 640px ) {
+	.search main {
+		height: calc(100vh - 52px);
+	}
+} */

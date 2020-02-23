@@ -1,7 +1,7 @@
 /* Sub-Navigation
 ****************************************************/
 aside {
-	background: #f3f7f9;
+	background: #f3f7f9f7;
 }
 .secondary {
     @apply flex flex-col items-start;

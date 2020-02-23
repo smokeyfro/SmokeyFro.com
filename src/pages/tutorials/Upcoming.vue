@@ -1,15 +1,29 @@
 <template>
-	<Layout :sidebar="true" :top="false" :bottom="true">
-		<h1>Upcoming</h1>
+	<Layout :sidebar="true" :top="false" :bottom="false">
+		<h1>Upcoming tutorials</h1>
 		<p>Below is a list of the tutorials I'll be writing as I get time. Don't feel like waiting? Sponsor a tutorial to get it bumped up the queue.</p>
+		<table class="w-full mb-10 overflow-hidden text-left bg-white border rounded-sm shadow-lg">
+			<thead class="text-white bg-black">
+				<th class="rounded-tl-lg">#</th>
+				<th>Title</th>
+				<th>Topic</th>
+				<th>Difficulty</th>
+				<th class="rounded-tr-lg">Tags</th>
+			</thead>
+			<!-- <tfoot>
+				<td colspan="4"></td>
+			</tfoot> -->
+			<tbody>
+				<tr v-for="(edge, $index) in $page.upcoming.edges" :key="edge.node.id">
+					<td class="w-10 text-xs text-gray-600"><span class="">#{{ $index + 1 }}</span></td>
+					<td>{{ edge.node.title }}</td>
+					<td class="text-sm">{{ edge.node.topic }}</td>
+					<td class="text-sm">{{ edge.node.level }}</td>
+					<td class="text-sm text-gray-600">{{ edge.node.tags }}</td>
+				</tr>
+			</tbody>
+		</table>
 		<template slot="navgroup">Tutorials</template>
-		<template slot="bottom-shelf">
-			<ul class="grid grid-cols-1 gap-0 mx-10 mt-8 reset md:grid-cols-2">
-				<li class="mb-4" v-for="edge in $page.upcoming.edges" :key="edge.node.id">
-					<span class="block text-lg font-semibold">{{ edge.node.title }}</span>
-				</li>
-			</ul>
-		</template>
 		<template slot="secondary-nav">
 			<NavTuts />
 		</template>
@@ -42,18 +56,12 @@ export default {
 				node {
 					id
 					title
+					topic
+					tags
+					level
+					amount
 				}
 			}
 		}
 	}
 </page-query>
-<style>
-@media (min-width: 768px) {
-	.upcoming.grid {
-		grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
-	}
-}
-.upcoming > li {
-	border-color: #ffd166;
-}
-</style>

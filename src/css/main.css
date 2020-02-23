@@ -1,7 +1,7 @@
 /* Main Body
 ****************************************************/
 main {
-	background: #fff;
+    background: #fffffff7;
     
     h1, h2, h3, h4, h5 {
         color: #1C2F39;
@@ -24,7 +24,8 @@ main {
     ul, ol {
         @apply mb-5 ml-5
     }
-    :not(.reset) li {
+    ul:not(.reset) li,
+    ol:not(.reset) li {
         @apply mb-3;
         list-style: circle;
     }
@@ -43,4 +44,28 @@ main {
             fill: #1C2F39;
         }
     }
+}
+
+/* Email */
+span.reverse {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+.wordpress .item:not(.beans) {
+	display: none;
+}
+.gridsome .item:not(.jamstack) {
+	display: none;
+}
+
+table th,
+table td {
+	@apply px-2 py-2
+}
+table tr {
+	@apply shadow-sm transition-all duration-500 ease-in-out border-t
+}
+table tr:hover {
+	@apply shadow-md bg-yellow-100
 }

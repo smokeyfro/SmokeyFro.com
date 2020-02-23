@@ -102,39 +102,3 @@ export default {
     }
 }
 </script>
-
-<style>
-@media( max-width: 640px ) {
-    .mobile-links {
-        top: 40px;
-        background: #192932;
-        width: auto;
-        right: 0;
-        opacity: 1;
-        border-radius: 3px;
-        border-bottom: 3px solid #ffc800;
-        box-shadow: 0 -4px 10px 0px rgba(0,0,0,.3);
-    }
-    .app .mobile-links a {
-        margin: 0;    
-        padding: 15px;
-        display: block;
-        line-height: 1;
-        opacity: 1;
-        color: rgba(255,255,255,0.7);
-    }
-    .app .mobile-links a.active {
-        color: rgba(255,255,255,1);
-    }
-    .app .mobile-links a:not(:last-of-type) {
-        border-bottom: 1px solid rgba(255,255,255,0.2);
-    }
-    .mobile-links svg {
-        display: none;
-    }
-    .close-nav {
-        position: relative;
-        top: 1px;
-    }
-}
-</style>

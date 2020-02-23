@@ -1,0 +1,88 @@
+.format sup {
+    @apply ml-2 text-sm
+  }
+    .sponsor main > div > div:last-of-type svg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      opacity: .2;
+    }
+  .perks-image {
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+  }
+  .perks {
+      padding: 1.5rem 1rem 1rem;
+      align-items: flex-start;
+  }
+  .perks h3 {
+      margin: 0 0 .5rem;
+      padding: .5rem 0 0;
+  }
+  .perks ul {
+      margin: 0;
+      padding: 0;
+  }
+  .perks li {
+      display: flex;
+      margin: 0 0 .5rem;
+      padding: 0;
+  }
+  .perks li:last-of-type {
+      margin: 0;
+  }
+  .perks strong {
+      margin-right: .5rem;
+  }
+  
+  .sponsor .main > div > div:last-of-type h3 {
+    margin-top: 0;
+  }
+  .message-wrapper div:last-of-type > div {
+    margin-top: .5rem;
+  }
+  .message-wrapper button mark {
+      background-color: #fff;
+      border-radius: 2px;
+      padding: 0 6px;
+  }
+  .message-wrapper div:last-of-type > div label sup {
+    color: #777;
+    font-size: .8rem;
+    font-weight: normal;
+  }
+  @media (min-width: 768px) {
+    .sponsor .main > div {
+      display: flex;
+    }
+    .sponsor .main > div > div {
+      width: 70%;
+    }
+    .sponsor .main > div > div:last-of-type {
+      width: 30%;
+      background: #f8f8f8e5;
+      position: relative;
+      margin-left: 3rem;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .format {
+        border-bottom: 1px solid #ccc;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    .mt-2.format label {
+        margin: 0;
+        padding: 10px 14px;
+        border: 1px solid #ccc;
+        border-width: 1px 1px 0 1px;
+        display: block;
+    }
+    .format label.active {
+      background: #fffef0;
+    }
+  }

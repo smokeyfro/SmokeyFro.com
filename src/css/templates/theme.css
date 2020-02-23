@@ -1,0 +1,24 @@
+.main {
+	position: relative;
+}
+main nav svg {
+    max-width: 10px;
+}
+main nav svg path {
+    stroke: #000;
+}
+.meta {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.meta > div a {
+	display: block;
+}
+.downloads a {
+	display: block;
+}
+.demo-link svg,
+.downloads svg {
+	width: 12px;
+}

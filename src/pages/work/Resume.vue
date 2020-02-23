@@ -1,7 +1,7 @@
 <template>
 	<Layout :sidebar="true" :top="true" :bottom="true">
 		<template slot="top-shelf">
-			<div class="flex flex-col items-center justify-center h-screen ml-2 -md:mt-20 lg:flex-row hero" v-for="({ name, birthDate, location, title, downloadLink, resumeImage }, i) in resume.info" :key="i">
+			<div class="flex flex-col items-center justify-center mt-24 ml-2 lg:h-screen -md:mt-20 lg:flex-row hero" v-for="({ name, birthDate, location, title, downloadLink, resumeImage }, i) in resume.info" :key="i">
 				<figure class="lg:mr-6">
 					<svg fill="#1C2F39" class="w-56 h-56" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 77 63">
 						<defs />
@@ -11,10 +11,10 @@
 						</g>
 					</svg>
 				</figure>
-				<div class="w-2/3">
-					<p class="mt-0 mb-2 text-center md:text-left">The online, <em>always-up-to-date</em> resume of</p>
+				<div class="w-3/4 lg:w-2/3">
+					<p class="mb-2 text-center md:text-left">The online, <em>always-up-to-date</em> resume of</p>
 					<h1 class="block mx-auto mt-0 mb-5 text-center md:text-left md:inline-block">{{ name }}</h1>
-					<h2 class="mb-3 text-xl font-normal leading-relaxed text-gray-800 lg:text-xl">A <span>{{ title }}</span> working remotely from {{ location }}.</h2>
+					<h2 class="mb-3 text-2xl font-normal leading-relaxed text-center text-gray-800 md:text-left lg:text-xl">A <span>{{ title }}</span> working remotely from {{ location }}.</h2>
 					<p class="m-0 text-center md:text-left download">
 						<a href="#" @click="printNow" class="link">
 							<svg class="inline-block w-6" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
@@ -85,7 +85,7 @@
 							</div>
 						</div>
 					</div>
-					<div>
+					<div class="mt-10 md:mt-0">
 						<h2 class="mt-0">Education</h2>
 						<div class="grid grid-cols-2 gap-4 mt-5 lg:gap-6 education">
 							<div v-for="({ date, location, organization, topic }, i) in resume.education" :key="i">
@@ -170,59 +170,3 @@ export default {
 	}
 };
 </script>
-
-<style scoped>
-.resume h3 {
-	@apply text-xl;
-}
-.resume p {
-	@apply text-base;
-}
-.date {
-	white-space: nowrap;
-	margin: .2rem 0 0 0;
-	min-width: 160px;
-	display: block;
-	@apply text-sm text-gray-700;
-}
-
-.download {
-	bottom: 5rem;
-	right: 0rem;
-}
-h1 {
-	@apply text-white px-5 py-2 border-accent border-l-8 rounded-tl-lg rounded-br-lg ;
-	background: #1C2F39;
-}
-.resume-body h2 {
-	@apply uppercase text-base border-solid border-b-4 border-accent inline-block;
-}
-.contact-info,
-.contact-info li {
-	list-style: none;
-	margin-left: 0;
-	padding: 0;
-}
-.contact-info li {
-	margin: 0;
-}
-.contact-info strong {
-	display: block;
-}
-.resume .resume-body a {
-	background: transparent;
-	padding: 0;
-	color: #777;
-	font-weight: normal;
-}
-:root [data-theme=dark].resume .resume-body a {
-	background: transparent;
-	color: #fff;
-}
-:root [data-theme=dark].resume figure svg {
-	fill: #fff;
-} 
-:root [data-theme=dark].resume h1 {
-	@apply bg-white text-black px-5 py-2 border-accent border-l-8 rounded-tl-lg rounded-br-lg ;
-}
-</style>

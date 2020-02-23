@@ -1,0 +1,25 @@
+h1 strong:before {
+	content: '#';
+}
+.tuts p:first-of-type a {
+	line-height: 1;
+	margin-right: 5px;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-radius: 2px;
+	font-size: .9rem;
+	display: inline-block;
+}
+.tuts p:first-of-type a:before {
+	content: '#';
+}
+.tuts figure {
+	margin: 0;
+	height: 200px;
+	overflow: hidden;
+}
+.grid figure {
+	margin: 0;
+	height: 200px;
+	overflow: hidden;
+}

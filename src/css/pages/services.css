@@ -1,0 +1,4 @@
+:root [data-theme=dark].services .grid img {
+	filter: invert(1);
+	opacity: .8;
+}

@@ -1,0 +1,108 @@
+@media ( max-width: 640px ) {
+    .error main {
+        background-position: bottom center;
+        background-size: 100%;
+    }
+    html, .error, .app {
+        height: 100%;
+    }
+    .error main {
+        height: calc(100% - 52px);
+    }
+    .inline-search {
+        background: #fffffff0;
+    }
+}
+
+/* .error header {
+    background: #7a1414;
+} */
+.error main {
+background-image: url(/chris-manson.svg);
+background-repeat: no-repeat;
+background-color: #ffc8002e;
+}
+.error-page main {
+    padding-top: 2rem;
+}
+.sidebar { 
+z-index: 9999;
+}
+.error-bg {
+z-index: -1;
+}
+.error-bg main:hover span.poop {
+top: -3.5em!important;
+}
+.error-page .layout {
+    grid-template-columns: 70px 1fr;
+}
+.error-page .layout main {
+grid-column: 2;
+column-span: 2;
+}
+.error-page .main {
+    display: flex;
+    justify-content: flex-end;
+}
+.error-page .poop {
+    font-size: 5rem;
+}
+.error-page .main > section {
+    width: 500px;
+    margin: 2rem 2rem 0 0;
+}
+.error-page .main > section form {
+    padding: 1rem 3rem 3rem;
+    background: #f8f8f8;
+}
+.error-page .main > section > div > div {
+    font-size: 1.2em;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.error-page .main h1 {
+    margin: 0;
+    line-height: 1;
+}
+@media (min-width: 1024px) {
+.error .app {
+        grid-template-columns: 80px 1fr;
+        grid-template-areas:
+        "header main main"
+        "header main main";
+        height: 100vh;
+    }
+.error header {
+    height: 100vh;
+}
+.error main {
+    position: fixed;
+    left: 80px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+}
+.search-box {
+@apply bg-white;
+}
+.results .item {
+@apply bg-white
+}
+:root [data-theme=dark] .results .item {
+@apply text-white bg-black;
+}
+:root [data-theme=dark].error .search-box {
+@apply text-white bg-gray-900;
+}
+:root [data-theme=dark].error .search-box svg path,
+:root [data-theme=dark].error .search-box svg circle {
+stroke: #fff;
+}
+:root [data-theme=dark].error .icon {
+filter: invert(1);
+opacity: .8;
+}

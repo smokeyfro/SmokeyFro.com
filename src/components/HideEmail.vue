@@ -13,10 +13,3 @@
         }
     }
 </script>
-
-<style scoped>
-    span.reverse {
-        unicode-bidi: bidi-override;
-        direction: rtl;
-    }
-</style>

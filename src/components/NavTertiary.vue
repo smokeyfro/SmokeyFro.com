@@ -22,8 +22,6 @@
 </template>
 
 <script>
-// import ToggleTheme from "~/components/ToggleTheme.vue";
-
 export default {
 	data() {
 		return {
@@ -43,11 +41,3 @@ export default {
   	}
 }
 </script>
-
-<style>
-@media( max-width: 640px ) {
-    .tertiary a {
-        padding: 0 5px;
-    }
-}
-</style>

@@ -1,0 +1,7 @@
+.gear li strong {
+    display: block;
+    color: #111;
+}
+[data-theme=dark].gear li strong {
+    color: rgba(255,255,255,0.8);
+}

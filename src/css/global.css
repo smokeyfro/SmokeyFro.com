@@ -7,6 +7,15 @@
 @import 'header';
 @import 'aside';
 @import 'main';
+@import 'browser';
 @import 'forms';
 @import 'darkmode';
 @import 'media-queries';
+
+html {
+    background-image: url(/topography.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+}

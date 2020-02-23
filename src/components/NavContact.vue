@@ -1,5 +1,3 @@
-
-
 <template>
     <nav class="flex nav secondary">
         <g-link to="/contact" exact><span>Message</span></g-link>

@@ -44,7 +44,7 @@
 		metaInfo: {
 			title: "Selected works by SmokeyFro",
 			bodyAttrs: {
-				class: "work index"
+				class: ""
 			}
 		}
 	};

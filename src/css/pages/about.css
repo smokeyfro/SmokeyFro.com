@@ -1,0 +1,35 @@
+.about {
+	main {
+		position: relative;
+		& > div {
+			padding: 0;
+			position: relative;
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+	.chris-forward {
+		margin-bottom: 1rem;
+	}
+	.about-over p:last-of-type {
+		margin-bottom: 0;
+	}
+}
+@media ( max-width: 480px ) {
+	.about main > div > div {
+		margin-bottom: 30px;
+	}
+	.curve {
+		display: none;
+	}
+	img.bottom-image {
+		padding: 0;
+		left: 0;
+	}
+}
+@media ( min-width: 768px ) {
+	.chris-forward svg {
+		width: 13vw;
+		margin: .3rem 1.6rem 1rem 0;
+	}
+}

@@ -1,0 +1,56 @@
+.jam,
+.jam .main {
+	background: var(--aside-color);
+}
+.jam .layout {
+	grid-template-columns: 70px 1fr;
+}
+.jam .layout main {
+  grid-column: 2;
+  column-span: 2;
+}
+.jam .main {
+	display: flex;
+	flex-direction: column;
+}
+.jam .main article {
+	order: 2;
+}
+.jam .main > div {
+	margin:  3rem 0 0;
+	order: 1;
+}
+.jam .main > div figure {
+	margin: 0;
+}
+.jam h1 {
+	font-size: 1rem;
+	margin-top: 1.3rem;
+}
+.jam h1 svg {
+	width: 32px;
+	margin-right: 5px;
+}
+.jam h1 strong {
+	font-size: 2.7rem;
+	line-height: 1.8rem;
+	display: block;
+}
+@media (min-width: 768px) {
+
+	.jam .main {
+		flex-direction: row;
+	}
+	.jam .main article {
+		width: 70%;
+		order: 1;
+	}
+	.jam .main > div {
+		width: 30%;
+		padding-top: 3rem;
+		order: 2;
+	}
+	.jam .main > div figure {
+		margin:  0;
+	}
+}

@@ -18,9 +18,9 @@
 				<p class="m-0">A brief history of the three digital product companies I helped create, our sweet taste of success, our discent down the rabbit whole, a tale of not giving up and a bunch of solid lessons learnt along the way.</p>
 			</article>
 		</div>
-		<h2 class="mt-10">Past Talks</h2>
+		<h2 class="mt-20">Past Talks</h2>
 		<p>Below are some of my past talks from when I was still working with Joomla!.</p>
-		<div class="grid gap-8 md:gap-4 grid-cols1">
+		<div class="grid gap-8 mb-16 md:gap-4 grid-cols1">
 			<article>
 				<h3>Content Construction with Zoo</h3>
 				<p class="mb-2">For those new to content construction and the Zoo component for Joomla. The talk covered an overview of how content construction works, an overview of Zoo's features and a couple tricks I learnt along the way.</p>

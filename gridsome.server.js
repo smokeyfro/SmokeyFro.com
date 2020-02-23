@@ -12,7 +12,11 @@ module.exports = function (api) {
       contentType.addNode({
         id: item.id,
         title: item.title,
-        path: item.slug
+        path: item.slug,
+        topic: item.topic,
+        tags: item.tags,
+        level: item.level,
+        amount: item.amount
       })
     }
   })

@@ -1,7 +1,7 @@
 <template>
 	<Layout :sidebar="true" :top="true" :bottom="true">
 		<template slot="top-shelf">
-			<div class="flex flex-col items-center justify-center mt-24 ml-2 lg:h-screen -md:mt-20 lg:flex-row hero" v-for="({ name, birthDate, location, title, downloadLink, resumeImage }, i) in resume.info" :key="i">
+			<div class="flex flex-col items-center justify-center ml-2 lg:h-screen -md:mt-20 lg:flex-row hero" v-for="({ name, birthDate, location, title, downloadLink, resumeImage }, i) in resume.info" :key="i">
 				<figure class="lg:mr-6">
 					<svg fill="#1C2F39" class="w-56 h-56" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 77 63">
 						<defs />
@@ -12,11 +12,11 @@
 					</svg>
 				</figure>
 				<div class="w-3/4 lg:w-2/3">
-					<p class="mb-2 text-center md:text-left">The online, <em>always-up-to-date</em> resume of</p>
-					<h1 class="block mx-auto mt-0 mb-5 text-center md:text-left md:inline-block">{{ name }}</h1>
+					<p class="mb-2 text-sm text-center md:text-left">The online, <em>always-up-to-date</em> resume of</p>
+					<h1 class="block mx-auto mt-0 mb-2 text-center md:text-left md:inline-block">{{ name }}</h1>
 					<h2 class="mb-3 text-2xl font-normal leading-relaxed text-center text-gray-800 md:text-left lg:text-xl">A <span>{{ title }}</span> working remotely from {{ location }}.</h2>
-					<p class="m-0 text-center md:text-left download">
-						<a href="#" @click="printNow" class="link">
+					<p class="m-0 text-base text-center md:text-left download">
+						<a href="#" @click="printNow">
 							<svg class="inline-block w-6" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
 							<defs />
 							<path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2" />
@@ -24,7 +24,7 @@
 							</svg>
 							Print
 						</a>&nbsp;&nbsp;&nbsp;
-						<a href="/Chris-Rault-Resume-2020.pdf" class="link" download>
+						<a href="/Chris-Rault-Resume-2020.pdf" download>
 							<svg class="inline-block w-6" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
 							<defs />
 							<path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
@@ -41,10 +41,10 @@
 					<h2>Work Experience</h2>
 					<div class="grid grid-cols-1 gap-6 mt-5">
 						<div v-for="({ date, location, company, role, summary }, i) in resume.experience" :key="i" class="flex items-start">
-							<div class="date">{{ date }}</div>
+							<div class="w-48 mt-2 text-sm text-gray-700 date">{{ date }}</div>
 							<div class="content">
-								<h3 class="leading-tight">{{ role }} @ {{ company }}</h3>
-								<p class="max-w-3xl mb-0" v-if="summary">{{ summary }}</p>
+								<h3 class="text-2xl leading-tight">{{ role }} @ {{ company }}</h3>
+								<p class="max-w-3xl mb-0 text-base" v-if="summary">{{ summary }}</p>
 							</div>
 						</div>
 					</div>
@@ -53,8 +53,8 @@
 					<h2>Skills</h2>
 					<div class="grid grid-cols-1 row-gap-4 col-gap-8 mt-5 md:grid-cols-2 skills">
 						<div v-for="({ title, description }, i) in resume.skills" :key="i">
-							<h3>{{ title }}</h3>
-							<p class="m-0" v-if="description" v-html="description" />
+							<h3 class="text-2xl">{{ title }}</h3>
+							<p class="m-0 text-base" v-if="description" v-html="description" />
 						</div>
 					</div>
 				</div>
@@ -63,12 +63,12 @@
 					<div class="grid grid-cols-1 gap-8 mt-5 md:grid-cols-2 projects">
 						<div v-for="({ name, status, url, summary, image }, i) in resume.projects" :key="i">
 							<div>
-								<h3>{{ name }}</h3>
+								<h3 class="mb-0 text-2xl">{{ name }}</h3>
 								<!-- <span :class="status" class="status">{{ status }}</span> -->
 							</div>
-							<p class="mb-2" v-if="summary" v-html="summary" />
-							<p class="m-0" v-if="url">
-								<a :href="url" :title="name">{{ url }}</a>
+							<p class="mb-2 text-base" v-if="summary" v-html="summary" />
+							<p class="m-0 text-sm" v-if="url">
+								<a :href="url" :title="name" class="link">{{ url }}</a>
 							</p>
 						</div>
 					</div>
@@ -79,8 +79,8 @@
 						<div class="grid grid-cols-2 row-gap-6 col-gap-4 mt-5 lg:gap-6 references">
 							<div v-for="({ name, image, title, company }, i) in resume.references" :key="i">
 								<div>
-									<h3 class="mt-0">{{ name }}</h3>
-									<p class="m-0"><em>{{ title }}</em>, {{ company }}</p>
+									<h3 class="mt-0 text-2xl">{{ name }}</h3>
+									<p class="m-0 text-base"><em>{{ title }}</em>, {{ company }}</p>
 								</div>
 							</div>
 						</div>
@@ -89,47 +89,47 @@
 						<h2 class="mt-0">Education</h2>
 						<div class="grid grid-cols-2 gap-4 mt-5 lg:gap-6 education">
 							<div v-for="({ date, location, organization, topic }, i) in resume.education" :key="i">
-								<h3>{{ topic }}</h3>
-								<p class="m-0 text-xl">{{ organization }}</p>
-								<p class="m-0 mt-2 text-gray-600">{{ date }}</p>
+								<h3 class="text-2xl">{{ topic }}</h3>
+								<p class="m-0 text-base">{{ organization }}</p>
+								<p class="m-0 mt-2 text-sm text-gray-600">{{ date }}</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="mx-6 mt-20 mb-24 md:mx-10">
 					<h2 class="mb-6">Contact Info</h2>
-					<ul class="grid grid-cols-2 row-gap-4 col-gap-16 list-none lg:grid-cols-4 contact-info" v-for="({ website, handle, email, phone, skype, telegram, linkedin }, i) in resume.contact" :key="i">
+					<ul class="grid grid-cols-2 row-gap-4 col-gap-16 ml-0 list-none reset lg:grid-cols-4 contact-info" v-for="({ website, handle, email, phone, skype, telegram, linkedin }, i) in resume.contact" :key="i">
 						<li>
-							<strong>Website</strong>
-							<span>{{ website}}</span>
+							<span class="block text-sm text-gray-600">Website</span>
+							<strong>{{ website}}</strong>
 						</li>
 						<li>
-							<strong>Email</strong>
-							<span><HideEmail :email="email" /></span>
+							<span class="block text-sm text-gray-600">Email</span>
+							<strong><HideEmail :email="email" /></strong>
 						</li>
 						<li>
-							<strong>Phone</strong>
-							<span>{{ phone }}</span>
+							<span class="block text-sm text-gray-600">Phone</span>
+							<strong>{{ phone }}</strong>
 						</li>
 						<li>
-							<strong>Skype</strong>
-							<span>{{ skype }}</span>
+							<span class="block text-sm text-gray-600">Skype</span>
+							<strong>{{ skype }}</strong>
 						</li>
 						<li>
-							<strong>Telegram</strong>
-							<span>{{ telegram }}</span>
+							<span class="block text-sm text-gray-600">Telegram</span>
+							<strong>{{ telegram }}</strong>
 						</li>
 						<li>
-							<strong>On the web</strong>
-							<span>@{{ handle }}</span>
+							<span class="block">On the web</span>
+							<strong>@{{ handle }}</strong>
 						</li>
 						<li>
-							<strong>Timezone</strong>
-							<span>UCT+2</span>
+							<span class="block text-sm text-gray-600">Timezone</span>
+							<strong>UCT+2</strong>
 						</li>
 						<li>
-							<strong>Linkedin</strong>
-							<span><a :href="linkedin" class="link">chris.rault</a></span>
+							<span class="block text-sm text-gray-600">Linkedin</span>
+							<strong><a :href="linkedin" class="link">chris.rault</a></strong>
 						</li>
 					</ul>
 				</div>

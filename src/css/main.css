@@ -1,10 +1,10 @@
 /* Main Body
 ****************************************************/
 main {
-    background: #fffffff7;
+    background-color: var(--main-bg);
     
     h1, h2, h3, h4, h5 {
-        color: #1C2F39;
+        color: var(--heading-color);
     }
     h1 {
         @apply mb-2 text-3xl font-bold leading-snug;
@@ -36,6 +36,9 @@ main {
         padding: 0 5px;
     }
 }
+.two-col .app main {
+	background: #f3f7f9f7;
+}
 
 /* SVG's */
 .home, .about {
@@ -66,6 +69,6 @@ table td {
 table tr {
 	@apply shadow-sm transition-all duration-500 ease-in-out border-t
 }
-table tr:hover {
+table tbody tr:hover {
 	@apply shadow-md bg-yellow-100
 }

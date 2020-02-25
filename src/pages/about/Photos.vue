@@ -44,3 +44,4 @@ export default {
 	}
 };
 </script>
+<style src="../../css/pages/gallery.css" />

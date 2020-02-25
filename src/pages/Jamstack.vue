@@ -59,3 +59,4 @@ export default {
 	},
 }
 </script>
+<style src="../css/pages/jam.css" />

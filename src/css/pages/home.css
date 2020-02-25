@@ -1,4 +1,43 @@
-.home {
+.home main .grid {
+    grid-template-columns: 40% 60%;
+    height: 100vh;
+    overflow: hidden;
+}
+.home main .grid > div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+.home main .grid figure {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+.home main .grid figure svg {
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+/* @media ( max-width: 980px ) {
+    .home main .grid {
+        display: flex;
+    }
+    .home main .grid > figure {
+        order: 2;
+    }
+}
+
+@media ( max-width: 1200px ) {
+    .home main .grid figure {
+        margin-left: -250px;
+        min-height: 100vh;
+    }
+} */
+
+/* .home {
     main {
         background: #fffffff7;
     } 
@@ -16,14 +55,7 @@
         height: 100%;
     }
 }
-@media ( min-width: 640px ) {
-    .home .app {
-        grid-template-columns: 80px 1fr;
-        grid-template-areas:
-        "header main main"
-        "header main main";
-    }
-}
+
 
 @media ( max-width: 640px ) {
     .home .app main div p > a {
@@ -83,7 +115,6 @@
         position: fixed;
         width: 700px;
         bottom: 0;
-        left: 50px;
     }
     :root [data-theme=dark].home main figure svg {
         filter: drop-shadow(2px 4px 26px black);
@@ -109,4 +140,4 @@
 }
 :root [data-theme=dark].home main h1 strong {
     color: #ffc800;
-}
+} */

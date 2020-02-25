@@ -34,3 +34,4 @@ export default {
 	}
 };
 </script>
+<style src="../../css/pages/sponsor.css" />

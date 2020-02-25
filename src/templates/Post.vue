@@ -7,7 +7,10 @@
 			<nav>
 				<g-link :to="tag.path" v-for="tag in $page.post.tags" v-bind:key="tag.id">#{{ tag.name }}</g-link>
 			</nav>
-			<Newsletter class="pt-10 mt-24 border-t-2" title="Never miss a post" summary="Signup below to be notified when new posts are posted" />
+
+			<Newsletter layout="inline" class="p-10 my-24 bg-white border border-t-2" title="Subscribe to my Journal" summary="Signup below and I'll let you know when new content is added." buttonText="Signup, it's free" />
+
+			<Comments />
 		</article>
 		<template slot="navgroup">
 			Journal
@@ -24,16 +27,17 @@
 <script>
 import NavJournal from "@/components/NavJournal";
 import Newsletter from "@/components/Newsletter";
+import Comments from "@/components/Comments";
 
 export default {
 	components: {
 		NavJournal,
-		Newsletter
+		Newsletter,
+		Comments
 	},
 	metaInfo() {
 		return {
 			title: `${this.$page.post.title}`,
-			// script: [{ src: "https://cdn.commento.io/js/commento.js", defer: true }],
 			bodyAttrs: {
 				class: "journal post single"
 			}

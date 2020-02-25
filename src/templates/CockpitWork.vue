@@ -1,38 +1,38 @@
 <template>
 	<Layout :sidebar="true" :top="true" :bottom="true">
-		<template slot="top-shelf">
-			<div class="pt-4 mx-6 md:pt-6 md:mx-10">
-				<h1 v-if="$page.post.title">{{ $page.post.title }}</h1>
-				<p v-if="$page.post.fields.excerpt">{{ $page.post.fields.excerpt }}</p>
-				<p>Client: {{ $page.post.fields.client }} <span class="block h-2 text-transparent md:inline"> &middot; </span>{{ $page.post.fields.website }}</p>
-			</div>
-		</template>
 		<article> 
-			<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-				<div v-if="$page.post.services">
-					<h2>Services</h2>
-					<ul>
-						<li v-for="service in $page.post.services" :key="service">{{ service }}</li>
-					</ul>
-				</div>
-				<!-- <div v-if="$page.post.stack">
-					<h2>Stack</h2>
-					<ul>
-						<li v-for="stack in $page.post.stack" :key="stack">{{ stack }}</li>
-					</ul>
-				</div> -->
+			<h1 v-if="$page.post.title">{{ $page.post.title }}</h1>
+			<p>Client: {{ $page.post.fields.client }} <span class="block h-2 text-transparent md:inline"> &middot; </span>{{ $page.post.fields.website }}</p>
+			
+			<div class="markdown" v-if="$page.post.fields.brief != false">
+				<h2>The brief</h2>
+				<div class="whitespace-pre-line" v-html="$page.post.fields.brief" />
 			</div>
 			<div class="markdown" v-if="$page.post.fields.content != false">
-				<h2>About the Project</h2>
-				<div class="cols" v-html="$page.post.fields.content" />
+				<h2>The approach</h2>
+				<div class="whitespace-pre-line" v-html="$page.post.fields.content" />
+			</div>
+			<div class="grid grid-cols-1 gap-6 mt-10 md:grid-cols-2">
+				<div v-if="$page.post.fields.services">
+					<h2>Services</h2>
+					<ul>
+						<li v-for="service in $page.post.fields.services" :key="service">{{ service }}</li>
+					</ul>
+				</div>
+				<div v-if="$page.post.fields.stack">
+					<h2>Stack</h2>
+					<ul class="m-0 md:flex md:flex-wrap md:items-start">
+						<li class="block md:w-1/2" v-for="stack in $page.post.fields.stack" :key="stack">{{ stack }}</li>
+					</ul>
+				</div>
 			</div>
 		</article>
 		<template slot="bottom-shelf">
 			<div v-if="$page.post.gallery != ''" class="mx-6 mt-10 mb-10 md:mx-10">
 				<h2>Screenshots</h2>
 				<silentbox-group class="grid grid-cols-2 row-gap-6 col-gap-4 mt-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gallery">
-					<silentbox-item v-for="(photo, $index) in $page.post.fields.gallery" :key="$index" :src="`https://cockpit.smokeyfro.com/` + photo.path" class="transition-all duration-500 ease-in-out bg-white border border-gray-300 rounded-md shadow-sm hover:shadow-md">
-						<g-image v-if="photo.path" :src="`https://cockpit.smokeyfro.com` + photo.path" width="265" height="200" />
+					<silentbox-item v-for="(photo, $index) in $page.post.fields.gallery" :key="$index" :src="`https://cdn.smokeyfro.com/` + photo.path" class="transition-all duration-500 ease-in-out bg-white border border-gray-300 rounded-md shadow-sm hover:shadow-md">
+						<g-image v-if="photo.path" :src="`https://cdn.smokeyfro.com` + photo.path" width="265" height="200" />
 					</silentbox-item>
 				</silentbox-group>
 			</div>
@@ -80,10 +80,13 @@ query Post ($path: String) {
 		path
 		fields {
 			excerpt
+			brief
 			content
 			highlights
 			website
 			services
+			stack
+			client
 			image {
 				path
 			}
@@ -94,3 +97,5 @@ query Post ($path: String) {
 	}
 }
 </page-query>
+<style src="../css/lightbox.css" />
+<style src="../css/templates/work.css" />

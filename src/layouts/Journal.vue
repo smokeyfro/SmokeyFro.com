@@ -10,8 +10,8 @@
 			<NavJournal />
 		</aside>
 		<main class="relative z-30 w-full overflow-x-hidden overflow-y-auto md:h-screen">
-            <g-image src="/chris-jumping.svg" class="object-cover w-full h-64 xl:fixed xl:top-0 xl:right-0 xl:w-1/3 xl:h-screen" />
-            <div class="lg:w-2/3">
+            <g-image src="/chris-jumping.svg" class="object-cover w-full h-64 bg-white xl:fixed xl:top-0 xl:right-0 xl:w-1/3 xl:h-screen" />
+            <div class="xl:w-1/2">
                 <div class="px-5 pt-4 lg:max-w-screen-lg md:px-10 md:pt-6">
                     <h1><slot name="title" /></h1>
                     <p><slot name="excerpt" /></p>

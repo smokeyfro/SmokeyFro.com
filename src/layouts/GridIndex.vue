@@ -10,12 +10,12 @@
 			<NavWork />
 		</aside>
 		<main class="relative z-30 w-full overflow-x-hidden overflow-y-auto md:h-screen">
-			<div class="px-5 pt-4 lg:max-w-screen-lg md:px-10 md:pt-6">
+			<div class="px-5 pt-4 lg:max-w-screen-lg md:px-10 lg:px-20 md:pt-6 lg:pt-12">
 				<h1><slot name="title" /></h1>
                 <p><slot name="excerpt" /></p>
 			</div>
 			<div>
-				<div class="grid grid-cols-2 gap-6 mx-6 mt-10 mb-10 md:gap-8 lg:grid-cols-3 md:mx-10">
+				<div class="grid grid-cols-2 gap-6 mx-6 mt-10 mb-10 md:gap-8 lg:grid-cols-3 md:mx-10 lg:mx-20">
                     <slot name="loop" />
     			</div>
 			</div>

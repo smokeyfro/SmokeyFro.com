@@ -40,7 +40,7 @@ export default {
 	metaInfo: {
 		title: "Search the SmokeyFro site",
 		bodyAttrs: {
-			class: "search"
+			class: "search two-col"
 		}
 	},
   computed: {
@@ -55,3 +55,4 @@ export default {
   }
 }
 </script>
+<style src="../css/pages/search.css" />

@@ -1,7 +1,7 @@
 /* Header
 ****************************************************/
 header {
-    background: #1c2f39f2;
+    background-color: var(--header-bg);
     svg, a {
         transition: all .3s ease-out;
     }
@@ -24,7 +24,15 @@ header {
         } 
     }
     .primary a {
-        @apply mx-auto;
+        padding: 7px;
+    }
+    .primary .active {
+        border-radius: 50%;
+        width: 32px;
+        height: 32px; 
+        background: #222;
+        border: 1px solid #00000078;
+        box-shadow: 0 1px 1px #ffffff3b;
     }
     .mobile-links .active {
         color: #000;

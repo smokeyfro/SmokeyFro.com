@@ -7,7 +7,7 @@
 			<h1>{{ $page.post.title }}</h1>
 			<p>{{ $page.post.description }}</p>
 			<div class="mb-10 markdown" v-html="$page.post.html" />
-			<p class="mb-10 text-2xl italic text-gray-800">Send a tweet to <a href="https://twitter.com/smokeyfro" target="_blank" rel="nofollow noopener"> @SmokeyFro</a>  on Twitter if you have anything to add.</p>
+			<Comments />
 		</article>
 		<template slot="navgroup">
 			Tutorials
@@ -23,11 +23,13 @@
 
 <script>
 import NavTuts from "@/components/NavTuts";
+import Comments from "@/components/Comments";
 import config from '~/.temp/config.js'
 
 export default {
 	components: {
-		NavTuts
+		NavTuts,
+		Comments
 	},
 	metaInfo() {
 		return {
@@ -94,7 +96,8 @@ export default {
 			  { src: "/prism.css", defer: false, rel: "stylesheet", type: "text/css" }
 			],
 			script: [
-				{ src: "/prism.js", defer: false, type: "text/javascript" }
+				{ src: "/prism.js", defer: false, type: "text/javascript" },
+				{ src: "https://just-comments.com/w2.js", async: true, defer: true, type: "text/javascript" }
 			],
 			bodyAttrs: {
 				class: "tutorials tutorial single"
@@ -131,3 +134,4 @@ query Post ($path: String) {
 	}
 }
 </page-query>
+<style src="../css/templates/tutorial.css" />

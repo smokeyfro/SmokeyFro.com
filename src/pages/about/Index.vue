@@ -108,3 +108,4 @@ export default {
 	}
 };
 </script>
+<style src="../../css/pages/about.css" />

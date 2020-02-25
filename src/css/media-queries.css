@@ -63,7 +63,7 @@
 	.tertiary {
 		position: absolute;
 		right: 0;
-		width: 65px;
+		width: 80px;
 	}
 	.tertiary .connect {
 		display: none;
@@ -105,8 +105,37 @@
 }
 @media (min-width: 640px ) {
 	.primary a:not(:last-of-type) {
-		@apply mb-5;
+		@apply mb-2;
 	}
+	header {
+		border-right: 5px solid var(--accent-color);
+        nav {
+            a {
+                position: relative;
+                z-index: 99;
+            }
+            a::after {
+				position: absolute;
+				font-size: 13px;
+				font-weight: 700;
+				top: -3px;
+				left: 31px;
+				padding: 8px;
+				white-space: pre;
+				z-index: -1;
+				color: #fff;
+				background-color: #000;
+				z-index: 99999;
+				border-radius: 4px;
+				transition: all .3s ease-out;
+				opacity: 0;
+				content: attr(tooltip);
+            }
+            a:hover::after {
+                opacity: 1;
+            }
+        }
+    }
 }
 @media ( min-width: 640px ) and ( max-width: 768px ) {
 	div.app {
@@ -159,35 +188,6 @@
 	.secondary a span {
 		position: relative;
 		z-index: 1;
-    }
-    header {
-        nav {
-            a {
-                position: relative;
-                z-index: 99;
-            }
-            a::after {
-                position: absolute;
-                font-size: 14px;
-                font-weight: 700;
-                top: -6px;
-                left: 48px;
-                padding: 8px;
-                white-space: pre;
-                z-index: -1;
-                color: #000;
-                background-color: #ffc800;
-                z-index: 99999;
-                border-radius: 0 4px 4px 0;
-                border-left: 3px solid;
-                transition: all .3s ease-out;
-                opacity: 0;
-                content: attr(tooltip);
-            }
-            a:hover::after {
-                opacity: 1;
-            }
-        }
     }
 
     /*  Sub Navigation  */

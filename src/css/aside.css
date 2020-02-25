@@ -1,7 +1,8 @@
 /* Sub-Navigation
 ****************************************************/
 aside {
-	background: #f3f7f9f7;
+    background-color: var(--aside-bg);
+    @apply shadow-2xl;
 }
 .secondary {
     @apply flex flex-col items-start;
@@ -11,6 +12,9 @@ aside {
     }
     a {
         color: #000000a1;
+    }
+    a:focus {
+        outline: none;
     }
     a.active:before {
         left: 0;
@@ -35,7 +39,7 @@ aside {
         display: block;
         position: absolute;
         left: 2px;
-        bottom: 3px;
+        bottom: 12px;
         z-index: -1;
         transform: skewX(-30deg);
     }

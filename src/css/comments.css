@@ -1,0 +1,55 @@
+.just-comments.sf {
+    --border-color: #ddd;
+
+    --primary-bg-color: #fff;
+    --secondary-bg-color: #ecebed;
+    --secondary-bg-color-lighter: #ecebed33;
+
+    --primary-color: #181818;
+    --primary-color-lighter: #e61d0f1a;
+    --primary-color-light: #e61d0f0d;
+
+    --primary-text-color: #222;
+    --secondary-text-color: #d0cddc;
+
+    --outline-style: 3px #fcfcfc solid;
+    --outline-offset: 1px;
+
+    --button-border-radius: 4px;
+    --input-border-radius: 4px;
+    --bubble-border-radius: 10px;
+    --user-pic-border-radius: 50%;
+
+    --font-heading1-size: 22px;
+    --font-heading1-line-height: 28px;
+    --font-heading2-size: 15px;
+    --font-heading2-line-height: 20px;
+
+    --font-button1-size: 20px;
+    --font-button1-line-height: 22px;
+    --font-button2-size: 15px;
+    --font-button2-line-height: 20px;
+    --font-button3-size: 13px;
+    --font-button3-line-height: 18px;
+
+    --font-text1-size: 18px;
+    --font-text1-line-height: 24px;
+    --font-text2-size: 15px;
+    --font-text2-line-height: 24px;
+    --font-text3-size: 13px;
+    --font-text3-line-height: 18px;
+
+    --primary-button-color: var(--accent-color);
+    --primary-button-bg-color: var(--primary-color);
+    --primary-button-hover-color: var(--primary-color);
+    --primary-button-hover-bg-color: var(--primary-bg-color);
+    --primary-button-border: 2px solid var(--primary-button-bg-color);
+
+    --small-button-height: 50px;
+    --font-button3-size: 1.1rem;
+
+    /* Hide the credits link */
+    & > div > div:last-of-type {
+        display: none;
+    }
+  }

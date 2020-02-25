@@ -1,10 +1,31 @@
 /* Dark Mode
 ****************************************************/
 [data-theme=dark] {
-
+    /* Override default variables */
+    --header-bg: rgba(0, 0, 0, 0.95);
+    --aside-bg: rgba(9, 9, 9, 0.95);
+    --main-bg: rgba(19, 19, 19, 0.95);
+    --heading-color: #fff;
+    --form-inputs: #000;
+    &.resume {
+        .resume-body {
+            h2 {
+                @apply text-accent;
+            }
+            .date {
+                @apply text-gray-200;
+            }
+            .contact-info span,
+            .link {
+                @apply text-white;
+            }
+        }
+        figure svg path {
+            fill: var(--accent-color);
+        }
+    }
     /* Header */
     header {
-        background-color: rgba(0, 0, 0, 0.95);
         border-right: 1px solid #000;
     }
     .mobile-links {
@@ -16,9 +37,6 @@
     }
 
     /* Sub-Navigation */
-    aside {
-        background-color: rgba(9, 9, 9, 0.95);
-    }
     .secondary {
         a {
             @apply text-gray-500;
@@ -38,7 +56,6 @@
 
     /* Main Body */
     main {
-        background-color: rgba(19, 19, 19, 0.95);
         background-repeat: no-repeat;
         background-size: cover;
     
@@ -69,6 +86,10 @@
         }
     }
 
+    /* Two Columns */
+    &.two-col .app main {
+        background: rgba(19, 19, 19, 0.95);
+    }
     /* Forms */
     .form-input,
     .form-select,

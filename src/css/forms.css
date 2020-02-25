@@ -10,6 +10,12 @@ button:focus,
     border-color: #ffc800;
 	border-style: solid;
 }
+button:hover,
+input[type="submit"]:hover {
+    cursor: pointer;
+    @apply bg-gray-800;
+}
+
 button:focus {
     box-shadow: 0 0 0 3px #ffc800;
 }

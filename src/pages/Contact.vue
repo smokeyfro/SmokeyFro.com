@@ -1,7 +1,7 @@
 <template>
 	<Layout :sidebar="true" :top="false" :bottom="false">
 		<h1>Contact</h1>
-		<p>Got something you'd like to discuss? Fill out the form below and I'll respond asap.</p>
+		<p>Got a project you would like to discuss? Or maybe you just want to say hello? Fill out the form below and I'll do my best to respond asap.</p>
 		<Form />
 		<template slot="secondary-nav">
 			<NavContact />

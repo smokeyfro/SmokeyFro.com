@@ -3,8 +3,8 @@
 		<template slot="top-shelf">
 			<div class="flex items-center justify-center w-full h-screen">
 				<div class="max-w-lg p-10 bg-gray-100 border-l-8 border-accent">
-					<h1>Message sent!</h1>
-					<p class="m-0">Expect a response within the next 24 hours (though usually less).</p>
+					<h1>You're subscribed!</h1>
+					<p class="m-0">Now sit back and wait for new content to arrive in your inbox.</p>
 				</div>
 			</div>
 		</template>

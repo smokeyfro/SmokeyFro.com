@@ -12,10 +12,31 @@
 @import 'darkmode';
 @import 'media-queries';
 
+/***
+  + Variables
+  ************************************************/
+:root {
+    --header-bg: #22292ff2;
+    --aside-bg: #f3f7f9f7;
+    --main-bg: #fffffff7;
+    --accent-color: #ffc800;
+    --heading-color: #1C2F39;
+    --form-inputs: #fff;
+}
+
 html {
     background-image: url(/topography.svg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-blend-mode: overlay;
+}
+
+@media ( min-width: 640px ) {
+    .two-col .app {
+        grid-template-columns: 80px 1fr;
+        grid-template-areas:
+        "header main main"
+        "header main main";
+    }
 }

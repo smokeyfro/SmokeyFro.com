@@ -2,9 +2,9 @@
 	<Layout :sidebar="true" :image="false">
 		<h1>Experience</h1>
 		<p>I've been working online for just shy of two decades and in that time I co-founded a small agency and brought a number of digital brands to market.</p>
-		<div class="mb-10 timeline">
-			<div v-for="({ company, date, location, role, summary }, i) in Resume.experience" :key="i">
-				<div>{{ location }} &middot; {{ date }}</div>
+		<div class="mb-20 timeline">
+			<div class="mt-10" v-for="({ company, date, location, role, summary }, i) in Resume.experience" :key="i">
+				<div class="text-gray-600">{{ location }} &middot; {{ date }}</div>
 				<h2>{{ role }} @ {{ company }}</h2>
 				<p>{{ summary }}</p>
 			</div>

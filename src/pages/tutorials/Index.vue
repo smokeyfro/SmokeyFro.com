@@ -3,7 +3,7 @@
 		<h1>Tutorials</h1>
 		<p>I learn something new all the time and as such I like the share my discoveries in the hope that it will help someone else down the line.</p>
 		<template slot="bottom-shelf">
-			<div class="grid grid-cols-2 gap-6 mx-6 mt-10 mb-10 md:gap-8 lg:grid-cols-3 md:mx-10">
+			<div class="grid grid-cols-2 gap-6 px-6 mt-10 mb-10 md:gap-10 lg:grid-cols-3 md:px-10 lg:px-20">
 				<article v-for="edge in $page.posts.edges" :key="edge.node.id">
 					<figure class="block h-56 mb-3 overflow-hidden rounded-md md:mb-5 card-image" v-if="edge.node.feature_image">
 						<g-link :to="`${edge.node.path}`" class="image">

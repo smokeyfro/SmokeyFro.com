@@ -2,27 +2,26 @@
 	<Layout :sidebar="true" :top="false" :bottom="false">
 		<h1>Upcoming tutorials</h1>
 		<p>Below is a list of the tutorials I'll be writing as I get time. Don't feel like waiting? Sponsor a tutorial to get it bumped up the queue.</p>
-		<table class="w-full mb-10 overflow-hidden text-left bg-white border rounded-sm shadow-lg">
-			<thead class="text-white bg-black">
-				<th class="rounded-tl-lg">#</th>
-				<th>Title</th>
-				<th>Topic</th>
-				<th>Difficulty</th>
-				<th class="rounded-tr-lg">Tags</th>
-			</thead>
-			<!-- <tfoot>
-				<td colspan="4"></td>
-			</tfoot> -->
-			<tbody>
-				<tr v-for="(edge, $index) in $page.upcoming.edges" :key="edge.node.id">
-					<td class="w-10 text-xs text-gray-600"><span class="">#{{ $index + 1 }}</span></td>
-					<td>{{ edge.node.title }}</td>
-					<td class="text-sm">{{ edge.node.topic }}</td>
-					<td class="text-sm">{{ edge.node.level }}</td>
-					<td class="text-sm text-gray-600">{{ edge.node.tags }}</td>
-				</tr>
-			</tbody>
-		</table>
+		<div class="w-full overflow-x-auto bg-white border rounded-sm shadow-lg">
+			<table class="w-full max-w-full mb-10 overflow-hidden text-left ">
+				<thead class="text-white bg-black">
+					<th class="rounded-tl-lg">#</th>
+					<th>Title</th>
+					<th>Topic</th>
+					<th>Difficulty</th>
+					<th class="rounded-tr-lg">Tags</th>
+				</thead>
+				<tbody>
+					<tr v-for="(edge, $index) in $page.upcoming.edges" :key="edge.node.id">
+						<td width="1%" class="text-xs text-gray-600 odd:bg-white even:bg-gray-200"><span class="">#{{ $index + 1 }}</span></td>
+						<td class="odd:bg-white even:bg-gray-200" width="30%"><span class="truncate">{{ edge.node.title }}</span></td>
+						<td width="10%" class="text-sm odd:bg-white even:bg-gray-200">{{ edge.node.topic }}</td>
+						<td width="9%" class="text-sm odd:bg-white even:bg-gray-200">{{ edge.node.level }}</td>
+						<td width="10%" class="text-sm text-gray-600 odd:bg-white even:bg-gray-200"><span class="truncate">{{ edge.node.tags }}</span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 		<template slot="navgroup">Tutorials</template>
 		<template slot="secondary-nav">
 			<NavTuts />
@@ -65,3 +64,18 @@ export default {
 		}
 	}
 </page-query>
+
+<style>
+.app main table tr:hover td:nth-of-type(odd) {
+    background: #ffc8003b;
+}
+.app main table tr:hover td:nth-of-type(even) {
+    background: #ffc80057;
+}
+@media ( max-width: 1200px ) {
+	.upcoming main > div {
+		padding-right: 0;
+	}
+
+}
+</style>

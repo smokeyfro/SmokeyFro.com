@@ -2,8 +2,8 @@
 	<Layout :sidebar="true" :top="false" :bottom="false">
 		<h1>Upcoming tutorials</h1>
 		<p>Below is a list of the tutorials I'll be writing as I get time. Don't feel like waiting? Sponsor a tutorial to get it bumped up the queue.</p>
-		<div class="w-full overflow-x-auto bg-white border rounded-sm shadow-lg">
-			<table class="w-full max-w-full mb-10 overflow-hidden text-left ">
+		<div class="w-full mb-10 overflow-x-auto bg-white border rounded-sm">
+			<table class="w-full max-w-full overflow-hidden text-left">
 				<thead class="text-white bg-black">
 					<th class="rounded-tl-lg">#</th>
 					<th>Title</th>

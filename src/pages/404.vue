@@ -48,22 +48,22 @@
 import lowerCase from "@/filters/LowerCase";
 
 export default {
-		data: () => ({
-				searchTerm: ''
-		}),
-		filters: {
-				lowerCase
+	data: () => ({
+			searchTerm: ''
+	}),
+	filters: {
+			lowerCase
+	},
+	metaInfo: {
+		title: `Page Not Found (404)`,
+		bodyAttrs: {
+			class: "error"
 		},
-		metaInfo: {
-			title: `Page Not Found (404)`,
-			bodyAttrs: {
-				class: "error"
-			},
-		},
+	},
 	computed: {
-			resultUrl () {
+		resultUrl () {
 
-			},
+		},
 		searchResults () {
 			const searchTerm = this.searchTerm
 			if (searchTerm.length < 3) return []

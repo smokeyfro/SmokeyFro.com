@@ -5,6 +5,7 @@ excerpt: Open-source CMS forked from Joomla.
 project_type: Contribution
 client: Molajo
 client_content: Molajo Foundation
+thumb: "/media/work/molajo-thumb.jpg"
 image: "/media/work/molajo-thumb.jpg"
 gallery:
 - thumb: "/media/work/molajo-installer-step-1b.jpg"

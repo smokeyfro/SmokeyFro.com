@@ -5,7 +5,7 @@ excerpt: Responsive design for a Hotel group in Norway.
 project_type: Web / UI Design
 company: BEDRE reklame
 client: Torkil Johnsen
-thumb: "/media/work/skagen-hotel.jpg"
+thumb: "/media/work/skagenhotel-thumb.jpg"
 image: "/media/work/skagen-inner.jpg"
 gallery:
 - thumb: "/media/work/skagen-inner-thumb.jpg"

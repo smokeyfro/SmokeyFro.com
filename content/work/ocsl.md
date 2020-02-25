@@ -5,6 +5,7 @@ excerpt: Multilingual site for learning languages abroad.
 project_type: Joomla!
 client: OCSL Education
 client_content: Thierry Muller
+thumb: "/media/work/ocsl-thumb.jpg"
 image: "/media/work/ocsl-thumb.jpg"
 gallery: ""
 url: https://ocsl.com

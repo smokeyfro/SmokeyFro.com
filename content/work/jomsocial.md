@@ -5,6 +5,7 @@ excerpt: Base theme for Social networking component for Joomla.
 project_type: UX Design
 client: Jomsocial
 client_contact: Azrul
+thumb: "/media/work/jomsocial-thumb.jpg"
 image: "/media/work/jomsocial-thumb.jpg"
 gallery: ""
 url: https://jomsocial.com

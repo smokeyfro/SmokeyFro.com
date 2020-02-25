@@ -7,6 +7,9 @@
 			<h1>{{ $page.post.title }}</h1>
 			<p>{{ $page.post.description }}</p>
 			<div class="mb-10 markdown" v-html="$page.post.html" />
+			<nav>
+				<g-link class="mb-4 mr-4" :to="tag.path" v-for="tag in $page.post.tags" v-bind:key="tag.id">#{{ tag.name }}</g-link>
+			</nav>
 			<Comments />
 		</article>
 		<template slot="navgroup">
@@ -129,6 +132,9 @@ query Post ($path: String) {
 		id
 		html
 		excerpt
+		tags {
+			name
+		}
 		coverImage: feature_image
 		date: published_at (format: "D. MMMM YYYY")
 	}

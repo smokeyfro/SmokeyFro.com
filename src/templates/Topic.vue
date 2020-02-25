@@ -1,9 +1,9 @@
 <template>
 	<Layout :sidebar="true" :top="false" :bottom="true">
-		<h1>{{ $page.topic.belongsTo.totalCount }} <span v-if="$page.topic.belongsTo.totalCount > 1">tutorials</span> <span v-if="$page.topic.belongsTo.totalCount == 1">tutorial</span> about <mark class="p-3 py-1 bg-yellow-200">{{ $page.topic.title }}</mark></h1>
+		<h1>{{ $page.topic.belongsTo.totalCount }} <span v-if="$page.topic.belongsTo.totalCount > 1">tutorials</span> <span v-if="$page.topic.belongsTo.totalCount == 1">tutorial</span> tagged with <mark class="p-3 py-1 bg-yellow-200">{{ $page.topic.title }}</mark></h1>
 		<p v-if="$page.topic.description">{{ $page.topic.description }}</p>
 		<template slot="bottom-shelf">
-		<div class="grid mx-6 mt-10 mb-10 grid-gap-4 md:gap-8 grid-cols1 md:grid-cols-2 lg:grid-cols-3 md:mx-10">
+		<div class="grid mx-6 mt-10 mb-10 grid-gap-4 md:gap-8 grid-cols1 md:grid-cols-2 lg:grid-cols-3 md:mx-10 lg:mx-20">
 			<article v-for="edge in $page.topic.belongsTo.edges" :key="edge.node.id">
 				<figure class="md:mb-5 card-image" v-if="edge.node.coverImage">
 					<g-link :to="`${edge.node.path}`" class="image">
@@ -67,9 +67,6 @@ import NavTuts from "@/components/NavTuts";
 export default {
 	components: {
 		NavTuts
-	},
-	computed: {
-		postCount: false
 	},
 	metaInfo: {
 		title: "Topic",

@@ -5,8 +5,8 @@ excerpt: WordPress site for a roofing specialist in the UK.
 project_type: WordPress
 company: Liquasil Ltd
 client: David Carter
+thumb: "/media/work/buildingsurveys-thumb.jpg"
 image: "/media/work/buildingsurveys.jpg"
-thumb: "/media/work/buildingsurveys.jpg"
 gallery: ""
 url: https://buildingsurveys.com
 status: Online

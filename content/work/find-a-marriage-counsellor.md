@@ -5,7 +5,7 @@ excerpt: Directory of marriage counsellors in Australia.
 project_type: Joomla
 company: Humaneed
 client: Bernice Morgan
-thumb: "/media/work/findamarriagecounsellor.jpg"
+thumb: "/media/work/findamarriagecounsellor-thumb.jpg"
 image: "/media/work/famc-register.jpg"
 gallery:
 - thumb: "/media/work/famc-register-thumb.jpg"

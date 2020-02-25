@@ -2,6 +2,7 @@
 title: Mzango
 slug: mzango
 excerpt: Backpacking guide to South Africa, without all the up-sells and tracking.
+thumb: "/media/projects/mzango-thumb.jpg"
 image: "/media/projects/mzango.jpg"
 gallery:
 - thumb: "/media/projects/mzango-home-thumb.jpg"

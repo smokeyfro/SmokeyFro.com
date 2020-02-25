@@ -39,6 +39,13 @@ export default {
 	components: {
 		NavTuts
 	},
+	// stored: {
+	// 	selectedTut: {
+	// 		type: String,
+	// 		key: 'selected-tut',
+	// 		default: false
+	// 	}
+	// },
 	metaInfo: {
 		title: "Upcoming web development tutorials by SmokeyFro",
 		bodyAttrs: {

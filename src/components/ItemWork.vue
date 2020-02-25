@@ -1,14 +1,13 @@
 <template>
-	<article class="item" :class="post.fields.group">
+	<article class="item">
 		<g-link :to="`${post.path}`" class="image">
-			<div class="card-image" v-if="post.fields.image.path">
-				<Browser :image="imageUrl" />
+			<div class="card-image" v-if="post.thumb">
+				<Browser :image="post.thumb" />
 			</div>
 		</g-link>
 		<div class="summary">
 			<h2 class="mt-5 text-2xl">{{ post.title }}</h2>
-			<p class="mb-3">{{ post.fields.excerpt }}</p>
-			<p class="mb-3">{{ post.fields.status }}</p>
+			<p class="mb-3">{{ post.excerpt }}</p>
 			<p class="mb-0"><g-link :to="`${post.path}`" class="text-base">Project details</g-link></p>
 		</div>
 	</article>
@@ -19,12 +18,6 @@ import Browser from "@/components/Browser";
 export default {
 	components: {
 		Browser
-	},
-	computed: {
-		imageUrl() {
-			let imagePath = this.post.fields.image.path
-			return `https://cdn.smokeyfro.com/` + imagePath
-		}
 	},
 	props: {
 		post: {

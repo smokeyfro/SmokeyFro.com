@@ -5,6 +5,7 @@ excerpt: Wireframe design for a Techjoomla's new website.
 project_type: Design Only
 client: TechJoomla
 client_content: Paarth
+thumb: "/media/work/techjoomla-thumb.jpg"
 image: "/media/work/techjoomla-thumb.jpg"
 gallery: ""
 url: https://techjoomla.com

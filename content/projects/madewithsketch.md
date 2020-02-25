@@ -5,6 +5,7 @@ excerpt: Sketch resources, optimised for the smallest download size.
 project_type: WordPress
 client: Side Project
 client_content: Me
+thumb: "/media/projects/madewithsketch-thumb.jpg"
 image: "/media/projects/madewithsketch.jpg"
 gallery:
 - thumb: "/media/projects/mws-frontpage-thumb.jpg"

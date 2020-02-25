@@ -36,16 +36,16 @@ module.exports = {
         component: './src/templates/Service.vue'
       }
     ],
-    CockpitProjects: [
+    Project: [
       {
         path: '/projects/:slug',
-        component: './src/templates/CockpitProject.vue'
+        component: './src/templates/Project.vue'
       }
     ],
-    CockpitWork: [
+    Work: [
       {
         path: '/work/:slug',
-        component: './src/templates/CockpitWork.vue'
+        component: './src/templates/Work.vue'
       }
     ],
     Video: [
@@ -129,11 +129,11 @@ module.exports = {
             indexName: 'Themes',
             fields: ['title', 'excerpt', 'description']
           },
-          {
-            typeName: 'CockpitWork',
-            indexName: 'Portfolio',
-            fields: ['title', 'fields.excerpt', 'fields.content']
-          },
+          // {
+          //   typeName: 'CockpitWork',
+          //   indexName: 'Portfolio',
+          //   fields: ['title', 'fields.excerpt', 'fields.content']
+          // },
           {
             typeName: 'Service',
             indexName: 'Services',
@@ -175,6 +175,22 @@ module.exports = {
     {
       use: "@gridsome/source-filesystem",
       options: {
+        path: "content/work/**/*.md",
+        typeName: "Work",
+        resolveAbsolutePaths: true
+      }
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "content/projects/**/*.md",
+        typeName: "Project",
+        resolveAbsolutePaths: true
+      }
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
         path: "content/videos/**/*.md",
         typeName: "Video",
         resolveAbsolutePaths: true,
@@ -185,17 +201,17 @@ module.exports = {
         }
       }
     },
-    {
-      use: '~/src/plugins/source-cockpit',
-        options: {
-          accessToken: process.env.SF_ACCESS_TOKEN,
-          host: process.env.SF_API_HOST,
-          routes: {
-            CockpitWork: '/work/:slug',
-            CockpitProjects: '/projects/:slug'
-          }
-        }
-    },
+    // {
+    //   use: '~/src/plugins/source-cockpit',
+    //     options: {
+    //       accessToken: process.env.SF_ACCESS_TOKEN,
+    //       host: process.env.SF_API_HOST,
+    //       routes: {
+    //         CockpitWork: '/work/:slug',
+    //         CockpitProjects: '/projects/:slug'
+    //       }
+    //     }
+    // },
     {
       use: '@gridsome/source-ghost',
       options: {

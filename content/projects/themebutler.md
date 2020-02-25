@@ -5,6 +5,7 @@ excerpt: Our attempt at a theme club aimed at developers. The birthplace of Bean
 project_type: WordPress
 client: Internal
 client_content: 
+thumb: "/media/projects/themebutler-thumb.jpg"
 image: "/media/projects/themebutler.jpg"
 gallery:
 - thumb: "/media/projects/themebutler-home-thumb.jpg"

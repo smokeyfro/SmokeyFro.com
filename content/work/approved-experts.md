@@ -5,7 +5,7 @@ excerpt: Online services marketplace in the UK.
 project_type: Web App
 company: Fatwax Media
 client: Kieron Bolton
-thumb: "/media/work/approved-experts.jpg"
+thumb: "/media/work/approvedexperts-thumb.jpg"
 image: "/media/work/approved-experts.jpg"
 gallery:
 - thumb: "/media/work/approved-experts-front-page.jpg"

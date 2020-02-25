@@ -5,7 +5,7 @@ excerpt: WordPress site for a local backpackers.
 project_type: WordPress
 company: Fairy Knowe Backpackers
 client: Digby Marshall
-thumb: "/media/work/fairy-knowe-backpackers.jpg"
+thumb: "/media/work/fairyknowe-thumb.jpg"
 image: "/media/work/fairy-knowe-backpackers-1-home.jpg"
 gallery:
 - thumb: "/media/work/fairy-knowe-backpackers-1-home-thumb.jpg"

@@ -21,6 +21,14 @@
     bottom: 0;
     right: 0;
 }
+@media ( min-width: 1024px ) {
+    .home main {
+        overflow: hidden;
+    }
+    .home main .grid > div {
+        padding-right: 4rem;
+    }
+}
 /* @media ( max-width: 980px ) {
     .home main .grid {
         display: flex;

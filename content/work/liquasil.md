@@ -5,7 +5,7 @@ excerpt: WordPress site for a roof coatings manufacturer in the UK.
 project_type: WordPress
 company: Liquasil Ltd
 client: David Carter
-thumb: "/media/work/liquasil.jpg"
+thumb: "/media/work/liqausil-thumb.jpg"
 image: "/media/work/liquasil.jpg"
 gallery: ""
 url: https://liquasil.com

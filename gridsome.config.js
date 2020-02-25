@@ -129,11 +129,16 @@ module.exports = {
             indexName: 'Themes',
             fields: ['title', 'excerpt', 'description']
           },
-          // {
-          //   typeName: 'CockpitWork',
-          //   indexName: 'Portfolio',
-          //   fields: ['title', 'fields.excerpt', 'fields.content']
-          // },
+          {
+            typeName: 'Work',
+            indexName: 'Portfolio',
+            fields: ['title', 'excerpt', 'content']
+          },
+          {
+            typeName: 'Project',
+            indexName: 'Portfolio',
+            fields: ['title', 'excerpt', 'content']
+          },
           {
             typeName: 'Service',
             indexName: 'Services',
@@ -235,7 +240,7 @@ module.exports = {
     {
       use: 'gridsome-plugin-feed',
       options: {
-        contentTypes: ['GhostPost', 'GhostPage', 'Theme', 'CockpitWork'],
+        contentTypes: ['GhostPost', 'GhostPage', 'Theme', 'Work', 'Project'],
         feedOptions: {
           title: 'SmokeyFro - Syndicate',
           description: 'Web Development Tutorials, JAMStack themes and more'

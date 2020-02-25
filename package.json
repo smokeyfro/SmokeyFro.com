@@ -1,7 +1,7 @@
 {
 	"name": "smokeyfro",
 	"license": "MIT",
-	"repository": "https://github.com/smokeyfro/site",
+	"repository": "https://github.com/smokeyfro/smokeyfro.com",
 	"scripts": {
 		"build": "gridsome build",
 		"develop": "gridsome develop",

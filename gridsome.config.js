@@ -1,8 +1,13 @@
-class TailwindExtractor {
-  static extract(content) {
-    return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
-  }
-}
+const tailwind = require('tailwindcss')
+const purgecss = require('@fullhuman/postcss-purgecss')
+
+const postcssPlugins = [
+  'postcss-import',
+  'postcss-nested',
+  tailwind()
+]
+
+if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss(require('./purgecss.config.js')))
 
 module.exports = {
   siteName: "SmokeyFro",
@@ -271,30 +276,16 @@ module.exports = {
   ],
   chainWebpack: config => {
     config.module
-      .rule('css')
-      .oneOf('normal')
-      .use('postcss-loader')
-      .tap(options => {
-        options.plugins.unshift(...[
-          require('postcss-import'),
-          require('postcss-nested'),
-          require('tailwindcss')
-        ])
-
-        if (process.env.NODE_ENV === 'production') {
-          options.plugins.push(...[
-            require('@fullhuman/postcss-purgecss')({
-              content: [
-                './../src/**/*.css',
-                './../src/**/*.vue',
-                './../src/**/*.js'
-              ],
-              defaultExtractor: content => content.match(/[\w-/:%]+(?<!:)/g) || []
-            }),
-          ])
-        }
-
-        return options
-      })
-  }
+      .rule('css') // or sass, scss, less, postcss, stylus
+      .oneOf('normal') // or module
+        .use('postcss-loader')
+          .tap(options => {
+            options.plugins.unshift(...[
+              require('postcss-import'),
+              require('postcss-nested'),
+              require('tailwindcss')
+            ])
+            return options
+          })
+  },
 }

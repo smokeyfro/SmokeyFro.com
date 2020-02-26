@@ -4,6 +4,7 @@
 
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
 @import 'header';
 @import 'aside';
 @import 'main';

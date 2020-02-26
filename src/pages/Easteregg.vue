@@ -29,8 +29,7 @@ export default {
 	created(){
 		if(process.isClient) {
 			const confetti = require('vue-confetti').default
-			Vue.use(confetti)
-				this.$confetti.start();
+			this.$confetti.start();
 		}
 		setTimeout( () => this.$router.push({ path: '/devtools'}), 5000);
 	}

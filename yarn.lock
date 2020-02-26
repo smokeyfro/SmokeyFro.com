@@ -9437,10 +9437,22 @@ vue-clickaway@^2.2.2:
   dependencies:
     loose-envify "^1.2.0"
 
+vue-confetti@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/vue-confetti/-/vue-confetti-2.0.7.tgz#986eb3d9f92b8424443409b4fbfa2fb6aaac92d5"
+  integrity sha512-skXnGS0M6uYVTGosmd0RvfGRC9pA3yuFYpa4b2RZKaNuo1qyrjzSZy4aZ7QrbGHspk8Nmfka8RqjA6cYH44z5A==
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
   integrity sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==
+
+vue-konami-code@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vue-konami-code/-/vue-konami-code-1.0.0.tgz#416d351b560e15968762ded7e5783bf61b06f6df"
+  integrity sha1-QW01G1YOFZaHYt7X5Xg79hsG9t8=
+  dependencies:
+    vue "^2.2.2"
 
 vue-loader@^15.7.1:
   version "15.9.0"
@@ -9505,7 +9517,7 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@^2.6.10:
+vue@^2.2.2, vue@^2.6.10:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
   integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==

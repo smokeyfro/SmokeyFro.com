@@ -20,7 +20,7 @@ export default function(Vue, { isClient, router }) {
 
 
 	if(process.isClient) {
-		import KonamiCode from 'vue-konami-code'
+		const KonamiCode = require('vue-konami-code').default
 		Vue.use(KonamiCode, {callback: function () {
 			router.push({ path: '/easteregg' })
 		}})

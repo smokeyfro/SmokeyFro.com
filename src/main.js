@@ -1,6 +1,5 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import VueStorage from 'vuestorage'
-import KonamiCode from 'vue-konami-code'
 import VueRouter from 'vue-router'
 
 import '~/css/global.css'
@@ -21,6 +20,7 @@ export default function(Vue, { isClient, router }) {
 
 
 	if(process.isClient) {
+		import KonamiCode from 'vue-konami-code'
 		Vue.use(KonamiCode, {callback: function () {
 			router.push({ path: '/easteregg' })
 		}})

@@ -28,8 +28,8 @@ export default {
 	created(){
 		this.$confetti.start();
 		setTimeout( () => this.$router.push({ path: '/devtools'}), 5000);
-		}
 	}
+}
 </script>
 <style scoped>
 .p-10 svg {

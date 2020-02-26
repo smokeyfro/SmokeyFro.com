@@ -28,6 +28,7 @@
 
 html {
     background-image: var(--bg-image);
+    background-color: var(--aside-bg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

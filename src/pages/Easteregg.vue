@@ -1,7 +1,7 @@
 <template>
 	<EasterEggWrap>
-		<div class="flex items-center justify-center w-full h-screen bg-white">
-			<div class="max-w-lg p-10">
+		<div class="flex items-center justify-center w-full h-screen">
+			<div class="relative z-50 max-w-lg p-10">
 				<EasterEggImage />
 				<h1 class="pt-0 mt-0"><strong>Congrats</strong>, you unlocked secret dev settings!</h1>
 				<p class="loading">Hold tight while I redirect you...</p>
@@ -28,7 +28,21 @@ export default {
 	created(){
 		if(process.isClient) {
 			const confetti = require('vue-confetti').default
-			this.$confetti.start();
+			this.$confetti.start({
+				particles: [
+					{
+					type: 'heart',
+					},
+					{
+					type: 'circle',
+					},
+				],
+				defaultColors: [
+					'#ffc800',
+					'#22292ff2',
+					'#f3f7f9f7'
+				],
+			});
 		}
 		setTimeout( () => this.$router.push({ path: '/devtools'}), 5000);
 	}

@@ -37,7 +37,7 @@ main {
     }
 }
 .two-col .app main {
-	background: #f3f7f9f7;
+	background: transparent;
 }
 
 /* SVG's */

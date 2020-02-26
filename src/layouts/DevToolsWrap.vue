@@ -14,9 +14,3 @@ export default {
 	}
 }
 </script>
-
-<style>
-.devtools {
-	background-color: var(--aside-bg);
-}
-</style>

@@ -13,14 +13,18 @@ export default function(Vue, { isClient, router }) {
 	if(process.isClient) {
 		const confetti = require('vue-confetti').default
 		Vue.use(confetti)
-	  }
-	  
+	}
+
 	// localStorage
 	Vue.use(VueStorage)
 
-	Vue.use(KonamiCode, {callback: function () {
-		router.push({ path: '/easteregg' })
-	}})
+
+
+	if(process.isClient) {
+		Vue.use(KonamiCode, {callback: function () {
+			router.push({ path: '/easteregg' })
+		}})
+	}
 
 	// Lightbox
 	if (process.isClient) {

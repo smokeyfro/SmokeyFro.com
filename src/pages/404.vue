@@ -56,8 +56,11 @@ export default {
 	},
 	metaInfo: {
 		title: `Page Not Found (404)`,
+		htmlAttrs: {
+			class: "error-bg bg-white"
+		},
 		bodyAttrs: {
-			class: "error"
+			class: "error two-col"
 		},
 	},
 	computed: {
@@ -72,3 +75,10 @@ export default {
 	}
 }
 </script>
+<style src="../css/pages/error.css" />
+
+<style>
+/* .error-bg {
+	filter: opacity(.5);
+} */
+</style>

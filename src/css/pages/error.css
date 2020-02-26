@@ -17,7 +17,8 @@
 /* .error header {
     background: #7a1414;
 } */
-.error main {
+
+.error .app main {
 background-image: url(/chris-manson.svg);
 background-repeat: no-repeat;
 background-color: #ffc8002e;

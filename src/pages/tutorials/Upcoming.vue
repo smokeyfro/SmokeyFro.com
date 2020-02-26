@@ -13,7 +13,7 @@
 				</thead>
 				<tbody>
 					<tr v-for="(edge, $index) in $page.upcoming.edges" :key="edge.node.id">
-						<td width="1%" class="text-xs text-gray-600 odd:bg-white even:bg-gray-200"><span class="">#{{ $index + 1 }}</span></td>
+						<td width="1%" class="text-xs text-gray-600 odd:bg-white even:bg-gray-200">#{{ $index + 1 }}</td>
 						<td class="odd:bg-white even:bg-gray-200" width="30%"><span class="truncate">{{ edge.node.title }}</span></td>
 						<td width="10%" class="text-sm odd:bg-white even:bg-gray-200">{{ edge.node.topic }}</td>
 						<td width="9%" class="text-sm odd:bg-white even:bg-gray-200">{{ edge.node.level }}</td>

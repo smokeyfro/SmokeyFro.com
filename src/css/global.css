@@ -17,7 +17,7 @@
   + Variables
   ************************************************/
 :root {
-    --header-bg: #22292ff2;
+    --header-bg: #13171bf2;
     --aside-bg: #f3f7f9f7;
     --main-bg: #fffffff7;
     --accent-color: #ffc800;
@@ -28,11 +28,15 @@
 
 html {
     background-image: var(--bg-image);
-    background-color: var(--aside-bg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-blend-mode: overlay;
+}
+
+.bg main {
+    background-color: var(--aside-bg);
+    background-image: var(---bg-image);
 }
 
 @media ( min-width: 640px ) {

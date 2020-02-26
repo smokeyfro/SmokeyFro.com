@@ -24,7 +24,7 @@ export default {
 }
 </script>
 
-<!--<style lang="postcss" scoped>
+<style lang="postcss" scoped>
 .image {
 	img {
 		filter: blur(2px);
@@ -34,4 +34,4 @@ export default {
 		}
 	}
 }
-</style>-->
+</style>

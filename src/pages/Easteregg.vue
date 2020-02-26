@@ -1,9 +1,10 @@
 <template>
 	<EasterEggWrap>
 		<div class="flex items-center justify-center w-full h-screen">
-			<div class="max-w-lg p-10 rounded-md shadow-lg">
+			<div class="max-w-lg p-10">
 				<EasterEggImage />
-				<h1 class="pt-0 mt-0">Congrats, you unlocked secret dev settings!</h1>
+				<h1 class="pt-0 mt-0"><strong>Congrats</strong>, you unlocked secret dev settings!</h1>
+				<p class="loading">Hold tight while I redirect you...</p>
 			</div>
 		</div>
 	</EasterEggWrap>
@@ -39,5 +40,26 @@ export default {
 }
 h1 {
     text-align: center;
+}
+.loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+  animation: ellipsis steps(4,end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 20px;    
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 20px;    
+  }
 }
 </style>

@@ -23,9 +23,11 @@
     --accent-color: #ffc800;
     --heading-color: #1C2F39;
     --form-inputs: #fff;
+    --bg-image: url(/topography.svg);
 }
 
 html {
+    background-image: var(--bg-image);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

@@ -1,5 +1,5 @@
 <template>
-    <div class="just-comments sf" data-apikey="51dd864a-782f-48a3-96d3-5b4f015ab62f" data-defaultuserpicurl="http://localhost:8080/favicon.png"></div>
+    <div class="just-comments sf" data-apikey="51dd864a-782f-48a3-96d3-5b4f015ab62f" data-defaultuserpicurl="/favicon.png"></div>
 </template>
 
 <script>

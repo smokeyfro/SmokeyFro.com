@@ -9,7 +9,8 @@
         "SF_BLOG_URL": "@sf-blog-url",
         "SF_TUTORIALS_SHEET_ID": "@sf-tutorials-sheet-id",
         "SF_GOOGLE_API_KEY": "@sf-google-api-key",
-        "SF_BASE_PATH": "http://localhost:8080/"
+        "SF_BASE_PATH": "http://localhost:8080/",
+        "SF_API_HOST": "@sf-api-host"
     },
     "build": {
         "env": {
@@ -18,7 +19,8 @@
             "SF_BLOG_URL": "@sf-blog-url",
             "SF_TUTORIALS_SHEET_ID": "@sf-tutorials-sheet-id",
             "SF_GOOGLE_API_KEY": "@sf-google-api-key",
-            "SF_BASE_PATH": "https://smokeyfro.com"
+            "SF_BASE_PATH": "https://smokeyfro.com",
+            "SF_API_HOST": "@sf-api-host"
         }
     }
 }

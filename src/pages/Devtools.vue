@@ -1,6 +1,6 @@
 <template>
 	<DevToolsWrap>
-        <div class="flex items-center justify-center w-full h-screen bg-black">
+        <div class="relative z-40 flex items-center justify-center w-full h-screen">
 			<div class="p-10 bg-white rounded-md shadowl-lg">
                 <h1 class="m-0 text-2xl bold">Dev Tools</h1>
                 <h2 class="pb-3 mb-3 border-b">For the curious developer</h2>
@@ -32,7 +32,11 @@ export default {
 		},
     },
     created(){
-		this.$confetti.stop();
+        if(process.isClient) {
+			const confetti = require('vue-confetti').default
+			Vue.use(confetti)
+			this.$confetti.stop();
+		}
 	}
 }
 </script>

@@ -15,6 +15,7 @@ import EasterEggWrap from "~/layouts/EasterEggWrap.vue";
 import EasterEggImage from "~/components/EasterEggImage.vue";
 
 export default {
+	
 	components: {
         EasterEggWrap,
         EasterEggImage
@@ -26,7 +27,11 @@ export default {
 		}
 	},
 	created(){
-		this.$confetti.start();
+		if(process.isClient) {
+			const confetti = require('vue-confetti').default
+			Vue.use(confetti)
+				this.$confetti.start();
+		}
 		setTimeout( () => this.$router.push({ path: '/devtools'}), 5000);
 	}
 }

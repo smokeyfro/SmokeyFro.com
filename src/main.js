@@ -1,5 +1,6 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import VueStorage from 'vuestorage'
+import KonamiCode from 'vue-konami-code'
 import VueRouter from 'vue-router'
 
 import '~/css/global.css'
@@ -9,10 +10,7 @@ export default function(Vue, { isClient, router }) {
 	Vue.component('Layout', DefaultLayout)
 	Vue.use(VueRouter)
 
-	if(process.isClient) {
-		const confetti = require('vue-confetti').default
-		Vue.use(confetti)
-	}
+
 
 	// localStorage
 	Vue.use(VueStorage)
@@ -20,7 +18,6 @@ export default function(Vue, { isClient, router }) {
 
 
 	if(process.isClient) {
-		const KonamiCode = require('vue-konami-code').default
 		Vue.use(KonamiCode, {callback: function () {
 			router.push({ path: '/easteregg' })
 		}})

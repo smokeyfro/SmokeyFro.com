@@ -1,5 +1,5 @@
 <template>
-    <a href="/" class="text-white sm:mx-auto sm:mt-6 logo" aria-label="SmokeyFro">
+    <a href="/" class="logo" aria-label="SmokeyFro">
         <span v-html="selectedImage" class="block" />
     </a>
 </template>

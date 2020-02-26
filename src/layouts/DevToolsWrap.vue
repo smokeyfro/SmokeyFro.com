@@ -1,8 +1,7 @@
 <template>
 	<div class="w-full h-screen overflow-x-auto overflow-x-hidden md:overflow-hidden">
-		<Logo class="absolute top-0 left-0 z-50 pt-10 pl-10" />
+		<div class="absolute top-0 left-0 z-50 flex items-center pt-5 pl-5"><Logo /> <strong class="ml-3"> Back</strong></div>
         <slot />
-		<video src="smoke.mp4" autoplay loop class="absolute top-0 bottom-0 left-0 right-0 z-0 object-cover w-full h-screen"/>
 	</div>
 </template>
 
@@ -15,3 +14,9 @@ export default {
 	}
 }
 </script>
+
+<style>
+.devtools {
+	background-color: var(--aside-bg);
+}
+</style>

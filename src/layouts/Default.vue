@@ -1,7 +1,7 @@
 <template>
 	<div class="overflow-x-auto overflow-x-hidden md:h-screen md:overflow-hidden layout app">
 		<header class="relative z-50 flex flex-row items-center justify-between dark:bg-black sm:flex-col">
-			<Logo />
+			<Logo class="text-white sm:mx-auto sm:mt-6 " />
 			<NavPrimary />
 			<NavMobile />
 			<NavTertiary />

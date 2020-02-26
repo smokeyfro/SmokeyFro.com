@@ -1,6 +1,6 @@
 <template>
 	<EasterEggWrap>
-		<div class="flex items-center justify-center w-full h-screen">
+		<div class="flex items-center justify-center w-full h-screen bg-white">
 			<div class="max-w-lg p-10">
 				<EasterEggImage />
 				<h1 class="pt-0 mt-0"><strong>Congrats</strong>, you unlocked secret dev settings!</h1>
@@ -15,7 +15,6 @@ import EasterEggWrap from "~/layouts/EasterEggWrap.vue";
 import EasterEggImage from "~/components/EasterEggImage.vue";
 
 export default {
-	
 	components: {
         EasterEggWrap,
         EasterEggImage

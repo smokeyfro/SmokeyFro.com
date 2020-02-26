@@ -10,7 +10,10 @@ export default function(Vue, { isClient, router }) {
 	Vue.component('Layout', DefaultLayout)
 	Vue.use(VueRouter)
 
-
+	if(process.isClient) {
+		const confetti = require('vue-confetti').default
+		Vue.use(confetti)
+	}
 
 	// localStorage
 	Vue.use(VueStorage)

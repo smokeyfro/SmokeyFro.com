@@ -35,6 +35,42 @@ export default {
 		'top',
 		'bottom'
 	],
+	data() {
+		return {
+			quotes: [
+				'Curiosity Killed The Cat',
+				'Early Bird Gets The Worm',
+				'Use CONSOLE for 20% Off',
+				'Garbage In, Garbage Out',
+				'↑↑↓↓←→←→BA'
+			],
+			css: [
+				'color: red; background: #f7f7f7; border: 1px solid #ddd; font-size: medium; padding: 2px 5px; border-radius: 2px; font-family: Georgia',
+				'color: green; background: #f7f7f7; border: 1px solid #ddd; font-size: medium; padding: 2px 5px; border-radius: 2px; font-family: Georgia',
+				'color: orange; background: #f7f7f7; border: 1px solid #ddd; font-size: medium; padding: 2px 5px; border-radius: 2px; font-family: Georgia',
+				'color: blue; background: #f7f7f7; border: 1px solid #ddd; font-size: medium; padding: 2px 5px; border-radius: 2px; font-family: Georgia',
+				'color	pink; background: #f7f7f7; border: 1px solid #ddd; font-size: medium; padding: 2px 5px; border-radius: 2px; font-family: Georgia',
+				'color: lilac; background: #f7f7f7; border: 1px solid #ddd; font-size: medium; padding: 2px 5px; border-radius: 2px; font-family: Georgia',
+				'color: orange; background: #f7f7f7; border: 1px solid #ddd; font-size: medium; padding: 2px 5px; border-radius: 2px; font-family: Georgia',
+				'color: turquoise; background: #f7f7f7; border: 1px solid #ddd; font-size: medium; padding: 2px 5px; border-radius: 2px; font-family: Georgia',
+				'color: purple; background: #f7f7f7; border: 1px solid #ddd; font-size: medium; padding: 2px 5px; border-radius: 2px; font-family: Georgia'
+			],
+			randomCss: '',
+			randomQuote: ''
+		}
+	},
+	mounted() {
+			var outputCss = this.randomCss;
+			var outputQuote = this.randomQuote;
+			setTimeout(console.log.bind(console, '%c \n  %c' + outputQuote + ' %c  \n', 'background: none;', outputCss, 'background: none;'));
+			// setTimeout(console.log.bind(console, '\n%c' + outputQuote + '\nFind the code for this page here:\nhttps://github.com/smokeyfro/smokeyfro/blob/master/src/pages/Devtools.vue\n\n', css));
+	},
+    created(){
+		const idx = Math.floor(Math.random() * this.quotes.length);
+		this.randomQuote = this.quotes[idx];
+		const idxcss = Math.floor(Math.random() * this.css.length);
+        this.randomCss = this.css[idxcss];
+	},
 	components: {
 		NavPrimary,
 		NavMobile,

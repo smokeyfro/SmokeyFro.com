@@ -30,7 +30,7 @@ export default {
 		bodyAttrs: {
 			class: "devtools bg"
 		},
-    },
+	},
     created(){
         if(process.isClient) {
 			const confetti = require('vue-confetti').default

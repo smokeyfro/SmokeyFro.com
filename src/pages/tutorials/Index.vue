@@ -6,7 +6,7 @@
 			<div class="grid grid-cols-2 gap-6 px-6 mt-10 mb-10 md:gap-10 lg:grid-cols-3 md:px-10 lg:px-20">
 				<article v-for="edge in $page.posts.edges" :key="edge.node.id">
 					<figure class="block h-56 mb-3 overflow-hidden rounded-md md:mb-5 card-image" v-if="edge.node.feature_image">
-						<g-link :to="`${edge.node.path}`" class="image">
+						<g-link :to="`${edge.node.path}`" class="block transition-opacity duration-100 ease-out opacity-100 image hover:opacity-75 hover:">
 							<g-image :src="edge.node.feature_image" width="364" height="244" fit="cover" />
 						</g-link>
 					</figure>

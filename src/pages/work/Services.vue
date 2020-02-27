@@ -6,7 +6,7 @@
 			<div class="grid grid-cols-2 gap-8 px-6 mt-10 mb-16 md:gap-8 lg:grid-cols-3 md:px-10 lg:px-20">
 				<div v-for="edge in $page.posts.edges" :key="edge.node.id">
 					<figure v-if="edge.node.icon" class="w-16">
-						<g-image :src="edge.node.icon" width="20" height="20" :alt="edge.node.title" />
+						<g-image :src="edge.node.icon" width="20" height="20" :alt="edge.node.title" immediate="true" />
 					</figure>
 					<h2 class="m-0 my-3 text-2xl">{{ edge.node.title }}</h2>
 					<p class="m-0" v-html="edge.node.excerpt" />

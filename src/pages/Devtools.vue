@@ -28,7 +28,7 @@ export default {
 			class: ""
 		},
 		bodyAttrs: {
-			class: "devtools"
+			class: "devtools bg"
 		},
     },
     created(){

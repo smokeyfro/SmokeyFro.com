@@ -36,6 +36,7 @@
                         <input type="hidden" name="subform" value="yes" />
                         <input type="submit" name="submit" id="submit" class="block w-full px-10 py-6 mt-4 mb-5 text-xl font-bold bg-gray-800 rounded-md text-accent md:mt-8" />
                     </form>
+                    <p class="mt-10 mb-0 text-base italic">Alternatively, subscribe via your feed reader of choice -> <a href="/feed.atom" target="_blank" title="Grab the Atom feed">Atom</a> &middot; <a href="/feed.json" target="_blank" title="Grab the JSON feed">JSON</a> &middot; <a href="/feed.xml" target="_blank" title="Grab the XML feed">XML</a></p>
                 </div>
             </div>
         </template>

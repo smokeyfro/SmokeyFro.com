@@ -6,11 +6,7 @@
 			<NavWork />
 		</template>
 		<template slot="bottom-shelf">
-			<article class="mb-2" v-for="edge in $page.posts.edges" :key="edge.node.id">
-					<g-link :to="edge.node.path">{{ edge.node.title }}</g-link>
-			</article>
-
-			<div class="grid gap-8 mx-6 mt-10 mb-10 md:gap-8 grid-cols1 md:grid-cols-2 lg:grid-cols-3 md:mx-10 lg:mx-20">
+			<div class="grid gap-8 mx-6 mt-10 mb-20 md:gap-10 grid-cols1 md:grid-cols-2 lg:grid-cols-3 md:mx-10 lg:mx-20">
 				<ItemWork :post="edge.node" v-for="edge in $page.posts.edges" :key="edge.node.id" />
 			</div>
 		</template>

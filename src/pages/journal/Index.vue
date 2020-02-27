@@ -2,7 +2,7 @@
 	<Journal :sidebar="true" :top="true" :bottom="false">
 		<template slot="title">Journal</template>
 		<template slot="excerpt">Updates about what I'm working on, books I'm reading, stuff I'm thinking about, news on the farm, product releases and more.</template>
-		<template slot="content" class="max-w-xl">
+		<template slot="content">
 			<article v-for="edge in $page.posts.edges" :key="edge.node.id" class="mt-6 ">
 				<h2 v-html="edge.node.title" />
 				<p class="mb-3 text-base">{{ edge.node.excerpt }}</p>

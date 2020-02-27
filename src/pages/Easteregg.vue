@@ -22,7 +22,7 @@ export default {
 	metaInfo: {
 		title: "Soufflé",
 		bodyAttrs: {
-			class: "easter-egg overflow-hidden"
+			class: "easter-egg bg overflow-hidden"
 		}
 	},
 	created(){
@@ -67,7 +67,6 @@ h1 {
   content: "\2026"; /* ascii code for the ellipsis character */
   width: 0px;
 }
-
 @keyframes ellipsis {
   to {
     width: 20px;    

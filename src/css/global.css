@@ -34,7 +34,7 @@ html {
     background-blend-mode: overlay;
 }
 
-.bg main {
+.bg {
     background-color: var(--aside-bg);
     background-image: var(---bg-image);
 }

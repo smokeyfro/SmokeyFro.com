@@ -5,6 +5,22 @@ aside {
     @apply shadow-2xl;
 }
 .secondary {
+    .external {
+        position: relative;
+    }
+    .external img {
+        opacity: 0;
+        position: absolute;
+        left: -16px;
+        top: 2px;
+    }
+    .external.social img {
+        top: 7px;
+    }
+    .external:hover img {
+        opacity: 1;
+    }
+    
     @apply flex flex-col items-start;
     & > a.active,
     & > a:hover {

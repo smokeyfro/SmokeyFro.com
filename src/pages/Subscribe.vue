@@ -5,7 +5,7 @@
                 <div class="w-1/2 px-12 py-8 bg-white border border-gray-300 rounded-md shadow-lg subscribe-wrap">
                     <h1>Subscribe</h1>
                     <p class="text-xl">Signup below to get notified when I post new themes, tutorials and journal updates. Pick and choose what you get notified about. Once a month digest on your selected topics.</p>
-                    <form action="https://subscribe.smokeyfro.com" method="POST" accept-charset="utf-8">
+                    <form class="subscribe-form" action="https://subscribe.smokeyfro.com" method="POST" accept-charset="utf-8">
                         <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
                             <label class="block">
                                 <span class="text-gray-700">Name</span>
@@ -23,7 +23,7 @@
                         <ul class="p-0 m-0 mt-5 list-none reset">
                             <li class="inline-block p-0 m-0 mr-5">
                                 <label>
-                                    <input type='checkbox' @click='checkAll()' v-model='isCheckAll' value=""> Everything
+                                    <input type='checkbox' @click='checkAll()' v-model='isCheckAll' value=""> <span>Everything</span>
                                 </label>
                             </li>
                             <li class="inline-block p-0 m-0 mr-5" v-for='(list, $index) in listsdata' :key="$index">
@@ -87,3 +87,13 @@ export default {
 	}
 };
 </script>
+<style>
+.subscribe-form {
+    input + span {
+        margin-left: 5px;
+    }
+    input:checked + span {
+        font-weight: bold;
+    }
+}
+</style>

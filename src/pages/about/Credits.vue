@@ -79,7 +79,7 @@ export default {
 	metaInfo: {
 		title: "",
 		bodyAttrs: {
-			class: "gear"
+			class: "credits"
 		}
 	}
 };

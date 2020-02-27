@@ -2,7 +2,7 @@
 	<Layout :sidebar="false" :top="true" :bottom="false">
 		<template slot="top-shelf">
             <div class="flex items-center justify-center w-full h-screen">
-                <div class="w-1/2 px-12 py-8 bg-white border border-gray-300 rounded-md shadow-lg">
+                <div class="w-1/2 px-12 py-8 bg-white border border-gray-300 rounded-md shadow-lg subscribe-wrap">
                     <h1>Subscribe</h1>
                     <p class="text-xl">Signup below to get notified when I post new themes, tutorials and journal updates. Pick and choose what you get notified about. Once a month digest on your selected topics.</p>
                     <form action="https://subscribe.smokeyfro.com" method="POST" accept-charset="utf-8">

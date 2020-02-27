@@ -101,6 +101,7 @@
      .form-textarea:focus {
         color: #000;
     }
+    .format,
     label {
         @apply text-white;
         span {
@@ -135,6 +136,86 @@
             path {
                 fill: #ffc800;
             }
+        }
+    }
+    &.speaking main > div > div table {
+        background: transparent;
+        color: #fff;
+    }
+    &.speaking main > div > div table tr {
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+        border-color: #555;
+    }
+    &.search .form-input {
+        background: #fff;
+    }
+    &.search .badge {
+        color: #000;
+    }
+    &.search .results a,
+    &.subscribe main .subscribe-wrap,
+    &.upcoming .upcoming-wrap,
+    &.speaking main > div > div:first-of-type,
+    &.credits .grid {
+        @apply bg-gray-900;
+    }
+    &.subscribe main .subscribe-wrap input[type="submit"] {
+        border: 1px solid #444;
+    }
+    &.subscribe main .subscribe-wrap,
+    &.upcoming .upcoming-wrap {
+        border-color: #444;
+    } 
+    &.subscribe main .subscribe-wrap .form-input {
+        background: #fff;
+    }
+    &.speaking main > div > div:first-of-type {
+        border-color: #000;
+        box-shadow: 1px 1px 0 0 rgba(255,255,255,0.05); 
+    }
+    &.services .grid .g-image{
+        filter: invert();
+    }
+    .newsletter {
+        border-color: transparent;
+        background: #262626;
+    }
+    &.upcoming .upcoming-wrap {
+        tr {
+            border-color: #444;
+        }
+        table tbody tr:hover,
+        table tbody tr:hover td {
+            background-color: rgba(0, 0, 0, 0.005)!important;
+        }
+        .odd\:bg-white:nth-child(odd) {
+            background-color: #1c1c1c;
+            color: #858585;
+        }
+        .even\:bg-gray-200:nth-child(even) {
+            background-color: #222;
+            color: #fff;
+        }
+    }
+
+    .just-comments.sf {
+        --border-color: #444;
+        --primary-bg-color: #111;
+        --secondary-bg-color: #ecebed;
+        --secondary-bg-color-lighter: #ecebed33;
+        --primary-text-color: #fff;
+        --secondary-text-color: #fff;
+
+        --primary-button-bg-color: var(--primary-color);
+        --primary-button-hover-color: var(--primary-color);
+        --primary-button-hover-bg-color: var(--primary-bg-color);
+        --primary-button-border: 1px solid #444;
+
+        --outline-style: 3px solid var(--accent-color);
+        --outline-offset: 5px;
+
+        .BXtvJgy._1mL7mm2 {
+            color: #fff;
         }
     }
 }

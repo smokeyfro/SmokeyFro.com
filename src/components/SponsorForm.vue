@@ -11,7 +11,7 @@
           </select>
         </label>
 
-        <div class="mt-4">
+        <div class="mt-4 format">
           <span class="text-gray-700">Preferred format</span>
           <div class="mt-2 format">
             <label v-bind:class="{ active: format == 'Article' }" class="inline-flex items-center">

@@ -28,7 +28,7 @@
 			</div>
 		</article>
 		<template slot="bottom-shelf">
-			<div v-if="$page.post.gallery != ''" class="mx-6 mb-24 md:mx-10">
+			<div v-if="$page.post.gallery != ''" class="mx-6 mb-24 md:mx-10 lg:mx-20">
 				<h2>Screenshots</h2>
 				<silentbox-group class="grid grid-cols-2 row-gap-6 col-gap-4 mt-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gallery">
 					<silentbox-item v-for="(photo, $index) in $page.post.gallery" :key="$index" :src="photo.full.src" :description="photo.title" class="border border-gray-300">

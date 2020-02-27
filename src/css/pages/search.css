@@ -8,10 +8,13 @@
     @apply bg-green-300;
 }
 .badge.themes {
-    @apply bg-orange-300;
+    @apply bg-teal-300;
 }
 .badge.designs {
     @apply bg-blue-300;
+}
+.badge.portfolio {
+    @apply bg-indigo-300;
 }
 .badge.tuts {
     @apply bg-purple-300;

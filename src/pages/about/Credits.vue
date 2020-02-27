@@ -3,7 +3,7 @@
 		<h1>Site credits</h1>
 		<p>This site is only possible thanks to hard work from a looong list of fine folks who have all contributed their skills, time and energy to provide the web development community with the awesome tools we have at our disposal.</p>
         <template slot="bottom-shelf">
-		<div class="grid grid-cols-1 gap-6 p-10 mx-6 mt-10 mb-10 bg-white border-t-8 rounded-md shadow-lg md:mx-10 sm:grid-cols-2 lg:grid-cols-3 border-accent">
+		<div class="grid grid-cols-1 gap-6 p-10 mx-6 mt-10 mb-20 bg-white border-t-8 rounded-md shadow-lg md:gap-10 md:mx-10 lg:mx-20 sm:grid-cols-2 lg:grid-cols-3 border-accent">
             <div>
                 <h2 class="mb-5 text-sm uppercase">Code</h2>
                 <ul>

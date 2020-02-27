@@ -51,6 +51,13 @@
                     @keydown.esc.exact="hideDropdown">
                     <span>Tutorials</span>
                 </g-link>
+                <g-link to="/subscribe" aria-label="Subscribe"
+                    @keydown.up.exact.prevent=""
+                    @keydown.tab.exact="focusNext(false)"
+                    @keydown.down.exact.prevent="focusNext(true)"
+                    @keydown.esc.exact="hideDropdown">
+                    <span>Subscribe</span>
+                </g-link>
             </nav>
         </div>
     </transition>

@@ -4,7 +4,7 @@
             <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 008 1l3-3a5 5 0 00-8-8l-1 2"/><path d="M14 11a5 5 0 00-8-1l-3 3a5 5 0 008 8l1-2"/></svg></span>
             <span class="hidden">Connect</span>
         </a> -->
-        <g-link tooltip="Subscribe" to="/subscribe" aria-label="Subscribe to the newsletter">
+        <g-link class="hidden md:block" tooltip="Subscribe" to="/subscribe" aria-label="Subscribe to the newsletter">
             <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg></span>
             <span class="hidden">Subscribe</span>
         </g-link>

@@ -21,6 +21,25 @@
     bottom: 0;
     right: 0;
 }
+@media ( max-width: 480px ) {
+    .home main {
+        padding-top: 0px;
+    }
+    .home .grid {
+        display: block;
+    }
+    .home main .grid > figure {
+        height: 300px;
+        background: #fff url(/chris-walking.jpg);
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 25px;
+        border-bottom: 5px solid var(--accent-color);
+    }
+    .home .grid figure svg {
+        display: none;
+    }
+}
 @media ( min-width: 1024px ) {
     .home main {
         overflow: hidden;

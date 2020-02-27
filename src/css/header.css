@@ -116,6 +116,9 @@ header {
             padding-top: 90px;
         }
     }
+    .subscribe main {
+        padding-top: 70px;
+    }
 }
 
 @media ( min-width: 641px ) and ( max-width: 768px ) {

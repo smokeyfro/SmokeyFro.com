@@ -1,9 +1,9 @@
 <template>
 	<Layout :sidebar="false" :top="true" :bottom="false">
 		<template slot="top-shelf">
-            <div class="flex items-center justify-center w-full h-screen">
-                <div class="w-1/2 px-12 py-8 bg-white border border-gray-300 rounded-md shadow-lg subscribe-wrap">
-                    <h1>Subscribe</h1>
+            <div class="w-full h-screen md:flex md:items-center md:justify-center">
+                <div class="mx-6 md:border md:border-gray-300 md:rounded-md md:shadow-lg md:px-12 md:py-8 md:bg-white md:w-1/2 subscribe-wrap">
+                    <h1 class="mt-0">Subscribe</h1>
                     <p class="text-xl">Signup below to get notified when I post new themes, tutorials and journal updates. Pick and choose what you get notified about. Once a month digest on your selected topics.</p>
                     <form class="subscribe-form" action="https://subscribe.smokeyfro.com" method="POST" accept-charset="utf-8">
                         <div class="grid grid-cols-1 gap-8 md:grid-cols-2">

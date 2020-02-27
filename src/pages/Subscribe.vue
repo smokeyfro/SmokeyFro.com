@@ -53,7 +53,7 @@ export default {
             listsdata: [
                 { name: 'New tutorials', value: 'cbj3D8Vn8KzuBVw391Q3pw', checked: false },
                 { name: 'Theme releases', value: 'p1nxnKya25ldkTpYc7Z3Kw', checked: false },
-                { name: 'Journal updates', value: 'ThUb8pZr32KZkIHilEJ0ZQ', checked: false }
+                { name: 'Journal entries', value: 'ThUb8pZr32KZkIHilEJ0ZQ', checked: false }
             ],
             lists: []
         }

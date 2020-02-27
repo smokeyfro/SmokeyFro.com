@@ -1,6 +1,6 @@
 <template>
 	<div class="w-full h-screen overflow-x-auto overflow-x-hidden md:overflow-hidden">
-		<div class="absolute top-0 left-0 z-50 flex items-center pt-5 pl-5"><Logo /> <strong class="ml-3"> Back</strong></div>
+		<div class="absolute top-0 left-0 z-50 flex items-center pt-5 pl-5"><Logo /></div>
         <slot />
 	</div>
 </template>

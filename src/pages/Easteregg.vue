@@ -31,16 +31,13 @@ export default {
 			this.$confetti.start({
 				particles: [
 					{
-					type: 'heart',
+						type: 'image',
+						url: '/gs.png',
 					},
 					{
-					type: 'circle',
+						type: 'image',
+						url: '/vue.png',
 					},
-				],
-				defaultColors: [
-					'#ffc800',
-					'#22292ff2',
-					'#f3f7f9f7'
 				],
 			});
 		}

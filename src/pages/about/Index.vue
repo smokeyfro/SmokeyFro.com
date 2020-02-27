@@ -1,8 +1,8 @@
 <template>
 	<Layout :sidebar="true" :top="false" :bottom="true">
 		<div>
-			<div class="relative z-10 px-6 about-over md:px-10">
-				<div class="pt-4 md:pt-6 lg:max-w-screen-md">
+			<div class="about-over">
+				<div class="lg:max-w-screen-md">
 					<h1>My Story</h1>
 					<p>My full name is Christopher Nicholas Rault, but I generally only get called Christopher when I'm in trouble. Good ol Chris will do fine. I live off-grid in the Garden Route of South Africa.</p>
 					<div class="md:flex">

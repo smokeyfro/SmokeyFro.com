@@ -1,7 +1,7 @@
 <template>
 	<Layout :sidebar="false" :top="true" bottom="false" class="h-screen">
 		<template slot="top-shelf">
-		<div class="grid w-full h-screen gap-0 overflow-hidden">
+		<div class="grid w-full gap-0 md:h-screen">
 			<HomeImage />
 			<div>
 				<h1><span class="block sm:hidden">Howdy. I'm Chris</span><span class="hidden sm:block">Hello. My name  <strong>Chris</strong></span></h1>

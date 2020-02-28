@@ -4,6 +4,12 @@ aside {
     background-color: var(--aside-bg);
     @apply shadow-2xl;
 }
+.social-links > div {
+    z-index: 9999;
+    width: 140px;
+    right: 0;
+    top: -12px;
+}
 .secondary {
     .external {
         position: relative;

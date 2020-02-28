@@ -82,7 +82,7 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: flex-start;
-		overflow-x: auto;
+		overflow-x: visible;
 	}
 	.secondary a {
 		margin: 0 .5rem 0 .7rem;

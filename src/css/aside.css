@@ -10,6 +10,9 @@ aside {
     right: 0;
     top: -12px;
 }
+.contact aside {
+    overflow: visible;
+}
 .secondary {
     .external {
         position: relative;

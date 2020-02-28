@@ -8,7 +8,7 @@
 				<g-link :to="tag.path" v-for="tag in $page.post.tags" v-bind:key="tag.id">#{{ tag.name }}</g-link>
 			</nav>
 
-			<Newsletter layout="inline" class="p-10 my-24 bg-white border border-t-2" title="Subscribe to my Journal" summary="Signup below and I'll let you know when new content is added." buttonText="Signup, it's free" />
+			<Newsletter layout="inline" class="p-6 bg-white border border-t-2 md:p-10 md:my-24" title="Subscribe to my Journal" summary="Signup below and I'll let you know when new content is added." buttonText="Signup, it's free" />
 
 			<Comments />
 		</article>

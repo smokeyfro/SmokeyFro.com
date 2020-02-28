@@ -6,7 +6,7 @@
 			<NavMobile />
 			<NavTertiary />
 		</header>
-		<aside class="relative z-40 flex items-center overflow-x-scroll dark:bg-gray-900 sm:justify-center" v-if="sidebar">
+		<aside class="relative z-40 flex items-center overflow-x-scroll md:overflow-hidden dark:bg-gray-900 sm:justify-center" v-if="sidebar">
 			<slot name="secondary-nav" />
 		</aside>
 		<main class="relative z-30 w-full h-screen overflow-x-hidden overflow-y-auto">

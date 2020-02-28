@@ -14,7 +14,6 @@
 	</Layout>
 </template>
 
-
 <script>
 	import HomeImage from "~/components/HomeImage.vue";
 	

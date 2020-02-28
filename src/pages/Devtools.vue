@@ -15,12 +15,12 @@
 </template>
 
 <script>
-import DevTools from "~/components/DevTools.vue";
+// import DevTools from "~/components/DevTools.vue";
 import DevToolsWrap from "~/layouts/DevToolsWrap.vue";
 
 export default {
     components: {
-        DevTools,
+        // DevTools,
         DevToolsWrap
     },
 	metaInfo: {

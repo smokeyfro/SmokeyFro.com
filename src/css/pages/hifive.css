@@ -7,6 +7,12 @@
 .success .layout {
 	grid-template-columns: 70px 1fr;
 }
+.success-message {
+	z-index: 9999!important;
+}
+canvas {
+    z-index: 999;
+}
 .success .layout main {
   grid-column: 2;
   column-span: 2;

@@ -47,6 +47,15 @@
 import Newsletter from "@/components/Newsletter";
 
 export default {
+    components: {
+        Newsletter
+	},
+	metaInfo: {
+		title: "Random thoughts by SmokeyFro",
+		bodyAttrs: {
+			class: "subscribe two-col"
+		}
+	},
     data() {
         return {
             isCheckAll: false,
@@ -76,13 +85,10 @@ export default {
             }
         }
     },
-	components: {
-        Newsletter
-	},
-	metaInfo: {
-		title: "Random thoughts by SmokeyFro",
-		bodyAttrs: {
-			class: "subscribe two-col"
+    created(){
+        if(process.isClient) {
+			const confetti = require('vue-confetti').default
+			this.$confetti.stop();
 		}
 	}
 };

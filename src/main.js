@@ -10,6 +10,7 @@ export default function(Vue, { isClient, router }) {
 	Vue.component('Layout', DefaultLayout)
 	Vue.use(VueRouter)
 
+	// Confetti
 	if(process.isClient) {
 		const confetti = require('vue-confetti').default
 		Vue.use(confetti)
@@ -18,8 +19,7 @@ export default function(Vue, { isClient, router }) {
 	// localStorage
 	Vue.use(VueStorage)
 
-
-
+	// Konami
 	if(process.isClient) {
 		Vue.use(KonamiCode, {callback: function () {
 			router.push({ path: '/easteregg' })

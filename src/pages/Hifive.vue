@@ -30,7 +30,11 @@ export default {
 		}
 	},
 	created(){
-      setTimeout( () => this.$router.push({ path: '/contact'}), 5000);
+		if(process.isClient) {
+			const confetti = require('vue-confetti').default
+			this.$confetti.start();
+		}
+      	setTimeout( () => this.$router.push({ path: '/contact'}), 5000);
     }
 }
 </script>

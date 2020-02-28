@@ -1,15 +1,12 @@
 <template>
-	<Layout :sidebar="true" :top="true" :bottom="false">
+	<Layout :sidebar="false" :top="true" :bottom="false">
 		<template slot="top-shelf">
-			<div class="flex items-center justify-center w-full h-screen">
-				<div class="max-w-lg p-10 bg-gray-100 border-l-8 border-accent">
-					<h1>You're subscribed!</h1>
+			<div class="relative flex items-center justify-center w-full h-screen success-message">
+				<div class="max-w-md p-10 bg-gray-100 border-t-8 rounded-md shadow-lg border-accent">
+					<h1 class="mt-0 text-4xl">You're subscribed!</h1>
 					<p class="m-0">Now sit back and wait for new content to arrive in your inbox.</p>
 				</div>
 			</div>
-		</template>
-		<template slot="secondary-nav">
-			<NavContact />
 		</template>
 		<template slot="navgroup">
 			Hello
@@ -26,11 +23,26 @@ export default {
 	metaInfo: {
 		title: "Message sent",
 		bodyAttrs: {
-			class: "success overflow-hidden"
+			class: "success z-10"
 		}
 	},
 	created(){
-      setTimeout( () => this.$router.push({ path: '/contact'}), 5000);
+		if(process.isClient) {
+			const confetti = require('vue-confetti').default
+			this.$confetti.start({
+				particles: [
+					{
+					type: 'heart',
+					},
+				],
+				defaultColors: [
+					'red',
+					'pink',
+					'#ba0000'
+				],
+        	});
+		}
+      	// setTimeout( () => this.$router.push({ path: '/subscribe'}), 5000);
     }
 }
 </script>

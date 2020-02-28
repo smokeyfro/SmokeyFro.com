@@ -82,7 +82,7 @@ export default {
 	metaInfo: {
 		title: "Random thoughts by SmokeyFro",
 		bodyAttrs: {
-			class: "subscribe two-col"
+			class: "subscribe"
 		}
 	}
 };

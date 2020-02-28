@@ -1,14 +1,14 @@
 <template>
 	<Layout :sidebar="true" :top="false" :bottom="false">
 		<h1>Tutorial topics</h1>
-		<p>Browse my web development tutorials by topic.</p>		
-		<div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+		<p class="mb-0">Browse my web development tutorials by topic.</p>		
+		<div class="grid grid-cols-1 gap-4 md:gap-10 md:grid-cols-2">
 			<div>
 				<TutsByTag tag="wordpress" title="WordPress" summary="I've been using WordPress for years and in that time I've learned a bunch of neat tricks, which I'll be sharing here." />
 				<TutsByTag tag="vuejs" title="Vue.js" summary="Vue is my JavaScript library of choice these days and I'm reading every book I can find. Expect more here soon." />
 			</div>
 			<div>
-				<h2 class="mt-10">Tags</h2>
+				<h2 class="md:mt-10">Tags</h2>
 				<ul class="flex flex-wrap m-0 reset">
 					<li v-for="edge in filteredData" :key="edge.node.id" class="p-0 m-0 mb-4 mr-4 list-none ">
 						<g-link :to="tagUrlPrefix +`${edge.node.slug}`" class="block px-4 py-2 text-base text-gray-700 bg-gray-100 border-b-4 rounded-sm hover:border-accent link hover:bg-black hover:text-white">

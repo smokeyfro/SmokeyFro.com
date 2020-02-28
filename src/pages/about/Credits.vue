@@ -7,14 +7,17 @@
             <div>
                 <h2 class="mb-5 text-sm uppercase">Code</h2>
                 <ul>
-                    <li><a href="https://" title="" target="_blank" rel="nofollow noopener">Gridsome</a> the static site generator powering this site.</li>
-                    <li><a href="https://" title="" target="_blank" rel="nofollow noopener">Vue.js</a> the underlying javascript framework that gives me super powers.</li>
-                    <li><a href="https://" title="" target="_blank" rel="nofollow noopener">Yarn</a> to bundle and maintain my node modules.</li>
-                    <li><a href="https://" title="" target="_blank" rel="nofollow noopener">Zeit</a> for their Zeit Now JAMstack hosting platform.</li>
-                    <li><a href="https://" title="" target="_blank" rel="nofollow noopener">Cockpit</a> for my portfolio and side projects content.</li>
-                    <li><a href="https://" title="" target="_blank" rel="nofollow noopener">Ghost</a> for my tutorials and journal content.</li>
-                    <li><a href="https://" title="" target="_blank" rel="nofollow noopener">Google Sheets</a> for my upcoming tuts list</li>
-                    <li><a href="https://" title="" target="_blank" rel="nofollow noopener">Markdown</a> for my static content.</li>
+                    <li><a href="https://gridsome.org" title="JAMstack static site generator based on Vue.js" target="_blank" rel="nofollow noopener">Gridsome</a> the static site generator powering this site.</li>
+                    <li><a href="https://vuejs.org" title="" target="_blank" rel="nofollow noopener">Vue.js</a> the underlying javascript framework that gives me super powers.</li>
+                    <li><a href="https://yarn.org" title="" target="_blank" rel="nofollow noopener">Yarn</a> to bundle and maintain my node modules.</li>
+                    <li><a href="https://runcloud.io" title="" target="_blank" rel="nofollow noopener">RunCloud</a> to manage my Digital Ocean droplet.</li>
+                    <li><a href="https://digitalocean.com" title="" target="_blank" rel="nofollow noopener">Digital Ocean</a> to host my php-based apps.</li>
+                    <li><a href="https://zeit.co" title="" target="_blank" rel="nofollow noopener">Zeit</a> for their Zeit Now JAMstack hosting platform.</li>
+                    <li><a href="https://getcockpit.com" title="" target="_blank" rel="nofollow noopener">Cockpit</a> for my portfolio and side projects content.</li>
+                    <li><a href="https://ghost.org" title="" target="_blank" rel="nofollow noopener">Ghost</a> for my tutorials and journal content.</li>
+                    <li><a href="https://sheets.google.com" title="" target="_blank" rel="nofollow noopener">Google Sheets</a> for my upcoming tuts list</li>
+                    <li><a href="https://en.wikipedia.org/wiki/Markdown" title="" target="_blank" rel="nofollow noopener">Markdown</a> for my static content.</li>
+                    <li><a href="https://just-comments.com/" title="" target="_blank" rel="nofollow noopener">JustComments</a> for the journal and tutorial comments.</li>
                 </ul>
                 <h2 class="mt-10 mb-5 text-sm uppercase">Tools</h2>
                 <ul>
@@ -30,12 +33,12 @@
             <div>
                 <h2 class="mb-5 text-sm uppercase">Gridsome</h2>
                 <ul>
-                    <li><a href="https://ghost.org" title="" target="_blank" rel="nofollow noopener">Source - Ghost</a> The open-source blogging software.</li>
-                    <li><a href="https://" title="" target="_blank" rel="nofollow noopener">Source - File System</a> Used to create collections from my markdown files.</li>
-                    <li><a href="https://" title="" target="_blank" rel="nofollow noopener">Source - Instagram</a> Used to pull in my most recent Instagram photos.</li>
-                    <li><a href="https://" title="" target="_blank" rel="nofollow noopener">Plugin - FlexSearch</a> Used to create the search page on the site and the inline search widget on the 404 page.</li>
-                    <li><a href="https://" title="" target="_blank" rel="nofollow noopener">Plugin - Feed</a> Generates a RSS, Atom, and JSON feed for the site.</li>
-                    <li><a href="https://" title="" target="_blank" rel="nofollow noopener">Plugin - Sitemap</a> Creates a dynamic sitemap of all the sites content.</li>
+                    <li><a href="https://ghost.org" title="Node based open-source blogging platform" target="_blank" rel="nofollow noopener">Source - Ghost</a> The open-source blogging software.</li>
+                    <li><a href="https://gridsome.org/plugins/@gridsome/source-filesystem" title="Transform files into content that can be fetched with GraphQL in your components." target="_blank" rel="nofollow noopener">Source - File System</a> Used to create collections from my markdown files.</li>
+                    <li><a href="https://gridsome.org/plugins/@zefman/gridsome-source-instagram" title="Instagram source for Gridsome" target="_blank" rel="nofollow noopener">Source - Instagram</a> Used to pull in my most recent Instagram photos.</li>
+                    <li><a href="https://gridsome.org/plugins/gridsome-plugin-flexsearch" title="Add lightning fast search to Gridsome with FlexSearch" target="_blank" rel="nofollow noopener">Plugin - FlexSearch</a> Used to create the search page on the site and the inline search widget on the 404 page.</li>
+                    <li><a href="https://gridsome.org/plugins/gridsome-plugin-feed" title="Generate an RSS, Atom, and/or JSON feed for your Gridsome site." target="_blank" rel="nofollow noopener">Plugin - Feed</a> Generates a RSS, Atom, and JSON feed for the site.</li>
+                    <li><a href="https://gridsome.org/plugins/@gridsome/plugin-sitemap" title="Generate sitemap for Gridsome sites" target="_blank" rel="nofollow noopener">Plugin - Sitemap</a> Creates a dynamic sitemap of all the sites content.</li>
                 </ul>
                 <h2 class="mt-10 mb-5 text-sm uppercase">Graphics</h2>
                 <ul>

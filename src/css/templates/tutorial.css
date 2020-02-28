@@ -24,7 +24,7 @@ figure.kg-card {
 }
 @media ( max-width: 480px ) {
     .kg-embed-card {
-        height: 180px;
+        height: 170px;
     }
 }
 .kg-embed-card iframe, 

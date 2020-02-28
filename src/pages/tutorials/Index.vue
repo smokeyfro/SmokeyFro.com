@@ -3,9 +3,9 @@
 		<h1>Tutorials</h1>
 		<p>I learn something new all the time and as such I like the share my discoveries in the hope that it will help someone else down the line.</p>
 		<template slot="bottom-shelf">
-			<div class="grid grid-cols-1 gap-6 px-6 mt-10 mb-10 md:grid-cols-2 md:gap-10 lg:grid-cols-3 md:px-10 lg:px-20">
+			<div class="grid grid-cols-1 gap-6 px-6 mt-6 mb-10 md:mt-10 md:grid-cols-2 md:gap-10 lg:grid-cols-3 md:px-10 lg:px-20">
 				<article v-for="edge in $page.posts.edges" :key="edge.node.id">
-					<figure class="block h-56 mb-3 overflow-hidden rounded-md md:mb-5 card-image" v-if="edge.node.feature_image">
+					<figure class="block h-40 mb-3 overflow-hidden rounded-md md:h-56 md:mb-5 card-image" v-if="edge.node.feature_image">
 						<g-link :to="`${edge.node.path}`" class="block transition-opacity duration-100 ease-out opacity-100 image hover:opacity-75">
 							<g-image :src="edge.node.feature_image" width="364" height="244" fit="cover" />
 						</g-link>

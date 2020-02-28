@@ -3,8 +3,8 @@
   }
     .sponsor main > div > div:last-of-type svg {
       position: absolute;
-      top: 0;
-      right: 0;
+      bottom: 0;
+      left: 50%;
       opacity: .2;
     }
   .perks-image {
@@ -71,14 +71,14 @@
   
   @media (max-width: 768px) {
     .format {
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #e2e8f0;
         border-radius: 3px;
         overflow: hidden;
     }
     .mt-2.format label {
         margin: 0;
         padding: 10px 14px;
-        border: 1px solid #ccc;
+        border: 1px solid #e2e8f0;
         border-width: 1px 1px 0 1px;
         display: block;
     }

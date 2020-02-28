@@ -1,12 +1,12 @@
 <template>
 	<Layout :sidebar="false" :top="false" :bottom="false">
 		<div class="w-full h-full search-wrap">
-			<h1>Search</h1>
+			<h1 class="mt-0">Search</h1>
 			<p>Know what you're looking for? Type a search term or phrase.</p>
 			<div class="search">
 				<div class="block w-full mt-6">
 					<input id="search" v-model="searchTerm" :v-bind="searchTerm" type="search" results="10" v-focus class="block w-full mt-2 form-input" placeholder="Type in a phrase or search term...">
-					<p class="flex-row mt-2 text-sm text-gray-600 md:mt-3 examples">Or try one of these: <button v-on:click="searchTerm = 'themes'">themes</button>, <button v-on:click="searchTerm = 'jamstack'">jamstack</button>, <button v-on:click="searchTerm = 'vue'">vue</button>, <button v-on:click="searchTerm = 'wordpress'">wordpress</button>, <button v-on:click="searchTerm = 'beans'">beans</button></p>
+					<p class="flex-row mt-2 text-sm leading-loose text-gray-600 md:mt-3 examples">Or try one of these:<br class="block sm:hidden" /><button v-on:click="searchTerm = 'themes'">themes</button>, <button v-on:click="searchTerm = 'jamstack'">jamstack</button>, <button v-on:click="searchTerm = 'vue'">vue</button>, <button v-on:click="searchTerm = 'wordpress'">wordpress</button>, <button v-on:click="searchTerm = 'beans'">beans</button></p>
 				</div>
 				<div class="results">
 					<div v-for="item in searchResults" :key="item.id">

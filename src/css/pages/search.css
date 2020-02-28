@@ -1,6 +1,9 @@
 .examples button {
 	@apply bg-yellow-200 px-1 py-0 inline-block text-xs text-gray-800
 }
+.search .app main {
+    padding-top: 50px;
+}
 .badge {
 	top: -1px;
 }

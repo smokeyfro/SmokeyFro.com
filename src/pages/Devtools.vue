@@ -4,7 +4,8 @@
 			<div class="p-10 bg-white rounded-md shadow-xl">
                 <h1 class="m-0 text-2xl bold">Hidden Settings</h1>
                 <h2 class="pb-3 mb-3 border-b">For the curious developer</h2>
-                <DevTools />
+                <!-- <DevTools /> -->
+				<p><strong>My bad!</strong> This page isn't actually implemented, but be sure to check back later.</p>
             </div>
         </div>
 		<template slot="repo_link">

@@ -73,6 +73,11 @@ header {
         opacity: 1;
         color: rgba(255,255,255,0.7);
     }
+    .tertiary .toggle,
+    .tertiary .search {
+        padding: 5px;
+        display: block;
+    }
     .app .mobile-links a.active {
         color: rgba(255,255,255,1);
     }

@@ -3,7 +3,7 @@
 		<h1>Themes</h1>
 		<p>My growing collection of themes for Gridsome and WordPress.</p>
 		<template slot="bottom-shelf">
-			<div class="grid grid-cols-2 gap-6 mx-6 mt-10 mb-20 md:gap-10 lg:grid-cols-3 md:mx-10 lg:mx-20">
+			<div class="grid grid-cols-1 gap-6 mx-6 mt-10 mb-20 md:grid-cols-2 md:gap-10 lg:grid-cols-3 md:mx-10 lg:mx-20">
 				<ItemTheme :post="edge.node" v-for="edge in $page.posts.edges" :key="edge.node.id" />
 			</div>
 		</template>

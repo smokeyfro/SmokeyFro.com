@@ -1,7 +1,6 @@
 .home main .grid {
     grid-template-columns: 40% 60%;
     height: 100vh;
-    overflow: hidden;
 }
 .home main .grid > div {
     display: flex;

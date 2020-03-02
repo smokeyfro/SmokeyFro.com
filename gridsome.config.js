@@ -72,7 +72,7 @@ module.exports = {
     ],
     GhostTag: [
       {
-        path: '/tuts/about/:slug',
+        path: '/tutorials/about/:slug',
         component: './src/templates/Topic.vue'
       }
     ],
@@ -121,7 +121,7 @@ module.exports = {
           },
           {
             typeName: 'GhostPost',
-            indexName: 'Tuts',
+            indexName: 'Tutorials',
             fields: ['title', 'excerpt', 'description', 'tags']
           },
           {

@@ -114,7 +114,7 @@ export default {
 		postUrl () {
 			let siteUrl = this.config.siteUrl
 			let postSlug = this.$page.post.slug
-			return postSlug ? `${siteUrl}/tuts/${postSlug}/` : `${siteUrl}/${this.$page.post.path}/`
+			return postSlug ? `${siteUrl}/tutorials/${postSlug}` : `${siteUrl}/${this.$page.post.path}`
 		},
 		ogImageUrl () {
 			return this.$page.post.coverImage || `${this.config.siteUrl}/images/sf-card.png`

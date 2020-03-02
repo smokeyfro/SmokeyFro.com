@@ -100,23 +100,23 @@ module.exports = {
     //     'targetPath': './media/tuts'
     //   }
     // },
-    {
-      use: 'gridsome-plugin-blog-cover',
-      options: {
-        typeName: 'GhostPost',
-        coverField: 'og_image',
-        backgroundColors: ['#13171b'],
-        imgWidth: '700px',
-        imgHeight: '650px',
-        border: false,
-        domain: 'https://smokeyfro.com',
-        outputDir: 'media/tuts/images/',
-        cloud_name: 'smokeyfro',
-        api_key: '183542389321419',
-        api_secret: '26Zkgd7F6PyyH6_4RtCVReO3obs',
-        upload_folder: 'tuts/covers'
-      }
-    },
+    // {
+    //   use: 'gridsome-plugin-blog-cover',
+    //   options: {
+    //     typeName: 'GhostPost',
+    //     coverField: 'og_image',
+    //     backgroundColors: ['#13171b'],
+    //     imgWidth: '700px',
+    //     imgHeight: '650px',
+    //     border: false,
+    //     domain: 'https://smokeyfro.com',
+    //     outputDir: 'media/tuts/images/',
+    //     cloud_name: 'smokeyfro',
+    //     api_key: '183542389321419',
+    //     api_secret: '26Zkgd7F6PyyH6_4RtCVReO3obs',
+    //     upload_folder: 'tuts/covers'
+    //   }
+    // },
     {
       use: 'gridsome-plugin-flexsearch',
       options: {

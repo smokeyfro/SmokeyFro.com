@@ -19,6 +19,7 @@
 		"gridsome-plugin-feed": "^1.0.2",
 		"gridsome-plugin-flexsearch": "^0.1.12",
 		"gridsome-plugin-remark-youtube": "^1.0.1",
+		"npm-install-all": "^1.1.21",
 		"postcss": "^7.0.27",
 		"postcss-import": "^12.0.1",
 		"postcss-loader": "^3.0.0",

@@ -1,0 +1,74 @@
+topics: 
+  - id: 1
+    title: The JAMstack
+    summary: The JAMstack refers to building static sites (ie, no database or php) using modern tooling and programming practices. It's come along way in recent years and we have more tools available than ever.
+  - id: 1
+    title: The Beans Framework
+    summary: This talk introduces the audience to the Beans framework, what problems it attempts to solve, a breakdown of the various api's that are included and lastly some examples of using Beans in a real-world project.
+  - id: 1
+    title: Bootstrap Business
+    summary: How do you launch your idea when you don't have access to funding? Myself and my business partners bootstrapped a number of online companies, each gaining their own success and failures along the way.
+  - id: 1
+    title: My Startup Journey
+    summary: A brief history of the three digital product companies I helped create, our sweet taste of success, our discent down the rabbit whole, a tale of not giving up and a bunch of solid lessons learnt along the way.
+talks:
+  - id: 1
+    title: Content Construction with Zoo
+    summary: For those new to content construction and the Zoo component for Joomla. The talk covered an overview of how content construction works, an overview of Zoo's features and a couple tricks I learnt along the way.
+    event: 
+      - name: JoomlaDay South Africa
+        date: Aug, 2011
+        location: Cape Town, South Africa
+        links: 
+        - id: 1a
+          text: Video
+          title: View a video of the talk on Vimeo
+          url: https://vimeo.com/30687357
+        - id: 1b
+          text: Slides
+          title: View the slide-deck on SlideShare
+          url: https://www.slideshare.net/sajoomladay/chris-rault-content-construction-with-zoo
+      - name: JoomlaDay Malaysia
+        date: Jun, 2011
+        location: Kuala Lumpur, Malaysia
+        links: 
+          - id: 2a
+            text: Slides
+            title: View the slide-deck on SlideShare
+            url: https://www.slideshare.net/connectr/content-construction-with-zoo
+  - id: 2
+    title: Introduction to Morph
+    summary: An introduction to Morph, the Joomla template framework we created back in 2009. The talk included a demo of the setup process and admin user interface and finally some practical examples of theming using child-themes.
+    event: 
+      - name: JoomlaDay South Africa
+        date: Aug, 2011
+        location: Cape Town, South Africa
+        links: 
+          - id: 3a
+            text: Video
+            title: View a video of the talk on Vimeo
+            url: https://vimeo.com/31361114
+      - name: JoomlaDay Malaysia
+        date: Jun, 2011
+        location: Kuala Lumpur, Malaysia
+        links: 
+          - id: 4a
+            text: Video
+            title: View a video of the talk on Youtube
+            url: https://www.youtube.com/watch?v=byLujAw1Cas
+  - id: 3
+    title: Rapid Template Development with Joomla, YUI and jQuery
+    summary: A two part presentation that covered my tips and tips for rapid Joomla development, using Yahoo's YUI library and jQuery.
+    event: 
+    - name: CMS Expo
+      date: Dec, 2008
+      location: Denver, USA
+      links: 
+        - id: 5a
+          text: Talk 1 Slides
+          title: View the slide-deck on SlideShare
+          url: https://www.slideshare.net/prothemer/rapid-template-development-part-1-presentation
+        - id: 5b
+          text: Talk 2 Slides
+          title: View the slide-deck on SlideShare
+          url: https://www.slideshare.net/prothemer/rapid-template-development-part-2-presentation

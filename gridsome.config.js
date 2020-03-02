@@ -13,7 +13,7 @@ module.exports = {
   siteName: "SmokeyFro",
   siteUrl: "https://smokeyfro.com",
   titleTemplate: "%s - SmokeyFro",
-  siteDescription: "Chris Rault, aka SmokeyFro - a designer, front-end developer and oocassional entrepreneur from South Africa.",
+  siteDescription: "Chris Rault, aka SmokeyFro - a designer, front-end developer and occassional entrepreneur from South Africa.",
   icon: 'src/favicon.png',
   trailingSlash: false,
   permalinks: { 

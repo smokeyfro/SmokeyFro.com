@@ -29,7 +29,7 @@
     }
     .home main .grid > figure {
         height: 300px;
-        background: #fff url(/chris-walking.jpg);
+        background: #fff url(/chris-walking-small.jpg);
         background-size: cover;
         background-position: center;
         margin-bottom: 25px;

@@ -15,7 +15,7 @@ module.exports = {
   titleTemplate: "%s - SmokeyFro",
   siteDescription: "Chris Rault, aka SmokeyFro - a designer, front-end developer and oocassional entrepreneur from South Africa.",
   icon: 'src/favicon.png',
-  //trailingSlash: false,
+  trailingSlash: false,
   permalinks: { 
     trailingSlash: false 
   },

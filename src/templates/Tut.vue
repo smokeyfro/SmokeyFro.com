@@ -84,7 +84,7 @@ export default {
 				},
 				{
 					name: "twitter:image:src",
-					content: this.$page.post.feature_image || ""
+					content: this.$page.post.og_image
 				},
 				{
 					property: "twitter:url",

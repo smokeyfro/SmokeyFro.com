@@ -10,7 +10,8 @@ repo_url: https://github.com/SmokeyFrom/london
 requirements: Gridsome 0.7x
 type: Blog
 release_date: Feb, 2020
-image: /media/themes/london-thumb.jpg
+thumb: /media/themes/london-thumb.jpg
+image: /media/themes/london-full.jpg
 download_theme: "https://github.com/smokeyfro/sf-files/raw/master/london.zip"
 download_source: ""
 gallery:

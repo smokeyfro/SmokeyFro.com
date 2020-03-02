@@ -50,7 +50,7 @@ export default {
 					group
 					demo_url
 					type
-					image
+					thumb
 					path
 				}
 			}

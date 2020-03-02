@@ -10,7 +10,8 @@ repo_url: https://github.com/ThemeButler/tbr-totem
 requirements: WordPress 4.x
 type: Magazine
 release_date: July, 2015
-image: /media/themes/totem-thumb.jpg
+thumb: /media/themes/totem-thumb.jpg
+image: /media/themes/totem-full.jpg
 download_theme: "https://github.com/smokeyfro/sf-files/raw/master/sf-totem.zip"
 download_source: "https://github.com/smokeyfro/sf-files/raw/master/sf-totem-source.zip"
 gallery:

@@ -1,6 +1,6 @@
 <template>
-	<Layout :sidebar="true" :top="false" :bottom="false">
-		<article class="w-2/3">
+	<Layout :sidebar="true" :top="true" :bottom="false">
+		<article class="lg:w-2/3">
 			<h1>{{ $page.post.title }}</h1>
 			<p v-html="$page.post.excerpt" />
 			<p class="demo-link" v-if="$page.post.group === 'beans'">
@@ -14,7 +14,7 @@
 					<a href="https://www.sitepoint.com/faster-wordpress-theme-development-beans-framework/" class="block link" target="_blank" rel="nofollow noopener" title="Get an overview of the Beans framework for WordPress">Intro to Beans <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#999" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block w-5 h-5" viewBox="0 0 24 24"><defs/><path d="M7 17L17 7M7 7h10v10"/></svg></a>
 					<a href="https://www.getbeans.io/documentation/" class="block link" target="_blank" rel="nofollow noopener" title="Read the official Beans documentation">Beans Documentation <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block w-5 h-5" viewBox="0 0 24 24"><defs/><path d="M7 17L17 7M7 7h10v10"/></svg></a>
 					<a href="https://www.getbeans.io/code-snippets/" class="block link" target="_blank" rel="nofollow noopener" title="View code-snippets on the official Beans site">Code Snippets <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block w-5 h-5" viewBox="0 0 24 24"><defs/><path d="M7 17L17 7M7 7h10v10"/></svg></a>
-					<a href="/tuts/beans-setup-guide" class="block link" title="Check out my general Beans setup guide">Setup Guide</a>
+					<!-- <a href="/tuts/beans-setup-guide" class="block link" title="Check out my general Beans setup guide">Setup Guide</a> -->
 					<a href="http://localhost:8080/tuts/about/beans" class="block link" title="Check out my Beans tutorials">Beans Tutorials</a>
 				</div>
 				<div class="downloads">
@@ -36,26 +36,31 @@
 					</a>
 				</div>
 			</div>
-			<div v-if="$page.post.group === 'jamstack'" class="pt-6 mt-10 border-t-2">
+			<div v-if="$page.post.group === 'jamstack'" class="pt-6 mt-10 mb-6 border-t-2 md:mb-10">
 				<h2 class="2xl">Easy tiger!</h2>
 				<p>My JAMstack themes aren't quite ready yet. Subscribe to my newsletter to be notified when they are ready.</p>
-				<Newsletter :customClass="flex "/>
+				<Newsletter title="" summary="" layout="inline" />
 			</div>
 			<div v-html="$page.post.content" />
 		</article>
-		<figure v-if="$page.post.image" class="fixed top-0 right-0 w-1/3 theme-image">
+		<figure v-if="$page.post.image" class="hidden md:top-0 md:right-0 md:w-40 md:fixed theme-image">
 			<g-image :src="$page.post.image" :alt="$page.post.title" />
-		</figure>	
-	<template slot="navgroup">
-	  Freebies
-	</template>
-	<template slot="secondary-nav">
-	  <NavThemes />
-	</template>
-	<template slot="repo_link">
-	  <a href="https://github.com/smokeyfro/smokeyfro/blob/master/src/pages/Freebies/Theme.vue">Source</a>
-	</template>
-  </Layout>
+		</figure>
+		<template slot="top-shelf">
+			<figure v-if="$page.post.thumb" class="block border-t border-b md:hidden">
+				<g-image :src="$page.post.thumb" :alt="$page.post.title" width="360" height="274" />
+			</figure>
+		</template>
+		<template slot="navgroup">
+			Freebies
+		</template>
+		<template slot="secondary-nav">
+			<NavThemes />
+		</template>
+		<template slot="repo_link">
+			<a href="https://github.com/smokeyfro/smokeyfro/blob/master/src/pages/Freebies/Theme.vue">Source</a>
+		</template>
+  	</Layout>
 </template>
 
 <script>
@@ -103,7 +108,8 @@ query Post ($path: String) {
 	group
 	download_theme
 	download_source
-	image ( width: 625)
+	thumb
+	image
   }
 }
 </page-query>

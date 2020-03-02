@@ -50,7 +50,7 @@ export default {
 					group
 					demo_url
 					type
-					image(width: 364, height: 244, quality: 90)
+					thumb
 					path
 				}
 			}

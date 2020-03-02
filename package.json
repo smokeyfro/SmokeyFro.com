@@ -15,6 +15,7 @@
 		"@zefman/gridsome-source-instagram": "^0.1.2",
 		"core-js": "3.6.4",
 		"gridsome": "latest",
+		"gridsome-plugin-blog-cover": "^0.0.4-alpha.1",
 		"gridsome-plugin-feed": "^1.0.2",
 		"gridsome-plugin-flexsearch": "^0.1.12",
 		"gridsome-plugin-remark-youtube": "^1.0.1",

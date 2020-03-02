@@ -52,7 +52,7 @@ export default {
 				},
 				{
 					property: "og:image",
-					content: this.$page.post.feature_image || ""
+					content: this.$page.post.og_image
 				},
 				{
 					property: "og:type",
@@ -132,6 +132,7 @@ query Post ($path: String) {
 		id
 		html
 		excerpt
+		og_image
 		tags {
 			name
 		}

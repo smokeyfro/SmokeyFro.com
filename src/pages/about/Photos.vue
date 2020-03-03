@@ -46,4 +46,5 @@ export default {
 	}
 };
 </script>
+<style src="../../css/lightbox.css" />
 <style src="../../css/pages/gallery.css" />

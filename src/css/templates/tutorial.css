@@ -1,5 +1,3 @@
-@import '../prism.css';
-
 .code-toolbar {
 	@apply my-6;
 }

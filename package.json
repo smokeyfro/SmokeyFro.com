@@ -8,25 +8,25 @@
 		"explore": "gridsome explore"
 	},
 	"dependencies": {
-		"@gridsome/plugin-sitemap": "^0.2.3",
+		"gridsome": "latest",
 		"@gridsome/source-filesystem": "^0.6.2",
 		"@gridsome/source-ghost": "^0.3.1",
-		"@gridsome/transformer-remark": "^0.5.0",
 		"@zefman/gridsome-source-instagram": "^0.1.2",
-		"core-js": "3.6.4",
-		"gridsome": "latest",
+		"@gridsome/plugin-sitemap": "^0.2.3",
 		"gridsome-plugin-feed": "^1.0.2",
 		"gridsome-plugin-flexsearch": "^0.1.12",
 		"gridsome-plugin-remark-youtube": "^1.0.1",
+		"@gridsome/transformer-remark": "^0.5.0",
+		"vue-silentbox": "^2.0.0",
 		"vue-clickaway": "^2.2.2",
 		"vue-confetti": "^2.0.7",
 		"vue-konami-code": "^1.0.0",
-		"vue-silentbox": "^2.0.0",
-		"vuestorage": "^19.0.1"
+		"vuestorage": "^19.0.1",
+		"core-js": "3.6.4"
 	},
 	"devDependencies": {
-		"@tailwindcss/custom-forms": "^0.2.1",
-		"gridsome-plugin-tailwindcss": "^2.2.36"
+		"gridsome-plugin-tailwindcss": "^2.2.36",
+		"@tailwindcss/custom-forms": "^0.2.1"
 	},
 	"resolutions": {
 		"**/core-js": "3.6.2",

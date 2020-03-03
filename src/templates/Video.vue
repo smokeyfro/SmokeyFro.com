@@ -1,11 +1,11 @@
 <template>
-	<Layout :sidebar="true" :top="false" :bottom="false">
+	<Video>
 		<article class="relative">
-			<div v-html="$page.post.content" />
-            <div class="hidden">
+			<figure v-html="$page.post.content" class="md:mt-10 lg:mt-20" />
+            <!-- <div class="hidden">
                 <h1 class="title">{{ $page.post.title }}</h1>
 			    <p class="lead" v-html="$page.post.excerpt" />
-            </div>
+            </div> -->
 		</article>
 		<template slot="navgroup">
 			Work
@@ -16,15 +16,17 @@
 		<template slot="repo_link">
 			<a href="https://github.com/smokeyfro/smokeyfro/blob/master/src/pages/work/Rates.vue">Source</a>
 		</template>
-	</Layout>
+	</Video>
 </template>
 
 <script>
 import NavAbout from "@/components/NavAbout";
+import Video from "~/layouts/Video.vue";
 
 export default {
 	components: {
-		NavAbout
+        NavAbout,
+        Video
 	},
 	metaInfo() {
 		return {

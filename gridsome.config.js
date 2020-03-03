@@ -4,7 +4,9 @@ module.exports = {
   titleTemplate: "%s - SmokeyFro",
   siteDescription: "Chris Rault, aka SmokeyFro - a designer, front-end developer and occassional entrepreneur from South Africa.",
   icon: 'src/favicon.png',
-  trailingSlash: false,
+  permalinks: {
+    trailingSlash: false,
+  },
   resolveAbsolutePaths: true,
   prefetch: {
     mask: '^$',
@@ -42,7 +44,8 @@ module.exports = {
     ],
     Video: [
       {
-        path: '/videos/:slug'
+        path: '/videos/:slug',
+        component: './src/templates/Video.vue'
       }
     ],
     GhostPost: [
@@ -97,11 +100,11 @@ module.exports = {
       use: 'gridsome-plugin-flexsearch',
       options: {
         collections: [
-          {
-            typeName: 'Design',
-            indexName: 'Designs',
-            fields: ['title', 'excerpt', 'description']
-          },
+          // {
+          //   typeName: 'Design',
+          //   indexName: 'Designs',
+          //   fields: ['title', 'excerpt', 'description']
+          // },
           {
             typeName: 'GhostTag',
             indexName: 'Tags',
@@ -117,11 +120,11 @@ module.exports = {
             indexName: 'Tutorials',
             fields: ['title', 'excerpt', 'description', 'tags']
           },
-          {
-            typeName: 'GhostTag',
-            indexName: 'Tag',
-            fields: ['name']
-          },
+          // {
+          //   typeName: 'GhostTag',
+          //   indexName: 'Tag',
+          //   fields: ['name']
+          // },
           {
             typeName: 'Theme',
             indexName: 'Themes',
@@ -199,7 +202,7 @@ module.exports = {
         resolveAbsolutePaths: true,
         remark: {
           plugins: [
-            ['gridsome-plugin-remark-youtube', { width: '800px', align: 'auto' }]
+            ['gridsome-plugin-remark-youtube', { width: '100%', align: 'auto' }]
           ]
         }
       }
@@ -228,7 +231,7 @@ module.exports = {
     {
       use: 'gridsome-plugin-feed',
       options: {
-        contentTypes: ['GhostPost', 'GhostPage', 'Theme', 'Work', 'Project'],
+        contentTypes: ['GhostPost', 'GhostPage', 'Theme', 'Work', 'Project', 'Video'],
         feedOptions: {
           title: 'SmokeyFro - Syndicate',
           description: 'Web Development Tutorials, JAMStack themes and more'

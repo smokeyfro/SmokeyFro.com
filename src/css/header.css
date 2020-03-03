@@ -5,24 +5,24 @@ header {
     svg, a {
         transition: all .3s ease-out;
     }
-    nav {
-        a {
-            @apply transition-opacity duration-100 ease-out;
-	        color: rgba(255,255,255,0.7);
-        }
-        .active {
-            color: #fff;
-            path, circle {
-                stroke: #ffc800;
-            }
-        }
-        svg {
-            width: 16px;
-        }
-        path, circle {
-            stroke: rgba(255,255,255,0.7);
-        } 
+    nav a {
+        @apply transition-opacity duration-100 ease-out;
+        color: rgba(255,255,255,0.7);
     }
+    nav .active {
+        color: #fff;
+    }
+    nav .active path, 
+    nav .active circle {
+        stroke: #ffc800;
+    }
+    nav svg {
+        width: 16px;
+    }
+    nav path, 
+    nav circle {
+        stroke: rgba(255,255,255,0.7);
+    } 
     .primary a {
         padding: 7px;
     }

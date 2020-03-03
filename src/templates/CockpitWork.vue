@@ -2,7 +2,7 @@
 	<Layout :sidebar="true" :top="true" :bottom="true">
 		<article> 
 			<h1 v-if="$page.post.title">{{ $page.post.title }}</h1>
-			<p>Client: {{ $page.post.fields.client }} <span class="block h-2 text-transparent md:inline"> &middot; </span>{{ $page.post.fields.website }}</p>
+			<p>contact: {{ $page.post.fields.client }} <span class="block h-2 text-transparent md:inline"> &middot; </span>{{ $page.post.fields.website }}</p>
 			
 			<div class="markdown" v-if="$page.post.fields.brief != false">
 				<h2>The brief</h2>

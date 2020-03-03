@@ -4,7 +4,7 @@ slug: fairy-knowe-backpackers
 excerpt: WordPress site for a local backpackers.
 project_type: WordPress
 company: Fairy Knowe Backpackers
-client: Digby Marshall
+contact: Digby Marshall
 thumb: "/media/work/fairyknowe-thumb.jpg"
 image: "/media/work/fairy-knowe-backpackers-1-home.jpg"
 gallery:

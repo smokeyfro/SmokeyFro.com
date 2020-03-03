@@ -4,11 +4,19 @@
 		<p>Here are some recent snaps on Instagram. Follow <a href="https://instagram.com/smokeyfro" target="_blank" rel="noopener" title="Follow me on Instagram">@SmokeyFro</a> for more.</p>
 		<template slot="bottom-shelf">
 			<div v-if="$page.posts.edges" class="mt-4 lg:mt-16">
-				<silentbox-group class="grid grid-cols-2 gap-1 lg:grid-cols-3 gallery">
-					<silentbox-item v-for="edge in $page.posts.edges" :key="edge.node.id" :src="edge.node.display_url" :description="edge.node.title" class="block h-40 overflow-hidden">
-						<g-image v-if="edge.node.display_url" :src="edge.node.display_url" width="265" height="300" />
-					</silentbox-item>
-				</silentbox-group>
+				<div>
+					<button @click="toggler = !toggler">
+					Toggle Lightbox
+					</button>
+
+					<ClientOnly>
+						<FsLightbox
+						:toggler="toggler"
+						:sources="$page.posts.edges"
+						:showThumbsOnMount="true"
+						/>
+					</ClientOnly>
+				</div>
 			</div>
 		</template>
 		<template slot="secondary-nav">
@@ -26,25 +34,30 @@
 				}
 			}
 		}
-}
+	}
 </page-query>
 
 <script>
 import NavAbout from "~/components/NavAbout.vue";
-import VueSilentbox from 'vue-silentbox';
 
 export default {
 	components: {
-		NavAbout,
-		VueSilentbox
+	    FsLightbox: () => import('fslightbox-vue'),
+		NavAbout
 	},
 	metaInfo: {
 		title: "",
 		bodyAttrs: {
 			class: "photos"
 		}
+	},
+	data() {
+		return {
+			toggler: false,
+			options : {
+				closeText : 'X'
+			}
+		}
 	}
 };
 </script>
-<style src="../../css/lightbox.css"></style>
-<style src="../../css/pages/gallery.css"></style>

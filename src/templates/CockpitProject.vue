@@ -4,7 +4,7 @@
 			<div class="pt-4 mx-6 md:pt-6 md:mx-10">
 				<h1 v-if="$page.post.title">{{ $page.post.title }}</h1>
 				<p v-if="$page.post.fields.excerpt">{{ $page.post.fields.excerpt }}</p>
-				<p>Client: <span class="block h-2 text-transparent md:inline"> &middot; </span>{{ $page.post.fields.website }}</p>
+				<p>contact: <span class="block h-2 text-transparent md:inline"> &middot; </span>{{ $page.post.fields.website }}</p>
 			</div>
 		</template>
 		<article> 

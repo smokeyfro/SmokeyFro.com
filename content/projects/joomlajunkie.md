@@ -3,7 +3,7 @@ title: JoomlaJunkie
 slug: joomlajunkie
 excerpt: Joomla template club we ran for 7+ years. The birthplace of Morph.
 project_type: Joomla!
-client: Internal Project
+contact: Internal Project
 client_content: Me
 thumb: "/media/projects/joomlajunkie-thumb.jpg"
 image: "/media/projects/configurator.jpg"

@@ -3,7 +3,7 @@ title: Kamooni
 slug: kamooni
 excerpt: Static wrapper for the Kamooni home page populated via the Kamooni api.
 project_type: Static / API
-client: Kamooni
+contact: Kamooni
 client_content: 
 thumb: "/media/work/kamooni-thumb.jpg"
 image: "/media/work/kamooni-thumb.jpg"

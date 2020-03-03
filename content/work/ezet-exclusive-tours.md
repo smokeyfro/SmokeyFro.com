@@ -4,7 +4,7 @@ slug: ezet-exclusive-tours
 excerpt: WordPress site for a local tour operator.
 project_type: WordPress
 company: Ezet's Exclusive Tours
-client: Ezette Pool
+contact: Ezette Pool
 thumb: "/media/work/ezet-thumb.jpg"
 image: "/media/work/ezet-exclusive-tours.jpg"
 gallery: ""

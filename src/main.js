@@ -11,10 +11,10 @@ export default function(Vue, { isClient, router }) {
 	Vue.use(VueRouter)
 
 	// Lightbox
-	if (process.isClient) {
-		const VueSilentbox = require('vue-silentbox').default;
-		Vue.use(VueSilentbox);
-	}
+	// if (process.isClient) {
+	// 	const VueSilentbox = require('vue-silentbox').default;
+	// 	Vue.use(VueSilentbox);
+	// }
 
 	// Confetti
 	if(process.isClient) {

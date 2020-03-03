@@ -3,7 +3,7 @@ title: HeadwayRocket
 slug: headwayrocket
 excerpt: WordPress theme and plugin shop focused on extending Headway.
 project_type: JAM Stack
-client: Side Project
+contact: Side Project
 thumb: "/media/projects/headwayrocket-v1-thumb.jpg"
 image: "/media/projects/headwayrocket.jpg"
 gallery:

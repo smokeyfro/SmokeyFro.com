@@ -3,8 +3,8 @@ title: House Finder
 slug: house-finder
 excerpt: For-sale-by-owner portal in the UK.
 project_type: Joomla
-client: HouseFinder UK
-client_content: David Thomas
+company: HouseFinder UK
+contact: David Thomas
 thumb: "/media/work/housefinder-thumb.jpg"
 image: "/media/work/housefinder-thumb.jpg"
 gallery: ""

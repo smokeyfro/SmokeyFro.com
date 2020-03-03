@@ -3,7 +3,7 @@ title: Made with Sketch
 slug: madewithsketch
 excerpt: Sketch resources, optimised for the smallest download size.
 project_type: WordPress
-client: Side Project
+contact: Side Project
 client_content: Me
 thumb: "/media/projects/madewithsketch-thumb.jpg"
 image: "/media/projects/madewithsketch.jpg"

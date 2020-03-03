@@ -4,7 +4,7 @@ slug: commercial-building-surveys
 excerpt: WordPress site for a roofing specialist in the UK.
 project_type: WordPress
 company: Liquasil Ltd
-client: David Carter
+contact: David Carter
 thumb: "/media/work/buildingsurveys-thumb.jpg"
 image: "/media/work/buildingsurveys.jpg"
 gallery: ""

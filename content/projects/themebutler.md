@@ -3,7 +3,7 @@ title: ThemeButler
 slug: themebutler
 excerpt: Our attempt at a theme club aimed at developers. The birthplace of Beans.
 project_type: WordPress
-client: Internal
+contact: Internal
 client_content: 
 thumb: "/media/projects/themebutler-thumb.jpg"
 image: "/media/projects/themebutler.jpg"

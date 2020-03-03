@@ -3,7 +3,7 @@ title: Wine Folly
 slug: winefolly
 excerpt: Complete overhaul of popular wine blog WineFolly.com
 project_type: WordPress
-client: Madeline Puckett
+contact: Madeline Puckett
 client_content: Madeline Puckett
 thumb: "/media/work/winefolly-thumb.jpg"
 image: "/media/work/winefolly-wines-grid.jpg"

@@ -3,10 +3,15 @@ title: WPTips
 slug: wptips
 excerpt: Curated collection of the best WordPress tutorials and snippets.
 project_type: WordPress
-client: Side Project
+contact: Side Project
 client_content: Me
 thumb: "/media/projects/wptips-thumb.jpg"
 image: "/media/projects/wptips-home.jpg"
+testgallery: 
+- "/media/projects/wptips-home.jpg"
+- "/media/projects/wptips-tips.jpg"
+- "/media/projects/wptips-tip.jpg"
+- "/media/projects/wptips-tuts.jpg"
 gallery:
 - thumb: "/media/projects/wptips-home.jpg"
   full: "/media/projects/wptips-home.jpg"

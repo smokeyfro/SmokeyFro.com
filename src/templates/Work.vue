@@ -1,13 +1,22 @@
 <template>
-	<Layout :sidebar="true" :top="true" :bottom="true">
-		<template slot="top-shelf">
-			<div class="pt-4 mx-6 md:pt-6 md:mx-10">
-				<h1>{{ $page.post.title }}</h1>
-				<p>{{ $page.post.excerpt }}</p>
-				<p>Client: {{ $page.post.client }}<span class="block h-2 text-transparent md:inline"> &middot; </span>{{ $page.post.url }}</p>
+	<Layout :sidebar="true" :top="false" :bottom="false">
+		<article class="mb-6 md:mb-10"> 
+			<div class="flex items-center justify-between w-full">
+				<h1 class="m-0">{{ $page.post.title }}</h1>
+				<a v-if="$page.post.status === 'Online'" :href="$page.post.url" target="_blank">View the site <img src="/external.svg" class="inline-block w-3 h-3" /></a>
 			</div>
-		</template>
-		<article> 
+			<p>{{ $page.post.excerpt }}</p>
+			<div class="w-full p-6 pb-4 mb-10 bg-white border rounded-md specs">
+				<ul class="grid grid-cols-2 p-0 mb-0 reset">
+					<li v-if="$page.post.company" class="m-0 mb-3 truncate"><strong class="block">Company</strong>{{ $page.post.company }}</li>
+					<li v-if="$page.post.contact" class="m-0 mb-3"><strong class="block">Contact</strong>{{ $page.post.contact }}</li>
+					<li v-if="$page.post.launch_date" class="m-0 mb-3"><strong class="block">Date</strong>{{ $page.post.launch_date }}</span></li>
+					<li v-if="$page.post.duration" class="m-0 mb-3"><strong class="block">Duration</strong>{{ $page.post.duration }}</li>
+					<li v-if="$page.post.url" class="m-0 mb-3 truncate"><strong class="block">Url</strong>{{ $page.post.url }}</li>
+					<li v-if="$page.post.project_type" class="m-0"><strong class="block">Type</strong>{{ $page.post.project_type }}</li>
+					<li v-if="$page.post.status" class="m-0"><strong class="block">Status</strong>{{ $page.post.status }}</li>
+				</ul>
+			</div>
 			<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
 				<div v-if="$page.post.services">
 					<h2>Services</h2>
@@ -27,7 +36,7 @@
 				<div class="cols" v-html="$page.post.content" />
 			</div>
 		</article>
-		<template slot="bottom-shelf">
+		<!-- <template slot="bottom-shelf">
 			<div v-if="$page.post.gallery != ''" class="mx-6 mb-24 md:mx-10 lg:mx-20">
 				<h2>Screenshots</h2>
 				<silentbox-group class="grid grid-cols-2 row-gap-6 col-gap-4 mt-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gallery">
@@ -36,7 +45,7 @@
 					</silentbox-item>
 				</silentbox-group>
 			</div>
-		</template>
+		</template> -->
 		<template slot="navgroup">Work</template>
 		<template slot="secondary-nav">
 			<NavWork />
@@ -49,12 +58,10 @@
 
 <script>
 import NavWork from "@/components/NavWork";
-// import Browser from "@/components/Browser";
 
 export default {
 	components: {
-		NavWork,
-		// Browser
+		NavWork
 	},
 	metaInfo() {
 		return {
@@ -78,31 +85,26 @@ query Post ($path: String) {
 		title
 		slug
 		project_type
-		client
+		company
+		contact
 		url
 		status
 		services
 		stack
-		launch_date
+		launch_date(format: "MMMM, YYYY")
 		excerpt
 		content
 		path
-		gallery {
-			thumb
-			full
-			alt
-			title
-		}
 	}
 }
 </page-query>
-<style src="../css/lightbox.css"></style>
+<!--@<style src="../css/lightbox.css"></style>-->
 
 <style scoped>
-.work .gallery > span {
+/* .work .gallery > span {
 	height: 160px;
 	overflow: hidden;
-}
+} */
 .work article > div:first-of-type > div:first-of-type {
 	margin-right: 5rem;
 }
@@ -141,7 +143,7 @@ query Post ($path: String) {
 	}
 }
 
-.work div#silentbox-overlay__embed img,
+/* .work div#silentbox-overlay__embed img,
 .work div#silentbox-overlay__embed iframe {
 	max-height: fit-content;
 	width: 100%;
@@ -155,5 +157,5 @@ query Post ($path: String) {
 	.work .gallery > span {
 		height: 100px;
 	}
-}
+} */
 </style>

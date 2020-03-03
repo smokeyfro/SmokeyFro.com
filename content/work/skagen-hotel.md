@@ -4,7 +4,7 @@ slug: skagen-hotel
 excerpt: Responsive design for a Hotel group in Norway.
 project_type: Web / UI Design
 company: BEDRE reklame
-client: Torkil Johnsen
+contact: Torkil Johnsen
 thumb: "/media/work/skagenhotel-thumb.jpg"
 image: "/media/work/skagen-inner.jpg"
 gallery:

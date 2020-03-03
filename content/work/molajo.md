@@ -3,7 +3,7 @@ title: Molajo
 slug: molajo
 excerpt: Open-source CMS forked from Joomla.
 project_type: Contribution
-client: Molajo
+contact: Molajo
 client_content: Molajo Foundation
 thumb: "/media/work/molajo-thumb.jpg"
 image: "/media/work/molajo-thumb.jpg"

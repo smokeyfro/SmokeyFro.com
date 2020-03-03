@@ -4,7 +4,7 @@ slug: approved-experts
 excerpt: Online services marketplace in the UK.
 project_type: Web App
 company: Fatwax Media
-client: Kieron Bolton
+contact: Kieron Bolton
 thumb: "/media/work/approvedexperts-thumb.jpg"
 image: "/media/work/approved-experts.jpg"
 gallery:

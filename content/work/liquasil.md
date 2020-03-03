@@ -4,7 +4,7 @@ slug: liquasil
 excerpt: WordPress site for a roof coatings manufacturer in the UK.
 project_type: WordPress
 company: Liquasil Ltd
-client: David Carter
+contact: David Carter
 thumb: "/media/work/liqausil-thumb.jpg"
 image: "/media/work/liquasil.jpg"
 gallery: ""

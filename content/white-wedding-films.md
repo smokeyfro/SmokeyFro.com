@@ -3,7 +3,7 @@ title: White Wedding Films
 slug: white-wedding-films
 excerpt: Simple landing page for an Australian Wedding Film agency.
 project_type: Static
-client: White Wedding Films
+contact: White Wedding Films
 client_content: Rowan van Zyl
 image: "/media/work/white-wedding-films-home.jpg"
 gallery:

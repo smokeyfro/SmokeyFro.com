@@ -3,7 +3,7 @@ title: TechJoomla
 slug: techjoomla
 excerpt: Wireframe design for a Techjoomla's new website.
 project_type: Design Only
-client: TechJoomla
+contact: TechJoomla
 client_content: Paarth
 thumb: "/media/work/techjoomla-thumb.jpg"
 image: "/media/work/techjoomla-thumb.jpg"

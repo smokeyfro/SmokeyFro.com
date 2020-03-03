@@ -141,4 +141,3 @@ query Post ($path: String) {
 	}
 }
 </page-query>
-<style src="../css/templates/tutorial.css" />

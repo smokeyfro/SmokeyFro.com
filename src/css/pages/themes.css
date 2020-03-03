@@ -16,7 +16,13 @@
 .themes .item:not(.beans) {
 	display: none;
 }
-
+.themes .image img {
+	filter: blur(2px);
+	transition: all .3s ease-out;
+}
+.themes .image img:hover {
+	filter: blur(0);
+}
 @media ( max-width: 480px ) {
 	.browser-content {
 		overflow: hidden;

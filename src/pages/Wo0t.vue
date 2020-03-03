@@ -49,5 +49,5 @@ export default {
     }
 }
 </script>
-<style src="../css/pages/hifive.css" />
-<style src="../css/loading.css" />
+<!--<style src="../css/pages/hifive.css" />
+<style src="../css/loading.css" />-->

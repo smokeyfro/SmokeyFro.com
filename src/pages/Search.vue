@@ -52,4 +52,4 @@ export default {
 	}
 }
 </script>
-<style src="../css/pages/search.css" />
+<!--<style src="../css/pages/search.css" />-->

@@ -93,7 +93,7 @@ export default {
 	}
 };
 </script>
-<style>
+<!--<style>
 .subscribe-form {
     input + span {
         margin-left: 5px;
@@ -102,4 +102,4 @@ export default {
         font-weight: bold;
     }
 }
-</style>
+</style>-->

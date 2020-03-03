@@ -30,4 +30,4 @@
 	};
 </script>
 
-<style src="../css/pages/home.css" />
+<!--<style src="../css/pages/home.css" />-->

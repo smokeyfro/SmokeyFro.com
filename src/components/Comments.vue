@@ -14,4 +14,4 @@
     };
 </script>
 
-<style src="../css/comments.css" />
+<!--<style src="../css/comments.css"></style>-->

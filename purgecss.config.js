@@ -6,6 +6,7 @@ module.exports = {
         './src/**/*.html',
         './src/**/*.pug',
         './src/**/*.md',
+        './src/**/*.css',
     ],
     whitelist: [
         'body',

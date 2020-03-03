@@ -34,4 +34,4 @@ export default {
 	}
 };
 </script>
-<style src="../../css/pages/sponsor.css" />
+<!--<style src="../../css/pages/sponsor.css" />-->

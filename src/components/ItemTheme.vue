@@ -23,15 +23,3 @@ export default {
 	}
 }
 </script>
-
-<style lang="postcss" scoped>
-.image {
-	img {
-		filter: blur(2px);
-		transition: all .3s ease-out;
-		&:hover {
-			filter: blur(0);
-		}
-	}
-}
-</style>

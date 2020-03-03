@@ -45,14 +45,14 @@ export default {
 	}
 }
 </script>
-<style scoped>
-.p-10 svg {
+<!--<style>
+.easteregg .p-10 svg {
     transform: scale(4);
     display: block;
     margin-bottom: 4rem;
     margin: 0 auto 5rem;
 }
-h1 {
+.easteregg h1 {
     text-align: center;
 }
-</style>
+</style>-->

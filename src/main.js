@@ -3,7 +3,7 @@ import VueStorage from 'vuestorage'
 import KonamiCode from 'vue-konami-code'
 import VueRouter from 'vue-router'
 
-import '~/css/global.css'
+require('~/css/global.css')
 
 export default function(Vue, { isClient, router }) {
 

@@ -76,4 +76,4 @@ export default {
 	}
 }
 </script>
-<style src="../css/templates/topic.css" />
+<!--<style src="../css/templates/topic.css" />-->

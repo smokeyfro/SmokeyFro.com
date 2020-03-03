@@ -98,7 +98,7 @@ query Project ($path: String) {
 }
 </page-query>
 
-<style src="../css/lightbox.css"></style>
+<!--<style src="../css/lightbox.css"></style>
 <style>
 .gallery > span {
 	height: 160px;
@@ -109,4 +109,4 @@ query Project ($path: String) {
 		height: 100px;
 	}
 }
-</style>
+</style>-->

@@ -45,7 +45,7 @@ export default {
 	}
 }
 </script>
-<!--<style>
+<style>
 .easteregg .p-10 svg {
     transform: scale(4);
     display: block;
@@ -55,4 +55,4 @@ export default {
 .easteregg h1 {
     text-align: center;
 }
-</style>-->
+</style>

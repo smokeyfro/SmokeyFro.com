@@ -96,7 +96,7 @@ query Post ($path: String) {
 	}
 }
 </page-query>
-<!--<style src="../css/lightbox.css"></style>
+<style src="../css/lightbox.css"></style>
 
 <style scoped>
 .work .gallery > span {
@@ -141,10 +141,6 @@ query Post ($path: String) {
 	}
 }
 
-/* .lead {
-	display: none;
-} */
-
 .work div#silentbox-overlay__embed img,
 .work div#silentbox-overlay__embed iframe {
 	max-height: fit-content;
@@ -160,4 +156,4 @@ query Post ($path: String) {
 		height: 100px;
 	}
 }
-</style>-->
+</style>

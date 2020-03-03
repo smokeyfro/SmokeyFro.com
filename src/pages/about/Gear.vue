@@ -57,4 +57,4 @@ export default {
 	}
 };
 </script>
-<!--<style src="../../css/pages/gear.css" />-->
+<style src="../../css/pages/gear.css" />

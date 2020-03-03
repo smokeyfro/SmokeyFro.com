@@ -55,4 +55,4 @@ export default {
 		}
 };
 </script>
-<!--<style src="../../css/pages/videos.css" />-->
+<style src="../../css/pages/videos.css" />

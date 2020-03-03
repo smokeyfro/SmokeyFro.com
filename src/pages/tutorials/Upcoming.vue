@@ -74,7 +74,7 @@ export default {
 	}
 </page-query>
 
-<!--<style>
+<style>
 .app main table tr:hover td:nth-of-type(odd) {
     background: #ffc8003b;
 }
@@ -92,4 +92,4 @@ export default {
 	}
 
 }
-</style>-->
+</style>

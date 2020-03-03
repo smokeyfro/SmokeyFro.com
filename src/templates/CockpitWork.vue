@@ -97,5 +97,5 @@ query Post ($path: String) {
 	}
 }
 </page-query>
-<!--<style src="../css/lightbox.css" />
-<style src="../css/templates/work.css" />-->
+<style src="../css/lightbox.css" />
+<style src="../css/templates/work.css" />

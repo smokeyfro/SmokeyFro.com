@@ -75,4 +75,4 @@ export default {
 	}
 }
 </script>
-<!--<style src="../css/pages/error.css" />-->
+<style src="../css/pages/error.css" />

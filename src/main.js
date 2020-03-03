@@ -10,6 +10,12 @@ export default function(Vue, { isClient, router }) {
 	Vue.component('Layout', DefaultLayout)
 	Vue.use(VueRouter)
 
+	// Lightbox
+	if (process.isClient) {
+		const VueSilentbox = require('vue-silentbox').default;
+		Vue.use(VueSilentbox);
+	}
+
 	// Confetti
 	if(process.isClient) {
 		const confetti = require('vue-confetti').default
@@ -24,12 +30,6 @@ export default function(Vue, { isClient, router }) {
 		Vue.use(KonamiCode, {callback: function () {
 			router.push({ path: '/easteregg' })
 		}})
-	}
-
-	// Lightbox
-	if (process.isClient) {
-		const VueSilentbox = require('vue-silentbox').default;
-		Vue.use(VueSilentbox);
 	}
 
 	// Register a global custom directive called v-focus

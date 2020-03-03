@@ -1,13 +1,13 @@
 <template>
 	<Layout :sidebar="true" :top="false" :bottom="true">
 		<h1>Photos</h1>
-		<p>Here are some recent snaps on Instagram. Follow @SmokeyFro for more.</p>
+		<p>Here are some recent snaps on Instagram. Follow <a href="https://instagram.com/smokeyfro" target="_blank" rel="noopener" title="Follow me on Instagram">@SmokeyFro</a> for more.</p>
 		<template slot="bottom-shelf">
-			<div v-if="$page.posts.edges" class="mt-4lg:mt-16">
-				<silentbox-group class="grid grid-cols-3 gap-1 gallery">
-						<silentbox-item v-for="edge in $page.posts.edges" :key="edge.node.id" :src="edge.node.display_url" :description="edge.node.title">
-								<g-image v-if="edge.node.display_url" :src="edge.node.display_url" width="265" height="300" />
-						</silentbox-item>
+			<div v-if="$page.posts.edges" class="mt-4 lg:mt-16">
+				<silentbox-group class="grid grid-cols-2 gap-1 lg:grid-cols-3 gallery">
+					<silentbox-item v-for="edge in $page.posts.edges" :key="edge.node.id" :src="edge.node.display_url" :description="edge.node.title" class="block h-40 overflow-hidden">
+						<g-image v-if="edge.node.display_url" :src="edge.node.display_url" width="265" height="300" />
+					</silentbox-item>
 				</silentbox-group>
 			</div>
 		</template>
@@ -19,7 +19,7 @@
 
 <page-query>
 	query Photos{
-		posts: allPhoto{
+		posts: allPhoto {
 			edges {
 				node {
 					display_url
@@ -31,10 +31,12 @@
 
 <script>
 import NavAbout from "~/components/NavAbout.vue";
+import VueSilentbox from 'vue-silentbox';
 
 export default {
 	components: {
-		NavAbout
+		NavAbout,
+		VueSilentbox
 	},
 	metaInfo: {
 		title: "",

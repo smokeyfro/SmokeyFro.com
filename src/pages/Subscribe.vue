@@ -95,10 +95,10 @@ export default {
 </script>
 <style>
 .subscribe-form {
-    input + span {
+    & input + span {
         margin-left: 5px;
     }
-    input:checked + span {
+    & input:checked + span {
         font-weight: bold;
     }
 }

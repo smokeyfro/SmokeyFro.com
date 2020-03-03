@@ -3,7 +3,7 @@
 		<div>
 			<div class="about-over">
 				<div class="lg:max-w-screen-md">
-					<div class="p-6 mt-6 mb-6 bg-gray-200 border xl:fixed xl:top-0 xl:right-0 xl:w-56 xl:mr-10"><strong>Heads up:</strong><br /> I'm still working on the content for this page.</div>
+					<div class="p-6 mt-6 mb-6 bg-gray-200 border xl:fixed xl:top-0 xl:right-0 xl:w-56 note xl:mr-10"><strong>Heads up:</strong><br /> I'm still working on the content for this page.</div>
 					<h1>My Story</h1>
 					<p>My full name is Christopher Nicholas Rault, but I generally only get called Christopher when I'm in trouble. Good ol Chris will do fine. I live off-grid in the Garden Route of South Africa.</p>
 					<div class="md:flex">

@@ -176,6 +176,11 @@
     &.services .grid .g-image{
         filter: invert();
     }
+    & .note {
+        background: rgba(153, 223, 247, 0.6);
+        border-radius: 3px;
+        border: 0;
+    }
     & .newsletter {
         border-color: transparent;
         background: #262626;

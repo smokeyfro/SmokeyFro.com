@@ -99,30 +99,30 @@ query Post ($path: String) {
 <style src="../css/lightbox.css"></style>
 
 <style scoped>
-.gallery > span {
+.work .gallery > span {
 	height: 160px;
 	overflow: hidden;
 }
-article > div:first-of-type > div:first-of-type {
+.work article > div:first-of-type > div:first-of-type {
 	margin-right: 5rem;
 }
-main {
+.work main {
 	display: flex;
 	flex-direction: column;
 }
-article {
+.work article {
 	width: 100%;
 }
-.markdown,
-.image {
+.work .markdown,
+.work .image {
 	width: 100%;
 	margin-top: 1.5rem;
 }
 @media (min-width: 1280px) {
-	main.main {
+	.work main.main {
 		position: relative;
 	}
-	.image {
+	.work .image {
 		max-width: 500px;
 		order: 2;
 		padding-top: 0;
@@ -134,29 +134,25 @@ article {
 			height: fit-content;
 		}
 	}
-	article {
+	.work article {
 		order: 1;
 		width: 70%;
 		position: relative;
 	}
 }
 
-/* .lead {
-	display: none;
-} */
-
-div#silentbox-overlay__embed img,
-div#silentbox-overlay__embed iframe {
+.work div#silentbox-overlay__embed img,
+.work div#silentbox-overlay__embed iframe {
 	max-height: fit-content;
 	width: 100%;
 	position: static !important;
 }
-div#silentbox-overlay__container {
+.work div#silentbox-overlay__container {
 	height: fit-content;
 	overflow: scroll;
 }
 @media ( max-width: 480px ) {
-	.gallery > span {
+	.work .gallery > span {
 		height: 100px;
 	}
 }

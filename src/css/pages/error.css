@@ -39,8 +39,8 @@ top: -3.5em!important;
     grid-template-columns: 70px 1fr;
 }
 .error-page .layout main {
-grid-column: 2;
-column-span: 2;
+    grid-column: 2;
+    column-span: 2;
 }
 .error-page .main {
     display: flex;
@@ -69,41 +69,41 @@ column-span: 2;
     line-height: 1;
 }
 @media (min-width: 1024px) {
-.error .app {
+    .error .app {
         grid-template-columns: 80px 1fr;
         grid-template-areas:
         "header main main"
         "header main main";
         height: 100vh;
     }
-.error header {
-    height: 100vh;
-}
-.error main {
-    position: fixed;
-    left: 80px;
-    right: 0;
-    top: 0;
-    bottom: 0;
-}
+    .error header {
+        height: 100vh;
+    }
+    .error main {
+        position: fixed;
+        left: 80px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
 }
 .search-box {
-@apply bg-white;
+    @apply bg-white;
 }
 .results .item {
-@apply bg-white
+    @apply bg-white
 }
 :root [data-theme=dark] .results .item {
-@apply text-white bg-black;
+    @apply text-white bg-black;
 }
 :root [data-theme=dark].error .search-box {
-@apply text-white bg-gray-900;
+    @apply text-white bg-gray-900;
 }
 :root [data-theme=dark].error .search-box svg path,
 :root [data-theme=dark].error .search-box svg circle {
-stroke: #fff;
+    stroke: #fff;
 }
 :root [data-theme=dark].error .icon {
-filter: invert(1);
-opacity: .8;
+    filter: invert(1);
+    opacity: .8;
 }

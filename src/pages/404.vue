@@ -76,9 +76,3 @@ export default {
 }
 </script>
 <style src="../css/pages/error.css" />
-
-<style>
-/* .error-bg {
-	filter: opacity(.5);
-} */
-</style>

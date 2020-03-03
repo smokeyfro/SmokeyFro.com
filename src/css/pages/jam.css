@@ -37,7 +37,6 @@
 	display: block;
 }
 @media (min-width: 768px) {
-
 	.jam .main {
 		flex-direction: row;
 	}

@@ -1,17 +1,10 @@
-/*! purgecss start ignore */
-@import 'tailwindcss/base';
-/*! purgecss end ignore */
-
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
-@import 'header';
-@import 'aside';
-@import 'main';
-@import 'browser';
-@import 'forms';
-@import 'darkmode';
-@import 'media-queries';
+@import 'header.css';
+@import 'aside.css';
+@import 'main.css';
+@import 'browser.css';
+@import 'forms.css';
+@import 'darkmode.css';
+@import 'media-queries.css';
 
 /***
   + Variables

@@ -29,7 +29,7 @@ article {
 		top: 1rem;
 		height: 100vh;
 		right: -8rem;
-		.browser {
+		& .browser {
 			height: fit-content;
 		}
 	}
@@ -39,11 +39,6 @@ article {
 		position: relative;
 	}
 }
-
-/* .lead {
-	display: none;
-} */
-
 div#silentbox-overlay__embed img,
 div#silentbox-overlay__embed iframe {
 	max-height: fit-content;

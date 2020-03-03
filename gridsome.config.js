@@ -1,14 +1,3 @@
-const tailwind = require('tailwindcss')
-const purgecss = require('@fullhuman/postcss-purgecss')
-
-const postcssPlugins = [
-  'postcss-import',
-  'postcss-nested',
-  tailwind()
-]
-
-if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss(require('./purgecss.config.js')))
-
 module.exports = {
   siteName: "SmokeyFro",
   siteUrl: "https://smokeyfro.com",
@@ -16,9 +5,7 @@ module.exports = {
   siteDescription: "Chris Rault, aka SmokeyFro - a designer, front-end developer and occassional entrepreneur from South Africa.",
   icon: 'src/favicon.png',
   trailingSlash: false,
-  permalinks: { 
-    trailingSlash: false 
-  },
+  resolveAbsolutePaths: true,
   prefetch: {
     mask: '^$',
   },
@@ -91,32 +78,21 @@ module.exports = {
         typeName: 'Photo'
       }
     },
-    // {
-    //   use: '@noxify/gridsome-plugin-remote-image',
-    //   options: {
-    //     'typeName' : 'GhostPost',
-    //     'sourceField': 'feature_image',
-    //     'targetField': 'coverImage',
-    //     'targetPath': './media/tuts'
-    //   }
-    // },
-    // {
-    //   use: 'gridsome-plugin-blog-cover',
-    //   options: {
-    //     typeName: 'GhostPost',
-    //     coverField: 'og_image',
-    //     backgroundColors: ['#13171b'],
-    //     imgWidth: '700px',
-    //     imgHeight: '650px',
-    //     border: false,
-    //     domain: 'https://smokeyfro.com',
-    //     outputDir: 'media/tuts/images/',
-    //     cloud_name: 'smokeyfro',
-    //     api_key: '183542389321419',
-    //     api_secret: '26Zkgd7F6PyyH6_4RtCVReO3obs',
-    //     upload_folder: 'tuts/covers'
-    //   }
-    // },
+    {
+      use: 'gridsome-plugin-tailwindcss',
+      options: {
+        tailwindConfig: './tailwind.config.js',
+        purgeConfig: {},
+        presetEnvConfig: {
+            features: {
+              'nesting-rules': true
+            }
+        },
+        shouldPurge: true,
+        shouldImport: true,
+        shouldTimeTravel: true
+      }
+    },
     {
       use: 'gridsome-plugin-flexsearch',
       options: {
@@ -228,17 +204,6 @@ module.exports = {
         }
       }
     },
-    // {
-    //   use: '~/src/plugins/source-cockpit',
-    //     options: {
-    //       accessToken: process.env.SF_ACCESS_TOKEN,
-    //       host: process.env.SF_API_HOST,
-    //       routes: {
-    //         CockpitWork: '/work/:slug',
-    //         CockpitProjects: '/projects/:slug'
-    //       }
-    //     }
-    // },
     {
       use: '@gridsome/source-ghost',
       options: {
@@ -291,19 +256,5 @@ module.exports = {
         })
       }
     }
-  ],
-  chainWebpack: config => {
-    config.module
-      .rule('css') // or sass, scss, less, postcss, stylus
-      .oneOf('normal') // or module
-        .use('postcss-loader')
-          .tap(options => {
-            options.plugins.unshift(...[
-              require('postcss-import'),
-              require('postcss-nested'),
-              require('tailwindcss')
-            ])
-            return options
-          })
-  },
+  ]
 }

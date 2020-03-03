@@ -1,9 +1,9 @@
 .gallery {
-	span {
+	& span {
 		max-height: 275px;
 		overflow: hidden;
 	}
-	img {
+	& img {
 		object-fit: cover;
 		min-height: 275px;
 	}

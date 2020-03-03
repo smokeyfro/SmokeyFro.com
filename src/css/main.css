@@ -3,33 +3,33 @@
 main {
     background-color: var(--main-bg);
     
-    h1, h2, h3, h4, h5 {
+    & h1, & h2, & h3, & h4, & h5 {
         color: var(--heading-color);
     }
-    h1 {
+    & h1 {
         @apply mb-2 text-3xl font-bold leading-snug;
     }
-    h2 {
+    & h2 {
         @apply mb-2 text-2xl font-bold;
     }
-    h3 {
+    & h3 {
         @apply mb-2 text-xl font-bold;
     }
-    h1 + p {
+    & h1 + p {
         @apply mb-5 text-lg;
     }
-    p {
+    & p {
         @apply mb-5;
     }
-    ul, ol {
+    & ul, & ol {
         @apply mb-5 ml-5
     }
-    ul:not(.reset) li,
-    ol:not(.reset) li {
+    & ul:not(.reset) li,
+    & ol:not(.reset) li {
         @apply mb-3;
         list-style: circle;
     }
-    a:not(.image):not(.link) {
+    & a:not(.image):not(.link) {
         text-decoration: none;
         font-weight: 700;
         background-color: rgba(255,200,0,.25);
@@ -42,8 +42,8 @@ main {
 
 /* SVG's */
 .home, .about {
-    main {
-        path {
+    & main {
+        & path {
             fill: #1C2F39;
         }
     }

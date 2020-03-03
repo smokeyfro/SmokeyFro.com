@@ -15,37 +15,22 @@
 		"@zefman/gridsome-source-instagram": "^0.1.2",
 		"core-js": "3.6.4",
 		"gridsome": "latest",
-		"gridsome-plugin-blog-cover": "^0.0.4-alpha.1",
 		"gridsome-plugin-feed": "^1.0.2",
 		"gridsome-plugin-flexsearch": "^0.1.12",
 		"gridsome-plugin-remark-youtube": "^1.0.1",
-		"npm-install-all": "^1.1.21",
-		"postcss": "^7.0.27",
-		"postcss-import": "^12.0.1",
-		"postcss-loader": "^3.0.0",
-		"postcss-nested": "^4.2.1",
-		"tailwindcss": "^1.2.0",
 		"vue-clickaway": "^2.2.2",
 		"vue-confetti": "^2.0.7",
 		"vue-konami-code": "^1.0.0",
-		"vue-silentbox": "^0.1.9",
+		"vue-silentbox": "^2.0.0",
 		"vuestorage": "^19.0.1"
 	},
 	"devDependencies": {
-		"@fullhuman/postcss-purgecss": "^2.1.0",
-		"@tailwindcss/custom-forms": "^0.2.1"
+		"@tailwindcss/custom-forms": "^0.2.1",
+		"gridsome-plugin-tailwindcss": "^2.2.36"
 	},
 	"resolutions": {
 		"**/core-js": "3.6.2",
 		"@vue/babel-preset-app/**/core-js": "3.6.2",
 		"gridsome/**/core-js": "3.6.2"
-	},
-	"postcss": {
-		"plugins": {
-			"tailwindcss": "./tailwind.js",
-			"postcss-nested": {},
-			"postcss-import": {},
-			"autoprefixer": {}
-		}
 	}
 }

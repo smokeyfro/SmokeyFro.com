@@ -80,6 +80,19 @@ module.exports = {
     },
     {
       use: 'gridsome-plugin-tailwindcss',
+      options: {
+        tailwindConfig: './tailwind.config.js',
+        purgeConfig: {},
+        presetEnvConfig: {
+            stage: 3,
+            features: {
+              'nesting-rules': true
+            }
+        },
+        shouldPurge: true,
+        shouldImport: true,
+        shouldTimeTravel: true
+      }
     },
     {
       use: 'gridsome-plugin-flexsearch',

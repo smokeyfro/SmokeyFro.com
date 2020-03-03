@@ -1,11 +1,6 @@
 .single main {
     padding: 0;
 }
-/* .single main > figure {
-    margin: 0;
-    position: relative;
-    overflow: hidden;
-} */
 .single main article {
     padding: 3rem;
     height: fit-content;

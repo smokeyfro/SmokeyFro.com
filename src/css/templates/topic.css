@@ -1,11 +1,11 @@
 .topics {
-	h1 {
-		strong:before {
+	& h1 {
+		& strong:before {
 			content: '#';
 		}
 	}
-	p:first-of-type {
-		a {
+	& p:first-of-type {
+		& a {
 			line-height: 1;
 			margin-right: 5px;
 			font-weight: bold;
@@ -14,7 +14,7 @@
 			font-size: .9rem;
 			display: inline-block;
 		}
-		a:before {
+		& a:before {
 			content: '#';
 		}	
 	}

@@ -2,31 +2,31 @@
 ****************************************************/
 header {
     background-color: var(--header-bg);
-    svg, a {
+    & svg, & a {
         transition: all .3s ease-out;
     }
-    nav a {
+    & nav a {
         @apply transition-opacity duration-100 ease-out;
         color: rgba(255,255,255,0.7);
     }
-    nav .active {
+    & nav .active {
         color: #fff;
     }
-    nav .active path, 
-    nav .active circle {
+    & nav .active path, 
+    & nav .active circle {
         stroke: #ffc800;
     }
-    nav svg {
+    & nav svg {
         width: 16px;
     }
-    nav path, 
-    nav circle {
+    & nav path, 
+    & nav circle {
         stroke: rgba(255,255,255,0.7);
     } 
-    .primary a {
+    & .primary a {
         padding: 7px;
     }
-    .primary .active {
+    & .primary .active {
         border-radius: 50%;
         width: 32px;
         height: 32px; 
@@ -34,23 +34,23 @@ header {
         border: 1px solid #00000078;
         box-shadow: 0 1px 1px #ffffff3b;
     }
-    .mobile-links .active {
+    & .mobile-links .active {
         color: #000;
         font-weight: bold;
     }
-    .logo:focus,
-    nav a:focus {
+    & .logo:focus,
+    & nav a:focus {
         outline: none transparent;
         box-shadow: 0 0;
     }
-    nav a:focus svg path,
-    nav a:focus svg circle {
+    & nav a:focus svg path,
+    & nav a:focus svg circle {
         stroke: #fff         ;
     }
-    nav a:focus svg {
+    & nav a:focus svg {
         transform: scale(1.2);
     }
-    .logo:focus svg {
+    & .logo:focus svg {
         transform: scale(.8);
     }
 }
@@ -110,14 +110,14 @@ header {
 }
 @media ( max-width: 640px ) {
     .app {
-        header, aside {
+        & header, & aside {
             position: fixed;
             width: 100%;
         }
-        aside {
+        & aside {
             top: 50px;
         }
-        main {
+        & main {
             padding-top: 90px;
         }
     }

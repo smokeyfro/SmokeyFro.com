@@ -1,5 +1,5 @@
 .about {
-	main {
+	& main {
 		position: relative;
 		& > div {
 			position: relative;
@@ -7,10 +7,10 @@
 			width: 100%;
 		}
 	}
-	.chris-forward {
+	& .chris-forward {
 		margin-bottom: 1rem;
 	}
-	.about-over p:last-of-type {
+	& .about-over p:last-of-type {
 		margin-bottom: 0;
 	}
 }

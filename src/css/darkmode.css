@@ -8,80 +8,80 @@
     --heading-color: #fff;
     --form-inputs: #000;
     &.resume {
-        .resume-body {
-            h2 {
+        & .resume-body {
+            & h2 {
                 @apply text-accent;
             }
-            .date {
+            & .date {
                 @apply text-gray-200;
             }
-            .contact-info span,
-            .link {
+            & .contact-info span,
+            & .link {
                 @apply text-white;
             }
         }
-        figure svg path {
+        & figure svg path {
             fill: var(--accent-color);
         }
     }
     /* Header */
-    header {
+    & header {
         border-right: 1px solid #000;
     }
-    .mobile-links {
+    & .mobile-links {
         background: #fff;
-        a {
+        & a {
             color: #111;
             border-color: #ddd;
         }
     }
 
     /* Sub-Navigation */
-    .secondary {
-        a {
+    & .secondary {
+        & a {
             @apply text-gray-500;
         }
-        .active span {
+        & .active span {
             @apply text-white;
             text-shadow: 1px 1px 0 #000;
             font-weight: bold;
         }
-        a:not(.active):hover:after {
+        & a:not(.active):hover:after {
             color: #fff;
         }
-        img {
+        & img {
             filter: invert(1);
         }
     }
 
     /* Main Body */
-    main {
+    & main {
         background-repeat: no-repeat;
         background-size: cover;
     
-        h1 {
+        & h1 {
             @apply text-white;
             text-shadow: 1px 1px 0 rgba(0,0,0,1);
         }
-        h2 {
+        & h2 {
             @apply text-gray-100;
         }
-        h3 {
+        & h3 {
             @apply text-white;
         }
-        h4 {
+        & h4 {
             @apply text-white;
         }
-        h5 {
+        & h5 {
             @apply text-white;
         }
-        p, li {
+        & p, & li {
             color: #888;
         }
-        h1 + p {
+        & h1 + p {
             color: #eee;
         }
-        a:not(.image):not(.link) {
+        & a:not(.image):not(.link) {
             @apply px-2 py-1 text-sm text-black uppercase border-b bg-accent border-accent;
         }
     }
@@ -91,49 +91,49 @@
         background: rgba(19, 19, 19, 0.95);
     }
     /* Forms */
-    .form-input,
-    .form-select,
-    textarea,
-    .form-textarea {
+    & .form-input,
+    & .form-select,
+    & textarea,
+    & .form-textarea {
         @apply bg-gray-900 border-black;
     }
-    .form-input:focus,
-     .form-textarea:focus {
+    & .form-input:focus,
+    & .form-textarea:focus {
         color: #000;
     }
-    .format,
-    label {
+    & .format,
+    & label {
         @apply text-white;
-        span {
+        & span {
             @apply text-gray-300;
         }
     }
-    form {
-        button[type="submit"] {
+    & form {
+        & button[type="submit"] {
             @apply text-black bg-accent;
         }
     }
-    .form-input:focus,
-    .form-textarea:focus {
+    & .form-input:focus,
+    & .form-textarea:focus {
         @apply bg-white border-accent;
     }
 
     /* Cards */
-    .card-image a img {
+    & .card-image a img {
         filter: saturate(0);
         opacity: .9;
         transition: all .3s ease-out;
         border-bottom: 0;
     }
-    .card-image a:hover img {
+    & .card-image a:hover img {
         filter: saturate(1);
         opacity: 1;
     }
 
     /* SVG's */
     &.home, &.about {
-        main {
-            path {
+        & main {
+            & path {
                 fill: #ffc800;
             }
         }
@@ -176,29 +176,29 @@
     &.services .grid .g-image{
         filter: invert();
     }
-    .newsletter {
+    & .newsletter {
         border-color: transparent;
         background: #262626;
     }
     &.upcoming .upcoming-wrap {
-        tr {
+        & tr {
             border-color: #444;
         }
-        table tbody tr:hover,
-        table tbody tr:hover td {
+        & tbody tr:hover,
+        & tbody tr:hover td {
             background-color: rgba(0, 0, 0, 0.005)!important;
         }
-        .odd\:bg-white:nth-child(odd) {
+        & .odd\:bg-white:nth-child(odd) {
             background-color: #1c1c1c;
             color: #858585;
         }
-        .even\:bg-gray-200:nth-child(even) {
+        & .even\:bg-gray-200:nth-child(even) {
             background-color: #222;
             color: #fff;
         }
     }
 
-    .just-comments.sf {
+    & .just-comments.sf {
         --border-color: #444;
         --primary-bg-color: #111;
         --secondary-bg-color: #ecebed;
@@ -214,7 +214,7 @@
         --outline-style: 3px solid var(--accent-color);
         --outline-offset: 5px;
 
-        .BXtvJgy._1mL7mm2 {
+        & .BXtvJgy._1mL7mm2 {
             color: #fff;
         }
     }

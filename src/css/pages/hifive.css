@@ -31,7 +31,6 @@ canvas {
 .success .main > div figure {
 	margin: 0;
 }
-
 .success h1 svg {
 	width: 32px;
 	margin-right: 5px;
@@ -42,7 +41,6 @@ canvas {
 	display: block;
 }
 @media (min-width: 768px) {
-
 	.success .main {
 		flex-direction: row;
 	}

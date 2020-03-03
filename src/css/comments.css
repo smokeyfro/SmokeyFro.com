@@ -1,4 +1,4 @@
-/* .just-comments.sf {
+.just-comments.sf {
     --border-color: #ddd;
 
     --primary-bg-color: #fff;
@@ -47,7 +47,7 @@
 
     --small-button-height: 50px;
     --font-button3-size: 1.1rem;
-} */
+}
 
 /* Hide the credits link */
 .just-comments.sf > div > div:last-of-type {

@@ -84,7 +84,6 @@ module.exports = {
         tailwindConfig: './tailwind.config.js',
         purgeConfig: {},
         presetEnvConfig: {
-            stage: 3,
             features: {
               'nesting-rules': true
             }

@@ -41,7 +41,8 @@ main {
 }
 
 /* SVG's */
-.home, .about {
+.home, 
+.about {
     & main {
         & path {
             fill: #1C2F39;

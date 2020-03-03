@@ -225,7 +225,7 @@ module.exports = {
       use: '@gridsome/plugin-sitemap',
       options: {
         cacheTime: 600000,
-        exclude: ['/wo0t','/hifive','/easteregg','/devtools'],
+        exclude: ['/wo0t','/hifive','/easteregg','/devtools','/jamstack'],
       }
     },
     {

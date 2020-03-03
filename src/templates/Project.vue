@@ -104,7 +104,6 @@ query Project ($path: String) {
 		title
 		slug
 		project_type
-		client
 		url
 		status
 		services
@@ -114,13 +113,6 @@ query Project ($path: String) {
 		content
 		path
 		image
-		testgallery
-		gallery {
-			thumb
-			full
-			alt
-			title
-		}
 	}
 }
 </page-query>

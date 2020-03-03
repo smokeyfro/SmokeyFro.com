@@ -54,7 +54,7 @@ export default {
 	metaInfo: {
 		title: "Everything you need to know about the JAM Stack",
 		bodyAttrs: {
-			class: "jam"
+			class: "jam two-col"
 		}
 	},
 }

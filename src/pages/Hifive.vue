@@ -34,7 +34,7 @@ export default {
 			const confetti = require('vue-confetti').default
 			this.$confetti.start();
 		}
-      	setTimeout( () => this.$router.push({ path: '/contact'}), 5000);
+      	setTimeout( () => this.$router.push({ path: '/contact'}), 2000);
     }
 }
 </script>

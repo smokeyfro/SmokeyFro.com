@@ -1,7 +1,7 @@
 topics: 
   - id: 1
     title: The JAMstack
-    summary: The JAMstack refers to building static sites (ie, no database or php) using modern tooling and programming practices. It's come along way in recent years and we have more tools available than ever.
+    summary: The JAMstack refers to building static sites (ie, no database or php) using modern tooling and programming practices. It's come a long way in recent years and we have more tools available than ever.
   - id: 1
     title: The Beans Framework
     summary: This talk introduces the audience to the Beans framework, what problems it attempts to solve, a breakdown of the various api's that are included and lastly some examples of using Beans in a real-world project.

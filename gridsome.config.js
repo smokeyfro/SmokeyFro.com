@@ -2,7 +2,7 @@ module.exports = {
   siteName: "SmokeyFro",
   siteUrl: "https://smokeyfro.com",
   titleTemplate: "%s - SmokeyFro",
-  siteDescription: "Chris Rault, aka SmokeyFro - a designer, front-end developer and occassional entrepreneur from South Africa.",
+  siteDescription: "The personal portfolio of Chris Rault, a designer, front-end developer and occassional entrepreneur from South Africa.",
   icon: 'src/favicon.png',
   permalinks: {
     trailingSlash: false,
@@ -120,11 +120,6 @@ module.exports = {
             indexName: 'Tutorials',
             fields: ['title', 'excerpt', 'description', 'tags']
           },
-          // {
-          //   typeName: 'GhostTag',
-          //   indexName: 'Tag',
-          //   fields: ['name']
-          // },
           {
             typeName: 'Theme',
             indexName: 'Themes',
@@ -137,7 +132,7 @@ module.exports = {
           },
           {
             typeName: 'Project',
-            indexName: 'Portfolio',
+            indexName: 'Side-Project',
             fields: ['title', 'excerpt', 'content']
           },
           {
@@ -211,8 +206,8 @@ module.exports = {
       use: '@gridsome/source-ghost',
       options: {
         typeName: 'Ghost',
-        baseUrl: process.env.SF_BLOG_URL,
-        contentKey: process.env.SF_BLOG_KEY,
+        baseUrl: process.env.SF_GHOST_URL,
+        contentKey: process.env.SF_GHOST_KEY,
         version: 'v3',
         routes: {
           post: '/tutorials/:slug',
@@ -231,7 +226,7 @@ module.exports = {
     {
       use: 'gridsome-plugin-feed',
       options: {
-        contentTypes: ['GhostPost', 'GhostPage', 'Theme', 'Work', 'Project', 'Video'],
+        contentTypes: ['GhostPost', 'GhostPage', 'Theme', 'Work', 'Project', 'Video', 'Service'],
         feedOptions: {
           title: 'SmokeyFro - Syndicate',
           description: 'Web Development Tutorials, JAMStack themes and more'

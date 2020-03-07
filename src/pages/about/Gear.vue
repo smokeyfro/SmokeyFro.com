@@ -52,7 +52,7 @@ export default {
 	metaInfo: {
 		title: "",
 		bodyAttrs: {
-			class: "gear"
+			class: "about gear"
 		}
 	}
 };

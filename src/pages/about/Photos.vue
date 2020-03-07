@@ -48,7 +48,7 @@ export default {
 	metaInfo: {
 		title: "",
 		bodyAttrs: {
-			class: "photos"
+			class: "about photos"
 		}
 	},
 	data() {

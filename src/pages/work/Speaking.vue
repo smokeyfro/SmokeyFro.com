@@ -70,7 +70,7 @@ export default {
 	metaInfo: {
 		title: "",
 		bodyAttrs: {
-			class: "speaking"
+			class: "work speaking"
 		}
 	}
 };

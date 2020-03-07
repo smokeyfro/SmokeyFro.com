@@ -12,10 +12,6 @@ header {
     & nav .active {
         color: #fff;
     }
-    & nav .active path, 
-    & nav .active circle {
-        stroke: #ffc800;
-    }
     & nav svg {
         width: 16px;
     }
@@ -45,6 +41,20 @@ header {
     & .logo:focus svg {
         transform: scale(.8);
     }
+}
+.about .primary .about path,
+.about .primary .about circle,
+.work .primary .work path,
+.work .primary .work circle,
+.themes .primary .themes path,
+.themes .primary .themes circle,
+.tutorials .primary .tutorials path,
+.tutorials .primary .tutorials circle,
+.journal .primary .journal path,
+.journal .primary .journal circle,
+header nav .active path, 
+header nav .active circle {
+    stroke: #ffc800;
 }
 @media( max-width: 640px ) {
     .mobile-links {
@@ -132,25 +142,29 @@ header {
 }
 
 @media ( min-width: 768px ) {
-    .active span.hidden {
+    .about .primary .about .text,
+    .work .primary .work .text,
+    .themes .primary .themes .text,
+    .tutorials .primary .tutorials .text,
+    .journal .primary .journal .text,
+    .active .text {
         display: block;
         position: absolute;
-        background: #fff;
         color: #fff;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 13px;
         left: -3px;
         padding: 5px 12px 5px 34px;
         border-radius: 20px;
         z-index: 0;
+        box-shadow: 0px 0 0 3px #000;
         background: #222;
-        border: 1px solid #00000078;
-        box-shadow: 0 1px 1px #ffffff3b;
+        border: 2px solid #fff;
     }
-    header .primary a.active {
+    header .primary a {
         position: relative;
     }
-    header .primary a.active .icon {
+    header .primary a .icon {
         position: relative;
         z-index: 2;
     }

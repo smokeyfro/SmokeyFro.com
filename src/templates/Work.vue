@@ -67,7 +67,7 @@ export default {
 		return {
 			title: `${this.$page.post.title}`,
 			bodyAttrs: {
-				class: "project single"
+				class: "work single"
 			}
 		};
 	},

@@ -82,7 +82,7 @@ export default {
 	metaInfo: {
 		title: "",
 		bodyAttrs: {
-			class: "credits"
+			class: "about credits"
 		}
 	}
 };

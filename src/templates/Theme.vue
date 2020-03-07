@@ -80,7 +80,7 @@ export default {
 		return {
 		title: `${this.$page.post.title}`,
 		bodyAttrs: {
-			class: "freebies theme single"
+			class: "themes freebies theme single"
 		}
 		};
 	},

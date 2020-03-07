@@ -1,8 +1,8 @@
 <template>
   <nav class="hidden text-white sm:flex-row sm:flex sm:flex-col nav primary" ref="primaryNav">
-    <g-link exact class="flex items-center justify-start" v-for="({ text, label, icon, url }, i) in navigation.primary" :key="i" :to="url" :tooltip="text" :aria-label="label">
+    <g-link exact class="flex items-center justify-start" :class="slug" v-for="({ text, slug, label, icon, url }, i) in navigation.primary" :key="i" :to="url" :tooltip="text" :aria-label="label">
       <span class="icon" v-if="icon" v-html="icon" />
-      <span class="hidden">{{ text }}</span>
+      <span class="hidden text">{{ text }}</span>
     </g-link>
   </nav>
 </template>

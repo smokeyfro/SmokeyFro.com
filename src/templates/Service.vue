@@ -28,7 +28,7 @@ export default {
 		return {
 			title: `${this.$page.post.title}`,
 			bodyAttrs: {
-				class: "service post single"
+				class: "work service post single"
 			}
 		};
 	},

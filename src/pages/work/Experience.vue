@@ -37,7 +37,7 @@ export default {
 	metaInfo: {
 		title: "Work Experience by SmokeyFro",
 		bodyAttrs: {
-			class: "experience"
+			class: "work experience"
 		}
 	}
 };

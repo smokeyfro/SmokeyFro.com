@@ -38,7 +38,7 @@ export default {
 	metaInfo: {
 		title: "Services provided by SmokeyFro",
 		bodyAttrs: {
-			class: "services"
+			class: "work services"
 		}
 	}
 };

@@ -71,7 +71,7 @@ export default {
 	metaInfo: {
 		title: "Topic",
 		bodyAttrs: {
-			class: "tuts index"
+			class: "tutorials index"
 		}
 	}
 }

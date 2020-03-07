@@ -165,7 +165,7 @@ export default {
 	metaInfo: {
 		title: "Resume of Chris Rault",
 		bodyAttrs: {
-			class: "resume"
+			class: "work resume"
 		}
 	}
 };

@@ -50,7 +50,7 @@ export default {
 	metaInfo: {
 		title: "Videos by SmokeyFro",
 		bodyAttrs: {
-			class: "videos"
+			class: "about videos"
 		}
 	}
 };

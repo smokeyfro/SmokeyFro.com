@@ -9,7 +9,7 @@
             <span class="icon" v-else><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
             <span class="hidden text">Theme</span>            
         </a>
-        <g-link class="hidden subscribe md:block" tooltip="Subscribe" to="/subscribe" aria-label="Subscribe to the newsletter">
+        <g-link class="hidden subscribe sm:block" tooltip="Subscribe" to="/subscribe" aria-label="Subscribe to the newsletter">
             <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg></span>
             <span class="hidden text">Subscribe</span>
         </g-link>

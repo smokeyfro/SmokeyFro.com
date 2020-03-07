@@ -36,7 +36,6 @@ aside {
     }
     & a {
         color: #000000a1;
-        padding: 5px 0;
 		font-weight: 600;
     }
     & a:focus {

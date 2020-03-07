@@ -5,7 +5,7 @@
 		<template slot="bottom-shelf">
 			<div class="grid grid-cols-1 gap-6 px-6 mt-6 mb-0 md:mb-10 md:mt-10 md:grid-cols-2 md:gap-10 lg:grid-cols-3 md:px-10 lg:px-20">
 				<article v-for="edge in $page.posts.edges" :key="edge.node.id">
-					<figure class="block h-40 mb-3 overflow-hidden rounded-md md:h-56 md:mb-5 card-image" v-if="edge.node.feature_image">
+					<figure class="block h-24 mb-3 overflow-hidden rounded-md sm:h-24 md:h-30 lg:h-30 xl:h-40 md:mb-5 card-image" v-if="edge.node.feature_image">
 						<g-link :to="`${edge.node.path}`" class="block transition-opacity duration-100 ease-out opacity-100 image hover:opacity-75">
 							<g-image :src="edge.node.feature_image" width="364" height="244" fit="cover" />
 						</g-link>

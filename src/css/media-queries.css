@@ -166,7 +166,7 @@
     /*  Sub Navigation  */
     .secondary {
         & a {
-            @apply font-medium leading-loose;
+            @apply leading-loose;
         }
         & a:after {
             display: inline-block;

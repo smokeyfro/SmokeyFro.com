@@ -6,6 +6,7 @@ nav .home svg {
 }
 header {
     background-color: var(--header-bg);
+    height: 50px;
     & svg, & a {
         transition: all .3s ease-out;
     }
@@ -13,7 +14,6 @@ header {
         @apply transition-all duration-1000 ease-in;
         color: rgba(255,255,255,0.7);
     }
-
     & nav svg {
         width: 16px;
         height: 16px;
@@ -69,6 +69,11 @@ header nav .active line,
 header nav .active circle {
     stroke: #111;
 }
+@media( max-width: 480px ) {
+    header nav a {
+        padding: 0;
+    }
+}
 @media( max-width: 640px ) {
     .mobile-links {
         top: 40px;
@@ -105,8 +110,7 @@ header nav .active circle {
     .close-nav {
         position: relative;
         top: 1px;
-    }
-    
+    } 
     .tertiary {
         width: 60px;
     }
@@ -154,7 +158,7 @@ header nav .active circle {
     }
 }
 
-@media ( min-width: 768px ) {
+@media ( min-width: 640px ) {
     .home .primary .home .text,
     .about .primary .about .text,
     .work .primary .work .text,

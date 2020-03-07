@@ -27,6 +27,10 @@ html {
     background-blend-mode: overlay;
 }
 
+body {
+    @apply overflow-hidden;
+}
+
 .bg {
     background-color: var(--aside-bg);
     background-image: var(---bg-image);

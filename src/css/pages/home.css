@@ -47,3 +47,10 @@
         padding-right: 4rem;
     }
 }
+@media ( max-width: 768px ) {
+    .home div.app {
+        grid-template-areas:
+            "header main main"
+            "header main main";
+    }
+}

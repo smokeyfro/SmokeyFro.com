@@ -1,12 +1,12 @@
 <template>
-	<div class="overflow-x-auto overflow-x-hidden md:h-screen md:overflow-hidden layout app">
-		<header class="relative z-50 flex flex-row items-center justify-between dark:bg-black sm:flex-col">
+	<div class="overflow-hidden md:h-screen md:overflow-hidden layout app">
+		<header class="relative z-50 flex flex-row items-center justify-between sm:h-screen dark:bg-black sm:flex-col">
 			<Logo class="text-white sm:mx-auto sm:mt-6 " />
 			<NavPrimary />
 			<NavMobile />
 			<NavTertiary />
 		</header>
-		<aside class="relative z-40 flex items-center overflow-x-scroll md:overflow-hidden dark:bg-gray-900 sm:justify-center" v-if="sidebar">
+		<aside class="relative z-40 flex items-center overflow-x-auto md:overflow-hidden dark:bg-gray-900 sm:justify-center" v-if="sidebar">
 			<slot name="secondary-nav" />
 		</aside>
 		<main class="relative z-30 w-full h-screen overflow-x-hidden overflow-y-auto">
@@ -83,8 +83,8 @@ export default {
 
 <static-query>
 query {
-  metadata {
-    siteName
-  }
+	metadata {
+		siteName
+	}
 }
 </static-query>

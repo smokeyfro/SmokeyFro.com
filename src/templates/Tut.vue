@@ -142,5 +142,5 @@ query Post ($path: String) {
 }
 </page-query>
 
-<style src="../css/prism.css"></style>
 <style src="../css/templates/tutorial.css"></style>
+<style src="../css/prism.css"></style>

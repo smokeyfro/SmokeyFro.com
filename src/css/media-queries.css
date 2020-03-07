@@ -1,23 +1,15 @@
 /* Media Queries
 ****************************************************/
 @media ( max-width: 480px ) {
-    /* .cards .browser-content {
-      overflow: hidden;
-      margin-bottom: 1rem;
+	.mobile > a:last-of-type {
+		margin-left: auto;
+		margin: 0 .7rem 0 .3rem;
+		display: flex;
+		align-items: center;	
     }
-    .cards  h2,
-    .cards  h2 + p {
-        margin-bottom: 1rem;
-    } */
-        .mobile > a:last-of-type {
-          margin-left: auto;
-          margin: 0 .7rem 0 .3rem;
-          display: flex;
-          align-items: center;	
-      }
-      .mobile a.tablet {
-          display: none;
-      }
+	.mobile a.tablet {
+		display: none;
+	}
   }
   @media ( min-width: 481px ) {
       .mobile > a:last-of-type {
@@ -26,15 +18,16 @@
   }
   @media only screen 
   and (min-device-width : 768px) 
-  and (max-device-width : 1024px)  {
-      .primary a {
+  and (max-device-width : 1024px)  {var
+      header nav a {
           padding: 5px;
       }
       header nav a svg {
           width: 22px;
       }
       .secondary a:after {
-          display: none;
+		  display: none;
+		  z-index: 0;
       }
       header nav a::after {
           left: 55px;
@@ -104,36 +97,34 @@
 	}
 }
 @media (min-width: 640px ) {
-	.primary a:not(:last-of-type) {
+	header nav a {
 		@apply py-3;
 	}
 	header {
 		border-right: 5px solid var(--accent-color);
-        nav {
-            a {
+        & nav {
+            & a {
                 position: relative;
                 z-index: 99;
-            }
-            a::after {
-				position: absolute;
-				font-size: 13px;
-				font-weight: 700;
-				top: -3px;
-				left: 31px;
-				padding: 8px;
+			}
+            & a::after {
 				white-space: pre;
+				top: 3px;
 				z-index: -1;
-				color: #fff;
-				background-color: #000;
-				z-index: 99999;
-				border-radius: 4px;
 				transition: all .3s ease-out;
 				opacity: 0;
 				content: attr(tooltip);
+				background: #fff;
+				color: #111;
             }
-            a:hover::after {
+            & a:hover::after {
                 opacity: 1;
-            }
+			}
+			& a:hover svg path,
+			& a:hover svg line,
+			& a:hover svg circle {
+				stroke: #111;
+			}
         }
     }
 }
@@ -192,26 +183,17 @@
 
     /*  Sub Navigation  */
     .secondary {
-        a {
+        & a {
             @apply font-medium leading-loose;
         }
-        a:after {
+        & a:after {
             display: inline-block;
             content: "→";
             transition: color 0.3s ease-out;
             color: transparent;
         }
-        a:hover:after {
-            color: #000;
-        }
-    }
-    
-    /* Utility Navigation */
-    .tertiary {
-        a {
-            circle, path {
-                stroke: #fff;
-            }
+        & a:hover:after {
+			color: #000;
         }
     }
 }

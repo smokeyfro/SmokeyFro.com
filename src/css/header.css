@@ -14,12 +14,13 @@ header {
     }
     & nav svg {
         width: 16px;
+        height: 16px;
     }
     & nav path, 
     & nav circle {
         stroke: rgba(255,255,255,0.7);
     } 
-    & .primary a {
+    & nav a {
         padding: 7px;
     }
     & .mobile-links .active {
@@ -54,7 +55,7 @@ header {
 .journal .primary .journal circle,
 header nav .active path, 
 header nav .active circle {
-    stroke: #ffc800;
+    stroke: #111;
 }
 @media( max-width: 640px ) {
     .mobile-links {
@@ -142,30 +143,39 @@ header nav .active circle {
 }
 
 @media ( min-width: 768px ) {
+    .home .primary .home .text,
     .about .primary .about .text,
     .work .primary .work .text,
     .themes .primary .themes .text,
     .tutorials .primary .tutorials .text,
     .journal .primary .journal .text,
+    header nav a:after,
     .active .text {
-        display: block;
         position: absolute;
-        color: #fff;
+        color: #111;
         font-weight: 700;
         font-size: 13px;
         left: -3px;
-        padding: 5px 12px 5px 34px;
+        padding: 5px 12px 5px 30px;
         border-radius: 20px;
         z-index: 0;
         box-shadow: 0px 0 0 3px #000;
-        background: #222;
+        background: var(--accent-color);
         border: 2px solid #fff;
     }
-    header .primary a {
+    .home .primary .home .text,
+    .about .primary .about .text,
+    .work .primary .work .text,
+    .themes .primary .themes .text,
+    .tutorials .primary .tutorials .text,
+    .journal .primary .journal .text {
+        display: block;
+    }
+    header nav a,
+    header nav a .icon {
         position: relative;
     }
-    header .primary a .icon {
-        position: relative;
+    header nav a .icon {
         z-index: 2;
     }
 }

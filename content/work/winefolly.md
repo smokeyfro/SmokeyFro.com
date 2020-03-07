@@ -3,8 +3,8 @@ title: Wine Folly
 slug: winefolly
 excerpt: Complete overhaul of popular wine blog WineFolly.com
 project_type: WordPress
-contact: Madeline Puckett
-client_content: Madeline Puckett
+contact: Madeline Puckette
+client_content: Madeline Puckette
 thumb: "/media/work/winefolly-thumb.jpg"
 image: "/media/work/winefolly-wines-grid.jpg"
 gallery:
@@ -92,11 +92,11 @@ stack: ['WordPress','Beans','AMP','Google Analytics','Git','WP Engine']
 testimonial: 
 launch_date: 2019-06-01
 ---
-I had the privelage to work with Madeline Puckette and the WineFolly team for a year and a half. In that time I rebuilt the site from the ground up, using Beans and CMB2 as my primary tools. The entire site was built using AMP Native, meaning AMP was used for both mobile and desktop users. 
+I had the privelage to work with Madeline Puckette and the WineFolly team for a year and a half. In that time I rebuilt the site from the ground up using Beans (the WordPress theme framework I helped create). 
 
-AMP came with it's own set of challenges, most of which being that it's still a relatively new technology, so there isn't that much info out there when you get stuck, or you come across a bug in one of the core components. That said, I'm pretty chuffed with the final product.
+The site was built using Googles Accelerated Mobile Pages (AMP) project, which aims to set a new standard for the performance of websites on mobile devices. AMP came with it's own set of challenges, most of which being that it's still a relatively new technology, so there isn't that much info out there when you get stuck, or you come across a bug in one of the core components.
 
-Some of the other projects we worked on, include:
+Some of the other projects I worked on include:
 
 - A suite of Gutenberg blocks.
 - An index of 260+ grape and wine landing pages.

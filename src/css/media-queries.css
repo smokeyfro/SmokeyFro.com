@@ -107,24 +107,6 @@
                 position: relative;
                 z-index: 99;
 			}
-            & a::after {
-				white-space: pre;
-				top: 3px;
-				z-index: -1;
-				transition: all .3s ease-out;
-				opacity: 0;
-				content: attr(tooltip);
-				background: #fff;
-				color: #111;
-            }
-            & a:hover::after {
-                opacity: 1;
-			}
-			& a:hover svg path,
-			& a:hover svg line,
-			& a:hover svg circle {
-				stroke: #111;
-			}
         }
     }
 }

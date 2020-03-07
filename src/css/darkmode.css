@@ -118,18 +118,6 @@
         @apply bg-white border-accent;
     }
 
-    /* Cards */
-    & .card-image a img {
-        filter: saturate(0);
-        opacity: .9;
-        transition: all .3s ease-out;
-        border-bottom: 0;
-    }
-    & .card-image a:hover img {
-        filter: saturate(1);
-        opacity: 1;
-    }
-
     /* SVG's */
     &.home, &.about {
         & main {

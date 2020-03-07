@@ -105,7 +105,7 @@
 }
 @media (min-width: 640px ) {
 	.primary a:not(:last-of-type) {
-		@apply mb-2;
+		@apply py-3;
 	}
 	header {
 		border-right: 5px solid var(--accent-color);

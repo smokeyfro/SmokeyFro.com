@@ -69,3 +69,15 @@ aside {
         transform: skewX(-30deg);
     }
 }
+
+.social-links > a:after {
+    @apply transition-all duration-500 ease-in-out;
+    transform: rotate(0deg);
+}
+.social-links > a:hover:after {
+    content: "→";
+}
+.social-links.open > a:after {        
+    transform: rotate(90deg);
+    color: #1C2F39;
+}

@@ -52,6 +52,9 @@
         & img {
             filter: invert(1);
         }
+        a.active:after {
+            color: var(--accent-color);
+        }
     }
 
     /* Main Body */
@@ -82,7 +85,7 @@
             color: #eee;
         }
         & a:not(.image):not(.link) {
-            @apply px-2 py-1 text-sm text-black uppercase border-b bg-accent border-accent;
+            @apply bg-accent;
         }
     }
 

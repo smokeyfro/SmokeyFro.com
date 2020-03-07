@@ -35,11 +35,6 @@ header {
         outline: none transparent;
         box-shadow: 0 0;
     }
-    & nav a:focus svg path,
-    & nav a:focus svg line,
-    & nav a:focus svg circle {
-        stroke: #333         ;
-    }
     & nav a:focus svg {
         transform: scale(1.2);
     }

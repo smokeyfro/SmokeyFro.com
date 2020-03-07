@@ -108,7 +108,11 @@
                 z-index: 99;
 			}
         }
-    }
+	}
+	.secondary a.active:after {
+		display: inline-block;
+		color: #000;
+	}
 }
 @media ( min-width: 640px ) and ( max-width: 768px ) {
 	div.app {

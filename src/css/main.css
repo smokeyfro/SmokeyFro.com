@@ -30,10 +30,12 @@ main {
         list-style: circle;
     }
     & a:not(.image):not(.link) {
+        @apply px-4 py-1 text-sm text-black bg-gray-100 rounded-full;
         text-decoration: none;
         font-weight: 700;
-        background-color: rgba(255,200,0,.25);
-        padding: 0 5px;
+    }
+    & a:not(.image):not(.link) {
+        @apply bg-gray-200;
     }
 }
 .two-col .app main {

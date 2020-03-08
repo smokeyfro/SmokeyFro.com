@@ -75,6 +75,4 @@ query Post ($path: String) {
 }
 </page-query>
 
-<style>
-@import "../../node_modules/plyr/dist/plyr.css";
-</style>
+<style src="../../node_modules/plyr/dist/plyr.css"></style>

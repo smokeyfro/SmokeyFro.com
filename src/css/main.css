@@ -63,11 +63,28 @@ span.reverse {
 
 table th,
 table td {
-	@apply px-2 py-2
+	@apply px-2 py-2;
 }
 table tr {
-	@apply shadow-sm transition-all duration-500 ease-in-out border-t
+	@apply transition-all duration-500 ease-in-out border-t shadow-sm;
 }
 table tbody tr:hover {
-	@apply shadow-md bg-yellow-100
+	@apply bg-yellow-100 shadow-md;
+}
+
+.notes-wrap button:before {
+    content: "Release Notes";
+    transform: translateX(-120%);
+    position: absolute;
+    font-size: 14px;
+    color: #777;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+    z-index: -1;
+}
+.notes-wrap button:hover:before {
+    opacity: 1;
+}
+.notes-wrap button:hover svg path {
+    fill: #111;
 }

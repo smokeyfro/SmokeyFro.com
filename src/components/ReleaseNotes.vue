@@ -1,7 +1,7 @@
 <template>
 <div class="absolute top-0 right-0 notes-wrap">
-    <button v-if="isVisible" class="absolute top-0 right-0 mt-5 mr-5 whitespace-pre hover-text-red hover:bg-transparent toggle-notes" @click="toggleVisibility"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
-    <button v-else class="absolute top-0 right-0 mt-5 mr-5 whitespace-pre hover-text-red hover:bg-transparent toggle-notes" @click="toggleVisibility"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg></button>
+    <button v-if="isVisible" class="fixed top-0 right-0 mt-5 mr-5 whitespace-pre hover-text-red hover:bg-transparent toggle-notes" @click="toggleVisibility"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+    <button v-else class="fixed top-0 right-0 mt-5 mr-8 whitespace-pre hover-text-red hover:bg-transparent toggle-notes" @click="toggleVisibility"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg></button>
     <div v-on-clickaway="hideNotes" v-if="isVisible" class="flex flex-col items-start justify-start h-screen bg-white shadow-lg release-notes">
     <h2 class="p-6 m-0 -mt-1 text-lg ">🎉 Recent Updates</h2>
     <div class="overflow-x-auto">

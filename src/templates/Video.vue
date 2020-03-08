@@ -2,13 +2,14 @@
 	<Video top="true">
 		<article class="relative">
             <div>
+				<figure v-html="$page.post.content" />
                 <h1 class="title">{{ $page.post.title }}</h1>
 			    <p class="lead" v-html="$page.post.excerpt" />
             </div>
 			<Comments />
 		</article>
 		<template slot="top-shelf">
-			<ClientOnly>
+			<!-- <ClientOnly>
 				<videoplayer>
 					<div class="plyr__video-embed">
 					<iframe
@@ -19,7 +20,7 @@
 					></iframe>
 					</div>
 				</videoplayer>
-			</ClientOnly>
+			</ClientOnly> -->
 		</template>
 		<template slot="navgroup">
 			Work

@@ -2,10 +2,8 @@
 	<Video top="true">
 		<h1 class="title">{{ $page.post.title }}</h1>
 		<p class="lead" v-html="$page.post.excerpt" />
-		{{ videoUrl }}
 		<Comments />
 		<template slot="top-shelf">
-			<!-- <figure v-html="$page.post.content" /> -->
 			<ClientOnly>
 				<videoplayer>
 					<div class="plyr__video-embed">

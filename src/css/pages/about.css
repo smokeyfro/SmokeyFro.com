@@ -1,7 +1,7 @@
 .about {
 	& main {
 		position: relative;
-		& > div {
+		& > div:first-of-type {
 			position: relative;
 			max-width: 100%;
 			width: 100%;

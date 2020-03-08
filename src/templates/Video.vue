@@ -14,6 +14,7 @@
 							allowfullscreen
 							allowtransparency
 							allow="autoplay"
+							sandbox="allow-scripts allow-same-origin"
 						></iframe>
 					</div>
 				</videoplayer>

@@ -86,17 +86,17 @@ module.exports = {
       options: {
         tailwindConfig: './tailwind.config.js',
         purgeConfig: {
-          whitelistPatterns: [
-            /video/,
-            /code-toolbar/,
-          ],
+          // whitelistPatterns: [
+          //   /video/,
+          //   /code-toolbar/,
+          // ],
         },
         presetEnvConfig: {
             features: {
               'nesting-rules': true
             }
         },
-        shouldPurge: true,
+        shouldPurge: false,
         shouldImport: true,
         shouldTimeTravel: true
       }

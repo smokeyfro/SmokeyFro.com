@@ -29,20 +29,24 @@
                 <span class="text-gray-700" v-if="radioValue === 'quote'" for="message">What do you need help with?</span>
                 <span class="text-gray-700" v-if="radioValue === 'message'" for="message">Message</span>
                 <div v-if="radioValue === 'quote'">
+                    <ClientOnly>
                     <vue-expand
                     v-model="message" 
                     :handler="handler" 
                     placeholder="Hi Chris, I need help with..." 
                     min-row="5"
                     v-focus />
+                    </ClientOnly>
                 </div>
                 <div v-if="radioValue === 'message'">
+                    <ClientOnly>
                     <vue-expand
                     v-model="message" 
                     :handler="handler" 
                     placeholder="Hey Chris! Love the fro dude! xoxo Dany"
                     min-row="3"
                     v-focus />
+                    </ClientOnly>
                 </div>
             </label>
             <div>

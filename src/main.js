@@ -16,6 +16,12 @@ export default function(Vue, { isClient, router }) {
 	// 	Vue.use(VueSilentbox);
 	// }
 
+	// Expanding textareas
+	// if (process.isClient) {
+	// 	const VueExpand = require('vue-expand').default;
+	// 	Vue.use(VueExpand);
+	// }
+
 	// Confetti
 	if(process.isClient) {
 		const confetti = require('vue-confetti').default

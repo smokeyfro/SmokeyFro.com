@@ -1,5 +1,5 @@
 <template>
-    <div class="form">
+    <div class="form" refs>
         <div class="success" v-if="status === 'success'">
             <div class="flex items-center justify-start w-full">
 				<div class="w-full p-10 mt-10 bg-gray-100 border-l-8 bg-accent border-accent">
@@ -24,11 +24,26 @@
                     </label>
                 </div>
             </div>
+            
             <label class="block">
                 <span class="text-gray-700" v-if="radioValue === 'quote'" for="message">What do you need help with?</span>
                 <span class="text-gray-700" v-if="radioValue === 'message'" for="message">Message</span>
-                <textarea v-if="radioValue === 'quote'" name="message" id="message" rows="10" v-model="message" required focus class="block w-full mt-1 form-textarea" placeholder="Hi Chris, I need help with..."></textarea>
-                <textarea v-if="radioValue === 'message'" name="message" id="message" rows="5" v-model="message" required focus class="block w-full mt-1 form-textarea" placeholder="Hey Chris! Love the fro dude! xoxo Dany"></textarea>
+                <div v-if="radioValue === 'quote'">
+                    <vue-expand
+                    v-model="message" 
+                    :handler="handler" 
+                    placeholder="Hi Chris, I need help with..." 
+                    min-row="5"
+                    v-focus />
+                </div>
+                <div v-if="radioValue === 'message'">
+                    <vue-expand
+                    v-model="message" 
+                    :handler="handler" 
+                    placeholder="Hey Chris! Love the fro dude! xoxo Dany"
+                    min-row="3"
+                    v-focus />
+                </div>
             </label>
             <div>
                 <div class="flex flex-col md:flex-row">
@@ -70,14 +85,17 @@
 </template>
 
 <script>
-    import ContactMethod from "@/components/ContactMethod.vue";
+    import VueExpand from 'vue-expand';
+    import Vue from 'vue';
+    
     export default {
         name: 'Form',
         components: {
-            ContactMethod
+            VueExpand
         },
         data: function() {
             return {
+                handler: new Vue(),
                 status: null,
                 name: null,
                 email: null,
@@ -89,10 +107,10 @@
                 message_type: this.radioValue
             }
         },
+        mounted(){
+            this.handler.$emit('focus')
+        },
         methods: {
-            setFocus: function() {
-                this.$refs.message.focus();
-            },
             sendForm: function(event) {
                 event.preventDefault()
 
@@ -125,3 +143,15 @@
         }
     }
 </script>
+
+<style>
+.contact .vue-expand {
+    @apply block w-full mt-1 border-solid border border-gray-300 rounded-sm p-3 bg-white;
+}
+.contact .vue-expand[min-row="3"] {
+    min-height: 200px;
+}
+.contact .vue-expand[min-row="5"] {
+    min-height: 300px;
+}
+</style>

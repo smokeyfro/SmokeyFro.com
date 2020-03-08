@@ -9783,6 +9783,13 @@ vue-confetti@^2.0.7:
   resolved "https://registry.yarnpkg.com/vue-confetti/-/vue-confetti-2.0.7.tgz#986eb3d9f92b8424443409b4fbfa2fb6aaac92d5"
   integrity sha512-skXnGS0M6uYVTGosmd0RvfGRC9pA3yuFYpa4b2RZKaNuo1qyrjzSZy4aZ7QrbGHspk8Nmfka8RqjA6cYH44z5A==
 
+vue-expand@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/vue-expand/-/vue-expand-1.1.1.tgz#940e8827f09e69b5327e3e354e0cbb0aaf2705fa"
+  integrity sha512-Y4ACxgUeNZ14pYyLJkfCdqHePEa0Qi39NmKAky52Gw0Ui95oTYxgZn3D4ybeH+h+kVx3ODa3AvVYbW5psbwhSA==
+  dependencies:
+    vue "^2.0.0"
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"

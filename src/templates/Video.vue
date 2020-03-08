@@ -1,23 +1,20 @@
 <template>
 	<Video top="true">
-		<article class="relative">
-            <div>
-                <h1 class="title">{{ $page.post.title }}</h1>
-			    <p class="lead" v-html="$page.post.excerpt" />
-            </div>
-			<Comments />
-		</article>
+		<h1 class="title">{{ $page.post.title }}</h1>
+		<p class="lead" v-html="$page.post.excerpt" />
+		{{ videoUrl }}
+		<Comments />
 		<template slot="top-shelf">
 			<!-- <figure v-html="$page.post.content" /> -->
 			<ClientOnly>
 				<videoplayer>
 					<div class="plyr__video-embed">
-					<iframe
-						:src="$page.post.video_url"
-						allowfullscreen
-						allowtransparency
-						allow="autoplay"
-					></iframe>
+						<iframe
+							:src="videoUrl"
+							allowfullscreen
+							allowtransparency
+							allow="autoplay"
+						></iframe>
 					</div>
 				</videoplayer>
 			</ClientOnly>
@@ -29,7 +26,7 @@
 			<NavAbout />
 		</template>
 		<template slot="repo_link">
-			<a href="https://github.com/smokeyfro/smokeyfro/blob/master/src/pages/work/Rates.vue">Source</a>
+			<a href="https://github.com/smokeyfro/smokeyfro/blob/master/src/templates/Video.vue">Source</a>
 		</template>
 	</Video>
 </template>
@@ -57,6 +54,10 @@ export default {
 	computed: {
 		config() {
 			return config;
+		},
+		videoUrl() {
+			let videoId = this.$page.post.video_id;
+			return `https://www.youtube.com/embed/${videoId}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1`
 		}
 	}
 };
@@ -72,6 +73,7 @@ query Post ($path: String) {
         duration
         content
         video_url
+		video_id
 	}
 }
 </page-query>

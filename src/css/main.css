@@ -43,13 +43,9 @@ main {
 }
 
 /* SVG's */
-.home, 
-.about.index {
-    & main {
-        & path {
-            fill: #1C2F39;
-        }
-    }
+.home main figure svg path,
+.about.index main figure path {
+    fill: #1C2F39;
 }
 
 /* Email */

@@ -16,6 +16,7 @@
             <div class="mx-6 md:mx-10 lg:mx-20">
                 <slot />
             </div>
+			<ReleaseNotes />
 		</main>
 	</div>
 </template>
@@ -26,6 +27,7 @@ import NavMobile from "~/components/NavMobile.vue";
 import NavTertiary from "~/components/NavTertiary.vue";
 import NavAbout from "~/components/NavAbout.vue";
 import Logo from "~/components/Logo.vue";
+import ReleaseNotes from "~/components/ReleaseNotes.vue";
 
 export default {
 	props: [
@@ -37,7 +39,8 @@ export default {
 		NavTertiary,
         NavMobile,
         NavAbout,
-        Logo
+		Logo,
+		ReleaseNotes
 	}
 }
 </script>

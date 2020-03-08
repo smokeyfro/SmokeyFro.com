@@ -10,6 +10,9 @@
 			<NavAbout />
 		</aside>
 		<main class="relative z-30 w-full overflow-x-hidden overflow-y-auto md:h-screen">
+			<div v-if="top">
+				<slot name="top-shelf" />
+			</div>
             <div class="mx-6 md:mx-10 lg:mx-20">
                 <slot />
             </div>
@@ -25,6 +28,9 @@ import NavAbout from "~/components/NavAbout.vue";
 import Logo from "~/components/Logo.vue";
 
 export default {
+	props: [
+		'top'
+	],
 	components: {
 		NavPrimary,
 		NavMobile,

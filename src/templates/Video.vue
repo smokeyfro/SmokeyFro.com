@@ -1,12 +1,26 @@
 <template>
-	<Video>
+	<Video top="true">
 		<article class="relative">
-			<figure v-html="$page.post.content" class="md:mt-10 lg:mt-20" />
-            <!-- <div class="hidden">
+            <div>
                 <h1 class="title">{{ $page.post.title }}</h1>
 			    <p class="lead" v-html="$page.post.excerpt" />
-            </div> -->
+            </div>
+			<Comments />
 		</article>
+		<template slot="top-shelf">
+			<ClientOnly>
+				<videoplayer>
+					<div class="plyr__video-embed">
+					<iframe
+						:src="$page.post.video_url"
+						allowfullscreen
+						allowtransparency
+						allow="autoplay"
+					></iframe>
+					</div>
+				</videoplayer>
+			</ClientOnly>
+		</template>
 		<template slot="navgroup">
 			Work
 		</template>
@@ -22,11 +36,14 @@
 <script>
 import NavAbout from "@/components/NavAbout";
 import Video from "~/layouts/Video.vue";
+import Comments from "@/components/Comments";
 
 export default {
 	components: {
         NavAbout,
-        Video
+		Video,
+		Comments,
+		videoplayer: () => import("vue-plyr/dist/vue-plyr.ssr.js")
 	},
 	metaInfo() {
 		return {
@@ -57,3 +74,7 @@ query Post ($path: String) {
 	}
 }
 </page-query>
+
+<style>
+@import "../../node_modules/plyr/dist/plyr.css";
+</style>

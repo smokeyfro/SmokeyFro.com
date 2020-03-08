@@ -104,7 +104,7 @@ export default {
 	metaInfo: {
 		title: "",
 		bodyAttrs: {
-			class: "about"
+			class: "about index"
 		}
 	}
 };

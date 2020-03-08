@@ -152,6 +152,14 @@ module.exports = {
     {
       use: "@gridsome/source-filesystem",
       options: {
+        path: "content/release-notes/**/*.md",
+        typeName: "ReleaseNote",
+        resolveAbsolutePaths: true
+      }
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
         path: "content/services/**/*.md",
         typeName: "Service",
         resolveAbsolutePaths: true

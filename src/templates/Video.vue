@@ -6,7 +6,7 @@
 		<template slot="top-shelf">
 			<ClientOnly>
 				<videoplayer>
-					<div class="plyr__video-embed">
+					<div class="video plyr__video-embed">
 						<iframe
 							:src="videoUrl"
 							allowfullscreen

@@ -86,23 +86,9 @@ module.exports = {
       options: {
         tailwindConfig: './tailwind.config.js',
         purgeConfig: {
-          whitelist: [
-            'body',
-            'html',
-            'img',
-            'a',
-            'g-image',
-            'g-image--lazy',
-            'g-image--loaded',
-            'active',
-            'active--exact',
-            'code-toolbar',
-            'plyr',
-            'language-javascript',
-            'language-html'
-          ],
           whitelistPatterns: [
-            /plyr/
+            /video/,
+            /code-toolbar/,
           ],
         },
         presetEnvConfig: {

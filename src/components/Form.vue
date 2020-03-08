@@ -89,13 +89,12 @@
 </template>
 
 <script>
-    import VueExpand from 'vue-expand';
     import Vue from 'vue';
-    
+
     export default {
         name: 'Form',
         components: {
-            VueExpand
+            VueExpand: () => import("vue-expand") 
         },
         data: function() {
             return {

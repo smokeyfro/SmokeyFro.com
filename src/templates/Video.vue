@@ -8,8 +8,8 @@
 			<Comments />
 		</article>
 		<template slot="top-shelf">
-			<figure v-html="$page.post.content" />
-			<!-- <ClientOnly>
+			<!-- <figure v-html="$page.post.content" /> -->
+			<ClientOnly>
 				<videoplayer>
 					<div class="plyr__video-embed">
 					<iframe
@@ -20,7 +20,7 @@
 					></iframe>
 					</div>
 				</videoplayer>
-			</ClientOnly> -->
+			</ClientOnly>
 		</template>
 		<template slot="navgroup">
 			Work

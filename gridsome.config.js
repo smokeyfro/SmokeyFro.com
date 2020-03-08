@@ -85,13 +85,32 @@ module.exports = {
       use: 'gridsome-plugin-tailwindcss',
       options: {
         tailwindConfig: './tailwind.config.js',
-        purgeConfig: {},
+        purgeConfig: {
+          whitelist: [
+            'body',
+            'html',
+            'img',
+            'a',
+            'g-image',
+            'g-image--lazy',
+            'g-image--loaded',
+            'active',
+            'active--exact',
+            'code-toolbar',
+            'plyr',
+            'language-javascript',
+            'language-html'
+          ],
+          whitelistPatterns: [
+            /plyr/
+          ],
+        },
         presetEnvConfig: {
             features: {
               'nesting-rules': true
             }
         },
-        shouldPurge: false,
+        shouldPurge: true,
         shouldImport: true,
         shouldTimeTravel: true
       }

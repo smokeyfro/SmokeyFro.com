@@ -1,0 +1,9 @@
+.btn {
+    @apply inline-block px-5 py-3 mt-2 text-base font-bold border border-2 border-black rounded-full;
+}
+.btn.btn-primary {
+    @apply bg-accent;
+}
+.btn.btn-secondary {
+    @apply bg-white;
+}

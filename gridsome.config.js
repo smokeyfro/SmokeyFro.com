@@ -115,6 +115,7 @@ module.exports = {
             /video/,
             /code-toolbar/,
             /$code-toolbar/,
+            /language-javascript/,
             /plyr/,
             /$plyr/,
             /prism/,

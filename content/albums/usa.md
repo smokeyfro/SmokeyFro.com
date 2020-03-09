@@ -1,7 +1,7 @@
 ---
 title: USA
 slug: usa
-excerpt: Photos from my trip to the US of A.
+excerpt: Photos from my trip to the United States in 2012.
 image: "/media/albums/farm/cover.jpg"
 category: travel
 photos:
@@ -17,17 +17,5 @@ photos:
   thumb: "/media/albums/farm/5-thumb.jpg"
 - full: "/media/albums/farm/6.jpg"
   thumb: "/media/albums/farm/6-thumb.jpg"
-- full: "/media/albums/farm/7.jpg"
-  thumb: "/media/albums/farm/7-thumb.jpg"
-- full: "/media/albums/farm/8.jpg"
-  thumb: "/media/albums/farm/8-thumb.jpg"
-- full: "/media/albums/farm/9.jpg"
-  thumb: "/media/albums/farm/9-thumb.jpg"
-- full: "/media/albums/farm/10.jpg"
-  thumb: "/media/albums/farm/10-thumb.jpg"
-- full: "/media/albums/farm/11.jpg"
-  thumb: "/media/albums/farm/11-thumb.jpg"
-- full: "/media/albums/farm/12.jpg"
-  thumb: "/media/albums/farm/12-thumb.jpg"
 searchTerms: farm, photos, albums, gallery, forest glade farm
 ---

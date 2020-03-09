@@ -1,17 +1,18 @@
 <template>
-    <div class="mb-10">
-        <h2 class="mt-5 md:mt-10">{{ title }}</h2>
-        <p class="text-base">{{ summary }}</p>
-        <div class="grid grid-cols-1 gap-10 mt-10 md:grid-cols-2 lg:grid-cols-3">
+    <div class="px-8 py-8 mb-10 bg-gray-100 rounded-md">
+        <h2 class="m-0 leading-none">{{ title }}</h2>
+        <p class="mt-2 text-base">{{ summary }}</p>
+        <div class="grid grid-cols-1 gap-6 mt-6 md:grid-cols-2 lg:grid-cols-4">
             <article v-for="post in filteredAlbums" :key="post.node.id">
                 <figure v-if="post.node.image">
                     <g-link :to="`${post.node.path}`" class="block h-40 mb-4 overflow-hidden rounded-md link">
                         <g-image :src="post.node.image.src" class="object-cover" />
                     </g-link>
-                </figure>    
-                <h2 class="text-2xl">{{ post.node.title }}</h2>
-                <p class="text-base">{{ post.node.excerpt }}</p>
-                <p><g-link :to="`${post.node.path}`">View Album</g-link></p>
+                </figure>
+                <div class="flex items-center justify-between">
+                    <h2 class="m-0 text-xl">{{ post.node.title }}</h2>
+                    <span class="text-xs bg-gray-100 rounded-md">{{ post.node.photos.length }} Images</span>
+                </div>
             </article>
         </div>
     </div>
@@ -29,7 +30,10 @@ export default {
 			return this.$static.albums.edges.filter(edge => {
 				return edge.node.category === this.category;
 			});
-		}
+        },
+        albumCount() {
+            return this.$static.albums.edges.node.photos.length;
+        }
 	}
 };
 </script>
@@ -37,6 +41,7 @@ export default {
 <static-query>
 query Albums {
 	albums: allAlbum {
+        totalCount
 		edges {
 			node {
 				title

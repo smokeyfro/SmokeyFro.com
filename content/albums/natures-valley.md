@@ -1,9 +1,9 @@
 ---
-title: Malaysia
-slug: malaysia
-excerpt: Photos from my trip to Malaysia.
+title: Natures Valley
+slug: natures-valley
+excerpt: Photos of the beautiful coastal town called Wilderness.
 image: "/media/albums/farm/cover.jpg"
-category: travel
+category: south-africa
 photos:
 - full: "/media/albums/farm/1.jpg"
   thumb: "/media/albums/farm/1-thumb.jpg"
@@ -25,5 +25,9 @@ photos:
   thumb: "/media/albums/farm/9-thumb.jpg"
 - full: "/media/albums/farm/10.jpg"
   thumb: "/media/albums/farm/10-thumb.jpg"
+- full: "/media/albums/farm/11.jpg"
+  thumb: "/media/albums/farm/11-thumb.jpg"
+- full: "/media/albums/farm/12.jpg"
+  thumb: "/media/albums/farm/12-thumb.jpg"
 searchTerms: farm, photos, albums, gallery, forest glade farm
 ---

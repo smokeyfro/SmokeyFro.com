@@ -1,9 +1,9 @@
 ---
-title: Malaysia
-slug: malaysia
-excerpt: Photos from my trip to Malaysia.
+title: Cape Town
+slug: cape-town
+excerpt: Photos of the beautiful coastal town called Wilderness.
 image: "/media/albums/farm/cover.jpg"
-category: travel
+category: south-africa
 photos:
 - full: "/media/albums/farm/1.jpg"
   thumb: "/media/albums/farm/1-thumb.jpg"
@@ -19,11 +19,5 @@ photos:
   thumb: "/media/albums/farm/6-thumb.jpg"
 - full: "/media/albums/farm/7.jpg"
   thumb: "/media/albums/farm/7-thumb.jpg"
-- full: "/media/albums/farm/8.jpg"
-  thumb: "/media/albums/farm/8-thumb.jpg"
-- full: "/media/albums/farm/9.jpg"
-  thumb: "/media/albums/farm/9-thumb.jpg"
-- full: "/media/albums/farm/10.jpg"
-  thumb: "/media/albums/farm/10-thumb.jpg"
 searchTerms: farm, photos, albums, gallery, forest glade farm
 ---

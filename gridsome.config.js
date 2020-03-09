@@ -111,19 +111,15 @@ module.exports = {
           //   'code[class*="language-"]',
           //   'pre[class*="language-"]'
           // ],
-          whitelistPatterns: [
-            /video/,
-            /code-toolbar/,
-            /$code-toolbar/,
-            /language-javascript/,
-            /$code/,
-            /plyr/,
-            /$plyr/,
-            /prism/,
-            /markdown/
-          ],
+          // whitelistPatterns: [
+          //   /code-toolbar/,
+          //   /plyr/,
+          //   /$plyr/,
+          //   /markdown/
+          // ],
           whitelistPatternsChildren: [
-            /plyr/
+            /plyr/,
+            /code-toolbar/
           ]
         },
         presetEnvConfig: {

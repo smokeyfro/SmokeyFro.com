@@ -1,15 +1,11 @@
 <template>
 	<Layout :sidebar="true" :top="false" :bottom="true">
 		<h1>Photos</h1>
-		<p>Here are some recent snaps on Instagram. Follow <a href="https://instagram.com/smokeyfro" target="_blank" rel="noopener" title="Follow me on Instagram">@SmokeyFro</a> for more.</p>
-		<div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
-			<article v-for="post in $page.posts.edges" :key="post.node.id">
-				<g-image v-if="post.node.image" :src="post.node.image" />
-				<h2>{{ post.node.title }}</h2>
-				<p>{{ post.node.excerpt }}</p>
-				<p><g-link :to="`${post.node.path}`">View Album</g-link></p>
-			</article>
-		</div>
+		<p>I've always had a fascination with photography and as such can usually be found happy snapping away. This is the world through my <strike>eyes</strike> lens.</p>
+						
+		<AlbumsByCategory category="farm" title="Farm" summary="Photos taken from around the farm." />
+		<AlbumsByCategory category="south-africa" title="South Africa" summary="Photos taken from around the farm." />
+		<AlbumsByCategory category="travel" title="Travel" summary="Photos taken from around the farm." />
 		<template slot="secondary-nav">
 			<NavAbout />
 		</template>
@@ -25,6 +21,7 @@
 					excerpt
 					image
 					id
+					category
 					path
 				}
 			}
@@ -34,25 +31,17 @@
 
 <script>
 import NavAbout from "~/components/NavAbout.vue";
+import AlbumsByCategory from "@/components/AlbumsByCategory";
 
 export default {
 	components: {
-	    FsLightbox: () => import('fslightbox-vue'),
-		NavAbout
+		NavAbout,
+		AlbumsByCategory
 	},
 	metaInfo: {
 		title: "",
 		bodyAttrs: {
 			class: "about photos"
-		}
-	},
-	data() {
-		return {
-			photos: this.$page.posts.edges.node.display_url,
-			toggler: false,
-			options : {
-				closeText : 'X'
-			}
 		}
 	}
 };

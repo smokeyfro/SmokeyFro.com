@@ -1,9 +1,9 @@
 ---
-title: The Farm
-slug: farm
-excerpt: A selection of photos taken from around the farm.
+title: Wilderness
+slug: wilderness
+excerpt: Photos of the beautiful coastal town called Wilderness.
 image: "/media/albums/farm/cover.jpg"
-category: farm
+category: south-africa
 photos:
 - full: "/media/albums/farm/1.jpg"
   thumb: "/media/albums/farm/1-thumb.jpg"

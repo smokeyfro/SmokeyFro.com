@@ -1,7 +1,7 @@
 ---
-title: The Farm
-slug: farm
-excerpt: A selection of photos taken from around the farm.
+title: Garden
+slug: garden
+excerpt: Photos of the produce we've grown on the farm.
 image: "/media/albums/farm/cover.jpg"
 category: farm
 photos:

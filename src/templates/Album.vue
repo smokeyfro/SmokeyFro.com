@@ -3,14 +3,11 @@
 		<article>
 			<h1 class="title">{{ $page.post.title }}</h1>
 			<p class="lead" v-html="$page.post.excerpt" />
-            <div class="grid w-full grid-cols-4 gap-px">
+            <div class="grid w-full grid-cols-4 gap-px" v-if="$page.post.photos">
                 <a v-for="(photo, $index) in $page.post.photos" :key="$index" :href="photo.full.src" data-fslightbox="gallery" class="block image">
                     <img :src="photo.thumb.src" width="250" />
                 </a>
-                </div>
-            <template slot="bottom-shelf">
-                
-            </template>
+            </div>
 		</article>
 		<template slot="navgroup">
 			About
@@ -19,7 +16,7 @@
 			<NavAbout />
 		</template>
 		<template slot="repo_link">
-			<a href="https://github.com/smokeyfro/smokeyfro/blob/master/src/pages/work/Rates.vue">Source</a>
+			<a href="https://github.com/smokeyfro/smokeyfro/blob/master/src/pages/about/Photos.vue">Source</a>
 		</template>
 	</Layout>
 </template>
@@ -27,10 +24,8 @@
 <script>
 import NavAbout from "@/components/NavAbout";
 
-
 export default {
 	components: {
-	    FsLightbox: () => import('fslightbox'),
 		NavAbout
 	},
     data() {
@@ -48,7 +43,7 @@ export default {
 				class: "photos single"
 			},
 			script: [
-				{ src: "/fslightbox.js", defer: false, type: "text/javascript" },
+				{ src: "/fslightbox.js", defer: true, type: "text/javascript" },
 			],
 		};
 	},

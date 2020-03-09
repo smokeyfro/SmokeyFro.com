@@ -1,7 +1,7 @@
 ---
-title: The Farm
-slug: farm
-excerpt: A selection of photos taken from around the farm.
+title: Harvest
+slug: harvest
+excerpt: Photos of the beautiful coastal town called Wilderness.
 image: "/media/albums/farm/cover.jpg"
 category: farm
 photos:

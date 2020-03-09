@@ -1,9 +1,9 @@
 ---
-title: The Farm
-slug: farm
-excerpt: A selection of photos taken from around the farm.
+title: USA
+slug: usa
+excerpt: Photos from my trip to the US of A.
 image: "/media/albums/farm/cover.jpg"
-category: farm
+category: travel
 photos:
 - full: "/media/albums/farm/1.jpg"
   thumb: "/media/albums/farm/1-thumb.jpg"

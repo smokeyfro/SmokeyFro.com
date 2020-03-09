@@ -138,7 +138,11 @@ module.exports = {
             'plyr__video-wrapper',
             'plyr__video-embed',
             'plyr__poster',
-            'plyr__control plyr__control--overlaid'
+            'plyr__control plyr__control--overlaid',
+            '.plyr__progress input[type=range]',
+            '.plyr--full-ui input[type=range]',
+            'input[type=range]',
+            ''
           ],
           whitelistPatterns: [
             /video/,

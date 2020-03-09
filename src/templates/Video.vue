@@ -2,7 +2,7 @@
 	<Video top="true">
 		<h1 class="title">{{ $page.post.title }}</h1>
 		<p class="lead" v-html="$page.post.excerpt" />
-		<Comments />
+		<!-- <Comments /> -->
 		<template slot="top-shelf">
 			<ClientOnly>
 				<videoplayer>
@@ -33,13 +33,13 @@
 <script>
 import NavAbout from "@/components/NavAbout";
 import Video from "~/layouts/Video.vue";
-import Comments from "@/components/Comments";
+// import Comments from "@/components/Comments";
 
 export default {
 	components: {
         NavAbout,
 		Video,
-		Comments,
+		// Comments,
 		videoplayer: () => import("vue-plyr/dist/vue-plyr.ssr.js")
 	},
 	metaInfo() {

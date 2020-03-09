@@ -10,7 +10,7 @@
 			<nav>
 				<g-link class="mb-4 mr-4" :to="tag.path" v-for="tag in $page.post.tags" v-bind:key="tag.id">#{{ tag.name }}</g-link>
 			</nav>
-			<Comments />
+			<!-- <Comments /> -->
 		</article>
 		<template slot="navgroup">
 			Tutorials
@@ -26,13 +26,13 @@
 
 <script>
 import NavTuts from "@/components/NavTuts";
-import Comments from "@/components/Comments";
+// import Comments from "@/components/Comments";
 import config from '~/.temp/config.js'
 
 export default {
 	components: {
 		NavTuts,
-		Comments
+		// Comments
 	},
 	metaInfo() {
 		return {

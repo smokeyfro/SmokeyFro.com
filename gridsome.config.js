@@ -152,6 +152,9 @@ module.exports = {
             /prism/,
             /markdown/
           ],
+          whitelistPatternsChildren: [
+            /$plyr/
+          ]
         },
         presetEnvConfig: {
             features: {

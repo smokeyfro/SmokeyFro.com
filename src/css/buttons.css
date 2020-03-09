@@ -2,7 +2,7 @@
     @apply inline-block px-5 py-3 mt-2 text-base font-bold border border-2 border-black rounded-full;
 }
 .btn.btn-primary {
-    @apply bg-accent;
+    @apply text-white bg-gray-800;
 }
 .btn.btn-secondary {
     @apply bg-white;

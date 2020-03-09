@@ -14,7 +14,6 @@
 		"@gridsome/transformer-remark": "^0.5.0",
 		"@zefman/gridsome-source-instagram": "^0.1.2",
 		"core-js": "3.6.4",
-		"fslightbox-vue": "./src/lib/fslightbox-vue-pro-1.0.1.tgz",
 		"gridsome": "latest",
 		"gridsome-plugin-feed": "^1.0.2",
 		"gridsome-plugin-flexsearch": "^0.1.12",
@@ -25,13 +24,10 @@
 		"vue-expand": "^1.1.1",
 		"vue-konami-code": "^1.0.0",
 		"vue-plyr": "^6.0.4",
-		"vue-silentbox": "^2.0.0",
-		"vue-simple-lightbox": "^1.1.0",
 		"vuestorage": "^19.0.1"
 	},
 	"devDependencies": {
 		"@tailwindcss/custom-forms": "^0.2.1",
-		"fslightbox": "^3.1.0",
 		"gridsome-plugin-tailwindcss": "^2.2.36"
 	},
 	"resolutions": {

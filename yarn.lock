@@ -4084,15 +4084,6 @@ fsevents@^1.2.7:
     bindings "^1.5.0"
     nan "^2.12.1"
 
-fslightbox-vue@./src/lib/fslightbox-vue-pro-1.0.1.tgz:
-  version "1.0.1"
-  resolved "./src/lib/fslightbox-vue-pro-1.0.1.tgz#7fd76811cdc7aa18bc0284e09ac338a18cd270eb"
-
-fslightbox@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/fslightbox/-/fslightbox-3.1.0.tgz#e177272f40a2c60b876c09eefc8d8d48af20cea1"
-  integrity sha512-nqtuEhfzIbcxz59yLe4y/mwSX8V85GxSkV5iugrsUCNy6Pxqmg44whUT6SpOWo8iVS5gJSSk6/kNopV2W2ZXvw==
-
 function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
@@ -5465,11 +5456,6 @@ jest-worker@24.0.0:
   dependencies:
     merge-stream "^1.0.1"
     supports-color "^6.1.0"
-
-jquery@>=1.7.0, jquery@^3.2.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
-  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
@@ -8557,13 +8543,6 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-simplelightbox@^1.10.7:
-  version "1.17.3"
-  resolved "https://registry.yarnpkg.com/simplelightbox/-/simplelightbox-1.17.3.tgz#f886cc789c90568699ef92923a87a64ffc14f740"
-  integrity sha512-PMQteGjJAgcRuxaOLtmc9RHIIyoyLQUoT0PprzeRwJSmV6SqwsKKYE4yA6O9um5bJw7suf5BMos52C5HBEg5Eg==
-  dependencies:
-    jquery ">=1.7.0"
-
 sitemap@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/sitemap/-/sitemap-2.2.0.tgz#98b8502762c5d7e8c77c9be5061dce85b326f1b0"
@@ -9882,20 +9861,6 @@ vue-server-renderer@^2.6.10:
     resolve "^1.2.0"
     serialize-javascript "^2.1.2"
     source-map "0.5.6"
-
-vue-silentbox@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/vue-silentbox/-/vue-silentbox-2.0.0.tgz#e6366afbac2ddc6dad6e206c05ddd4a407613416"
-  integrity sha512-KlgalvpHhYWcgZvR4gxmLv/cXCGtDqLfcl6pWDGHgBVVv/ceK2OhHI8Ix2fTpg0LI6ti2hPpZj0J8elsu4BOwA==
-
-vue-simple-lightbox@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/vue-simple-lightbox/-/vue-simple-lightbox-1.1.0.tgz#b756c73b2ba852ea7fc9c08d017daa4cfb786575"
-  integrity sha512-3U0loG8eIycip5Zc81sQYTyXo6knm5MuoENltP/Xvu2kHRSzvlaE9IJ7HGYpNTFksuLPDaWVXpWs+gmViw77dw==
-  dependencies:
-    jquery "^3.2.1"
-    simplelightbox "^1.10.7"
-    vue "^2.0.0"
 
 vue-style-loader@^4.1.0:
   version "4.1.2"

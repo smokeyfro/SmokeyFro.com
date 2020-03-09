@@ -1,20 +1,20 @@
-.home main .grid {
+.home main .content {
     grid-template-columns: 40% 60%;
     height: 100vh;
 }
-.home main .grid > div {
+.home main .content > div {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     padding: 0 2rem;
 }
-.home main .grid figure {
+.home main .content figure {
     position: relative;
     overflow: hidden;
     height: 100vh;
 }
-.home main .grid figure svg {
+.home main .content figure svg {
     height: 100vh;
     position: absolute;
     bottom: 0;
@@ -24,10 +24,10 @@
     .home main {
         padding-top: 0px;
     }
-    .home .grid {
+    .home .content {
         display: block;
     }
-    .home main .grid > figure {
+    .home main .content > figure {
         height: 300px;
         background: #fff url(/chris-walking-small.jpg);
         background-size: cover;
@@ -43,7 +43,7 @@
     .home main {
         overflow: hidden;
     }
-    .home main .grid > div {
+    .home .content > div {
         padding-right: 4rem;
     }
 }

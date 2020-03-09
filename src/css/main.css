@@ -71,3 +71,7 @@ table tr {
 table tbody tr:hover {
 	@apply bg-yellow-100 shadow-md;
 }
+
+pre[class*="language-"] {
+    background-color: #fdf6e3;
+}

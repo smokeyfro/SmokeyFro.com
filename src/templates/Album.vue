@@ -42,9 +42,9 @@ export default {
 			bodyAttrs: {
 				class: "photos single"
 			},
-			// script: [
-			// 	{ src: "/fslightbox.js", defer: true, type: "text/javascript" },
-			// ],
+			script: [
+				{ src: "/fslightbox.js", defer: true, type: "text/javascript" },
+			]
 		};
 	},
 	computed: {

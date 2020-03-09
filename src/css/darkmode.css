@@ -122,12 +122,12 @@
     }
 
     /* SVG's */
-    &.home, &.about {
-        & main {
-            & path {
-                fill: #ffc800;
-            }
-        }
+    &.home main .content path,
+    &.about main .content path {
+        fill: var(--accent-color);
+    }
+    & .notes-wrap button svg path {
+        stroke: var(--accent-color);
     }
     &.speaking main > div > div table {
         background: transparent;

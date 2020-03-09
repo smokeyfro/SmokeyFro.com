@@ -90,6 +90,8 @@ module.exports = {
             'pre',
             'code',
             'code-toolbar', 
+            'toolbar',
+            'toolbar-item',
             'language-javascript', 
             'language-html', 
             'language-css', 

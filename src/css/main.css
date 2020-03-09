@@ -37,6 +37,9 @@ main {
     & a:not(.image):not(.link):not(.btn) {
         @apply bg-gray-200;
     }
+    & pre {
+        background-color: #fdf6e3;
+    }
 }
 .two-col .app main {
 	background: #f3f7f9f7;
@@ -70,8 +73,4 @@ table tr {
 }
 table tbody tr:hover {
 	@apply bg-yellow-100 shadow-md;
-}
-
-pre[class*="language-"] {
-    background-color: #fdf6e3;
 }

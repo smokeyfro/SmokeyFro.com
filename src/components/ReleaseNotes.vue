@@ -69,6 +69,9 @@ query ReleaseNotes {
 </static-query>
 
 <style>
+.notes-wrap button {
+    border-radius: 50%;
+}
 .notes-wrap button:before {
     content: "Release Notes";
     transform: translateX(-120%);

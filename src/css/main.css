@@ -71,20 +71,3 @@ table tr {
 table tbody tr:hover {
 	@apply bg-yellow-100 shadow-md;
 }
-
-.notes-wrap button:before {
-    content: "Release Notes";
-    transform: translateX(-120%);
-    position: absolute;
-    font-size: 14px;
-    color: #777;
-    opacity: 0;
-    transition: all 0.2s ease-in;
-    z-index: -1;
-}
-.notes-wrap button:hover:before {
-    opacity: 1;
-}
-.notes-wrap button:hover svg path {
-    fill: #111;
-}

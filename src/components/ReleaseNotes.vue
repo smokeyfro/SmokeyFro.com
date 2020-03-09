@@ -1,7 +1,7 @@
 <template>
 <div class="absolute top-0 right-0 notes-wrap">
-    <button aria-label="Show Release Notes" v-if="isVisible" class="fixed top-0 right-0 mt-5 mr-5 whitespace-pre hover-text-red hover:bg-transparent toggle-notes" @click="toggleVisibility"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
-    <button aria-label="Hide Release Notes" v-else class="fixed top-0 right-0 mt-5 mr-8 whitespace-pre hover-text-red hover:bg-transparent toggle-notes" @click="toggleVisibility"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg></button>
+    <button aria-label="Close" v-if="isVisible" class="fixed top-0 right-0 mt-5 mr-5 whitespace-pre hide-notes hover-text-red hover:bg-transparent toggle-notes" @click="toggleVisibility"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+    <button aria-label="Release Notes" v-else class="fixed top-0 right-0 mt-5 mr-8 whitespace-pre show-notes hover-text-red hover:bg-transparent toggle-notes" @click="toggleVisibility"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg></button>
     <div v-on-clickaway="hideNotes" v-if="isVisible" class="flex flex-col items-start justify-start h-screen bg-white shadow-lg release-notes">
     <h2 class="p-6 m-0 -mt-1 text-lg ">🎉 Recent Updates</h2>
     <div class="overflow-x-auto">
@@ -69,8 +69,32 @@ query ReleaseNotes {
 </static-query>
 
 <style>
+.notes-wrap button:before {
+    content: "Release Notes";
+    transform: translateX(-120%);
+    position: absolute;
+    font-size: 14px;
+    color: #777;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+    z-index: -1;
+}
+.notes-wrap .show-notes:before {
+    content: "Release Notes";
+}
+.notes-wrap .hide-notes:before {
+    content: "Close";
+    transform: translateX(-150%);
+}
+.notes-wrap button:hover:before {
+    opacity: 1;
+}
+.notes-wrap button:hover svg path {
+    fill: #111;
+}
 .release-notes {
     width: 300px;
+    z-index: 999;
 }
 .release-notes ul,
 .release-notes li:last-of-type {
@@ -86,13 +110,4 @@ query ReleaseNotes {
 .release-notes li svg path {
     fill: transparent;
 }
-/* .release-notes .improvement {
-    @apply bg-orange-600;
-}
-.release-notes .improvement {
-    @apply bg-blue-600;
-}
-.release-notes .new {
-    @apply bg-green-600;
-} */
 </style>

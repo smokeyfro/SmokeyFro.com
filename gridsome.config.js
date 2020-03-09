@@ -81,48 +81,10 @@ module.exports = {
   },
   plugins: [
     {
-      use: '~/src/plugins/gridsome-source-instagram',
-      options: {
-        username: 'smokeyfro',
-        typeName: 'Photo'
-      }
-    },
-    {
       use: 'gridsome-plugin-tailwindcss',
       options: {
         tailwindConfig: './tailwind.config.js',
         purgeConfig: {
-          // whitelist: [
-          //   'pre',
-          //   'code',
-          //   'code-toolbar', 
-          //   'toolbar',
-          //   'toolbar-item',
-          //   'language-javascript', 
-          //   'language-html', 
-          //   'language-css', 
-          //   'language-php',
-          //   'token',
-          //   'operator',
-          //   'keyword',
-          //   'function',
-          //   'function-variable',
-          //   'punctuation',
-          //   'class-name',
-          //   'string',
-          //   'number',
-          //   '.token.keyword',
-          //   '.token.atrule',
-          //   '.token.attr-value',
-          //   'code[class*="language-"]',
-          //   'pre[class*="language-"]'
-          // ],
-          // whitelistPatterns: [
-          //   /code-toolbar/,
-          //   /plyr/,
-          //   /$plyr/,
-          //   /markdown/
-          // ],
           whitelistPatternsChildren: [
             /plyr/,
             /code-toolbar/

@@ -147,6 +147,10 @@ module.exports = {
           whitelistPatterns: [
             /video/,
             /code-toolbar/,
+            /plyr/,
+            /$plyr/,
+            /prism/,
+            /markdown/
           ],
         },
         presetEnvConfig: {

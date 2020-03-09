@@ -100,7 +100,7 @@ export default {
 			],
 			script: [
 				{ src: "/prism.js", defer: false, type: "text/javascript" },
-				{ src: "https://just-comments.com/w2.js", async: true, defer: true, type: "text/javascript" }
+				//{ src: "https://just-comments.com/w2.js", async: true, defer: true, type: "text/javascript" }
 			],
 			bodyAttrs: {
 				class: "tutorials tutorial single"

@@ -4,8 +4,8 @@
 			<h1 class="title">{{ $page.post.title }}</h1>
 			<p class="lead" v-html="$page.post.excerpt" />
             <div class="grid w-full grid-cols-4 gap-px">
-                <a v-for="(photo, $index) in $page.post.photos" :key="$index" :href="photo.full.src" data-fslightbox="gallery" class="block image">
-                    <img :src="photo.thumb.src" width="250" />
+                <a v-for="(photo, $index) in $page.post.photos" :key="$index" :href="`https://smokeyfro.com ` + photo.full.src" data-fslightbox="gallery" class="block image">
+                    <img :src="`https://smokeyfro.com ` + photo.thumb.src" width="250" />
                 </a>
             </div>
 		</article>

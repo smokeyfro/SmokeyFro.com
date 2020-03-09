@@ -41,6 +41,14 @@ main {
         background-color: #fdf6e3;
         padding: 1rem 1.25rem;
     }
+    & div.code-toolbar > .toolbar button {
+        background: #111!important;
+        color: #fff;
+        box-shadow: 0 0 transparent;
+        border-radius: 2px;
+        padding: .2rem .5rem;
+        margin-right: 2px;
+    }
 }
 .two-col .app main {
 	background: #f3f7f9f7;

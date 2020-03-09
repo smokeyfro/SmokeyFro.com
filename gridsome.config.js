@@ -105,6 +105,7 @@ module.exports = {
             'class-name',
             'string',
             'number',
+            'pre[class*="language-"]',
             'plyr',
             'plyr--full-ui',
             'plyr--video',

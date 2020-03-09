@@ -31,6 +31,7 @@
 	},
 	"devDependencies": {
 		"@tailwindcss/custom-forms": "^0.2.1",
+		"fslightbox": "^3.1.0",
 		"gridsome-plugin-tailwindcss": "^2.2.36"
 	},
 	"resolutions": {

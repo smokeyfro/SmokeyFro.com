@@ -66,6 +66,12 @@ module.exports = {
         component: './src/templates/Topic.vue'
       }
     ],
+    Album: [
+      {
+        path: '/about/photos/:slug',
+        component: './src/templates/Album.vue'
+      }
+    ],
   },
   transformers: {
     remark: {
@@ -180,6 +186,11 @@ module.exports = {
             typeName: 'Video',
             indexName: 'Videos',
             fields: ['title', 'excerpt', 'description']
+          },
+          {
+            typeName: 'Album',
+            indexName: 'photos',
+            fields: ['title', 'excerpt', 'description']
           }
         ],
         searchFields: ['title', 'searchTerms']
@@ -244,6 +255,14 @@ module.exports = {
             ['gridsome-plugin-remark-youtube', { width: '100%', align: 'auto' }]
           ]
         }
+      }
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "content/albums/**/*.md",
+        typeName: "Album",
+        resolveAbsolutePaths: true
       }
     },
     {

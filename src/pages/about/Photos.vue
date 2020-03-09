@@ -2,23 +2,14 @@
 	<Layout :sidebar="true" :top="false" :bottom="true">
 		<h1>Photos</h1>
 		<p>Here are some recent snaps on Instagram. Follow <a href="https://instagram.com/smokeyfro" target="_blank" rel="noopener" title="Follow me on Instagram">@SmokeyFro</a> for more.</p>
-		<template slot="bottom-shelf">
-			<div v-if="$page.posts.edges" class="mt-4 lg:mt-16">
-				<div>
-					<button @click="toggler = !toggler">
-					Toggle Lightbox
-					</button>
-
-					<ClientOnly>
-						<FsLightbox
-						:toggler="toggler"
-						:sources="$page.posts.edges"
-						:showThumbsOnMount="true"
-						/>
-					</ClientOnly>
-				</div>
-			</div>
-		</template>
+		<div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+			<article v-for="post in $page.posts.edges" :key="post.node.id">
+				<g-image v-if="post.node.image" :src="post.node.image" />
+				<h2>{{ post.node.title }}</h2>
+				<p>{{ post.node.excerpt }}</p>
+				<p><g-link :to="`${post.node.path}`">View Album</g-link></p>
+			</article>
+		</div>
 		<template slot="secondary-nav">
 			<NavAbout />
 		</template>
@@ -27,10 +18,14 @@
 
 <page-query>
 	query Photos{
-		posts: allPhoto {
+		posts: allAlbum {
 			edges {
 				node {
-					display_url
+					title
+					excerpt
+					image
+					id
+					path
 				}
 			}
 		}
@@ -53,6 +48,7 @@ export default {
 	},
 	data() {
 		return {
+			photos: this.$page.posts.edges.node.display_url,
 			toggler: false,
 			options : {
 				closeText : 'X'

@@ -208,7 +208,7 @@
 	.flex > aside {
 		width: 250px;
 	}
-	.about main > div > div {
+	.about.index .content {
 		padding-bottom: 30px;
 	}
 }

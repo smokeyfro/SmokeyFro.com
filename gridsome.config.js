@@ -153,7 +153,7 @@ module.exports = {
             /markdown/
           ],
           whitelistPatternsChildren: [
-            /$plyr/
+            /plyr/
           ]
         },
         presetEnvConfig: {

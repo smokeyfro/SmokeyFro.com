@@ -55,8 +55,9 @@ main {
 	background: #f3f7f9f7;
 }
 
-.tutorials,
-.work {
+.tutorials, .about.index,
+.work, .credits, .themes,
+.upcoming, .subscribe {
     & .notes-wrap button {
         right: 15px;
     }

@@ -40,7 +40,7 @@ export default {
 		return {
 			title: `${this.$page.post.title}`,
 			bodyAttrs: {
-				class: "photos single"
+				class: "about photos single"
 			},
 			script: [
 				{ src: "/fslightbox.js", defer: true, type: "text/javascript" },

@@ -1,7 +1,7 @@
 <template>
 	<Layout :sidebar="true" :top="false" :bottom="true">
 		<h1>Photos</h1>
-		<p>I've always had a fascination with photography and as such can usually be found happy snapping away. This is the world through my <strike>eyes</strike> lens.</p>
+		<p>I've always had a fascination with photography and as such can usually be found happy snapping away. See the world through my lens.</p>
 		<div class="mt-10 mb-20">
 			<AlbumsByCategory category="farm" title="Forest Glade Farm" summary="My small piece of paradise, where I live off-grid, grow my own food and slowly-but-surely, edge closer to being full self-sufficient." />
 			<!-- <AlbumsByCategory category="south-africa" title="South Africa" summary="Photos taken from around the farm." />

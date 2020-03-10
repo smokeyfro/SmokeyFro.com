@@ -114,7 +114,10 @@ module.exports = {
             /code-toolbar/,
             /plyr/,
             /$plyr/,
-            /markdown/
+            /markdown/,
+            /$token/,
+            /$function/,
+            /$code/
           ],
           whitelistPatternsChildren: [
             /plyr/,

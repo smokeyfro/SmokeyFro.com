@@ -1,10 +1,10 @@
 <template>
 	<EasterEggWrap>
 		<div class="flex items-center justify-center w-full h-screen">
-			<div class="relative z-50 max-w-lg p-10">
+			<div class="relative z-50 max-w-md p-10 mx-auto">
 				<EasterEggImage />
-				<h1 class="pt-0 mt-0"><strong>Congrats</strong>, you unlocked secret dev settings!</h1>
-				<p class="loading">Hold tight while I redirect you...</p>
+				<h1 class="pt-0 mt-0 text-3xl"><strong>Congrats</strong>, you unlocked the devtools inspector 🥳</h1>
+				<p class="mt-5 text-sm text-gray-600 loading">Hang tight while I redirect you...</p>
 			</div>
 		</div>
 	</EasterEggWrap>
@@ -45,6 +45,7 @@ export default {
 	}
 }
 </script>
+<style src="../css/loading.css"></style>
 <style>
 .easteregg .p-10 svg {
     transform: scale(4);

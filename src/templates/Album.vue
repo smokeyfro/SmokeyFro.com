@@ -3,9 +3,9 @@
 		<article>
 			<h1 class="title">{{ $page.post.title }}</h1>
 			<p class="lead" v-html="$page.post.excerpt" />
-            <div class="grid w-full grid-cols-4 gap-px" :class="$page.post.albumClass">
-                <a v-for="(photo, $index) in $page.post.photos" :key="$index" :href="photo.full.src" data-fslightbox="gallery" class="block image">
-                    <g-image :src="photo.thumb.src" width="250" />
+            <div class="grid w-full grid-cols-4 gap-4 mt-10 mb-20" :class="$page.post.albumClass">
+                <a v-for="(photo, $index) in $page.post.photos" :key="$index" :href="photo.full.src" data-fslightbox="gallery" class="block overflow-hidden transition-all duration-300 ease-in-out border border-white border-solid rounded-md shadow-sm opacity-100 hover:opacity-75 hover:border-accent hover:shadow-lg image">
+                    <g-image :src="photo.thumb.src" width="250" class="object-cover w-full rounded-md" />
                 </a>
             </div>
 		</article>
@@ -74,9 +74,6 @@ query Post ($path: String) {
 </page-query>
 
 <style>
-main .grid {
-	@apply mt-10 mb-20
-}
 main .grid-style1 > a:first-of-type,
 main .grid-style1 > a:nth-of-type(7),
 main .grid-style1 > a:nth-of-type(13) {
@@ -98,8 +95,15 @@ main .grid-style3 > a:nth-of-type(10) {
   grid-row: span 3;
 }
 
-main .grid > a img {
-    object-fit: cover;
-    width: 100%;
+main .grid-style1 > a:first-of-type img,
+main .grid-style1 > a:nth-of-type(7) img,
+main .grid-style1 > a:nth-of-type(13) img,
+main .grid-style2 > a:nth-of-type(3) img,
+main .grid-style2 > a:nth-of-type(6) img,
+main .grid-style2 > a:nth-of-type(13) img,
+main .grid-style3 > a:nth-of-type(2) img,
+main .grid-style3 > a:nth-of-type(5) img,
+main .grid-style3 > a:nth-of-type(10) img {
+    height: 110%;
 }
 </style>

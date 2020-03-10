@@ -35,32 +35,27 @@
                 <ul>
                     <li><a href="https://ghost.org" title="Node based open-source blogging platform" target="_blank" rel="nofollow noopener">Source - Ghost</a> The open-source blogging software.</li>
                     <li><a href="https://gridsome.org/plugins/@gridsome/source-filesystem" title="Transform files into content that can be fetched with GraphQL in your components." target="_blank" rel="nofollow noopener">Source - File System</a> Used to create collections from my markdown files.</li>
-                    <li><a href="https://gridsome.org/plugins/@zefman/gridsome-source-instagram" title="Instagram source for Gridsome" target="_blank" rel="nofollow noopener">Source - Instagram</a> Used to pull in my most recent Instagram photos.</li>
                     <li><a href="https://gridsome.org/plugins/gridsome-plugin-flexsearch" title="Add lightning fast search to Gridsome with FlexSearch" target="_blank" rel="nofollow noopener">Plugin - FlexSearch</a> Used to create the search page on the site and the inline search widget on the 404 page.</li>
                     <li><a href="https://gridsome.org/plugins/gridsome-plugin-feed" title="Generate an RSS, Atom, and/or JSON feed for your Gridsome site." target="_blank" rel="nofollow noopener">Plugin - Feed</a> Generates a RSS, Atom, and JSON feed for the site.</li>
                     <li><a href="https://gridsome.org/plugins/@gridsome/plugin-sitemap" title="Generate sitemap for Gridsome sites" target="_blank" rel="nofollow noopener">Plugin - Sitemap</a> Creates a dynamic sitemap of all the sites content.</li>
+                    <li><a href="https://gridsome.org/plugins/gridsome-plugin-tailwindcss" title="A utility-first CSS framework for rapidly building custom user interfaces." target="_blank" rel="nofollow noopener">Plugin- Tailwind CSS</a> The awesome utility first CSS framework I'm using.</li>
                 </ul>
                 <h2 class="mt-10 mb-5 text-sm uppercase">Graphics</h2>
                 <ul>
                     <li><a href="https://www.heropatterns.com/" title="A collection of repeatable SVG background patterns for you to use on your web projects." target="_blank" rel="nofollow noopener">Hero Patterns</a> from the topography pattern I used for the site background. </a></li>
-                    <li><a href="https://www.facebook.com/andsoitisphotography/" title="Garden Route based Documentary & Lifestyle Photographer." target="_blank" rel="nofollow noopener">Amie De Souza</a> for the photo of me on the home page.</li>
                     <li><a href="https://feathericons.com/" title="Simply beautiful open source icons" target="_blank" rel="nofollow noopener">Feather Icons</a> for their awesome collection of simple svg icons.</li>
                     <li><a href="https://unsplash.com/" title="The internet’s source of freely usable images." target="_blank" rel="nofollow noopener">Unsplash</a> for their library of free images.</li>
+                    <li><a href="https://www.facebook.com/andsoitisphotography/" title="Garden Route based Documentary & Lifestyle Photographer." target="_blank" rel="nofollow noopener">Amie De Souza</a> for the photo of me on the home page.</li>
                 </ul>
             </div>
             <div>
                 <h2 class="mb-5 text-sm uppercase">Node</h2>
                 <ul>
-                    <li><a href="https://www.npmjs.com/package/tailwindcss" title="A utility-first CSS framework for rapidly building custom user interfaces." target="_blank" rel="nofollow noopener">Tailwind CSS</a> utility first CSS framework.</li>
                     <li><a href="https://www.npmjs.com/package/@tailwindcss/custom-forms" title="A better base for styling form elements with Tailwind CSS." target="_blank" rel="nofollow noopener">Tailwind CSS - Custom Forms</a> extends Tailwind with support for fancy form inputs.</li>
-                    <li><a href="https://www.npmjs.com/package/postcss" title="Tool for transforming styles with JS plugins." target="_blank" rel="nofollow noopener">PostCSS</a> a JavaScript library that lets us use tomorrows CSS today.</li>
-                    <li><a href="https://www.npmjs.com/package/@fullhuman/postcss-purgecss" title="PostCSS plugin for PurgeCSS" target="_blank" rel="nofollow noopener">PostCSS - PurgeCSS</a> A runtime utility that strips out all unenecessary CSS.</li>
-                    <li><a href="https://www.npmjs.com/package/postcss-nested" title="SASS style css nested rules with PostCSS" target="_blank" rel="nofollow noopener">PostCSS - Nested</a> Adds the ability to nest CSS selectors.</li>
-                    <li><a href="https://www.npmjs.com/package/postcss-import" title="SASS style css imports with PostCSS" target="_blank" rel="nofollow noopener">PostCSS - Imports</a> Adds a utility to allow for CSS imports.</li>
                     <li><a href="https://www.npmjs.com/package/axios" title="Promise based HTTP client for the browser and node.js" target="_blank" rel="nofollow noopener">Axios</a> A JavaScript library for fetching content from remote API's.</li>
                     <li><a href="https://www.npmjs.com/package/cockpit-sdk" title="A Javascript SDK for Cockpit Headless CMS" target="_blank" rel="nofollow noopener">Cockpit SDK</a> A JavaScript library exposing the Cockpit API.</li>
                     <li><a href="https://www.npmjs.com/package/vue-storage" title="localStorage plugin for Vue.js." target="_blank" rel="nofollow noopener">VueStorage</a> A simple utility for remembering state (aka cookies/localStorage).</li>
-                    <li><a href="https://www.npmjs.com/package/vue-silentbox" title="A simple lightbox inspired component for Vue.js." target="_blank" rel="nofollow noopener">Vue Silentbox</a> A minimal lightbox plugin for Vue, with support for multiple images.</li>
+                    <li><a href="https://www.npmjs.com/package/fslightbox" title="A vanilla js lightbox plugin." target="_blank" rel="nofollow noopener">FSlightbox</a> A minimal lightbox plugin, with support for multiple images and different media types.</li>
                     <li><a href="https://www.npmjs.com/package/vue-clickaway" title="Reusable clickaway directive for reusable Vue.js components" target="_blank" rel="nofollow noopener">Vue Clickaway</a> A utility to close things when clicking away from them.</li>
                 </ul>
             </div>            

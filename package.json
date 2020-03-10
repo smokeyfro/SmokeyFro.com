@@ -14,6 +14,7 @@
 		"@gridsome/transformer-remark": "^0.5.0",
 		"@zefman/gridsome-source-instagram": "^0.1.2",
 		"core-js": "3.6.4",
+		"fslightbox-vue": "./src/lib/fslightbox-vue-pro-1.0.1.tgz",
 		"gridsome": "latest",
 		"gridsome-plugin-feed": "^1.0.2",
 		"gridsome-plugin-flexsearch": "^0.1.12",

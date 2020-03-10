@@ -4084,6 +4084,10 @@ fsevents@^1.2.7:
     bindings "^1.5.0"
     nan "^2.12.1"
 
+fslightbox-vue@./src/lib/fslightbox-vue-pro-1.0.1.tgz:
+  version "1.0.1"
+  resolved "./src/lib/fslightbox-vue-pro-1.0.1.tgz#7fd76811cdc7aa18bc0284e09ac338a18cd270eb"
+
 function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"

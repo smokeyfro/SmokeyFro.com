@@ -40,6 +40,7 @@ main {
     & pre {
         background-color: #fdf6e3;
         padding: 1rem 1.25rem;
+        white-space: pre-wrap;
     }
     & div.code-toolbar > .toolbar button {
         background: #111!important;

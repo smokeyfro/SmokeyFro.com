@@ -85,6 +85,12 @@ module.exports = {
       options: {
         tailwindConfig: './tailwind.config.js',
         purgeConfig: {
+          whitelistPatterns: [
+            /code-toolbar/,
+            /plyr/,
+            /$plyr/,
+            /markdown/
+          ],
           whitelistPatternsChildren: [
             /plyr/,
             /code-toolbar/

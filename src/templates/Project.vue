@@ -65,23 +65,23 @@
 <script>
 import NavWork from "@/components/NavWork";
 import Browser from '@/components/Browser';
-import FsLightbox from "fslightbox-vue";
+// import FsLightbox from "fslightbox-vue";
 
 export default {
 	components: {
 		NavWork,
 		Browser,
-		FsLightbox 
+		// FsLightbox 
 		//FsLightbox: () => import('fslightbox-vue')
 	},
-	data() {
-		return {
-			toggler: false,
-			options : {
-				closeText : 'X'
-			}
-		}
-	},
+	// data() {
+	// 	return {
+	// 		toggler: false,
+	// 		options : {
+	// 			closeText : 'X'
+	// 		}
+	// 	}
+	// },
 	metaInfo() {
 		return {
 			title: `${this.$page.post.title}`,

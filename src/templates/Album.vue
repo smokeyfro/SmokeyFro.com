@@ -17,7 +17,7 @@
 			<NavAbout />
 		</template>
 		<template slot="repo_link">
-			<a href="https://github.com/smokeyfro/smokeyfro/blob/master/src/pages/about/Photos.vue">Source</a>
+			<a href="https://github.com/smokeyfro/smokeyfro/blob/master/src/templates/Album.vue">Source</a>
 		</template>
 	</Layout>
 </template>

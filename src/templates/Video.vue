@@ -1,7 +1,7 @@
 <template>
 	<Video top="true">
-		<h1 class="title">{{ $page.post.title }}</h1>
-		<p class="lead" v-html="$page.post.excerpt" />
+		<h1 class="mt-12">{{ $page.post.title }}</h1>
+		<p class="mb-12" v-html="$page.post.excerpt" />
 		<!-- <Comments /> -->
 		<template slot="top-shelf">
 			<ClientOnly>

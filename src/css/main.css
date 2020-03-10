@@ -54,6 +54,18 @@ main {
 	background: #f3f7f9f7;
 }
 
+.tutorials,
+.work {
+    & .notes-wrap button {
+        right: 15px;
+    }
+}
+
+
+.tutorials.single .notes-wrap button {
+    @apply p-3 bg-white;
+}
+
 /* SVG's */
 .home main figure svg path,
 .about.index main figure path {

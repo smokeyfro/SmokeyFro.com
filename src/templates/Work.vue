@@ -1,20 +1,19 @@
 <template>
 	<Layout :sidebar="true" :top="false" :bottom="false">
 		<article class="mb-6 md:mb-10"> 
-			<div class="flex items-center justify-between w-full">
-				<h1 class="m-0">{{ $page.post.title }}</h1>
-				<a v-if="$page.post.status === 'Online'" :href="$page.post.url" target="_blank">View the site <img src="/external.svg" class="inline-block w-3 h-3" /></a>
-			</div>
-			<p>{{ $page.post.excerpt }}</p>
-			<div class="w-full p-6 pb-4 mb-10 bg-white border rounded-md specs">
-				<ul class="grid grid-cols-2 p-0 mb-0 reset">
-					<li v-if="$page.post.company" class="m-0 mb-3 truncate"><strong class="block">Company</strong>{{ $page.post.company }}</li>
-					<li v-if="$page.post.contact" class="m-0 mb-3"><strong class="block">Contact</strong>{{ $page.post.contact }}</li>
-					<li v-if="$page.post.launch_date" class="m-0 mb-3"><strong class="block">Date</strong>{{ $page.post.launch_date }}</span></li>
-					<li v-if="$page.post.duration" class="m-0 mb-3"><strong class="block">Duration</strong>{{ $page.post.duration }}</li>
-					<li v-if="$page.post.url" class="m-0 mb-3 truncate"><strong class="block">Url</strong>{{ $page.post.url }}</li>
-					<li v-if="$page.post.project_type" class="m-0"><strong class="block">Type</strong>{{ $page.post.project_type }}</li>
-					<li v-if="$page.post.status" class="m-0"><strong class="block">Status</strong>{{ $page.post.status }}</li>
+			<h1 class="m-0">{{ $page.post.title }}</h1>
+			<p class="mb-1">{{ $page.post.excerpt }}</p>
+			<p class="m-0 mb-5"><a v-if="$page.post.status === 'Online'" :href="$page.post.url" target="_blank" class="btn btn-primary">View the site <img src="/external.svg" class="inline-block w-3 h-3" /></a></p>
+			
+			<div class="w-full ">
+				<ul class="grid grid-cols-2 p-0 m-0 mb-6 reset">
+					<li v-if="$page.post.company" class="p-0 m-0 mb-3 truncate"><strong class="block">Company</strong>{{ $page.post.company }}</li>
+					<li v-if="$page.post.contact" class="p-0 m-0 mb-3"><strong class="block">Contact</strong>{{ $page.post.contact }}</li>
+					<li v-if="$page.post.launch_date" class="p-0 m-0 mb-3"><strong class="block">Date</strong>{{ $page.post.launch_date }}</span></li>
+					<li v-if="$page.post.duration" class="p-0 m-0 mb-3"><strong class="block">Duration</strong>{{ $page.post.duration }}</li>
+					<li v-if="$page.post.url" class="p-0 m-0 mb-3 truncate"><strong class="block">Url</strong>{{ $page.post.url }}</li>
+					<li v-if="$page.post.project_type" class="p-0 m-0"><strong class="block">Type</strong>{{ $page.post.project_type }}</li>
+					<li v-if="$page.post.status" class="p-0 m-0"><strong class="block">Status</strong>{{ $page.post.status }}</li>
 				</ul>
 			</div>
 			<div class="grid grid-cols-1 gap-6 md:grid-cols-2">

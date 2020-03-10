@@ -2,6 +2,9 @@
     grid-template-columns: 40% 60%;
     height: 100vh;
 }
+.home .content a{
+    @apply font-bold underline;
+}
 .home main .content > div {
     display: flex;
     align-items: flex-start;

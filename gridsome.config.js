@@ -7,7 +7,7 @@ module.exports = {
   permalinks: {
     trailingSlash: false,
   },
-  resolveAbsolutePaths: true,
+  resolveAbsolutePaths: false,
   prefetch: {
     mask: '^$',
   },

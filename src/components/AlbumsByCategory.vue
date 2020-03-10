@@ -2,7 +2,7 @@
     <div class="px-8 py-8 mb-10 bg-gray-100 rounded-md">
         <h2 class="m-0 leading-none">{{ title }}</h2>
         <p class="mt-2 text-base">{{ summary }}</p>
-        <div class="grid grid-cols-2 gap-6 mt-6 lg:grid-cols-3">
+        <div class="grid grid-cols-2 gap-6 mt-6 lg:grid-cols-4">
             <article v-for="post in filteredAlbums" :key="post.node.id">
                 <figure v-if="post.node.image">
                     <g-link :to="`${post.node.path}`" class="block h-40 mb-4 overflow-hidden rounded-md link">

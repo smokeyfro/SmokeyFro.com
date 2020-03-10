@@ -2,7 +2,7 @@
 title: The Farm
 slug: farm
 excerpt: A selection of photos taken from around the farm.
-image: "/media/albums/farm/cover.jpgJPG"
+image: "/media/albums/farm/cover.JPG"
 category: farm
 photos:
 - full: "/media/albums/farm/1.JPG"

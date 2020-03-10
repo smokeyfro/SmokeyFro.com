@@ -251,7 +251,7 @@ module.exports = {
     {
       use: 'gridsome-plugin-feed',
       options: {
-        contentTypes: ['GhostPost', 'GhostPage', 'Theme', 'Work', 'Project', 'Video', 'Service'],
+        contentTypes: ['GhostPost', 'GhostPage', 'Theme', 'Work', 'Project', 'Video', 'Service', 'Album'],
         feedOptions: {
           title: 'SmokeyFro - Syndicate',
           description: 'Web Development Tutorials, JAMStack themes and more'

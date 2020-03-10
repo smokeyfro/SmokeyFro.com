@@ -6,7 +6,7 @@
             <article v-for="post in filteredAlbums" :key="post.node.id">
                 <figure v-if="post.node.image" class="w-full h-auto m-0">
                     <g-link :to="`${post.node.path}`" class="block h-32 mb-4 overflow-hidden transition-all duration-300 ease-in-out border border-white border-solid rounded-md shadow-sm opacity-100 link hover:opacity-75 hover:border-accent hover:shadow-lg">
-                        <g-image :src="post.node.image.src" class="object-cover" />
+                        <g-image :src="post.node.image.src" class="object-cover w-full h-full" />
                     </g-link>
                 </figure>
                 <div class="flex items-center justify-between">

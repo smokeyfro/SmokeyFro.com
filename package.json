@@ -12,7 +12,6 @@
 		"@gridsome/source-filesystem": "^0.6.2",
 		"@gridsome/source-ghost": "^0.3.1",
 		"@gridsome/transformer-remark": "^0.5.0",
-		"@zefman/gridsome-source-instagram": "^0.1.2",
 		"core-js": "3.6.4",
 		"fslightbox-vue": "./src/lib/fslightbox-vue-pro-1.0.1.tgz",
 		"gridsome": "latest",

@@ -74,12 +74,14 @@ query Post ($path: String) {
 </page-query>
 
 <style>
-main .grid-style1 > a:first-of-type,
-main .grid-style1 > a:nth-of-type(7),
-main .grid-style1 > a:nth-of-type(13) {
-  grid-column: span 2;
-  grid-row: span 2;
-}
+.grid-style1 {
+	& > a:first-of-type,
+	& > a:nth-of-type(7),
+	& > a:nth-of-type(13) {
+		grid-column: span 2;
+  		grid-row: span 2;
+	}
+};
 
 main .grid-style2 > a:nth-of-type(3),
 main .grid-style2 > a:nth-of-type(6),

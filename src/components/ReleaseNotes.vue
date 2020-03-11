@@ -79,31 +79,8 @@ query ReleaseNotes {
 </static-query>
 
 <style>
-.notes-wrap button {
-    border-radius: 50%;
-}
-.notes-wrap button:before {
-    content: "Release Notes";
-    transform: translateX(-120%);
-    position: absolute;
-    font-size: 14px;
-    color: #777;
-    opacity: 0;
-    transition: all 0.2s ease-in;
-    z-index: -1;
-}
-.notes-wrap .show-notes:before {
-    content: "Release Notes";
-}
-.notes-wrap .hide-notes:before {
-    content: "Close";
-    transform: translateX(-150%);
-}
-.notes-wrap button:hover:before {
-    opacity: 1;
-}
-.notes-wrap button:hover svg path {
-    fill: #111;
+div.bm-menu {
+    padding-top: 0;
 }
 .release-notes {
     width: 300px;

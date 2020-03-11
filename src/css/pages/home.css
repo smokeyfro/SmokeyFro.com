@@ -2,7 +2,7 @@
     grid-template-columns: 40% 60%;
     height: 100vh;
 }
-.home .content a{
+.home .content a:not(.btn){
     @apply font-bold underline;
 }
 .home main .content > div {

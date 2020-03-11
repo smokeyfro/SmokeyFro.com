@@ -1,5 +1,5 @@
 .btn {
-    @apply inline-block px-5 py-3 mt-2 text-base font-bold border border-2 border-black rounded-full;
+    @apply inline-block px-5 py-3 mt-2 text-base font-bold no-underline border border-2 border-black rounded-full;
 }
 .btn.btn-primary {
     @apply text-white bg-gray-800;

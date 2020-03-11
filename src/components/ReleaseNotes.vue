@@ -1,5 +1,6 @@
 <template>
-    <Reveal right width="400" class="relative">
+<ClientOnly>
+    <Push right width="400" class="relative">
         <div class="flex flex-col items-start justify-start h-screen bg-white release-notes">
             <h2 class="p-6 m-0 -mt-1 text-lg ">🎉 Recent Updates</h2>
             <div class="overflow-x-auto">
@@ -26,17 +27,20 @@
                 </ul>
             </div>
         </div>
-    </Reveal>
+    </Push>
+</ClientOnly>
 </template>
 
 <script>
 import { mixin as clickaway } from 'vue-clickaway'
-import { Reveal } from 'vue-burger-menu'
 
 export default {
     mixins: [ clickaway ],
     components: {
-        Reveal
+        Push: () =>
+            import ('vue-burger-menu')
+            .then(m => m.Push)
+            .catch(),
     },
     data() {
         return {

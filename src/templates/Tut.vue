@@ -135,6 +135,7 @@ query Post ($path: String) {
 		og_image
 		tags {
 			name
+			path
 		}
 		coverImage: feature_image
 		date: published_at (format: "D. MMMM YYYY")

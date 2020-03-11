@@ -82,6 +82,9 @@ query ReleaseNotes {
 div.bm-menu {
     padding-top: 0;
 }
+.bm-item-list>* {
+    padding: 0;
+}
 .release-notes {
     width: 300px;
     z-index: 999;

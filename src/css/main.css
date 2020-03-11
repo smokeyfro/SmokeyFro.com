@@ -48,7 +48,7 @@ main {
 }
 
 
-main .bm-burger-button {
+div.layout .bm-burger-button {
     position: fixed;
     background-image: url(/bell.svg);
     background-repeat: no-repeat;
@@ -62,10 +62,11 @@ main .bm-burger-button {
     top: 20px;
     right: 30px;
 }
-main .bm-burger-button span {
+div.layout .bm-burger-button span {
     height: 0;
 }
-main .bm-menu {
+div.layout .bm-menu,
+div.layout .bm-item-list>* {
     padding: 0;
 }
 .release-notes h2 {

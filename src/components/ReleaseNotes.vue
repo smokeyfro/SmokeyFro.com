@@ -1,6 +1,6 @@
 <template>
 <ClientOnly>
-    <Push right width="400" class="relative">
+    <Push right width="400">
         <div class="flex flex-col items-start justify-start h-screen bg-white release-notes">
             <h2 class="p-6 m-0 -mt-1 text-lg ">🎉 Recent Updates</h2>
             <div class="overflow-x-auto">

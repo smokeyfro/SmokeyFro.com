@@ -48,7 +48,7 @@ main {
 }
 
 
-.app .bm-burger-button {
+main .bm-burger-button {
     position: fixed;
     background-image: url(/bell.svg);
     background-repeat: no-repeat;
@@ -62,10 +62,10 @@ main {
     top: 20px;
     right: 30px;
 }
-.app .bm-burger-button span {
+main .bm-burger-button span {
     height: 0;
 }
-.app .bm-menu {
+main .bm-menu {
     padding: 0;
 }
 .release-notes h2 {

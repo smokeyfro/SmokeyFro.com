@@ -2,20 +2,20 @@
 	<Layout :sidebar="true" :top="false" :bottom="true">
 		<h1>{{ $page.category.belongsTo.totalCount }} <span v-if="$page.category.belongsTo.totalCount > 1">albums</span> <span v-if="$page.category.belongsTo.totalCount == 1">album</span> filed under <mark class="p-3 py-1 bg-yellow-200">{{ $page.category.title }}</mark></h1>
 		<template slot="bottom-shelf">
-		<div class="grid mx-6 mt-10 mb-10 grid-gap-4 md:gap-8 grid-cols1 md:grid-cols-2 lg:grid-cols-3 md:mx-10 lg:mx-20">
-			<article v-for="edge in $page.category.belongsTo.edges" :key="edge.node.id">
-				<figure class="md:mb-5 card-image" v-if="edge.node.coverImage">
-					<g-link :to="`${edge.node.path}`" class="image">
-						<g-image :src="edge.node.coverImage" width="364" height="244" fit="cover" />
-					</g-link>
-				</figure>
-				<h2 class="mt-3 text-2xl" v-if="edge.node.title">
-					{{ edge.node.title }}
-				</h2>
-				<p class="mb-2 text-base">{{ edge.node.description }}</p>
-				<p><g-link :to="`${edge.node.path}`" class="text-sm">Continue reading</g-link></p>
-			</article>
-		</div>
+            <div class="grid grid-cols-1 gap-6 mx-6 mt-6 mt-10 sm:grid-cols-2 lg:grid-cols-4 lg:mx-20 md:mx-10">
+			<article v-for="post in $page.category.belongsTo.edges" :key="post.node.id">
+                <figure v-if="post.node.image" class="w-full h-auto m-0">
+                    <g-link :to="`${post.node.path}`" class="block h-32 mb-2 overflow-hidden transition-all duration-300 ease-in-out border border-white border-solid rounded-md shadow-sm opacity-100 sm:mb-4 link hover:opacity-75 hover:border-accent hover:shadow-lg">
+                        <g-image :src="post.node.image.src" class="object-cover w-full h-full" />
+                    </g-link>
+                </figure>
+                <div class="flex items-center justify-between">
+                    <h2 class="m-0 text-lg">{{ post.node.title }}</h2>
+                    <span class="text-xs bg-gray-100 rounded-md">{{ post.node.photos.length }} Images</span>
+                </div>
+            </article>
+        </div>
+        
 		</template>
 		<template slot="navgroup">
 			Tuts
@@ -48,6 +48,10 @@ query Category ($id: ID!) {
 						path
 						excerpt
 						image
+                        photos {
+                            thumb
+                            full
+                        }
 					}
 				}
 			}

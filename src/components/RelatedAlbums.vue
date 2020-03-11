@@ -3,10 +3,10 @@
         <h2>More in <strong>{{ this.category }}</strong></h2>
         <div class="grid w-full grid-cols-2 gap-4 mt-2 mb-6 md:mb-20 md:mt-6 md:grid-cols-4">
             <figure v-for="edge in filteredAlbums" :key="edge.node.id" class="block m-0">
-                <a class="image" :to="edge.node.path">
+                <g-link class="image" :to="edge.node.path">
                     <g-image :src="edge.node.image" width="250" class="object-cover w-full h-32 overflow-hidden rounded-md" />
-                </a>
-                <figcaption class="mt-3 font-bold">{{ edge.node.title }}</figcaption>
+                </g-link>
+                <figcaption class="mt-3 font-bold"><g-link :to="edge.node.path">{{ edge.node.title }}</g-link></figcaption>
             </figure>
         </div>
     </div>

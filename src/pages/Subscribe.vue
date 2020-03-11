@@ -34,7 +34,7 @@
                             </li>
                         </ul>
                         <input type="hidden" name="subform" value="yes" />
-                        <input type="submit" name="submit" id="submit" class="block w-full px-10 py-6 mt-4 mb-5 text-xl font-bold bg-gray-800 rounded-md text-accent md:mt-8" />
+                        <input value="Join the A-List" type="submit" name="submit" id="submit" class="block w-full px-10 py-6 mt-4 mb-5 text-xl font-bold bg-gray-800 rounded-md text-accent md:mt-8" />
                     </form>
                     <p class="mt-10 mb-10 text-base italic sm:mb-0">Alternatively, subscribe via your feed reader of choice -> <span class="block mb-2 sm:mb-0 sm:hidden"></span><a href="/feed.atom" target="_blank" title="Grab the Atom feed">Atom</a> &middot; <a href="/feed.json" target="_blank" title="Grab the JSON feed">JSON</a> &middot; <a href="/feed.xml" target="_blank" title="Grab the XML feed">XML</a></p>
                 </div>

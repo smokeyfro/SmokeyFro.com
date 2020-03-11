@@ -103,7 +103,10 @@
         @apply text-black;
     }
     & .btn-primary {
-        @apply bg-accent;
+        @apply bg-white;
+    }
+    & .btn-secondary {
+        @apply text-white bg-gray-800;        
     }
     &.home .content a:not(.btn){
         @apply text-white;
@@ -201,8 +204,11 @@
         border-color: #444;
     } 
     &.subscribe main .subscribe-wrap .form-input {
-        background: #333;
-        color: #fff;
+        background: #fff;
+        color: #111;
+    }
+    &.subscribe main .subscribe-wrap input[type="submit"] {
+        @apply text-black bg-accent;
     }
     &.speaking main > div > div:first-of-type {
         border-color: #000;

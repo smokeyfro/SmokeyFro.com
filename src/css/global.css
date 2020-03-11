@@ -37,6 +37,20 @@ body {
     background-image: var(---bg-image);
 }
 
+/* main {
+    & div:not(.content) a:not(.image):not(.link):not(.btn) {
+        @apply px-4 py-1 text-sm text-black bg-gray-100 rounded-full;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    & div:not(.content) a:not(.image):not(.link):not(.btn) {
+        @apply bg-gray-200;
+    }
+} */
+
+main a {
+    @apply font-bold underline;
+}
 @media ( min-width: 640px ) {
     .two-col .app {
         grid-template-columns: 80px 1fr;

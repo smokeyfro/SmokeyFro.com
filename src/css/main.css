@@ -29,14 +29,6 @@ main {
         @apply mb-3;
         list-style: circle;
     }
-    & a:not(.image):not(.link):not(.btn) {
-        @apply px-4 py-1 text-sm text-black bg-gray-100 rounded-full;
-        text-decoration: none;
-        font-weight: 700;
-    }
-    & a:not(.image):not(.link):not(.btn) {
-        @apply bg-gray-200;
-    }
     & pre {
         background-color: #fdf6e3;
         padding: 1rem 1.25rem;
@@ -110,6 +102,7 @@ nav.bm-item-list {
 }
 
 /* SVG's */
+.about.index .about-image path,
 .home main figure svg path,
 .about.index main figure path {
     fill: #1C2F39;

@@ -27,8 +27,9 @@
 	}
 }
 @media ( min-width: 768px ) {
-	.chris-forward svg {
-		width: 13vw;
+	.chris-forward {
+		min-width: 170px;
+		display: block;
 		margin: .3rem 1.6rem 1rem 0;
 	}
 }

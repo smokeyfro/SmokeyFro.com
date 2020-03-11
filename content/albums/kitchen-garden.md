@@ -4,7 +4,6 @@ slug: kitchen-garden
 excerpt: The edible food garden that sits adjascent to the old cottage ruin.
 image: "/media/albums/kitchen-garden/cover.jpg"
 category: farm
-albumClass: grid-style3
 photos:
 - full: "/media/albums/kitchen-garden/chocolate-mint.jpg"
   thumb: "/media/albums/kitchen-garden/chocolate-mint-thumb.jpg"

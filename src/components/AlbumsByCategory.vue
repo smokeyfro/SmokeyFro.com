@@ -28,7 +28,7 @@ export default {
 	computed: {
 		filteredAlbums() {
 			return this.$static.albums.edges.filter(edge => {
-				return edge.node.category === this.category;
+				return edge.node.category.title === this.category;
 			});
         },
         albumCount() {
@@ -45,7 +45,9 @@ query Albums {
 		edges {
 			node {
 				title
-				category
+				category {
+                    title
+                }
                 image
                 photos {
                     thumb

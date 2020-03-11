@@ -84,9 +84,52 @@
         & h1 + p {
             color: #eee;
         }
-        & a:not(.image):not(.link) {
+        & a:not(.image):not(.link):not(.btn) {
             @apply bg-accent;
         }
+    }
+    /* Photos */
+    &.photos {
+        & .photos-wrap > div {
+            background: #292929;
+        }
+        & .photos-wrap article > div span {
+            background: transparent;
+            color: #999;
+        }
+    }
+    /* Buttons */
+    & .btn {
+        @apply text-black;
+    }
+    & .btn-primary {
+        @apply bg-accent;
+    }
+    &.home .content a:not(.btn){
+        @apply text-white;
+    }
+    &.home .content p {
+        color: #ccc;
+    }
+    
+    /* Release Notes */
+    & .app .bm-burger-button {
+        background-image: url(/bell-white.svg);
+    }
+    & .bm-item-list > div  {
+        background: #111;
+    }
+    & .box-content:nth-of-type(odd) {
+        background: #222;
+    }
+    & .box-content:nth-of-type(even) {
+        background: #111;
+    }
+    & .box-content p {
+        color: #ccc;
+    }
+    & .box-content a {
+        color: #fff;
     }
 
     /* Two Columns */
@@ -158,7 +201,8 @@
         border-color: #444;
     } 
     &.subscribe main .subscribe-wrap .form-input {
-        background: #fff;
+        background: #333;
+        color: #fff;
     }
     &.speaking main > div > div:first-of-type {
         border-color: #000;
@@ -190,27 +234,6 @@
         }
         & .even\:bg-gray-200:nth-child(even) {
             background-color: #222;
-            color: #fff;
-        }
-    }
-
-    & .just-comments.sf {
-        --border-color: #444;
-        --primary-bg-color: #111;
-        --secondary-bg-color: #ecebed;
-        --secondary-bg-color-lighter: #ecebed33;
-        --primary-text-color: #fff;
-        --secondary-text-color: #fff;
-
-        --primary-button-bg-color: var(--primary-color);
-        --primary-button-hover-color: var(--primary-color);
-        --primary-button-hover-bg-color: var(--primary-bg-color);
-        --primary-button-border: 1px solid #444;
-
-        --outline-style: 3px solid var(--accent-color);
-        --outline-offset: 5px;
-
-        & .BXtvJgy._1mL7mm2 {
             color: #fff;
         }
     }

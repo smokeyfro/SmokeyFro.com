@@ -72,6 +72,12 @@ module.exports = {
         component: './src/templates/Album.vue'
       }
     ],
+    Category: [
+      {
+        path: '/about/photos/category/:title',
+        component: './src/templates/Category.vue'
+      }
+    ],
   },
   transformers: {
     remark: {
@@ -258,7 +264,13 @@ module.exports = {
       options: {
         path: "content/albums/**/*.md",
         typeName: "Album",
-        resolveAbsolutePaths: true
+        resolveAbsolutePaths: true,
+        refs: {
+          category: {
+            typeName: 'Category',
+            create: true,
+          }
+        }
       }
     },
     {

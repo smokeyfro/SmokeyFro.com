@@ -1,7 +1,7 @@
 <template>
 	<ClientOnly>
-	<vue-drawer-layout ref="drawerLayout" :drawer-width="300" :reverse="true" :content-drawable="true">
-	<div class="drawer-content" slot="drawer" v-on-clickaway="hideNotes">
+	<vue-drawer-layout ref="drawerLayout" :drawer-width="300" :backdrop-opacity-range="[0,1]" :reverse="true" :content-drawable="true">
+	<div class="drawer-content" slot="drawer">
 		<nav id="menu">
         <div class="flex flex-col items-start justify-start h-screen bg-white release-notes">
             <h2 class="p-6 m-0 -mt-1 text-lg ">🎉 Recent Updates</h2>
@@ -74,7 +74,6 @@ import NavTertiary from "~/components/NavTertiary.vue";
 import Logo from "~/components/Logo.vue";
 import ReleaseNotes from "~/components/ReleaseNotes.vue";
 import {DrawerLayout} from 'vue-drawer-layout'
-import { mixin as clickaway } from 'vue-clickaway'
 import vueCustomScrollbar from 'vue-custom-scrollbar'
 
 export default {
@@ -83,7 +82,6 @@ export default {
 		'top',
 		'bottom'
 	],
-	mixins: [ clickaway ],
 	data() {
 		return {
 			settings: {
@@ -136,10 +134,6 @@ export default {
 	methods: {
 		handleToggleDrawer() {
 			this.$refs.drawerLayout.toggle();
-		},
-		hideNotes() {
-			this.isVisible = false
-			this.focusedIndex = 0
 		}
     }
 }

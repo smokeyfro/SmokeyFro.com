@@ -1,4 +1,5 @@
 <template>
+	<ClientOnly>
 	<vue-drawer-layout ref="drawerLayout" :drawer-width="300" :reverse="true" :content-drawable="true">
 	<div class="drawer-content" slot="drawer" v-on-clickaway="hideNotes">
 		<nav id="menu">
@@ -63,6 +64,7 @@
 		</div>
 	</div>
 	</vue-drawer-layout>
+	</ClientOnly>
 </template>
 
 <script>
@@ -129,7 +131,10 @@ export default {
 		Logo,
 		ReleaseNotes,
 		vueCustomScrollbar,
-		'vue-drawer-layout': DrawerLayout
+		'vue-drawer-layout': () =>
+        import ('vue-drawer-layout')
+        .then(m => m.DrawerLayout)
+        .catch(),
 	},
 	methods: {
 		handleToggleDrawer() {

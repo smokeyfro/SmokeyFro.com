@@ -16,11 +16,6 @@ export default function(Vue, { isClient, router }) {
 		Vue.use(VueExpand);
 	}
 
-	// if(process.isClient) {
-	// 	const vueCustomScrollbar = require('vue-custom-scrollbar').default
-	// 	Vue.use(vueCustomScrollbar)
-	// }
-
 	if(process.isClient) {
 		const DrawerLayout = require('vue-drawer-layout').default
 		Vue.use(DrawerLayout)

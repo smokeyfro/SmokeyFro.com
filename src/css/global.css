@@ -59,3 +59,9 @@ main a {
         "header main main";
     }
 }
+
+.scroll-area {
+  position: relative;
+  margin: auto;
+  height: 100%;
+}

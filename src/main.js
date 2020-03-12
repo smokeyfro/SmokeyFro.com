@@ -10,12 +10,6 @@ export default function(Vue, { isClient, router }) {
 	Vue.component('Layout', DefaultLayout)
 	Vue.use(VueRouter)
 
-	// Lightbox
-	// if (process.isClient) {
-	// 	const VueSilentbox = require('vue-silentbox').default;
-	// 	Vue.use(VueSilentbox);
-	// }
-
 	// Expanding textareas
 	if (process.isClient) {
 		const VueExpand = require('vue-expand').default;

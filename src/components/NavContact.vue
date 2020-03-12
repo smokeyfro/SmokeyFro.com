@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex nav secondary">
+    <nav class="flex nav secondary" role="navigation">
         <g-link to="/contact" exact><span>Message</span></g-link>
         <a href="mailto:chris@smokeyfro.com" title="Send me an message using your email client" class="text-sm external"><span>Email <img src="/external.svg" class="inline-block w-3 h-3" /></span></a>
         <a href="tel:+27767773705" title="Give me a call" class="text-sm external"><span>Call <img src="/external.svg" class="inline-block w-3 h-3" /></span></a>

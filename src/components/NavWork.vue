@@ -1,5 +1,5 @@
 <template>
-<nav class="nav secondary">
+<nav class="nav secondary" role="navigation">
 <g-link to="/work" exact><span>Portfolio</span></g-link>
 <g-link to="/work/projects"><span>Projects</span></g-link>
 <g-link to="/work/services"><span>Services</span></g-link>

@@ -131,10 +131,7 @@ export default {
 		Logo,
 		ReleaseNotes,
 		vueCustomScrollbar,
-		'vue-drawer-layout': () =>
-        import ('vue-drawer-layout')
-        .then(m => m.DrawerLayout)
-        .catch(),
+		'vue-drawer-layout': DrawerLayout
 	},
 	methods: {
 		handleToggleDrawer() {

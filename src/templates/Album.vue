@@ -3,7 +3,7 @@
 		<article>
 			<h1 class="title">{{ $page.post.title }}</h1>
 			<p class="lead" v-html="$page.post.excerpt" />
-            <div class="grid w-full grid-cols-1 gap-4 mt-6 mb-6 album-grid md:mb-20 md:mt-10 md:grid-cols-4" :class="$page.post.albumClass">
+            <div class="grid w-full grid-cols-1 gap-4 mt-6 mb-6 album-grid md:mb-20 md:mt-10 sm:grid-cols-2 lg:grid-cols-4" :class="$page.post.albumClass">
                 <a v-for="(photo, $index) in $page.post.photos" :key="$index" :href="photo.full.src" data-fslightbox="gallery" class="block overflow-hidden transition-all duration-300 ease-in-out border border-white border-solid rounded-md shadow-sm opacity-100 hover:opacity-75 hover:border-accent hover:shadow-lg image">
                     <g-image :src="photo.thumb.src" width="250" class="object-cover w-full rounded-md" />
                 </a>
@@ -81,7 +81,7 @@ export default {
 	}
 </page-query>
 <style>
-@media ( min-width: 640px ) {
+@media ( min-width: 1024px ) {
 	.grid-style1 {
 		& > a:first-of-type,
 		& > a:nth-of-type(7),

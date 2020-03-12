@@ -115,6 +115,7 @@ export default {
 			var outputCss = this.randomCss;
 			var outputQuote = this.randomQuote;
 			setTimeout(console.log.bind(console, '%c \n  %c' + outputQuote + ' %c  \n', 'background: none;', outputCss, 'background: none;'));
+      		window.DrawerLayout = require('vue-drawer-layout');
 	},
     created(){
 		const idx = Math.floor(Math.random() * this.quotes.length);

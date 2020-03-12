@@ -1,0 +1,94 @@
+credits:
+  - title: Code
+    links:
+    - title: Gridsome
+      desc: JAMstack static site generator based on Vue.js.
+      url: https://gridsome.org
+    - title: Vue.js
+      desc: The underlying javascript framework that gives me super powers.
+      url: https://vuejs.org
+    - title: Yarn
+      desc: The package manager I use to bundle and maintain my node modules.
+      url: https://yarn.org
+    - title: Markdown
+      desc: Markdown is a lightweight markup language with plain-text-formatting syntax.
+      url: https://en.wikipedia.org/wiki/Markdown
+  - title: Graphics
+    links:
+    - title: Hero Patterns
+      desc: A collection of repeatable SVG background patterns for you to use on your web projects.
+      url: https://www.heropatterns.com/
+    - title: Feather Icons
+      desc: Simply beautiful open source icons.
+      url: https://feathericons.com/
+    - title: UnSplash
+      desc: The internet’s source of freely usable images.
+      url: https://unsplash.com/
+    - title: Amie De Souza
+      desc: Garden Route based Documentary & Lifestyle Photographer.
+      url: https://www.facebook.com/andsoitisphotography/
+  - title: Gridsome
+    links: 
+    - title: Source:/ Ghost
+      desc: Node based open-source blogging platform.
+      url: https://gridsome.org/plugins/@gridsome/source-ghost
+    - title: Source - File System
+      desc: Transform files into content that can be fetched with GraphQL in your components.
+      url: https://gridsome.org/plugins/@gridsome/source-filesystem
+    - title: Plugin - FlexSearch
+      desc: Add lightning fast search to Gridsome with FlexSearch
+      url: https://gridsome.org/plugins/gridsome-plugin-flexsearch
+    - title: Plugin - Feed
+      desc: Generate an RSS, Atom, and/or JSON feed for your Gridsome site.
+      url: https://gridsome.org/plugins/gridsome-plugin-feed
+    - title: Plugin - Sitemap
+      desc: Generate sitemap for Gridsome sites
+      url: https://gridsome.org/plugins/@gridsome/plugin-sitemap
+    - title: Plugin- Tailwind CSS
+      desc: A utility-first CSS framework for rapidly building custom user interfaces.
+      url: https://gridsome.org/plugins/gridsome-plugin-tailwindcss
+  - title: Hosting
+    links:
+    - title: Zeit Now
+      desc: Specialised JAMstack hosting, which I use to host this site.
+      url: https://zeit.co
+    - title: Digital Ocean
+      desc: Affordable hosting for developers, which I use to host my php-based apps.
+      url: https://digitalocean.com
+    - title: RunCloud
+      desc: A service which makes managing your DigitalOcean droplets a breeze.
+      url: https://runcloud.io
+  - title: Node
+    links:
+    - title: SVGOMG
+      desc: Node.js tool for optimizing SVG files.
+      url: https://github.com/svg/svgo
+    - title: TinyPNG
+      desc: Smart PNG and JPEG compression.
+      url: http://tinypng.org/
+    - title: Sendy
+      desc: Self-hosted newsletter email marketing tool.
+      url: https://sendy.co/
+    - title: Github
+      desc: Version controlled code hosting for developers.
+      url: https://github.com/smokeyfro/SmokeyFro.com
+    - title: FormCarry
+      desc: Form processing for JAMstack sites.
+      url: https://formcarry.com
+  - title: Node
+    links:
+    - title: Tailwind Custom Forms
+      desc: A better base for styling form elements with Tailwind CSS.
+      url: https://www.npmjs.com/package/@tailwindcss/custom-forms
+    - title: Axios
+      desc: Promise based HTTP client for the browser and node.js
+      url: https://www.npmjs.com/package/axios
+    - title: VueStorage
+      desc: localStorage plugin for Vue.
+      url: https://www.npmjs.com/package/vue-storage
+    - title: FSlightbox
+      desc: A vanilla js lightbox plugin.
+      url: https://www.npmjs.com/package/fslightbox
+    - title: Vue Clickaway
+      desc: Reusable clickaway directive for reusable Vue.js components.
+      url: https://www.npmjs.com/package/vue-clickaway

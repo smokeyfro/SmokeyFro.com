@@ -9,7 +9,7 @@
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
 					</a>
 					<div class="h-full overflow-hidden">
-						<vue-custom-scrollbar class="scroll-area">
+						<div vbar>
 							<article class="box-content p-4 mb-0 odd:bg-gray-200 even:bg-white" v-for="note in $static.notes.edges" :key="note.node.id">
 								<h3 class="mb-2 text-sm text-gray-600">{{ note.node.date }}</h3>
 								<ul class="p-0 m-0 reset">
@@ -22,7 +22,7 @@
 									</li>
 								</ul>
 							</article>
-						</vue-custom-scrollbar>
+						</div>
 					</div>
 					<div class="flex items-start self-end justify-start w-full p-4 mt-auto bg-gray-100">
 						<strong class="mt-1 text-xs uppercase">Key:</strong>
@@ -47,8 +47,8 @@
 					<aside role="navigation" class="relative z-40 flex items-center overflow-x-auto md:overflow-hidden dark:bg-gray-900 sm:justify-center" v-if="sidebar">
 						<slot name="secondary-nav" />
 					</aside>
-					<main class="relative z-30 w-full h-screen overflow-hidden overflow-y-auto">
-					<vue-custom-scrollbar class="scroll-area">
+					<main class="relative z-30 w-full h-screen overflow-hidden">
+					<div v-bar>
 						<div v-if="top">
 							<slot name="top-shelf" />
 						</div>
@@ -61,7 +61,7 @@
 						<a href="javascript:void(0)" class="fixed top-0 right-0 block mt-5 mr-8 rounded-full" @click="handleToggleDrawer">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
 						</a>	
-					</vue-custom-scrollbar>
+					</div>
 					</main>
 				</div>
 			</div>
@@ -75,8 +75,6 @@ import NavMobile from "~/components/NavMobile.vue";
 import NavTertiary from "~/components/NavTertiary.vue";
 import Logo from "~/components/Logo.vue";
 import ReleaseNotes from "~/components/ReleaseNotes.vue";
-import {DrawerLayout} from 'vue-drawer-layout';
-import vueCustomScrollbar from 'vue-custom-scrollbar';
 
 export default {
   	props: [
@@ -112,9 +110,9 @@ export default {
 		}
 	},
 	mounted() {
-			var outputCss = this.randomCss;
-			var outputQuote = this.randomQuote;
-			setTimeout(console.log.bind(console, '%c \n  %c' + outputQuote + ' %c  \n', 'background: none;', outputCss, 'background: none;'));
+		var outputCss = this.randomCss;
+		var outputQuote = this.randomQuote;
+		setTimeout(console.log.bind(console, '%c \n  %c' + outputQuote + ' %c  \n', 'background: none;', outputCss, 'background: none;'));
 	},
     created(){
 		const idx = Math.floor(Math.random() * this.quotes.length);
@@ -129,8 +127,10 @@ export default {
 		NavMobile,
 		Logo,
 		ReleaseNotes,
-		vueCustomScrollbar,
-		'vue-drawer-layout': DrawerLayout,
+		Vuebar: () =>
+			import ('vuebar')
+			.then(m => m.Vuebar)
+			.catch(),
 		DrawerLayout: () =>
 			import ('vue-drawer-layout')
 			.then(m => m.DrawerLayout)

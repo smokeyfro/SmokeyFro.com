@@ -141,6 +141,10 @@ module.exports = {
       }
     },
     {
+      use: '~/plugins/vue-drawer-layout',
+      mode: 'client'
+    },
+    {
       use: 'gridsome-plugin-flexsearch',
       options: {
         collections: [

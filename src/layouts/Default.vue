@@ -1,5 +1,4 @@
 <template>
-	<ClientOnly>
 		<vue-drawer-layout ref="drawerLayout" :drawer-width="300" :backdrop-opacity-range="[0,1]" :reverse="true" :content-drawable="true">
 			<div class="drawer-content" slot="drawer">
 				<nav id="menu">
@@ -64,7 +63,6 @@
 				</div>
 			</div>
 		</vue-drawer-layout>
-	</ClientOnly>
 </template>
 
 <script>

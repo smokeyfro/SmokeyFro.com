@@ -8,8 +8,7 @@
 					<a href="#" class="absolute top-0 right-0 mt-5 mr-5 rounded-full" @click.prevent="handleToggleDrawer">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
 					</a>
-					<div class="h-full overflow-hidden">
-						<div vbar>
+					<div class="h-full overflow-y-hidden">
 							<article class="box-content p-4 mb-0 odd:bg-gray-200 even:bg-white" v-for="note in $static.notes.edges" :key="note.node.id">
 								<h3 class="mb-2 text-sm text-gray-600">{{ note.node.date }}</h3>
 								<ul class="p-0 m-0 reset">
@@ -22,7 +21,6 @@
 									</li>
 								</ul>
 							</article>
-						</div>
 					</div>
 					<div class="flex items-start self-end justify-start w-full p-4 mt-auto bg-gray-100">
 						<strong class="mt-1 text-xs uppercase">Key:</strong>
@@ -47,8 +45,8 @@
 					<aside role="navigation" class="relative z-40 flex items-center overflow-x-auto md:overflow-hidden dark:bg-gray-900 sm:justify-center" v-if="sidebar">
 						<slot name="secondary-nav" />
 					</aside>
-					<main class="relative z-30 w-full h-screen overflow-hidden">
-					<div v-bar>
+					<main class="relative z-30 w-full h-screen overflow-hidden overflow-y-auto">
+					<div>
 						<div v-if="top">
 							<slot name="top-shelf" />
 						</div>
@@ -58,7 +56,7 @@
 						<div v-if="bottom">
 							<slot name="bottom-shelf" />
 						</div>
-						<a href="#" class="fixed top-0 right-0 block mt-5 mr-8 rounded-full" @click.prevent="handleToggleDrawer">
+						<a href="javascript:void(0)" class="fixed top-0 right-0 block mt-5 mr-8 rounded-full" @click="handleToggleDrawer">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
 						</a>	
 					</div>
@@ -75,6 +73,7 @@ import NavMobile from "~/components/NavMobile.vue";
 import NavTertiary from "~/components/NavTertiary.vue";
 import Logo from "~/components/Logo.vue";
 import ReleaseNotes from "~/components/ReleaseNotes.vue";
+// import vueCustomScrollbar from 'vue-custom-scrollbar'
 
 export default {
   	props: [
@@ -126,11 +125,7 @@ export default {
 		NavTertiary,
 		NavMobile,
 		Logo,
-		ReleaseNotes,
-		Vuebar: () =>
-			import ('vuebar')
-			.then(m => m.Vuebar)
-			.catch()
+		ReleaseNotes
 	},
 	methods: {
 		handleToggleDrawer() {

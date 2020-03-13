@@ -21,7 +21,7 @@ export default function(Vue, { isClient, router }) {
 
 		Vue.use(DrawerLayout)
 		Vue.use(confetti)
-		Vue.use(VueExpand);
+		Vue.use(VueExpand)
 
 		Vue.use(KonamiCode, {callback: function () {
 			router.push({ path: '/easteregg' })

@@ -73,7 +73,8 @@ import NavMobile from "~/components/NavMobile.vue";
 import NavTertiary from "~/components/NavTertiary.vue";
 import Logo from "~/components/Logo.vue";
 import ReleaseNotes from "~/components/ReleaseNotes.vue";
-// import vueCustomScrollbar from 'vue-custom-scrollbar'
+// import vueCustomScrollbar from 'vue-custom-scrollbar';
+// import DrawerLayout from 'vue-drawer-layout';
 
 export default {
   	props: [
@@ -90,9 +91,6 @@ export default {
 			randomQuote: '',
 			quotes: [
 				'Curiosity Killed The Cat',
-				'Early Bird Gets The Worm',
-				'Use CONSOLE for 20% Off',
-				'Garbage In, Garbage Out',
 				'↑↑↓↓←→←→BA'
 			],
 			css: [
@@ -112,6 +110,9 @@ export default {
 		var outputCss = this.randomCss;
 		var outputQuote = this.randomQuote;
 		setTimeout(console.log.bind(console, '%c \n  %c' + outputQuote + ' %c  \n', 'background: none;', outputCss, 'background: none;'));
+		// window.DrawerLayout = import('vue-drawer-layout').then(m => m.DrawerLayout).catch();
+		// var NewDrawerLayout = new DrawerLayout();
+			
 	},
     created(){
 		const idx = Math.floor(Math.random() * this.quotes.length);
@@ -125,11 +126,7 @@ export default {
 		NavTertiary,
 		NavMobile,
 		Logo,
-		ReleaseNotes,
-		DrawerLayout: () =>
-			import ('vue-drawer-layout')
-			.then(m => m.DrawerLayout)
-			.catch(),
+		ReleaseNotes
 	},
 	methods: {
 		handleToggleDrawer() {

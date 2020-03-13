@@ -15,12 +15,11 @@ export default function(Vue, { isClient, router }) {
 	// Non SSR Packages
 	if(process.isClient) {
 
-		const {DrawerLayout} = require('vue-drawer-layout').default
-		Vue.component(DrawerLayout.name, DrawerLayout)
-		
+		const DrawerLayout = require('vue-drawer-layout').default
 		const confetti = require('vue-confetti').default
 		const VueExpand = require('vue-expand').default;
 
+		Vue.use(DrawerLayout)
 		Vue.use(confetti)
 		Vue.use(VueExpand)
 
@@ -29,6 +28,7 @@ export default function(Vue, { isClient, router }) {
 		}})
 
 	}
+
 
 	// Add v-focus directive
 	Vue.directive('focus', {

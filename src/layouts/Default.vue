@@ -109,10 +109,7 @@ export default {
 	mounted() {
 		var outputCss = this.randomCss;
 		var outputQuote = this.randomQuote;
-		setTimeout(console.log.bind(console, '%c \n  %c' + outputQuote + ' %c  \n', 'background: none;', outputCss, 'background: none;'));
-		// window.DrawerLayout = import('vue-drawer-layout').then(m => m.DrawerLayout).catch();
-		// var NewDrawerLayout = new DrawerLayout();
-			
+		setTimeout(console.log.bind(console, '%c \n  %c' + outputQuote + ' %c  \n', 'background: none;', outputCss, 'background: none;'));			
 	},
     created(){
 		const idx = Math.floor(Math.random() * this.quotes.length);

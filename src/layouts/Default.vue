@@ -130,10 +130,6 @@ export default {
 		Vuebar: () =>
 			import ('vuebar')
 			.then(m => m.Vuebar)
-			.catch(),
-		DrawerLayout: () =>
-			import ('vue-drawer-layout')
-			.then(m => m.DrawerLayout)
 			.catch()
 	},
 	methods: {

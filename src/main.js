@@ -11,13 +11,13 @@ export default function(Vue, { isClient, router }) {
 	
 	Vue.use(VueRouter)
 	Vue.use(VueStorage)
-	
-	const {DrawerLayout} = require('vue-drawer-layout').default
-	Vue.component(DrawerLayout.name, DrawerLayout)
 
 	// Non SSR Packages
 	if(process.isClient) {
 
+		const {DrawerLayout} = require('vue-drawer-layout').default
+		Vue.component(DrawerLayout.name, DrawerLayout)
+		
 		const confetti = require('vue-confetti').default
 		const VueExpand = require('vue-expand').default;
 

@@ -125,8 +125,7 @@ export default {
 		NavTertiary,
 		NavMobile,
 		Logo,
-		ReleaseNotes,
-		DrawerLayout: () => require('vue-drawer-layout').then(m => m.DrawerLayout).catch()
+		ReleaseNotes
 	},
 	methods: {
 		handleToggleDrawer() {

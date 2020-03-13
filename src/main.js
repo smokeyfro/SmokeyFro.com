@@ -15,17 +15,25 @@ export default function(Vue, { isClient, router }) {
 	// Non SSR Packages
 	if(process.isClient) {
 
-		const DrawerLayout = require('vue-drawer-layout').default
+		// const DrawerLayout = require('vue-drawer-layout').default
 		const confetti = require('vue-confetti').default
 		const VueExpand = require('vue-expand').default;
 
-		Vue.use(DrawerLayout)
+		// Vue.use(DrawerLayout)
 		Vue.use(confetti)
 		Vue.use(VueExpand)
 
 		Vue.use(KonamiCode, {callback: function () {
 			router.push({ path: '/easteregg' })
 		}})
+
+	}
+
+	if(process.isClient) {
+
+		const DrawerLayout = require('vue-drawer-layout').default
+
+		Vue.use(DrawerLayout)
 
 	}
 

@@ -125,7 +125,11 @@ export default {
 		NavTertiary,
 		NavMobile,
 		Logo,
-		ReleaseNotes
+		ReleaseNotes,
+		DrawerLayout: () =>
+			import ('vue-drawer-layout')
+			.then(m => m.DrawerLayout)
+			.catch(),
 	},
 	methods: {
 		handleToggleDrawer() {

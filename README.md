@@ -11,13 +11,13 @@ My personal portfolio and home of my themes, tuts and other goodies.
 ## Content sources
 
 - Ghost
-- Sanity Studio
 - Google Sheets
 - Markdown
 - HAML
 
 ## Gridsome plugins
 
+- File System Source
 - Ghost Source
 - Flex Search
 - Tailwind

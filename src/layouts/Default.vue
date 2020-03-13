@@ -126,10 +126,7 @@ export default {
 		NavMobile,
 		Logo,
 		ReleaseNotes,
-		DrawerLayout: () =>
-			import ('vue-drawer-layout')
-			.then(m => m.DrawerLayout)
-			.catch()
+		DrawerLayout: () => require('vue-drawer-layout').then(m => m.DrawerLayout).catch()
 	},
 	methods: {
 		handleToggleDrawer() {

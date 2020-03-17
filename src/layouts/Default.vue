@@ -1,7 +1,7 @@
 <template>
-	<ClientOnly>
-		<vue-drawer-layout ref="drawerLayout" :drawer-width="300" :backdrop-opacity-range="[0,1]" :reverse="true" :content-drawable="true">
-			<div class="drawer-content" slot="drawer">
+	<!-- <ClientOnly>
+		<vue-drawer-layout ref="drawerLayout" :drawer-width="300" :backdrop-opacity-range="[0,1]" :reverse="true" :content-drawable="true"> -->
+			<!-- <div class="drawer-content" slot="drawer">
 				<nav id="menu">
 				<div class="flex flex-col items-start justify-start h-screen bg-white release-notes">
 					<h2 class="p-6 m-0 -mt-1 text-lg ">🎉 Recent Updates</h2>
@@ -33,7 +33,7 @@
 						</div>
 					</div>
 				</nav>
-			</div>
+			</div> -->
 			<div class="w-full h-screen" slot="content">
 				<div id="app" class="overflow-hidden md:h-screen md:overflow-hidden layout app">
 					<header role="banner" class="relative z-50 flex flex-row items-center justify-between sm:h-screen dark:bg-black sm:flex-col">
@@ -56,15 +56,15 @@
 						<div v-if="bottom">
 							<slot name="bottom-shelf" />
 						</div>
-						<button class="fixed top-0 right-0 block mt-5 mr-8 rounded-full hover:bg-transparent hover:text-accent" @click="handleToggleDrawer">
+						<!-- <button class="fixed top-0 right-0 block mt-5 mr-8 rounded-full hover:bg-transparent hover:text-accent" @click="handleToggleDrawer">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
-						</button>	
+						</button>	 -->
 					</div>
 					</main>
 				</div>
 			</div>
-		</vue-drawer-layout>
-	</ClientOnly>
+		<!-- </vue-drawer-layout>
+	</ClientOnly> -->
 </template>
 
 <script>

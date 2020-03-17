@@ -138,11 +138,6 @@ module.exports = {
       use: 'gridsome-plugin-flexsearch',
       options: {
         collections: [
-          // {
-          //   typeName: 'Design',
-          //   indexName: 'Designs',
-          //   fields: ['title', 'excerpt', 'description']
-          // },
           {
             typeName: 'GhostTag',
             indexName: 'Tags',
@@ -278,7 +273,7 @@ module.exports = {
     {
       use: 'gridsome-plugin-feed',
       options: {
-        contentTypes: ['GhostPost', 'GhostPage', 'Theme', 'Work', 'Project', 'Video', 'Service', 'Album'],
+        contentTypes: ['GhostPost', 'GhostPage', 'Theme', 'Work', 'Video', 'Service', 'Album'],
         feedOptions: {
           title: 'SmokeyFro - Syndicate',
           description: 'Web Development Tutorials, JAMStack themes and more'

@@ -59,3 +59,16 @@ main a {
         "header main main";
     }
 }
+
+.scroll-area {
+  position: relative;
+  margin: auto;
+  height: 100%;
+}
+
+#app .drawer-mask {
+    background-color: rgba(19, 23, 27, .8);
+    opacity: 1!important;
+    /* background-image: url(/topography-bg.svg); */
+    border-right: 5px solid var(--accent-color);
+}

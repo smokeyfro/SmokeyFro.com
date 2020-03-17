@@ -8,37 +8,29 @@ require('~/css/global.css')
 export default function(Vue, { isClient, router }) {
 
 	Vue.component('Layout', DefaultLayout)
+	
 	Vue.use(VueRouter)
-
-	// Lightbox
-	// if (process.isClient) {
-	// 	const VueSilentbox = require('vue-silentbox').default;
-	// 	Vue.use(VueSilentbox);
-	// }
-
-	// Expanding textareas
-	if (process.isClient) {
-		const VueExpand = require('vue-expand').default;
-		Vue.use(VueExpand);
-	}
-
-	// Confetti
-	if(process.isClient) {
-		const confetti = require('vue-confetti').default
-		Vue.use(confetti)
-	}
-
-	// localStorage
 	Vue.use(VueStorage)
 
-	// Konami
+	// Non SSR Packages
 	if(process.isClient) {
+
+		const DrawerLayout = require('vue-drawer-layout').default;
+		const confetti = require('vue-confetti').default;
+		const VueExpand = require('vue-expand').default;
+
+		Vue.use(DrawerLayout);
+		Vue.use(confetti);
+		Vue.use(VueExpand);
+
 		Vue.use(KonamiCode, {callback: function () {
 			router.push({ path: '/easteregg' })
 		}})
+
 	}
 
-	// Register a global custom directive called v-focus
+
+	// Add v-focus directive
 	Vue.directive('focus', {
 		inserted: function (el) {
 			el.focus()

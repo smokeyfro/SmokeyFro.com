@@ -1,5 +1,5 @@
 <template>
-  <nav class="z-50 flex flex-row text-white sm:hidden nav mobile">
+  <nav class="z-50 flex flex-row text-white sm:hidden nav mobile" role="navigation">
     <g-link to="/about" aria-label="About">
       <span>About</span>
     </g-link>

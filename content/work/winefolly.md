@@ -1,13 +1,13 @@
 ---
 title: Wine Folly
 slug: winefolly
-excerpt: Complete overhaul of popular wine blog WineFolly.com
+excerpt: Complete overhaul of popular wine learning site, WineFolly.com.
 project_type: WordPress
 contact: Madeline Puckette
 client_content: Madeline Puckette
 featured: true
 thumb: "/media/work/winefolly-thumb.jpg"
-image: "/media/work/winefolly-wines-grid.jpg"
+image: "/media/work/winefolly-wine-details.jpg"
 gallery:
 - thumb: "/media/work/winefolly-home-thumb.jpg"
   full: "/media/work/winefolly-home.jpg"

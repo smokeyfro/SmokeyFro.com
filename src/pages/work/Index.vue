@@ -172,6 +172,5 @@ export default {
 		top: auto;
 		bottom: -5px;
 	}
-
 }
 </style>

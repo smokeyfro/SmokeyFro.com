@@ -13,8 +13,39 @@
 			<div v-if="top">
 				<slot name="top-shelf" />
 			</div>
+<<<<<<< Updated upstream
 			<div class="px-5 pt-4 lg:max-w-screen-lg md:px-10 lg:px-20 lg:pt-12 md:pt-6">
 				<slot />
+=======
+			<div class="w-full h-screen" slot="content">
+				<div id="app" class="overflow-hidden md:h-screen md:overflow-hidden layout app">
+					<header role="banner" class="relative z-50 flex flex-row items-center justify-between sm:h-screen dark:bg-black sm:flex-col">
+						<Logo class="text-white sm:mx-auto sm:mt-6 " />
+						<NavPrimary />
+						<NavMobile />
+						<NavTertiary />
+					</header>
+					<aside role="navigation" class="relative z-40 flex items-center overflow-x-auto md:overflow-hidden dark:bg-gray-900 sm:justify-center" v-if="sidebar">
+						<slot name="secondary-nav" />
+					</aside>
+					<main class="relative z-30 w-full h-screen overflow-hidden overflow-y-auto">
+					<div>
+						<div v-if="top">
+							<slot name="top-shelf" />
+						</div>
+						<div class="px-5 pt-4 lg:max-w-screen-lg md:px-10 lg:px-20 lg:pt-12 md:pt-6">
+							<slot />
+						</div>
+						<div v-if="bottom">
+							<slot name="bottom-shelf" />
+						</div>
+						<a href="javascript:void(0)" class="fixed top-0 right-0 block mt-5 mr-8 rounded-full shelf-toggle" @click="handleToggleDrawer">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
+						</a>	
+					</div>
+					</main>
+				</div>
+>>>>>>> Stashed changes
 			</div>
 			<div v-if="bottom">
 				<slot name="bottom-shelf" />

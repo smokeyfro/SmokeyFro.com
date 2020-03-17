@@ -1,7 +1,7 @@
 ---
 title: Kamooni
 slug: kamooni
-excerpt: Static wrapper for the Kamooni home page populated via the Kamooni api.
+excerpt: Refreshed the home page design for Kamooni, a booking app for conscious travellers.
 project_type: Static / API
 contact: Kamooni
 client_content: Herkie Vercuil

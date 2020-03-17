@@ -1,7 +1,7 @@
 ---
 title: Fairy Knowe Backpackers
 slug: fairy-knowe-backpackers
-excerpt: WordPress site for a local backpackers.
+excerpt: New simplified design, content and navigation for a local backpackers in the Garden Route.
 project_type: WordPress
 company: Fairy Knowe Backpackers
 contact: Digby Marshall

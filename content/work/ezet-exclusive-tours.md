@@ -1,7 +1,7 @@
 ---
 title: Ezet Exclusive Tours
 slug: ezet-exclusive-tours
-excerpt: WordPress site for a local tour operator.
+excerpt: New site for local tour operator to showcase her tours in different countries.
 project_type: WordPress
 company: Ezet's Exclusive Tours
 contact: Ezette Pool

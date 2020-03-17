@@ -36,4 +36,4 @@ stack: ['WordPress', 'Gutenberg', 'Beans', 'CloudFlare']
 testimonial: 
 launch_date: 2019-08-01
 ---
-Custom WordPress site using Beans as the base with a custom theme and plugin. I created custom post types for the different rooms and cleaned up the backend admin.
+Custom WordPress site using Beans as the base with a custom theme and plugin. I created custom post types for the different rooms and cleaned up the backend admin...

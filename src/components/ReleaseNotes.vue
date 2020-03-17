@@ -36,12 +36,6 @@ import { mixin as clickaway } from 'vue-clickaway'
 
 export default {
     mixins: [ clickaway ],
-    components: {
-        Push: () =>
-            import ('vue-burger-menu')
-            .then(m => m.Push)
-            .catch(),
-    },
     data() {
         return {
             isVisible: false

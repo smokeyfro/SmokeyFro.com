@@ -124,6 +124,10 @@ export default {
 </script>
 
 <style>
+.featured-image {
+    max-width: 420px;
+    height: auto;
+}
 #app .VueCarousel-dot-container {
 	margin-top: 0!important;
 }

@@ -10,12 +10,12 @@
 				</div>
 				<div class="results">
 					<div v-for="item in searchResults" :key="item.id">
-						<g-link :to="item.path" class="block p-6 mb-5 no-underline transition-all duration-500 ease-in-out bg-white rounded-md shadow-sm md:opacity-75 hover:opacity-100 link hover:shadow-lg">
+						<g-link :to="item.path" class="block p-6 mb-5 transition-all duration-500 ease-in-out bg-white rounded-md shadow-sm md:opacity-75 hover:opacity-100 link hover:shadow-lg">
 							<h2 class="m-0 text-2xl">
 								{{ item.title }} <span :class="item.index | lowerCase" class="relative px-2 py-1 ml-2 text-sm rounded-sm badge">{{ item.index }}</span>
 							</h2>
-							<p class="mb-0 text-base font-normal" v-html="item.excerpt" />
-							<p class="mt-1 mb-0 text-sm font-normal text-gray-700"><span class="hidden md:inline-block">https://smokeyfro.com</span>{{ item.path }}</p>
+							<p class="mb-0 text-base" v-html="item.excerpt" />
+							<p class="mt-1 mb-0 text-sm text-gray-700"><span class="hidden md:inline-block">https://smokeyfro.com</span>{{ item.path }}</p>
 						</g-link>
 					</div>
 				</div>

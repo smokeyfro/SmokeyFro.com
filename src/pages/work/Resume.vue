@@ -37,7 +37,7 @@
 		
 		 <template slot="bottom-shelf">
 			<div class="resume-body">
-				<div class="mx-6 screen:mt-20 md:mx-10">
+				<div class="mx-6 mt-20 md:mx-10">
 					<h2>Work Experience</h2>
 					<div class="grid grid-cols-1 gap-6 mt-5">
 						<div v-for="({ date, location, company, role, summary }, i) in resume.experience" :key="i" class="flex items-start">
@@ -170,5 +170,3 @@ export default {
 	}
 };
 </script>
-
-<style src="../../css/pages/resume.css" />

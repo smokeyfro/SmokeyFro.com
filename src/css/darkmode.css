@@ -85,7 +85,7 @@
             color: #eee;
         }
         & a:not(.image):not(.link):not(.btn) {
-            @apply bg-accent;
+            @apply text-white;
         }
     }
     /* Photos */

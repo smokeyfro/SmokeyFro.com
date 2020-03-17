@@ -7,7 +7,7 @@ contact: Side Project
 client_content: Me
 featured: true
 thumb: "/media/projects/wptips-thumb.jpg"
-image: "/media/projects/wptips-tuts.jpg"
+image: "/media/work/featured-wptips.jpg"
 testgallery: 
 - "/media/projects/wptips-home.jpg"
 - "/media/projects/wptips-tips.jpg"

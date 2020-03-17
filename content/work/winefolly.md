@@ -7,7 +7,7 @@ contact: Madeline Puckette
 client_content: Madeline Puckette
 featured: true
 thumb: "/media/work/winefolly-thumb.jpg"
-image: "/media/work/winefolly-wine-details.jpg"
+image: "/media/work/featured-winefolly.jpg"
 gallery:
 - thumb: "/media/work/winefolly-home-thumb.jpg"
   full: "/media/work/winefolly-home.jpg"

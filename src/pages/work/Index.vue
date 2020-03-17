@@ -124,11 +124,6 @@ export default {
 </script>
 
 <style>
-
-.featured-image {
-	@apply overflow-hidden;
-	height: 300px;
-}
 #app .VueCarousel-dot-container {
 	margin-top: 0!important;
 }

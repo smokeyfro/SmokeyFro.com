@@ -20,7 +20,6 @@
                     <slot name="content" />
                 </div>
             </div>
-			<ReleaseNotes />
 		</main>
 	</div>
 </template>
@@ -31,7 +30,6 @@ import NavMobile from "~/components/NavMobile.vue";
 import NavTertiary from "~/components/NavTertiary.vue";
 import NavJournal from "~/components/NavJournal.vue";
 import Logo from "~/components/Logo.vue";
-import ReleaseNotes from "~/components/ReleaseNotes.vue";
 
 export default {
   	props: {
@@ -45,8 +43,7 @@ export default {
 		NavTertiary,
         NavMobile,
         NavJournal,
-		Logo,
-		ReleaseNotes
+		Logo
 	}
 }
 </script>

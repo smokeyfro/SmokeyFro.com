@@ -19,7 +19,6 @@
                     <slot name="loop" />
     			</div>
 			</div>
-			<ReleaseNotes />
 		</main>
 	</div>
 </template>
@@ -30,7 +29,6 @@ import NavMobile from "~/components/NavMobile.vue";
 import NavTertiary from "~/components/NavTertiary.vue";
 import NavWork from "~/components/NavWork.vue";
 import Logo from "~/components/Logo.vue";
-import ReleaseNotes from "~/components/ReleaseNotes.vue";
 
 export default {
   	props: {
@@ -44,8 +42,7 @@ export default {
 		NavTertiary,
         NavMobile,
         NavWork,
-		Logo,
-		ReleaseNotes
+		Logo
 	}
 }
 </script>

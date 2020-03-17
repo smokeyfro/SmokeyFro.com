@@ -19,7 +19,7 @@
 			<div v-if="bottom">
 				<slot name="bottom-shelf" />
 			</div>
-			<ReleaseNotes />
+			<!-- <ReleaseNotes /> -->
 		</main>
 	</div>
 </template>
@@ -29,7 +29,7 @@ import NavPrimary from "~/components/NavPrimary.vue";
 import NavMobile from "~/components/NavMobile.vue";
 import NavTertiary from "~/components/NavTertiary.vue";
 import Logo from "~/components/Logo.vue";
-import ReleaseNotes from "~/components/ReleaseNotes.vue";
+// import ReleaseNotes from "~/components/ReleaseNotes.vue";
 
 export default {
   	props: [
@@ -78,8 +78,8 @@ export default {
 		NavMobile,
 		NavTertiary,
 		NavMobile,
-		Logo,
-		ReleaseNotes
+		Logo
+		// ReleaseNotes
 	}
 }
 </script>

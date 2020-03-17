@@ -5,9 +5,9 @@
 				<nav id="menu">
 				<div class="flex flex-col items-start justify-start h-screen bg-white release-notes">
 					<h2 class="p-6 m-0 -mt-1 text-lg ">🎉 Recent Updates</h2>
-					<a href="#" class="absolute top-0 right-0 mt-5 mr-5 rounded-full" @click.prevent="handleToggleDrawer">
+					<button class="absolute top-0 right-0 mt-5 mr-5 rounded-full hover:bg-transparent hover:text-accent" @click="handleToggleDrawer">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
-					</a>
+					</button>
 					<div class="h-full overflow-y-hidden">
 							<article class="box-content p-4 mb-0 odd:bg-gray-200 even:bg-white" v-for="note in $static.notes.edges" :key="note.node.id">
 								<h3 class="mb-2 text-sm text-gray-600">{{ note.node.date }}</h3>
@@ -56,9 +56,9 @@
 						<div v-if="bottom">
 							<slot name="bottom-shelf" />
 						</div>
-						<a href="#" class="fixed top-0 right-0 block mt-5 mr-8 rounded-full" @click. 	prevent="handleToggleDrawer">
+						<button class="fixed top-0 right-0 block mt-5 mr-8 rounded-full hover:bg-transparent hover:text-accent" @click="handleToggleDrawer">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
-						</a>	
+						</button>	
 					</div>
 					</main>
 				</div>
@@ -68,13 +68,10 @@
 </template>
 
 <script>
-import NavPrimary from "~/components/NavPrimary.vue";
-import NavMobile from "~/components/NavMobile.vue";
-import NavTertiary from "~/components/NavTertiary.vue";
-import Logo from "~/components/Logo.vue";
-import ReleaseNotes from "~/components/ReleaseNotes.vue";
-// import vueCustomScrollbar from 'vue-custom-scrollbar';
-// import DrawerLayout from 'vue-drawer-layout';
+import NavPrimary from "~/components/NavPrimary.vue"
+import NavMobile from "~/components/NavMobile.vue"
+import NavTertiary from "~/components/NavTertiary.vue"
+import Logo from "~/components/Logo.vue"
 
 export default {
   	props: [
@@ -84,9 +81,6 @@ export default {
 	],
 	data() {
 		return {
-			settings: {
-				maxScrollbarLength: 60
-			},
 			randomCss: '',
 			randomQuote: '',
 			quotes: [
@@ -109,7 +103,7 @@ export default {
 	mounted() {
 		var outputCss = this.randomCss;
 		var outputQuote = this.randomQuote;
-		setTimeout(console.log.bind(console, '%c \n  %c' + outputQuote + ' %c  \n', 'background: none;', outputCss, 'background: none;'));			
+		setTimeout(console.log.bind(console, '%c \n  %c' + outputQuote + ' %c  \n', 'background: none;', outputCss, 'background: none;'));
 	},
     created(){
 		const idx = Math.floor(Math.random() * this.quotes.length);
@@ -122,8 +116,7 @@ export default {
 		NavMobile,
 		NavTertiary,
 		NavMobile,
-		Logo,
-		ReleaseNotes
+		Logo
 	},
 	methods: {
 		handleToggleDrawer() {

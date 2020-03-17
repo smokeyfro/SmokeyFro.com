@@ -34,7 +34,6 @@
 					</div>
 				</nav>
 			</div> -->
-			<div class="w-full h-screen" slot="content">
 				<div id="app" class="overflow-hidden md:h-screen md:overflow-hidden layout app">
 					<header role="banner" class="relative z-50 flex flex-row items-center justify-between sm:h-screen dark:bg-black sm:flex-col">
 						<Logo class="text-white sm:mx-auto sm:mt-6 " />
@@ -62,7 +61,6 @@
 					</div>
 					</main>
 				</div>
-			</div>
 		<!-- </vue-drawer-layout>
 	</ClientOnly> -->
 </template>

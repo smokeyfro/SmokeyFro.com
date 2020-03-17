@@ -3,30 +3,25 @@
 		<h1>Gridsome</h1>
 		<p>Below are the first of the Gridsome starters I have in the works. Subscribe to my newsletter to be notified when they launch.</p>
 		<template slot="bottom-shelf">
-			<div class="grid grid-cols-1 gap-6 mx-6 mt-6 mb-6 md:mt-10 md:mb-20 md:grid-cols-2 md:gap-10 lg:grid-cols-3 md:mx-10 lg:mx-20">
-				<ItemTheme :post="edge.node" v-for="edge in $page.posts.edges" :key="edge.node.id" />
-			</div>
-		</template>
-		<template slot="navgroup">
-			Freebies
+			<ThemeIndex />
 		</template>
 		<template slot="secondary-nav">
-			<NavThemes />
-		</template>
+            <NavThemes />
+        </template>	
 		<template slot="repo_link">
-			<a href="https://github.com/smokeyfro/smokeyfro/blob/master/src/pages/Freebies/Themes.vue">Source</a>
+			<a href="https://github.com/smokeyfro/smokeyfro/blob/master/src/pages/Themes/Index.vue">Source</a>
 		</template>
 	</Layout>
 </template>
 
 <script>
-import NavThemes from "@/components/NavThemes";
-import ItemTheme from "@/components/ItemTheme";
+import NavThemes from "@/components/NavThemes"
+import ThemeIndex from "@/components/ThemeIndex"
 
 export default {
 	components: {
 		NavThemes,
-		ItemTheme
+		ThemeIndex
 	},
 	metaInfo: {
 		title: "Themes by SmokeyFro",
@@ -34,26 +29,5 @@ export default {
 			class: "themes gridsome"
 		}
 	}
-};
+}
 </script>
-<page-query>
-	query Themes {
-	posts: allTheme (sortBy: "order", order: ASC) {
-			totalCount
-			edges {
-				node {
-					id
-					title
-					content
-					excerpt
-					platform
-					group
-					demo_url
-					type
-					thumb
-					path
-				}
-			}
-		}
-	}
-</page-query>

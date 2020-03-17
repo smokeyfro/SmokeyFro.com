@@ -21,6 +21,7 @@
 									</li>
 								</ul>
 							</article>
+						</div>
 						<div class="flex items-start self-end justify-start w-full p-4 mt-auto bg-gray-100">
 							<strong class="mt-1 text-xs uppercase">Key:</strong>
 							<ul class="grid w-full grid-cols-1 reset md:grid-cols-2">

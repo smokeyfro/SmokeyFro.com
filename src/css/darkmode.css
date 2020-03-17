@@ -244,3 +244,11 @@
         }
     }
 }
+
+@media print {
+	[data-theme=dark] {
+		& .hero h1 {
+			color: #fff;
+		}
+	}
+}

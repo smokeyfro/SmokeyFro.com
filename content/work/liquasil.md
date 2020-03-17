@@ -7,7 +7,7 @@ company: Liquasil Ltd
 contact: David Carter
 featured: false
 thumb: "/media/work/liqausil-thumb.jpg"
-image: "/media/work/liquasil.jpg"
+image: "/media/work/liquasil-preview.jpg"
 gallery: ""
 url: https://liquasil.com
 status: Online

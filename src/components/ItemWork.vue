@@ -1,10 +1,10 @@
 <template>
 	<article class="item">
-		<g-link :to="`${post.path}`" class="image">
+		<a :href="`${post.image.src}`" class="image" data-fslightbox="gallery">
 			<div class="card-image" v-if="post.thumb">
 				<Browser :image="post.thumb" />
 			</div>
-		</g-link>
+		</a>
 		<div class="summary">
 			<h2 class="mt-5 text-2xl">{{ post.title }}</h2>
 			<p class="mb-3 text-base">{{ post.excerpt }}</p>

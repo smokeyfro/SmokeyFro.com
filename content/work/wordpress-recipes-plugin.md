@@ -7,7 +7,7 @@ contact: Internal
 client_content: Internal
 featured: false
 thumb: "/media/work/wordpress-recipe-plugin.jpg"
-image: "/media/work/wordpress-recipe-plugin.jpg"
+image: "/media/work/recipe-plugin-concept.jpg"
 gallery: ""
 url: ""
 status: Shelfed

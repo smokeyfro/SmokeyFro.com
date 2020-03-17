@@ -118,7 +118,10 @@ export default {
 		title: "",
 		bodyAttrs: {
 			class: "work"
-		}
+		},
+		script: [
+			{ src: "/fslightbox.js", defer: true, type: "text/javascript" },
+		]
 	}
 };
 </script>

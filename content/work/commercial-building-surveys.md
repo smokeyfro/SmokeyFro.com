@@ -7,7 +7,7 @@ company: Liquasil Ltd
 contact: David Carter
 featured: false
 thumb: "/media/work/buildingsurveys-thumb.jpg"
-image: "/media/work/buildingsurveys.jpg"
+image: "/media/work/building-surveys-full.jpg"
 gallery: ""
 url: https://buildingsurveys.com
 status: Online

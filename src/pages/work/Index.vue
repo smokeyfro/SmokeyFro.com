@@ -1,13 +1,18 @@
 <template>
 	<Layout :sidebar="true" :top="false" :bottom="true" class="max-width-none">
-		<h1>Selected Works</h1>
+		<h1 id="title" class="flex items-center justify-between w-full">
+			Selected Works 
+			<span v-if="$page.posts.pageInfo.currentPage > 1" class="mt-1 text-base font-normal ">
+				Page <strong>{{$page.posts.pageInfo.currentPage}}</strong> of <strong>{{ $page.posts.pageInfo.totalPages }}</strong>
+			</span>
+		</h1>
 		<p>Below you'll find a few examples of my work that showcase my overall design style and the types of projects I've worked on.</p>
 		<template slot="secondary-nav">
 			<NavWork />
 		</template>
 		<template slot="bottom-shelf">
 			<ClientOnly>
-				<carousel :perPage="1" :navigationEnabled="true" navigationNextLabel="›" navigationPrevLabel="‹" :paginationEnabled="true" class="mx-6 mt-6 md:mt-10 md:mx-10 lg:mx-20">
+				<carousel v-if="$page.posts.pageInfo.currentPage === 1" :perPage="1" :navigationEnabled="true" navigationNextLabel="›" navigationPrevLabel="‹" :paginationEnabled="true" class="mx-6 mt-6 md:mt-10 md:mx-10 lg:mx-20">
 					<slide v-for="edge in featuredWork" :key="edge.node.id">
 						<FeaturedItemWork :post="edge.node"  />
 					</slide>
@@ -16,13 +21,14 @@
 			<div class="grid gap-8 mx-6 mt-6 mb-20 lg:mt-10 md:gap-10 grid-cols1 sm:grid-cols-2 xl:grid-cols-3 md:mx-10 lg:mx-20 ">
 				<ItemWork :post="edge.node" v-for="edge in normalWork" :key="edge.node.id" />
 			</div>
+			<pagination :info="$page.posts.pageInfo" base="work" v-if="$page.posts.pageInfo.totalPages > 1" />
 		</template>
 	</Layout>
 </template>
 
 <page-query>
-	query Work {
-		posts: allWork (sortBy: "launch_date", order: DESC) {
+	query Work($page: Int) {
+		posts: allWork (filter: { featured: { eq: false }}, sortBy: "launch_date", order: DESC, page: $page, perPage: 6) @paginate {
 			totalCount
 			pageInfo {
 				totalPages
@@ -47,17 +53,45 @@
 	}
 </page-query>
 
+<static-query>
+	query Work {
+		featured: allWork (sortBy: "launch_date", order: DESC) {
+			totalCount
+			pageInfo {
+				totalPages
+				currentPage
+			}
+			edges {
+				node {
+					title
+					content
+					path
+					thumb
+					image
+					excerpt
+					launch_date
+					project_type
+					services
+					status
+					featured
+				}
+			}
+		}
+	}
+</static-query>
 <script>
 import NavWork from "~/components/NavWork.vue";
 import Browser from "@/components/Browser";
 import ItemWork from "@/components/ItemWork";
 import FeaturedItemWork from "@/components/FeaturedItemWork";
+import Pagination from "@/components/Pagination";
 
 export default {
 	components: {
 		NavWork,
 		Browser,
 		ItemWork,
+		Pagination,
 		FeaturedItemWork,
 		Carousel: () =>
 			import ('vue-carousel')
@@ -70,7 +104,7 @@ export default {
 	},
 	computed: {
 		featuredWork() {
-			return this.$page.posts.edges.filter(edge => {
+			return this.$static.featured.edges.filter(edge => {
 				return edge.node.featured === true;
 			});
 		},
@@ -107,11 +141,6 @@ export default {
     width: 15px!important;
     height: 15px!important;
 }
-
-.VueCarousel-navigation button {
-    /* font-size: 50px; */
-}
-
 #app .VueCarousel-navigation button {
     height: auto!important;
     border-radius: 50%;

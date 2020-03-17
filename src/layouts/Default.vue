@@ -9,7 +9,7 @@
 		<aside class="relative z-40 flex items-center overflow-x-auto md:overflow-hidden dark:bg-gray-900 sm:justify-center" v-if="sidebar">
 			<slot name="secondary-nav" />
 		</aside>
-		<main class="relative z-30 w-full h-screen overflow-x-hidden overflow-y-auto">
+		<main id="content" class="relative z-30 w-full h-screen overflow-x-hidden overflow-y-auto">
 			<div v-if="top">
 				<slot name="top-shelf" />
 			</div>

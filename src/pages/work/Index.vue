@@ -124,12 +124,8 @@ export default {
 </script>
 
 <style>
-#app .VueCarousel-slide {
-	max-height: 400px;
-}
-#app .VueCarousel-slide a img {
-	height: 200px;
-}
+
+
 #app .VueCarousel-dot-container {
 	margin-top: 0!important;
 }
@@ -176,7 +172,7 @@ export default {
     padding: 20px 15px 25px 20px!important;
 }
 @media ( min-width: 768px ) {
-	#app .VueCarousel-slide a img {
+	#app .VueCarousel-slide a {
 		height: 300px;
 	}
 }

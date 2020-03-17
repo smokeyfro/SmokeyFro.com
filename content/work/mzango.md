@@ -4,7 +4,7 @@ slug: mzango
 excerpt: The adventure travellers guide to backpacking in South Africa.
 featured: true
 thumb: "/media/work/mzango-thumb.jpg"
-image: "/media/work/mzango.jpg"
+image: "/media/projects/mzango-home.jpg"
 gallery:
 - thumb: "/media/projects/mzango-home-thumb.jpg"
   full: "/media/projects/mzango-home.jpg"

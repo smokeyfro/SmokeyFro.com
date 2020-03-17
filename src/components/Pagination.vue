@@ -23,10 +23,10 @@ export default {
   props: ['base','info'],
   methods: {
     previousPage(currentPage) {
-      return [0, 1].includes(currentPage - 1) ? `${this.basePath}/` : `${this.basePath}/${currentPage - 1}/`;
+      return [0, 1].includes(currentPage - 1) ? `${this.basePath}` : `${this.basePath}/${currentPage - 1}`;
     },
     nextPage(currentPage, totalPages) {
-      return totalPages > currentPage ? `${this.basePath}/${currentPage + 1}/` : `${this.basePath}/${currentPage}/`;
+      return totalPages > currentPage ? `${this.basePath}/${currentPage + 1}` : `${this.basePath}/${currentPage}`;
     }
   },
   computed: {

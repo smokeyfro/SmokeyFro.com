@@ -5,6 +5,7 @@ excerpt: Curated collection of the best WordPress tutorials and snippets.
 project_type: WordPress
 contact: Side Project
 client_content: Me
+featured: true
 thumb: "/media/projects/wptips-thumb.jpg"
 image: "/media/projects/wptips-home.jpg"
 testgallery: 

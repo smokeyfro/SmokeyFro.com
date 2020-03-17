@@ -1,13 +1,16 @@
 <template>
 	<Layout :sidebar="true" :top="false" :bottom="true" class="max-width-none">
 		<h1>Selected Works</h1>
-		<p>A few examples of my work that showcase my overall design style and the types of projects I've worked on.</p>
+		<p>Below you'll find a few examples of my work that showcase my overall design style and the types of projects I've worked on.</p>
 		<template slot="secondary-nav">
 			<NavWork />
 		</template>
-		<template slot="bottom-shelf">	
+		<template slot="bottom-shelf">
 			<div class="grid gap-8 mx-6 mt-6 mb-20 lg:mt-10 md:gap-10 grid-cols1 lg:grid-cols-2 xl:grid-cols-3 md:mx-10 lg:mx-20 ">
-				<ItemWork :post="edge.node" v-for="edge in $page.posts.edges" :key="edge.node.id" />
+				<ItemWork :post="edge.node" v-for="edge in featuredWork" :key="edge.node.id" />
+			</div>
+			<div class="grid gap-8 mx-6 mt-6 mb-20 lg:mt-10 md:gap-10 grid-cols1 lg:grid-cols-2 xl:grid-cols-3 md:mx-10 lg:mx-20 ">
+				<ItemWork :post="edge.node" v-for="edge in normalWork" :key="edge.node.id" />
 			</div>
 		</template>
 	</Layout>
@@ -32,6 +35,7 @@
 					project_type
 					services
 					status
+					featured
 				}
 			}
 		}
@@ -48,6 +52,18 @@ export default {
 		NavWork,
 		Browser,
 		ItemWork
+	},
+	computed: {
+		featuredWork() {
+			return this.$page.posts.edges.filter(edge => {
+				return edge.node.featured === true;
+			});
+		},
+		normalWork() {
+			return this.$page.posts.edges.filter(edge => {
+				return edge.node.featured === false;
+			});
+        }
 	},
 	metaInfo: {
 		title: "",

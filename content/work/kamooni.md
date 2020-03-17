@@ -4,7 +4,8 @@ slug: kamooni
 excerpt: Static wrapper for the Kamooni home page populated via the Kamooni api.
 project_type: Static / API
 contact: Kamooni
-client_content: 
+client_content: Herkie Vercuil
+featured: false
 thumb: "/media/work/kamooni-thumb.jpg"
 image: "/media/work/kamooni-thumb.jpg"
 gallery: ""

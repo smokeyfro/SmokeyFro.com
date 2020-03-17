@@ -1,10 +1,11 @@
 ---
 title: JoomlaJunkie
 slug: joomlajunkie
-excerpt: Joomla template club we ran for 7+ years. The birthplace of Morph.
+excerpt: Joomla template club we ran for 7+ years and the birthplace of the Morph template framework.
 project_type: Joomla!
 contact: Internal Project
 client_content: Me
+featured: false
 thumb: "/media/projects/joomlajunkie-thumb.jpg"
 image: "/media/projects/configurator.jpg"
 gallery: ""

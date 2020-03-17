@@ -30,12 +30,6 @@ module.exports = {
         component: './src/templates/Service.vue'
       }
     ],
-    Project: [
-      {
-        path: '/projects/:slug',
-        component: './src/templates/Project.vue'
-      }
-    ],
     Work: [
       {
         path: '/work/:slug',
@@ -175,11 +169,6 @@ module.exports = {
             fields: ['title', 'excerpt', 'content']
           },
           {
-            typeName: 'Project',
-            indexName: 'Side-Project',
-            fields: ['title', 'excerpt', 'content']
-          },
-          {
             typeName: 'Service',
             indexName: 'Services',
             fields: ['title', 'excerpt', 'description']
@@ -235,14 +224,6 @@ module.exports = {
       options: {
         path: "content/work/**/*.md",
         typeName: "Work",
-        resolveAbsolutePaths: true
-      }
-    },
-    {
-      use: "@gridsome/source-filesystem",
-      options: {
-        path: "content/projects/**/*.md",
-        typeName: "Project",
         resolveAbsolutePaths: true
       }
     },

@@ -1,10 +1,11 @@
 ---
 title: Commercial Building Surveys
 slug: commercial-building-surveys
-excerpt: WordPress site for a roofing specialist in the UK.
+excerpt: A fresh new look for a UK company specialising in commercial property building surveys.
 project_type: WordPress
 company: Liquasil Ltd
 contact: David Carter
+featured: false
 thumb: "/media/work/buildingsurveys-thumb.jpg"
 image: "/media/work/buildingsurveys.jpg"
 gallery: ""

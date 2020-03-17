@@ -5,6 +5,7 @@ excerpt: Complete overhaul of popular wine blog WineFolly.com
 project_type: WordPress
 contact: Madeline Puckette
 client_content: Madeline Puckette
+featured: true
 thumb: "/media/work/winefolly-thumb.jpg"
 image: "/media/work/winefolly-wines-grid.jpg"
 gallery:

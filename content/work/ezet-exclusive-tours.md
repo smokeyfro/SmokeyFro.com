@@ -5,6 +5,7 @@ excerpt: WordPress site for a local tour operator.
 project_type: WordPress
 company: Ezet's Exclusive Tours
 contact: Ezette Pool
+featured: false
 thumb: "/media/work/ezet-thumb.jpg"
 image: "/media/work/ezet-exclusive-tours.jpg"
 gallery: ""

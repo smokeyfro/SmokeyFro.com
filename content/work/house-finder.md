@@ -1,10 +1,11 @@
 ---
 title: House Finder
 slug: house-finder
-excerpt: For-sale-by-owner portal in the UK.
+excerpt: For-sale-by-owner property portal, focussed on the UK market.
 project_type: Joomla
 company: HouseFinder UK
 contact: David Thomas
+featured: false
 thumb: "/media/work/housefinder-thumb.jpg"
 image: "/media/work/housefinder-thumb.jpg"
 gallery: ""

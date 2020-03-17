@@ -1,10 +1,11 @@
 ---
 title: Find a Marriage Counsellor
 slug: find-a-marriage-counsellor
-excerpt: Directory of marriage counsellors in Australia.
+excerpt: A searchable directory of marriage counsellors in Australia.
 project_type: Joomla
 company: Humaneed
 contact: Bernice Morgan
+featured: false
 thumb: "/media/work/findamarriagecounsellor-thumb.jpg"
 image: "/media/work/famc-register.jpg"
 gallery:

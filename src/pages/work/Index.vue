@@ -124,6 +124,9 @@ export default {
 </script>
 
 <style>
+#app .VueCarousel-slide {
+	max-height: 400px;
+}
 #app .VueCarousel-slide a img {
 	height: 200px;
 }

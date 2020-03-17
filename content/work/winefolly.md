@@ -93,9 +93,9 @@ stack: ['WordPress','Beans','AMP','Google Analytics','Git','WP Engine']
 testimonial: 
 launch_date: 2019-06-01
 ---
-I had the privelage to work with Madeline Puckette and the WineFolly team for a year and a half. In that time I rebuilt the site from the ground up using Beans (the WordPress theme framework I helped create). 
+I was initially contracted to redesign and rebuild the previous WineFolly.com site, but was later hired full-time as the sole developer working on the site.
 
-The site was built using Googles Accelerated Mobile Pages (AMP) project, which aims to set a new standard for the performance of websites on mobile devices. AMP came with it's own set of challenges, most of which being that it's still a relatively new technology, so there isn't that much info out there when you get stuck, or you come across a bug in one of the core components.
+The site was built using the Beans framework and Google's Accelerated Mobile Pages (AMP) project, which aims to set a new standard for the performance of websites on mobile devices. 
 
 Some of the other projects I worked on include:
 

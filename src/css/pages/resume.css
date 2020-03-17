@@ -1,7 +1,6 @@
 .resume {
 	& h1 {
-		@apply px-5 py-2 text-white border-l-8 rounded-tl-lg rounded-br-lg border-accent ;
-		background: #1C2F39;
+
 	}
 	& h3 {
 		@apply text-xl;
@@ -52,6 +51,35 @@
 :root [data-theme=dark].resume figure svg {
 	fill: #fff;
 } 
-:root [data-theme=dark].resume h1 {
+/* :root [data-theme=dark].resume h1 {
 	@apply px-5 py-2 text-black bg-white border-l-8 rounded-tl-lg rounded-br-lg border-accent ;
+} */
+
+@media print {
+	#app {
+		& .hero figure,
+		& header, 
+		& aside, 
+		& .shelf-toggle, 
+		& p.download {
+			display: none!important;
+		}
+		& main {
+			padding-top: 0;
+		}
+		& .w-3\/4 {
+			width: 100%;
+		}
+		& .hero * {
+			text-align: left;
+		}
+		& .hero {
+			padding: 30px 20px 0;
+		}
+		& .hero h1 {
+			background: transparent;
+			padding: 0;
+			border: 0;
+		}
+	}
 }

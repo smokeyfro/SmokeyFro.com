@@ -3,7 +3,7 @@ title: Wilderness
 slug: wilderness
 excerpt: Photos of the beautiful coastal town called Wilderness.
 image: "/media/albums/farm/cover.jpg"
-category: south-africa
+category: garden-route
 photos:
 - full: "/media/albums/farm/1.jpg"
   thumb: "/media/albums/farm/1-thumb.jpg"
@@ -29,5 +29,5 @@ photos:
   thumb: "/media/albums/farm/11-thumb.jpg"
 - full: "/media/albums/farm/12.jpg"
   thumb: "/media/albums/farm/12-thumb.jpg"
-searchTerms: farm, photos, albums, gallery, forest glade farm
+searchTerms: wilderness, photos, albums, gallery, garden route
 ---

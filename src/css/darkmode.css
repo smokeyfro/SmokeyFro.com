@@ -88,6 +88,11 @@
             @apply text-white;
         }
     }
+    /* Active state on the Work index slider */
+    & #app button.VueCarousel-dot.VueCarousel-dot--active {
+        background-color: var(--accent-color)!important;
+    }
+
     /* Photos */
     &.photos {
         & .photos-wrap > div {

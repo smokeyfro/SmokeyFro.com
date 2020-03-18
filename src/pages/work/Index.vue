@@ -127,6 +127,16 @@ export default {
 </script>
 
 <style>
+.work a.image {
+    @apply relative block;
+}
+.work a.image:after {
+    @apply h-full w-full block flex items-center justify-center absolute bg-transparent text-2xl text-transparent;
+    content: "+";
+}
+.work a.image:hover:after {
+    @apply bg-black text-white;
+}
 .featured-image {
     max-width: 420px;
     height: auto;
@@ -168,12 +178,12 @@ export default {
     display: flex;
     align-items:center;
 }
-#app .VueCarousel-navigation button.VueCarousel-navigation-prev {
+#app .VueCarousel-navigation-prev[data-v-453ad8cd] {
 	padding: 20px 20px 25px 15px!important;
 	margin-right: 10px!important;
 
 }
-#app .VueCarousel-navigation button.VueCarousel-navigation-next {
+#app .VueCarousel-navigation-next[data-v-453ad8cd] {
     padding: 20px 15px 25px 20px!important;
 }
 @media ( min-width: 768px ) {

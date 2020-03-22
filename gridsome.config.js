@@ -126,11 +126,13 @@ module.exports = {
             /$function/,
             /$code/,
             /$VueCarousel/,
+            /VueCarousel/
 
           ],
           whitelistPatternsChildren: [
             /plyr/,
             /code-toolbar/,
+            /$VueCarousel/,
             /VueCarousel-wrapper/
           ]
         },

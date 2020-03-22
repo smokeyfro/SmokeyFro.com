@@ -105,7 +105,6 @@ export default {
 		var outputCss = this.randomCss;
 		var outputQuote = this.randomQuote;
 		setTimeout(console.log.bind(console, '%c \n  %c' + outputQuote + ' %c  \n', 'background: none;', outputCss, 'background: none;'));
-		DrawerLayout: () => import("vue-drawer-layout") 
 },
     created(){
 		const idx = Math.floor(Math.random() * this.quotes.length);
@@ -118,7 +117,8 @@ export default {
 		NavMobile,
 		NavTertiary,
 		NavMobile,
-		Logo
+		Logo,
+		DrawerLayout: () => import("vue-drawer-layout")
 	},
 	methods: {
 		handleToggleDrawer() {

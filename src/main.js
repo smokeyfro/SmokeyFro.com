@@ -5,7 +5,7 @@ import VueRouter from 'vue-router'
 
 require('~/css/global.css')
 
-export default function(Vue, { isClient, router }) {
+export default function(Vue, { router }) {
 
 	Vue.component('Layout', DefaultLayout)
 	

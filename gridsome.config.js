@@ -128,7 +128,8 @@ module.exports = {
           ],
           whitelistPatternsChildren: [
             /plyr/,
-            /code-toolbar/
+            /code-toolbar/,
+            /VueCarousel-wrapper/
           ]
         },
         presetEnvConfig: {

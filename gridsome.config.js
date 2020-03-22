@@ -66,18 +66,18 @@ module.exports = {
         component: './src/templates/Topic.vue'
       }
     ],
-    Album: [
-      {
-        path: '/about/photos/:slug',
-        component: './src/templates/Album.vue'
-      }
-    ],
-    Category: [
-      {
-        path: '/about/photos/category/:title',
-        component: './src/templates/Category.vue'
-      }
-    ],
+    // Album: [
+    //   {
+    //     path: '/about/photos/:slug',
+    //     component: './src/templates/Album.vue'
+    //   }
+    // ],
+    // Category: [
+    //   {
+    //     path: '/about/photos/category/:title',
+    //     component: './src/templates/Category.vue'
+    //   }
+    // ],
   },
   transformers: {
     remark: {
@@ -179,11 +179,11 @@ module.exports = {
             indexName: 'Videos',
             fields: ['title', 'excerpt', 'description']
           },
-          {
-            typeName: 'Album',
-            indexName: 'photos',
-            fields: ['title', 'excerpt', 'description']
-          }
+          // {
+          //   typeName: 'Album',
+          //   indexName: 'photos',
+          //   fields: ['title', 'excerpt', 'description']
+          // }
         ],
         searchFields: ['title', 'searchTerms']
       }
@@ -241,20 +241,20 @@ module.exports = {
         }
       }
     },
-    {
-      use: "@gridsome/source-filesystem",
-      options: {
-        path: "content/albums/**/*.md",
-        typeName: "Album",
-        resolveAbsolutePaths: true,
-        refs: {
-          category: {
-            typeName: 'Category',
-            create: true,
-          }
-        }
-      }
-    },
+    // {
+    //   use: "@gridsome/source-filesystem",
+    //   options: {
+    //     path: "content/albums/**/*.md",
+    //     typeName: "Album",
+    //     resolveAbsolutePaths: true,
+    //     refs: {
+    //       category: {
+    //         typeName: 'Category',
+    //         create: true,
+    //       }
+    //     }
+    //   }
+    // },
     {
       use: '@gridsome/source-ghost',
       options: {
@@ -279,7 +279,7 @@ module.exports = {
     {
       use: 'gridsome-plugin-feed',
       options: {
-        contentTypes: ['GhostPost', 'GhostPage', 'Theme', 'Work', 'Video', 'Service', 'Album'],
+        contentTypes: ['GhostPost', 'GhostPage', 'Theme', 'Work', 'Video', 'Service'],
         feedOptions: {
           title: 'SmokeyFro - Syndicate',
           description: 'Web Development Tutorials, JAMStack themes and more'

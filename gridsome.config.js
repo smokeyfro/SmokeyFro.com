@@ -124,7 +124,9 @@ module.exports = {
             /markdown/,
             /$token/,
             /$function/,
-            /$code/
+            /$code/,
+            /$VueCarousel/,
+
           ],
           whitelistPatternsChildren: [
             /plyr/,

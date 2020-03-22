@@ -37,7 +37,7 @@
 						</div>
 					</nav>
 				</div>
-				<div slot="content" id="app" class="overflow-hidden md:h-screen md:overflow-hidden layout app">
+				<div slot="content" v-on-clickaway="handleToggleDrawer" id="app" class="overflow-hidden md:h-screen md:overflow-hidden layout app">
 					<header role="banner" class="relative z-50 flex flex-row items-center justify-between sm:h-screen dark:bg-black sm:flex-col">
 						<Logo class="text-white sm:mx-auto sm:mt-6 " />
 						<NavPrimary />
@@ -74,8 +74,10 @@ import NavPrimary from "~/components/NavPrimary.vue"
 import NavMobile from "~/components/NavMobile.vue"
 import NavTertiary from "~/components/NavTertiary.vue"
 import Logo from "~/components/Logo.vue"
+import { mixin as clickaway } from 'vue-clickaway'
 
 export default {
+    mixins: [ clickaway ],
   	props: [
 		'sidebar',
 		'top',

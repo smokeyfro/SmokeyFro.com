@@ -58,7 +58,7 @@
 							<div v-if="bottom">
 								<slot name="bottom-shelf" />
 							</div>
-							<button class="fixed top-0 right-0 block mt-5 mr-8 rounded-full hover:bg-transparent hover:text-accent" @click="handleToggleDrawer">
+							<button class="fixed top-0 right-0 block p-2 mt-5 mr-8 bg-white border-2 border-transparent rounded-full hover:bg-white hover:border-accent" @click="handleToggleDrawer">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
 							</button>
 						</div>

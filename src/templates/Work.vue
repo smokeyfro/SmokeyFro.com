@@ -3,7 +3,7 @@
 		<article class="mb-6 md:mb-10"> 
 			<h1 class="m-0">{{ $page.post.title }}</h1>
 			<p class="mb-1">{{ $page.post.excerpt }}</p>
-			<p class="m-0 mb-5"><a v-if="$page.post.status === 'Online'" :href="$page.post.url" target="_blank" class="btn btn-primary">View the site <img src="/external.svg" class="inline-block w-3 h-3" /></a></p>
+			<p class="m-0 mb-5"><a v-if="$page.post.status === 'Online'" :href="$page.post.url" target="_blank" class="btn btn-large btn-primary">View the site <img src="/external.svg" class="inline-block w-3 h-3" /></a></p>
 			
 			<div class="w-full ">
 				<ul class="grid grid-cols-2 p-0 m-0 mb-6 reset">

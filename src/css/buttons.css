@@ -1,9 +1,18 @@
 .btn {
-    @apply inline-block px-5 py-3 mt-2 text-base font-bold no-underline border border-2 border-black rounded-full;
+    @apply mt-2 text-base font-bold no-underline border border-2 border-black rounded-full;
+}
+.btn-medium {
+    @apply px-5 py-3;
 }
 .btn.btn-primary {
     @apply text-white bg-gray-800;
 }
 .btn.btn-secondary {
     @apply bg-white;
+}
+.btn-large {
+    @apply px-5 py-3;
+}
+.btn-small {
+    @apply px-3 py-1;
 }

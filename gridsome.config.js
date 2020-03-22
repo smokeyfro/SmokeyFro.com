@@ -18,6 +18,12 @@ module.exports = {
         component: './src/templates/Theme.vue'
       }
     ],
+    Book: [
+      {
+        path: '/about/library/:title',
+        component: './src/templates/Book.vue'
+      }
+    ],
     Design: [
       {
         path: '/freebies/designs/:slug',

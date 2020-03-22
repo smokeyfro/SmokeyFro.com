@@ -6,7 +6,7 @@
 			<article v-for="edge in $page.posts.edges" :key="edge.node.id" class="mt-6 ">
 				<h2 v-html="edge.node.title" />
 				<p class="mb-3 text-base">{{ edge.node.excerpt }}</p>
-				<p><g-link :to="`${edge.node.path}`" class="btn btn-secondary">Continue reading</g-link></p>
+				<p><g-link :to="`${edge.node.path}`" class="btn btn-large btn-secondary">Continue reading</g-link></p>
 			</article>
 		</template>
 	</Journal>

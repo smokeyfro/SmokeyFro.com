@@ -130,12 +130,19 @@ export default {
 .work a.image {
     @apply relative block;
 }
-.work a.image:after {
-    @apply h-full w-full block flex items-center justify-center absolute bg-transparent text-2xl text-transparent;
+.work a.image .browser-content:after {
+    @apply h-full transition-all duration-300 ease-linear w-full block flex items-center justify-center absolute top-0 bg-transparent text-2xl text-transparent;
     content: "+";
+	right: 1px;
+	left: 1px;
+	width: 99.5%;
 }
-.work a.image:hover:after {
-    @apply bg-black text-white;
+.work a.image .browser-content {
+	position: relative;
+}
+.work a.image:hover .browser-content:after {
+    @apply text-black;
+	background-color: rgba(255,255,255,.8);
 }
 .featured-image {
     max-width: 420px;

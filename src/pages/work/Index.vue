@@ -127,96 +127,95 @@ export default {
 </script>
 
 <style>
-.work a.image {
+.work #app a.image {
     @apply relative block;
 }
-.work a.image .browser-content:after {
+.work #app a.image .browser-content:after {
     @apply h-full transition-all duration-300 ease-linear w-full block flex items-center justify-center absolute top-0 bg-transparent text-2xl text-transparent;
     content: "+";
 	right: 1px;
 	left: 1px;
 	width: 99.5%;
 }
-.work a.image .browser-content {
+.work #app a.image .browser-content {
 	position: relative;
 }
-.work a.image:hover .browser-content:after {
+.work #app a.image:hover .browser-content:after {
     @apply text-black;
 	background-color: rgba(255,255,255,.8);
 }
-.featured-image {
+.work #app .featured-image {
     max-width: 420px;
     height: auto;
 }
-#app .VueCarousel-dot-container {
+.work #app .VueCarousel-dot-container {
 	margin-top: 0!important;
 }
-#app .VueCarousel-pagination[data-v-438fd353] {
-    position: absolute;
-    bottom: 0;
-	right: 0;
-	width: auto;
-	text-align: right;
+.work #app .VueCarousel-pagination[data-v-438fd353] {
+    position: absolute!important;
+    bottom: 0!important;
+	right: 0!important;
+	width: auto!important;
+	text-align: right!important;
 }
-#app .VueCarousel-dot {
+.work .work #app .VueCarousel-dot {
     width: 15px!important;
     height: 15px!important;
 }
-#app .VueCarousel-navigation button {
+.work #app .VueCarousel-navigation button {
     height: auto!important;
-    border-radius: 50%;
+    border-radius: 50%!important;
     background: #f7f7f7;
-    display: block;
-    line-height: 0;
-    font-weight: bold;
-    font-size: 200%;
+    display: block!important;
+    line-height: 0!important;
+    font-weight: bold!important;
+    font-size: 200%!important;
     position: static!important;
     margin: 0!important;
-	display: block;
-	transform: none;
+	transform: none!important;
 }
-#app .VueCarousel-navigation[data-v-453ad8cd] {
-    left: auto;
-    bottom: auto;
-    right: 0;
-	top: 0;
-	width: auto;
-    position: absolute;
-    display: flex;
-    align-items:center;
+.work #app .VueCarousel-navigation[data-v-453ad8cd] {
+    left: auto!important;
+    bottom: auto!important;
+    right: 0!important;
+	top: 0!important;
+	width: auto!important;
+    position: absolute!important;
+    display: flex!important;
+    align-items:center!important;
 }
-#app .VueCarousel-navigation-prev[data-v-453ad8cd] {
+.work #app .VueCarousel-navigation-prev[data-v-453ad8cd] {
 	padding: 20px 20px 25px 15px!important;
 	margin-right: 10px!important;
 
 }
-#app .VueCarousel-navigation-next[data-v-453ad8cd] {
+.work #app .VueCarousel-navigation-next[data-v-453ad8cd] {
     padding: 20px 15px 25px 20px!important;
 }
 @media ( min-width: 768px ) {
-	#app .VueCarousel-slide a {
-		height: 300px;
+	.work #app .VueCarousel-slide a {
+		height: 300px!important;
 	}
 }
 @media ( max-width: 480px ) {
-	#app .VueCarousel-navigation[data-v-453ad8cd] {
+	.work #app .VueCarousel-navigation[data-v-453ad8cd] {
 		top: auto!important;
-		bottom: -5px;
+		bottom: -5px!important;
 	}
-	#app .VueCarousel-slide {
+	.work #app .VueCarousel-slide {
 		margin-top: 0;
 		padding-bottom: 40px;
 	}
-	#app .VueCarousel-dot {
+	.work #app .VueCarousel-dot {
 		margin-top: 0 !important;
 	}
-	#app .VueCarousel-navigation button.VueCarousel-navigation-prev {
+	.work #app .VueCarousel-navigation button.VueCarousel-navigation-prev {
 		padding: 10px 10px 18px 8px!important;
 	}
-	#app .VueCarousel-navigation button.VueCarousel-navigation-next {
+	.work #app .VueCarousel-navigation button.VueCarousel-navigation-next {
 		padding: 10px 8px 18px 10px!important;
 	}
-	#app .VueCarousel-pagination[data-v-438fd353] {
+	.work #app .VueCarousel-pagination[data-v-438fd353] {
 		left: 0;
 		right: auto;
 		top: auto;

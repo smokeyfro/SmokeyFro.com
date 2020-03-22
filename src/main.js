@@ -17,8 +17,15 @@ export default function(Vue, { router }) {
 
 		const DrawerLayout = require('vue-drawer-layout').default;
 		Vue.use(DrawerLayout);
-
+		
 	}
+
+	// if(process.isClient) {
+
+	// 	const vueCustomScrollbar = require('vue-custom-scrollbar').default;
+	// 	Vue.use(vueCustomScrollbar);
+
+	// }
 
 	if(process.isClient) {
 		const confetti = require('vue-confetti').default;

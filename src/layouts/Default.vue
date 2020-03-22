@@ -10,6 +10,7 @@
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
 							</button>
 							<div class="h-full overflow-y-hidden">
+							 	<vue-custom-scrollbar class="scroll-area"  :settings="settings">
 								<article class="box-content p-4 mb-0 odd:bg-gray-200 even:bg-white" v-for="note in $static.notes.edges" :key="note.node.id">
 									<h3 class="mb-2 text-sm text-gray-600">{{ note.node.date }}</h3>
 									<ul class="p-0 m-0 reset">
@@ -22,6 +23,7 @@
 										</li>
 									</ul>
 								</article>
+							 	</vue-custom-scrollbar>
 							</div>
 							<div class="flex items-start self-end justify-start w-full p-4 mt-auto bg-gray-100">
 								<strong class="mt-1 text-xs uppercase">Key:</strong>
@@ -72,6 +74,7 @@ import NavPrimary from "~/components/NavPrimary.vue"
 import NavMobile from "~/components/NavMobile.vue"
 import NavTertiary from "~/components/NavTertiary.vue"
 import Logo from "~/components/Logo.vue"
+import vueCustomScrollbar from 'vue-custom-scrollbar';
 
 export default {
   	props: [
@@ -81,6 +84,9 @@ export default {
 	],
 	data() {
 		return {
+			settings: {
+				maxScrollbarLength: 60
+			},
 			randomCss: '',
 			randomQuote: '',
 			quotes: [
@@ -116,7 +122,8 @@ export default {
 		NavMobile,
 		NavTertiary,
 		NavMobile,
-		Logo
+		Logo,
+		vueCustomScrollbar
 	},
 	methods: {
 		handleToggleDrawer() {
@@ -147,3 +154,10 @@ query Static {,
 	}
 }
 </static-query>
+
+<style>
+.scroll-area {
+  position: relative;
+  margin: auto;
+}
+</style>

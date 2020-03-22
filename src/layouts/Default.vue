@@ -72,7 +72,6 @@ import NavPrimary from "~/components/NavPrimary.vue"
 import NavMobile from "~/components/NavMobile.vue"
 import NavTertiary from "~/components/NavTertiary.vue"
 import Logo from "~/components/Logo.vue"
-import DrawerLayout  from "vue-drawer-layout"
 
 export default {
   	props: [
@@ -117,8 +116,7 @@ export default {
 		NavMobile,
 		NavTertiary,
 		NavMobile,
-		Logo,
-		DrawerLayout: () => import("vue-drawer-layout")
+		Logo
 	},
 	methods: {
 		handleToggleDrawer() {

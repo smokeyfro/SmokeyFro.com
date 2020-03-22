@@ -51,7 +51,11 @@
                 </thead>
                 <tbody>
                     <tr v-for="edge in filteredBooks" :key="edge.node.id" class="odd:bg-white even:bg-gray-100" :class="{'opacity-50': edge.node.status === 'read'}">
-                        <td class="px-4 py-2">{{ edge.node.title }}</td>
+                        <td class="px-4 py-2">
+                            <g-link :to="edge.node.path" class="no-underline">
+                                {{ edge.node.title }}
+                            </g-link>
+                        </td>
                         <td class="px-4 py-2 text-sm text-gray-700">
                             <span v-for="(author, i) in edge.node.authors" :key="i">
                                 {{ author.name }}

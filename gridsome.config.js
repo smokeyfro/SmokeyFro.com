@@ -119,6 +119,7 @@ module.exports = {
           whitelistPatterns: [
             /code-toolbar/,
             /plyr/,
+            /drawer-mask/,
             /$plyr/,
             /markdown/,
             /$token/,

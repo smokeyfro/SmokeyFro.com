@@ -4,6 +4,7 @@
 @import 'browser.css';
 @import 'buttons.css';
 @import 'forms.css';
+@import 'scrollbar.css';
 @import 'darkmode.css';
 @import 'media-queries.css';
 
@@ -71,4 +72,22 @@ main a {
     opacity: 1!important;
     /* background-image: url(/topography-bg.svg); */
     border-right: 5px solid var(--accent-color);
+}
+
+div#cookie-bar {
+    padding: 10px 15px 20px 0;
+    background: #000;
+    border-top: 5px solid var(--accent-color)!important;
+}
+#cookie-bar-button {
+    background: #fff;
+    text-shadow: none;
+    color: #000!important;
+    height: auto!important;
+    line-height: 1!important;
+    padding: 5px!important;
+    margin-right: 5px;
+}
+.home .content {
+    display: block;
 }

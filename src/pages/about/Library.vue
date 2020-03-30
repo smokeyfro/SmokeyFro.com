@@ -18,8 +18,8 @@
                     <button class="block text- hover:bg-grey-300" v-on:click="layout = 'table'" :class="{ 'active-layout': layout == 'table'}" title="Switch to Grid Layout">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-columns"><path d="M12 3h7a2 2 0 012 2v14a2 2 0 01-2 2h-7m0-18H5a2 2 0 00-2 2v14a2 2 0 002 2h7m0-18v18"/></svg>
                     </button>
-                    <button class="relative z-50 block p-2 ml-3 text-xs border-2 rounded-full hover:bg-gray-300 hover:text-white" v-on:click='isSearchOpen = !isSearchOpen' title="Search the books">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24">
+                    <button class="relative z-50 block p-2 ml-3 text-xs border-2 rounded-full hover:bg-gray-300 hover:text-white" v-on:click.prevent='isSearchOpen = !isSearchOpen' title="Search the books">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24">
                             <defs/>
                             <circle cx="11" cy="11" r="8"/>
                             <path d="M21 21l-4.35-4.35"/>

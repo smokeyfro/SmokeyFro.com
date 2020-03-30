@@ -12,12 +12,15 @@
 		</template>
 		<template slot="bottom-shelf">
 			<ClientOnly>
-				<carousel v-if="$page.posts.pageInfo.currentPage === 1" :perPage="1" :navigationEnabled="true" navigationNextLabel="›" navigationPrevLabel="‹" :paginationEnabled="true" class="mx-6 mt-6 md:mt-10 md:mx-10 lg:mx-20">
+				<carousel v-if="$page.posts.pageInfo.currentPage === 1" :perPage="1" :navigationEnabled="true" navigationNextLabel="›" navigationPrevLabel="‹" :paginationEnabled="true" class="hidden mx-6 mt-6 sm:block md:mt-10 md:mx-10 lg:mx-20">
 					<slide v-for="edge in featuredWork" :key="edge.node.id">
 						<FeaturedItemWork :post="edge.node"  />
 					</slide>
 				</carousel>
 			</ClientOnly>
+			<div class="grid gap-8 mx-6 mt-6 mb-0 grid-cols1 sm:hidden">
+				<ItemWork :post="edge.node" v-for="edge in featuredWork" :key="edge.node.id" />
+			</div>
 			<div class="grid gap-8 mx-6 mt-6 mb-20 lg:mt-10 md:gap-10 grid-cols1 sm:grid-cols-2 xl:grid-cols-3 md:mx-10 lg:mx-20 ">
 				<ItemWork :post="edge.node" v-for="edge in normalWork" :key="edge.node.id" />
 			</div>
@@ -220,6 +223,12 @@ export default {
 		right: auto;
 		top: auto;
 		bottom: -5px;
+	}
+}
+
+@media ( max-width: 640px ) {
+	#app .VueCarousel {
+		display: none;
 	}
 }
 </style>

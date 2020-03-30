@@ -37,6 +37,7 @@
                 <g-link to="/subscribe" aria-label="Subscribe" @keydown.esc.exact="hideDropdown">
                     <span>Subscribe</span>
                 </g-link>
+                <a href="#" @click.prevent="handleToggleDrawer">Updates</a>
             </nav>
         </div>
     </transition>

@@ -2,7 +2,6 @@ import DefaultLayout from '~/layouts/Default.vue'
 import VueStorage from 'vuestorage'
 import KonamiCode from 'vue-konami-code'
 import VueRouter from 'vue-router'
-
 require('~/css/global.css')
 
 export default function(Vue, { router }) {
@@ -20,13 +19,6 @@ export default function(Vue, { router }) {
 		
 	}
 
-	// if(process.isClient) {
-
-	// 	const vueCustomScrollbar = require('vue-custom-scrollbar').default;
-	// 	Vue.use(vueCustomScrollbar);
-
-	// }
-
 	if(process.isClient) {
 		const confetti = require('vue-confetti').default;
 		const VueExpand = require('vue-expand').default;
@@ -40,6 +32,11 @@ export default function(Vue, { router }) {
 
 	}
 
+	Vue.prototype.$vuescrollConfig = {
+		bar: {
+		  background: ''
+		}
+	  };
 
 	// Add v-focus directive
 	Vue.directive('focus', {

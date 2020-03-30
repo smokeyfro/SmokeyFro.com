@@ -130,6 +130,7 @@ header nav .active circle {
         }
         & aside {
             top: 50px;
+            height: 40px;
         }
         & main {
             padding-top: 90px;

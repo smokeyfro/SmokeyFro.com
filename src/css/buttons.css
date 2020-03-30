@@ -16,3 +16,18 @@
 .btn-small {
     @apply px-3 py-1;
 }
+
+@media ( max-width: 480px ) {
+    .btn-small {
+        @apply px-3 py-1;
+    }
+    .btn {
+        @apply mt-2 text-base font-bold no-underline border border-2 border-black rounded-full;
+    }
+    .btn-medium {
+        @apply px-5 py-3;
+    }
+    .btn-large {
+        @apply px-5 py-3;
+    }
+}

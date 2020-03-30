@@ -67,5 +67,6 @@
 @media ( min-width: 768px ) {
     .home main .content {
         grid-template-columns: 40% 60%;
+        height: 100vh;
     }
 }

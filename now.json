@@ -10,7 +10,15 @@
         "SF_TUTORIALS_SHEET_ID": "@sf-tutorials-sheet-id",
         "SF_GOOGLE_API_KEY": "@sf-google-api-key",
         "SF_BASE_PATH": "http://localhost:8080/",
-        "SF_API_HOST": "@sf-api-host"
+        "SF_API_HOST": "@sf-api-host",
+        "SF_MAILJET_PUBLIC_KEY": "@sf-mailjet-public-key",
+        "SF_MAILJET_SECRET_KEY": "@sf-mailjet-secret-key",
+        "SF_MAILJET_MESSAGE_TEMPLATE_ID": "1326620",
+        "SF_MAILJET_QUOTE_TEMPLATE_ID": "1326640",
+        "SF_MAILJET_SENDER_MESSAGE_TEMPLATE_ID": "1326701",
+        "SF_MAILJET_SENDER_QUOTE_TEMPLATE_ID": "1326706",
+        "SF_MAILJET_OWNER_EMAIL": "chris@smokeyfro.com",
+        "SF_MAILJET_OWNER_NAME": "Chris Rault"
     },
     "build": {
         "env": {
@@ -20,7 +28,15 @@
             "SF_TUTORIALS_SHEET_ID": "@sf-tutorials-sheet-id",
             "SF_GOOGLE_API_KEY": "@sf-google-api-key",
             "SF_BASE_PATH": "https://smokeyfro.com",
-            "SF_API_HOST": "@sf-api-host"
+            "SF_API_HOST": "@sf-api-host",
+            "SF_MAILJET_PUBLIC_KEY": "@sf-mailjet-public-key",
+            "SF_MAILJET_SECRET_KEY": "@sf-mailjet-secret-key",
+            "SF_MAILJET_MESSAGE_TEMPLATE_ID": "1326620",
+            "SF_MAILJET_QUOTE_TEMPLATE_ID": "1326640",
+            "SF_MAILJET_SENDER_MESSAGE_TEMPLATE_ID": "1326701",
+            "SF_MAILJET_SENDER_QUOTE_TEMPLATE_ID": "1326706",
+            "SF_MAILJET_OWNER_EMAIL": "chris@smokeyfro.com",
+            "SF_MAILJET_OWNER_NAME": "Chris Rault"
         }
     }
 }

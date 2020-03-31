@@ -13,6 +13,7 @@
 		"@gridsome/source-ghost": "^0.3.1",
 		"@gridsome/transformer-remark": "^0.5.0",
 		"core-js": "3.6.4",
+		"got": "^10.7.0",
 		"gridsome": "latest",
 		"gridsome-plugin-feed": "^1.0.2",
 		"gridsome-plugin-flexsearch": "^0.1.12",

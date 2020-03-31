@@ -2,28 +2,166 @@ const axios = require('axios')
 
 const upcomingTuts = [
   {
-    id: "1",
-    title: "Customise your Beans child-theme",
-    topic: "Beans",
-    tags: ["setup", "beans", "themes"],
-    level: "beginner",
-    amount: "150"
+    "id": 1,
+    "title": "Using NPM Modules with Gridsome",
+    "slug": 1,
+    "topic": "Gridsome",
+    "tags": "npm, yarn, modules",
+    "amount": 150,
+    "level": "Intermediate"
   },
   {
-    id: "2",
-    title: "Calculate your age with Vue.js",
-    topic: "Vue",
-    tags: ["setup", "vue", "localdev"],
-    level: "beginner",
-    amount: "150"
+    "id": 2,
+    "title": "Easy state persistence with Vue.js",
+    "slug": 2,
+    "topic": "JAMstack",
+    "tags": "state, cookies, persistence",
+    "amount": 150,
+    "level": "Beginner"
   },
   {
-    id: "3",
-    title: "Setup localStorage to remember state",
-    topic: "Vue",
-    tags: ["setup", "vue", "localdev"],
-    level: "beginner",
-    amount: "150"
+    "id": 3,
+    "title": "Vue.js weather widget with Gridsome",
+    "slug": 3,
+    "topic": "Gridsome",
+    "tags": "vue, weather, apis",
+    "amount": 150,
+    "level": "Intermediate"
+  },
+  {
+    "id": 4,
+    "title": "Build a robust search solution for Gridsome",
+    "slug": 4,
+    "topic": "Vue",
+    "tags": "search, diy, gridsome",
+    "amount": 300,
+    "level": "Intermediate"
+  },
+  {
+    "id": 5,
+    "title": "Live search filtering with Gridsome",
+    "slug": 5,
+    "topic": "Gridsome",
+    "tags": "search, filtering, live-search",
+    "amount": 300,
+    "level": "Beginner"
+  },
+  {
+    "id": 6,
+    "title": "Using Cockpit as a Gridsome source",
+    "slug": 6,
+    "topic": "Gridsome",
+    "tags": "cockpit, source, headless",
+    "amount": 150,
+    "level": "Intermediate"
+  },
+  {
+    "id": 7,
+    "title": "Form processing for static sites",
+    "slug": 7,
+    "topic": "JAMstack",
+    "tags": "contact, forms, forms-processing",
+    "amount": 300,
+    "level": "Intermediate"
+  },
+  {
+    "id": 8,
+    "title": "Output posts on a live map",
+    "slug": 8,
+    "topic": "Gridsome",
+    "tags": "maps, linked-posts, mapquest",
+    "amount": 150,
+    "level": "Advanced"
+  },
+  {
+    "id": 9,
+    "title": "Using WordPress as a Gridsome source",
+    "slug": 9,
+    "topic": "Gridsome",
+    "tags": "wordpress, source, headless",
+    "amount": 150,
+    "level": "Intermediate"
+  },
+  {
+    "id": 10,
+    "title": "Implementing a theme selector",
+    "slug": 10,
+    "topic": "Vue",
+    "tags": "theme-selector, darkmode, presets",
+    "amount": 150,
+    "level": "Beginner"
+  },
+  {
+    "id": 11,
+    "title": "Using Markdown as a Gridsome source",
+    "slug": 11,
+    "topic": "Gridsome",
+    "tags": "markdown, source, local",
+    "amount": 150,
+    "level": "Beginner"
+  },
+  {
+    "id": 12,
+    "title": "Using Ghost as a Gridsome source",
+    "slug": 12,
+    "topic": "Gridsome",
+    "tags": "ghost, source, blogging",
+    "amount": 150,
+    "level": "Intermediate"
+  },
+  {
+    "id": 13,
+    "title": "Simple list layout toggling with Vue.js",
+    "slug": 13,
+    "topic": "Vue",
+    "tags": "layout, toggle, switcher",
+    "amount": 150,
+    "level": "Beginner"
+  },
+  {
+    "id": 14,
+    "title": "Query multiple collections with Gridsome",
+    "slug": 14,
+    "topic": "Gridsome",
+    "tags": "queries, graphql, loops",
+    "amount": 150,
+    "level": "Intermediate"
+  },
+  {
+    "id": 15,
+    "title": "Related content with Gridsome",
+    "slug": 15,
+    "topic": "Gridsome",
+    "tags": "related-posts, graphql, content",
+    "amount": 300,
+    "level": "Intermediate"
+  },
+  {
+    "id": 16,
+    "title": "Using Forestry.io as a Gridsome source",
+    "slug": 16,
+    "topic": "Gridsome",
+    "tags": "forestry, source, headless",
+    "amount": 150,
+    "level": "Intermediate"
+  },
+  {
+    "id": 17,
+    "title": "Using Google Sheets as a Gridsome source",
+    "slug": 17,
+    "topic": "Gridsome",
+    "tags": "googlesheets, source, spreadsheets",
+    "amount": 150,
+    "level": "Intermediate"
+  },
+  {
+    "id": 18,
+    "title": "Using Airtable as a Gridsome source",
+    "slug": 18,
+    "topic": "Gridsome",
+    "tags": "airtable, source, spreadsheets",
+    "amount": 150,
+    "level": "Intermediate"
   }
 ]
 

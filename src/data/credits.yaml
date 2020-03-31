@@ -29,7 +29,7 @@ credits:
       url: https://www.facebook.com/andsoitisphotography/
   - title: Gridsome
     links: 
-    - title: Source:/ Ghost
+    - title: Source - Ghost
       desc: Node based open-source blogging platform.
       url: https://gridsome.org/plugins/@gridsome/source-ghost
     - title: Source - File System

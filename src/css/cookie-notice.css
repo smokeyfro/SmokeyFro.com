@@ -1,0 +1,28 @@
+#cookie-bar {
+    width: 300px;
+    border-radius: 4px;
+    padding: 1.2rem;
+    bottom: 1rem !important;
+    right: 1rem !important;
+    left: auto;
+}
+#cookie-bar-button {
+    background: #fff;
+    text-shadow: 0 0;
+    color: #000 !important;
+    font-weight: normal;
+}
+#cookie-bar-prompt-button {
+    padding: 0 !important;
+    display: block;
+    margin-top: .7rem;
+}
+#cookie-bar p {
+    padding: 0 !important;
+    margin: 0;
+}
+#cookie-bar-button {
+    margin: 0;
+    border-radius: 15px;
+    padding: .4rem .8rem;
+}

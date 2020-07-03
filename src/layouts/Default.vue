@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<ClientOnly>
-			<vue-drawer-layout ref="drawerLayout" :drawer-width="300" :backdrop-opacity-range="[0,1]" :reverse="true" :content-drawable="true">
+			<vue-drawer-layout ref="drawerLayout" :drawer-width="300" :backdrop-opacity-range="[0,1]" :reverse="true" :content-drawable="false">
 				<div class="drawer-content" slot="drawer">
 					<nav id="menu">
 						<div class="flex flex-col items-start justify-start h-screen bg-white release-notes">

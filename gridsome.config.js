@@ -48,24 +48,6 @@ module.exports = {
         component: './src/templates/Video.vue'
       }
     ],
-    GhostPost: [
-      {
-        path: '/tutorials/:slug',
-        component: './src/templates/Tut.vue'
-      }
-    ],
-    GhostPage: [
-      {
-        path: '/journal/:slug',
-        component: './src/templates/Post.vue'
-      }
-    ],
-    GhostTag: [
-      {
-        path: '/tutorials/about/:slug',
-        component: './src/templates/Topic.vue'
-      }
-    ],
     Album: [
       {
         path: '/about/photos/:slug',
@@ -86,6 +68,19 @@ module.exports = {
     }
   },
   plugins: [
+    {
+      use: "gridsome-source-graphql-prismic",
+      options: {
+        url: "https://smokeyfro.prismic.io",
+        fieldName: 'prismic',
+        typeName: 'prismic',
+        headers: { 
+          'Prismic-Ref': `MC5YMkNobWhBQUFDTUFZQzVv.77-977-9X3NQ77-9Hu-_vRMyYO-_ve-_ve-_ve-_vVUQ77-9al4e77-977-9MVXvv73vv71oUmzvv70w`, // useMasterRef will overload this line
+          'Authorization': `Token `,
+        },
+        useMasterRef: true // undefined by default
+      }
+    },
     {
       use: 'gridsome-plugin-tailwindcss',
       options: {
@@ -145,21 +140,6 @@ module.exports = {
       use: 'gridsome-plugin-flexsearch',
       options: {
         collections: [
-          {
-            typeName: 'GhostTag',
-            indexName: 'Tags',
-            fields: ['title', 'excerpt', 'description']
-          },
-          {
-            typeName: 'GhostPage',
-            indexName: 'Journal',
-            fields: ['title', 'excerpt', 'description']
-          },
-          {
-            typeName: 'GhostPost',
-            indexName: 'Tutorials',
-            fields: ['title', 'excerpt', 'description', 'tags']
-          },
           {
             typeName: 'Theme',
             indexName: 'Themes',
@@ -257,20 +237,6 @@ module.exports = {
       }
     },
     {
-      use: '@gridsome/source-ghost',
-      options: {
-        typeName: 'Ghost',
-        baseUrl: process.env.SF_GHOST_URL,
-        contentKey: process.env.SF_GHOST_KEY,
-        version: 'v3',
-        routes: {
-          post: '/tutorials/:slug',
-          page: '/journal/:slug',
-          tag: '/journal/tag/:slug'
-        }
-      }
-    },
-    {
       use: '@gridsome/plugin-sitemap',
       options: {
         cacheTime: 600000,
@@ -280,7 +246,7 @@ module.exports = {
     {
       use: 'gridsome-plugin-feed',
       options: {
-        contentTypes: ['GhostPost', 'GhostPage', 'Theme', 'Work', 'Video', 'Service', 'Album'],
+        contentTypes: ['Theme', 'Work', 'Video', 'Service', 'Album'],
         feedOptions: {
           title: 'SmokeyFro - Syndicate',
           description: 'Web Development Tutorials, JAMStack themes and more'

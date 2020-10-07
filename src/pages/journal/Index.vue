@@ -1,46 +1,60 @@
 <template>
-	<Journal :sidebar="true" :top="true" :bottom="false">
-		<template slot="title">Journal</template>
-		<template slot="excerpt">Updates about what I'm working on, books I'm reading, stuff I'm thinking about, news on the farm, product releases and more.</template>
-		<template slot="content">
-			<article v-for="edge in $page.posts.edges" :key="edge.node.id" class="mt-6 ">
-				<h2 v-html="edge.node.title" />
-				<p class="mb-3 text-base">{{ edge.node.excerpt }}</p>
-				<p><g-link :to="`${edge.node.path}`" class="btn btn-large btn-secondary">Continue reading</g-link></p>
-			</article>
-		</template>
-	</Journal>
+<Journal :sidebar="true" :top="false" :bottom="true">
+    <h1>Themes</h1>
+    <p>My growing collection of themes for Gridsome and WordPress.</p>
+    <div>
+        <div v-for="(post, index) in posts" :key="index">
+            {{ $prismic.richTextAsPlain(post.title) }}
+        </div>
+    </div>
+    <template slot="bottom-shelf">
+
+    </template>
+    <template slot="secondary-nav">
+        <NavJournal />
+    </template>
+    <template slot="repo_link">
+        <a href="https://github.com/smokeyfro/smokeyfro/blob/master/src/pages/Themes/Index.vue">Source</a>
+    </template>
+</Journal>
 </template>
 
 <script>
-import Newsletter from "@/components/Newsletter";
-import Journal from '@/layouts/Journal'
+import Journal from "@/layouts/Journal"
+import NavJournal from "@/components/NavJournal"
 
 export default {
-	components: {
-		Newsletter,
-		Journal
-	},
-	metaInfo: {
-		title: "Random thoughts by SmokeyFro",
-		bodyAttrs: {
-			class: "journal"
-		}
-	}
-};
+    computed: {
+        posts() {
+            return this.$page.prismic.posts.edges.map(e => e.node)
+        }
+    },
+    components: {
+        Journal,
+        NavJournal
+    },
+    metaInfo: {
+        title: "Journal",
+        bodyAttrs: {
+            class: "journal index"
+        }
+    }
+}
 </script>
 
 <page-query>
-	query Journal {
-		posts: allGhostPage {
-			edges {
-				node {
-						title
-						date: published_at (format: "D MMMM, YYYY")
-						path
-						excerpt
-				}
-			}
-		}
-	}
+query Post {
+    prismic {
+        posts: allPosts {
+            edges {
+                node {
+                    title
+                    subtitle
+                    date
+                    excerpt
+                }
+            }
+        }
+    }
+}
 </page-query>

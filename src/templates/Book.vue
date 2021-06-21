@@ -93,6 +93,6 @@ export default {
     @apply bg-green-400;
 }
 .reading {
-    @apply bg-orange-400;
+    @apply bg-yellow-400;
 }
 </style>

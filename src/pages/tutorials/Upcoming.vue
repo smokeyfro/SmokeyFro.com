@@ -1,7 +1,7 @@
 <template>
 	<Layout :sidebar="true" :top="false" :bottom="true">
 		<h1>Upcoming tutorials</h1>
-		<p>Below is a list of the tutorials I'll be writing as I get time. Don't feel like waiting? Sponsor a tutorial to get it bumped up the queue.</p>
+		<p class="mt-6">Below is a list of the tutorials I'll be writing as I get time. Don't feel like waiting? Sponsor a tutorial to get it bumped up the queue.</p>
 		<template slot="bottom-shelf">
 			<div class="mx-6 mt-6 mb-10 mb-20 overflow-x-auto bg-white border rounded-sm md:mt-10 upcoming-wrap md:mx-10 lg:mx-20">
 				<table class="w-full max-w-full overflow-hidden text-left rounded-sm">

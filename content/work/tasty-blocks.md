@@ -14,7 +14,7 @@ status: Shelfed
 services: ['UI Design','Wireframing','Prototyping','Research', 'WordPress Plugin Development']
 tools: ['Adobe XD']
 stack: ['Gutenberg','Beans','WordPress']
-launch_date: 2020-06-01
+launch_date: 2018-01-01
 ---
 I've been considering re-entering the theme/plugin market and one of the ideas I've been playing with is TastyBlocks, which would be the home of my Gutenberg blocks, all tailored around the food-blogging market. 
 

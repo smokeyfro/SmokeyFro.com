@@ -48,28 +48,22 @@ module.exports = {
         component: './src/templates/Video.vue'
       }
     ],
-    Tutorial: [
+    GhostPage: [
       {
         path: '/tutorials/:slug',
         component: './src/templates/Tut.vue'
       }
     ],
-    Post: [
+    GhostPost: [
       {
         path: '/journal/:slug',
         component: './src/templates/Post.vue'
       }
     ],
-    Topic: [
+    GhostTag: [
       {
-        path: '/tutorials/:title',
+        path: '/journal/topics/:slug',
         component: './src/templates/Topic.vue'
-      }
-    ],
-    Tag: [
-      {
-        path: '/tutorials/:title',
-        component: './src/templates/Tag.vue'
       }
     ],
     Album: [
@@ -92,6 +86,15 @@ module.exports = {
     }
   },
   plugins: [
+    {
+      use: '@noxify/gridsome-plugin-remote-image',
+      options: {
+        'typeName' : 'GhostPage',
+        'sourceField': 'feature_image',
+        'targetField': 'cover',
+        'targetPath': './src/assets/remote-images'
+      }
+    },
     {
       use: 'gridsome-plugin-tailwindcss',
       options: {
@@ -130,16 +133,12 @@ module.exports = {
             /markdown/,
             /$token/,
             /$function/,
-            /$code/,
-            /$VueCarousel/,
-            /VueCarousel/
+            /$code/
 
           ],
           whitelistPatternsChildren: [
             /plyr/,
-            /code-toolbar/,
-            /$VueCarousel/,
-            /VueCarousel-wrapper/
+            /code-toolbar/
           ]
         },
         presetEnvConfig: {
@@ -148,7 +147,7 @@ module.exports = {
             }
         },
         shouldPurge: true,
-        shouldImport: true,
+        shouldImport: false,
         shouldTimeTravel: true
       }
     },
@@ -157,24 +156,24 @@ module.exports = {
       options: {
         collections: [
           {
-            typeName: 'Tag',
+            typeName: 'GhostTag',
             indexName: 'Tags',
-            fields: ['title', 'excerpt', 'description']
+            fields: ['name', 'description']
           },
           {
-            typeName: 'Post',
+            typeName: 'GhostPost',
             indexName: 'Journal',
-            fields: ['title', 'excerpt', 'description']
+            fields: ['title', 'excerpt']
           },
           {
-            typeName: 'Tutorial',
+            typeName: 'GhostPage',
             indexName: 'Tutorials',
-            fields: ['title', 'excerpt', 'description', 'tags']
+            fields: ['title', 'excerpt']
           },
           {
             typeName: 'Theme',
             indexName: 'Themes',
-            fields: ['title', 'excerpt', 'description']
+            fields: ['title', 'excerpt']
           },
           {
             typeName: 'Work',
@@ -184,17 +183,17 @@ module.exports = {
           {
             typeName: 'Service',
             indexName: 'Services',
-            fields: ['title', 'excerpt', 'description']
+            fields: ['title', 'excerpt']
           },
           {
             typeName: 'Video',
             indexName: 'Videos',
-            fields: ['title', 'excerpt', 'description']
+            fields: ['title', 'excerpt']
           },
           {
             typeName: 'Album',
             indexName: 'photos',
-            fields: ['title', 'excerpt', 'description']
+            fields: ['title', 'excerpt']
           }
         ],
         searchFields: ['title', 'searchTerms']
@@ -268,38 +267,16 @@ module.exports = {
       }
     },
     {
-      use: "@gridsome/source-filesystem",
+      use: '@gridsome/source-ghost',
       options: {
-        path: "content/journal/**/*.md",
-        typeName: "Post",
-        resolveAbsolutePaths: true,
-        refs: {
-          topic: {
-            typeName: 'Topic',
-            create: true,
-          },
-          tag: {
-            typeName: 'Tag',
-            create: true,
-          }
-        }
-      }
-    },
-    {
-      use: "@gridsome/source-filesystem",
-      options: {
-        path: "content/tutorials/**/*.md",
-        typeName: "Tutorial",
-        resolveAbsolutePaths: true,
-        refs: {
-          topic: {
-            typeName: 'Topic',
-            create: true,
-          },
-          tag: {
-            typeName: 'Tag',
-            create: true,
-          }
+        typeName: 'Ghost',
+        baseUrl: process.env.SF_GHOST_URL,
+        contentKey: process.env.SF_GHOST_KEY,
+        version: 'v4',
+        routes: {
+          post: '/tutorials/:slug',
+          page: '/journal/:slug',
+          tag: '/journal/tag/:slug'
         }
       }
     },
@@ -313,7 +290,7 @@ module.exports = {
     {
       use: 'gridsome-plugin-feed',
       options: {
-        contentTypes: ['Post', 'Tutorial', 'Theme', 'Work', 'Video', 'Service', 'Album'],
+        contentTypes: ['GhostPost', 'GhostPage', 'GhostTag', 'Theme', 'Work', 'Video', 'Service', 'Album'],
         feedOptions: {
           title: 'SmokeyFro - Syndicate',
           description: 'Web Development Tutorials, JAMStack themes and more'

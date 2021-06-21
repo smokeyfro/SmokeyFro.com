@@ -2,9 +2,9 @@
 	<Layout :sidebar="true" :top="false" :bottom="false">
 		<h1>Speaking</h1>
 		<p class="lead">I am passionate about sharing my craft and have had the privilage of speaking at a number of technology related conferences and meetups.</p>
-		<div class="mt-10 md:bg-white md:border md:rounded-md md:p-10">
+		<div class="mt-10">
 			<h2>Topics I get excited about</h2>
-			<p>These are the topics that are currently getting me excited. I'll update these over time as my interests develop.</p>
+			<p class="my-5">These are the topics that are currently getting me excited. I'll update these over time as my interests develop.</p>
 			<div class="grid gap-4 md:gap-10 grid-cols1 md:grid-cols-2">
 				<article v-for="({ title, summary }, i) in talks.topics" :key="i">
 					<h3>{{ title }}</h3>
@@ -17,7 +17,7 @@
 		<div class="grid gap-4 pt-6 mb-16 border-t-2 border-black md:gap-10 grid-cols1 md:pt-10">
 			<article v-for="({ title, summary, name, date, location, links, event }, i) in talks.talks" :key="i">
 				<h3 class="mt-0">{{ title }}</h3>
-				<p class="mb-2">{{ summary }}</p>
+				<p class="mt-5 mb-2">{{ summary }}</p>
 				<div class="hidden mt-6 mb-10 mb-20 overflow-x-auto overflow-y-hidden bg-white border rounded-sm md:block md:mt-10">
 					<table class="w-full max-w-full overflow-hidden text-left rounded-sm">
 						<thead class="text-white bg-black">

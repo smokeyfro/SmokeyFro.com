@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex flex-row items-center mb-5 text-white sm:flex-col nav tertiary">
+    <nav class="flex flex-row items-center md:mb-5 text-white sm:flex-col nav tertiary">
         <!-- <a href="/contact" class="connect" tooltip="Connect" aria-label="Connect via your favorite social media outlet">
             <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 008 1l3-3a5 5 0 00-8-8l-1 2"/><path d="M14 11a5 5 0 00-8-1l-3 3a5 5 0 008 8l1-2"/></svg></span>
             <span class="hidden">Connect</span>

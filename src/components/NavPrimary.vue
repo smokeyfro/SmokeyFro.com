@@ -1,5 +1,5 @@
 <template>
-  <nav class="hidden text-white sm:flex-row sm:flex sm:flex-col nav primary" ref="primaryNav" role="navigation">
+  <nav class="hidden text-white flex-row sm:flex sm:flex-col nav primary" ref="primaryNav" role="navigation">
     <g-link exact class="flex items-center justify-start" :class="slug" v-for="({ text, slug, label, icon, url }, i) in navigation.primary" :key="i" :to="url" :tooltip="text" :aria-label="label">
       <span class="icon" v-if="icon" v-html="icon" />
       <span class="hidden text">{{ text }}</span>

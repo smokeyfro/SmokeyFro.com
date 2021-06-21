@@ -5,7 +5,7 @@
 			<p>Know what you're looking for? Type a search term or phrase.</p>
 			<div class="search">
 				<div class="block w-full mt-6">
-					<input id="search" v-model="searchTerm" :v-bind="searchTerm" type="search" results="10" v-focus class="block w-full mt-2 form-input" placeholder="Type in a phrase or search term...">
+					<input id="search" v-model="searchTerm" :v-bind="searchTerm" type="search" results="10" v-focus class="bg-white block w-full mt-2 form-input p-4 border border-gray-200" placeholder="Type in a phrase or search term...">
 					<p class="flex-row mt-2 text-sm leading-loose text-gray-600 md:mt-3 examples">Or try one of these:<br class="block sm:hidden" /><button v-on:click="searchTerm = 'themes'">themes</button>, <button v-on:click="searchTerm = 'jamstack'">jamstack</button>, <button v-on:click="searchTerm = 'vue'">vue</button>, <button v-on:click="searchTerm = 'wordpress'">wordpress</button>, <button v-on:click="searchTerm = 'beans'">beans</button></p>
 				</div>
 				<div class="results">

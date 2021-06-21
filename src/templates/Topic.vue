@@ -32,18 +32,17 @@
 
 <page-query>
 query Tag ($id: ID!) {
-	topic (id: $id) {
-		title
+	ghostTag (id: $id) {
+		name
 		belongsTo {
 			totalCount
 			edges {
 				node {
-					...on Tutorial {
+					...on GhostPage {
 						id
 						title
-						tags
-						topic {
-							title
+						primary_tag {
+							name
 							path
 						}
 						path

@@ -33,6 +33,8 @@
 <script>
 import NavAbout from "@/components/NavAbout";
 import Video from "~/layouts/Video.vue";
+//import '../../node_modules/plyr/dist/plyr.css'
+
 // import Comments from "@/components/Comments";
 
 export default {
@@ -76,5 +78,3 @@ query Post ($path: String) {
 	}
 }
 </page-query>
-
-<style src="../../node_modules/plyr/dist/plyr.css"></style>

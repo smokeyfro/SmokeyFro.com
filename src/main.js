@@ -2,7 +2,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 import VueStorage from 'vuestorage'
 import KonamiCode from 'vue-konami-code'
 import VueRouter from 'vue-router'
-require('~/css/global.css')
+import '~/css/global.css'
 
 export default function(Vue, { router }) {
 

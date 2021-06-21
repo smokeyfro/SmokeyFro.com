@@ -49,3 +49,7 @@ button.BXtvJgy._1DVgifv._7PDFY5O.d8xhWgi {
     background: #000;
     border: 0;
 }
+
+blockquote {
+    @apply bg-gray-100 p-10 text-2xl italic my-8 font-serif;
+}

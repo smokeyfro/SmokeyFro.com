@@ -1,6 +1,6 @@
 <template>
 	<article class="item">
-		<a :href="`${post.image.src}`" class="image" data-fslightbox="gallery">
+		<a :href="`${post.path}`" class="image">
 			<div class="card-image" v-if="post.thumb">
 				<Browser :image="post.thumb" />
 			</div>

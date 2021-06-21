@@ -28,35 +28,21 @@ contact:
     stackoverflow: smokeyfro
 
 projects:
+  - name: JammeryHQ
+    status: WIP
+    url: https://jammeryhq.com
+    image: na
+    summary: In collaboration with two other founders, we're building tools for the modern web.
+  - name: SavvyGarden
+    status: Live
+    url: https://savvygarden.app
+    image: na
+    summary: The gardening app I always wanted.
   - name: Mzango
     status: WIP
     url: https://mzango.com
     image: na
     summary: Backpackers guide to South Africa where the traveller is not the product.
-
-  # - name: SmokeyFro
-  #   status: Live
-  #   url: https://smokeyfro.com
-  #   image: na
-  #   summary: Home of my portfolio, case-studies, tutorials, videos and themes.
-
-  - name: Made with Sketch
-    status: Live
-    url: https://madewithsketch.com
-    image: na
-    summary: A curated collection of Sketch.app resources optimised for download.
-
-  - name: HeadwayRocket
-    status: Retired
-    url: https://headwayrocket.com
-    image: na
-    summary: Plugins and templates for Headway, the original visual site builder for WordPress.
-
-  - name: ThemeButler
-    status: Retired
-    url: https://themebutler.com
-    image: na
-    summary: WordPress theme club for developers centered around our in-house theme framework, Beans.
 
 experience:
 - id: 7
@@ -95,12 +81,6 @@ experience:
   location: George, ZA
   date: Feb 2001 – Jun 2003
   summary: I was recruited for a rigorous six month bootcamp then three months of Oracle training in Zimbabwe and later advanced web design at UCT. My responsibilities included building technical demos, prototypes and more.
-- id: 1
-  company: Phinda Game Reserve
-  role: Training Camp Manager
-  location: KZN, ZA
-  date: Jan 2000 – Jan 2001
-  summary: Fresh out of school and in search of an adventure, I landed a job at a prestige game reserve in KZN, South Africa. My responsibilities included camp security, maintenance, procurement and assisting with training exercises.
 
 education:
   - topic: Advanced Web Design

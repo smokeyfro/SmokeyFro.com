@@ -64,6 +64,14 @@ header nav .active line,
 header nav .active circle {
     stroke: #111;
 }
+a:focus span.icon svg line,
+a:focus span.icon svg path,
+a:focus span.icon svg circle,
+span.icon svg line,
+span.icon svg path,
+span.icon svg circle {
+    stroke: #fff;
+}
 @media( max-width: 480px ) {
     header nav a {
         padding: 0;

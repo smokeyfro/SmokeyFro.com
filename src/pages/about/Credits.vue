@@ -1,9 +1,9 @@
 <template>
 	<Layout :sidebar="true" :top="false" :bottom="true">
 		<h1>Site credits</h1>
-		<p>This site is only possible thanks to hard work from a looong list of fine folks who have all contributed their skills, time and energy to provide the web development community with the awesome tools we have at our disposal.</p>
+		<p class="mt-6">This site is only possible thanks to hard work from a looong list of fine folks who have all contributed their skills, time and energy to provide the web development community with the awesome tools we have at our disposal.</p>
         <template slot="bottom-shelf">
-		<div class="grid grid-cols-1 gap-6 p-6 mx-6 mt-6 mb-6 bg-white border-t-8 rounded-md shadow-lg content lg:mt-10 lg:mb-20 lg:p-10 md:gap-10 md:mx-10 lg:mx-20 sm:grid-cols-2 lg:grid-cols-4 border-accent">
+		<div class="mt-6 mb-6 ml-20 space-x-20 lg:mt-10 lg:mb-20 flex flex-wrap items-start justify-start border-accent">
             <div v-for="({ title, links }, i) in credits.credits" :key="i">
                 <h2 class="mb-5 text-sm uppercase">{{ title }}</h2>
                 <ul class="reset">

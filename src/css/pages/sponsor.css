@@ -9,15 +9,18 @@
 }
 .perks-image {
   width: 150px;
-  margin: 0 auto;
+  margin: -30px -10px 0 auto;
   display: block;
+  position: absolute;
+  top: 90px;
+  right: 0;
 }
 .perks {
     padding: 1.5rem 1rem 1rem;
     align-items: flex-start;
 }
 .perks h3 {
-    margin: 0 0 .5rem;
+    margin: 0 0 1rem;
     padding: .5rem 0 0;
 }
 .perks ul {

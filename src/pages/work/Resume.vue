@@ -1,7 +1,7 @@
 <template>
 	<Layout :sidebar="true" :top="true" :bottom="true">
 		<template slot="top-shelf">
-			<div class="flex flex-col items-center justify-center ml-2 lg:h-screen -md:mt-20 lg:flex-row hero" v-for="({ name, birthDate, location, title, downloadLink, resumeImage }, i) in resume.info" :key="i">
+			<div class="max-w-6xl mx-auto flex flex-col items-center justify-center lg:h-screen -md:mt-20 lg:flex-row hero" v-for="({ name, birthDate, location, title, downloadLink, resumeImage }, i) in resume.info" :key="i">
 				<figure class="lg:mr-6">
 					<svg fill="#1C2F39" class="w-56 h-56" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 77 63">
 						<defs />
@@ -36,7 +36,7 @@
 		</template>
 		
 		 <template slot="bottom-shelf">
-			<div class="resume-body">
+			<div class="resume-body max-w-6xl mx-auto">
 				<div class="mx-6 screen:mt-20 md:mx-10">
 					<h2>Work Experience</h2>
 					<div class="grid grid-cols-1 gap-6 mt-5">
@@ -51,7 +51,7 @@
 				</div>
 				<div class="mx-6 mt-20 md:mx-10 skills-wrap">
 					<h2>Skills</h2>
-					<div class="grid grid-cols-1 row-gap-4 col-gap-8 mt-5 md:grid-cols-2 skills">
+					<div class="grid grid-cols-1 gap-6 mt-5 md:grid-cols-2 skills">
 						<div v-for="({ title, description }, i) in resume.skills" :key="i">
 							<h3 class="text-2xl">{{ title }}</h3>
 							<p class="m-0 text-base" v-if="description" v-html="description" />
@@ -60,11 +60,11 @@
 				</div>
 				<div class="mx-6 mt-20 md:mx-10 projects-wrap">
 					<h2>My Side Projects</h2>
-					<div class="grid grid-cols-1 gap-8 mt-5 md:grid-cols-2 projects">
+					<div class="grid grid-cols-1 gap-8 mt-5 md:grid-cols-3 projects">
 						<div v-for="({ name, status, url, summary, image }, i) in resume.projects" :key="i">
 							<div>
 								<h3 class="mb-0 text-2xl">{{ name }}</h3>
-								<!-- <span :class="status" class="status">{{ status }}</span> -->
+								<span :class="status" class="status">{{ status }}</span>
 							</div>
 							<p class="mb-2 text-base" v-if="summary" v-html="summary" />
 							<p class="m-0 text-sm" v-if="url">
@@ -98,7 +98,7 @@
 				</div>
 				<div class="mx-6 mt-20 mb-24 md:mx-10">
 					<h2 class="mb-6">Contact Info</h2>
-					<ul class="grid grid-cols-2 row-gap-4 col-gap-16 ml-0 list-none reset lg:grid-cols-4 contact-info" v-for="({ website, handle, email, phone, skype, telegram, linkedin }, i) in resume.contact" :key="i">
+					<ul class="grid grid-cols-2 gap-4 ml-0 list-none reset lg:grid-cols-4 contact-info" v-for="({ website, handle, email, phone, skype, telegram, linkedin }, i) in resume.contact" :key="i">
 						<li>
 							<span class="block text-sm text-gray-600">Website</span>
 							<strong>{{ website}}</strong>
@@ -120,7 +120,7 @@
 							<strong>{{ telegram }}</strong>
 						</li>
 						<li>
-							<span class="block">On the web</span>
+							<span class="block text-sm text-gray-600">On the web</span>
 							<strong>@{{ handle }}</strong>
 						</li>
 						<li>
@@ -129,7 +129,7 @@
 						</li>
 						<li>
 							<span class="block text-sm text-gray-600">Linkedin</span>
-							<strong><a :href="linkedin" class="link">chris.rault</a></strong>
+							<a :href="linkedin" class="font-bold text-black no-underline">chris.rault</a>
 						</li>
 					</ul>
 				</div>

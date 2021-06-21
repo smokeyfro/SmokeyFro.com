@@ -1,10 +1,10 @@
 <template>
 	<Layout :sidebar="true" :top="true" :bottom="false">
 		<template slot="top-shelf">
-			<!--<g-image :src="$page.post.coverImage" :alt="$page.post.title" />-->
+			<g-image :src="$page.post.cover" :alt="$page.post.title" />
 		</template>
 		<article>
-			<h1>{{ $page.post.title }}</h1>
+			<h1 class="mb-6">{{ $page.post.title }}</h1>
 			<p>{{ $page.post.description }}</p>
 			<div class="mb-10 markdown" v-html="$page.post.content" />
 			<nav>
@@ -125,15 +125,19 @@ export default {
 
 <page-query>
 query Post ($path: String) {
-	post (path: $path) {
+	post: ghostPage (path: $path) {
 		title
 		slug
 		path
 		id
-		content
+		cover (width: 1280, height: 500, quality: 90)
+		content: html
 		excerpt
-		tags
-		date (format: "D. MMMM YYYY")
+		primary_tag {
+			name
+			path
+		}
+		date: published_at (format: "D. MMMM YYYY")
 	}
 }
 </page-query>

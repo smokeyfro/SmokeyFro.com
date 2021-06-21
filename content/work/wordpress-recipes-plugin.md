@@ -14,5 +14,5 @@ status: Shelfed
 services: ['UI Design','Wireframing','Prototyping','Research', 'WordPress Plugin Development']
 tools: ['Adobe XD']
 stack: ['UIkit','Beans', 'WordPress']
-launch_date: 2020-06-01
+launch_date: 2018-06-01
 ---

@@ -1,10 +1,10 @@
 <template>
     <div>
         <h2 class="mt-5 md:mt-10">{{ title }}</h2>
-        <p class="text-base">{{ summary }}</p>
-        <article class="mb-2" v-for="edge in filteredTuts" :key="edge.node.id">
-            <g-link :to="edge.node.path">{{ edge.node.title }}</g-link>
-        </article>
+        <p class="mt-5 text-xl">{{ summary }}</p>
+        <ul class="mb-2" v-for="edge in filteredTuts" :key="edge.node.id">
+            <li><g-link :to="edge.node.path">{{ edge.node.title }}</g-link></li>
+        </ul>
     </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
 	computed: {
 		filteredTuts() {
 			return this.$static.tuts.edges.filter(edge => {
-				return edge.node.topic.slug === this.tag;
+				return edge.node.primary_tag.slug === this.tag;
 			});
 		}
 	}
@@ -27,13 +27,13 @@ export default {
 
 <static-query>
 query FilteredTuts {
-	tuts: allPost {
+	tuts: allGhostPage {
 		edges {
 			node {
 				title
-				topic {
-					title
-					path
+				primary_tag {
+					name
+					slug
 				}
 				path
 			}

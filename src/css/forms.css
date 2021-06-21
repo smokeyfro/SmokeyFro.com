@@ -1,5 +1,11 @@
 /* Forms
 ****************************************************/
+.form-label {
+    @apply block mb-3 font-bold text-xl;
+}
+.form-input {
+    @apply p-4 bg-gray-100 rounded-md mt-5 block border border-gray-200;
+}
 a:focus,
 .form-textarea:focus,
 .form-radio:focus,
@@ -26,4 +32,5 @@ button:focus {
 .contact form textarea {
 	background: #fafafa;
 	border: 1px dashed #ddd;
+    @apply p-3;
 }

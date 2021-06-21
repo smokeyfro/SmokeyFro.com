@@ -102,12 +102,10 @@
 	}
 	header {
 		border-right: 5px solid var(--accent-color);
-        & nav {
-            & a {
-                position: relative;
-                z-index: 99;
-			}
-        }
+	}
+	header nav a {
+			position: relative;
+			z-index: 99;
 	}
 	.secondary a.active:after {
 		display: inline-block;

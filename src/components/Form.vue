@@ -1,160 +1,165 @@
 <template>
-    <div class="form" refs>
-        <div class="success" v-if="status === 'success'">
-            <div class="flex items-center justify-start w-full">
-				<div class="w-full p-10 mt-10 bg-gray-100 border-l-8 bg-accent border-accent">
-					<h2>Message sent!</h2>
-					<p class="m-0">Expect a response within the next 24 hours (though usually less).</p>
-				</div>
-			</div>
-        </div>
-        <div class="error" v-if="status === 'error'">
-            Oops, something went wrong. Please try again.
-        </div>
-        <form v-if="!status" @submit="sendForm">
-            <div class="my-4">
-                <div class="mt-2">
-                    <label class="inline-flex items-center">
-                        <input v-model="radioValue" type="radio" class="text-black outline-red form-radio" name="message_type" id="is-message" value="message">
-                        <span class="ml-2">Say Hello</span>
-                    </label>
-                    <label class="inline-flex items-center ml-6">
-                        <input v-model="radioValue" type="radio" class="text-black outline-red form-radio" name="message_type" id="is-quote" value="quote">
-                        <span class="ml-2">Get a Quote</span>
-                    </label>
-                </div>
+<form @submit.prevent="submit" method="POST" accept-charset="UTF-8" class="contact-form border-none mt-0 pt-0 px-6 lg:px-0 lg:max-w-4xl mx-auto">
+    <div class="relative mt-0">
+        <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/2 md:mr-5">
+                <label class="block mt-4">
+                    <span class="text-gray-700 block mb-2">Your name</span>
+                    <input name="name" id="name" v-model="input.name" class="w-full p-4 rounded-md" placeholder="Eg: Dany Targaryen">
+                </label>
             </div>
-            
-            <label class="block">
-                <span class="text-gray-700" v-if="radioValue === 'quote'" for="message">What do you need help with?</span>
-                <span class="text-gray-700" v-if="radioValue === 'message'" for="message">Message</span>
-                <div v-if="radioValue === 'quote'">
-                    <ClientOnly>
-                    <vue-expand
-                    v-model="message" 
-                    :handler="handler" 
-                    placeholder="Hi Chris, I need help with..." 
-                    min-row="5"
-                    v-focus />
-                    </ClientOnly>
-                </div>
-                <div v-if="radioValue === 'message'">
-                    <ClientOnly>
-                    <vue-expand
-                    v-model="message" 
-                    :handler="handler" 
-                    placeholder="Hey Chris! Love the fro dude! xoxo Dany"
-                    min-row="3"
-                    v-focus />
-                    </ClientOnly>
-                </div>
+            <div class="md:w-1/2">
+                <label class="block mt-4">
+                    <span class="text-gray-700 block mb-2">Email address</span>
+                    <input name="email" id="email" v-model="input.email" class="w-full p-4 rounded-md" placeholder="Eg: dany@allthekingdoms.gov">
+                </label>
+            </div>
+        </div>
+
+      <div class="my-4">
+        <div class="mt-2">
+            <label class="inline-flex items-center">
+                <input v-model="input.radioValue" type="radio" class="text-black outline-red form-radio" name="message_type" id="is-message" value="message">
+                <span class="ml-2">Say Hello</span>
             </label>
-            <div>
-                <div class="flex flex-col md:flex-row">
-                    <div class="md:w-1/2 md:mr-5">
-                        <label class="block mt-4">
-                            <span class="text-gray-700">Your name</span>
-                            <input name="name" id="name" v-model="name" class="block w-full mt-1 form-input" placeholder="Dany Targaryen" required>
-                        </label>
-                    </div>
-                    <div class="md:w-1/2">            
-                        <label class="block mt-4">
-                            <span class="text-gray-700">Your email</span>
-                            <input name="email" id="email" v-model="email" class="block w-full mt-1 form-input" placeholder="dani@allthekingdoms.org" required>
-                        </label>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row">
-                    <div class="md:w-1/2 md:mr-5">
-                        <label class="block mt-4" v-if="radioValue === 'quote'">
-                            <span class="text-gray-700">Estimated budget (in USD)</span>
-                            <input name="budget" id="budget" v-model="budget" class="block w-full mt-1 form-input" placeholder="$5000">
-                        </label>
-                    </div>
-                    <div class="md:w-1/2">
-                        <label class="block mt-4" v-if="radioValue === 'quote'">
-                            <span class="text-gray-700">Current site (if any)</span>
-                            <input name="website" id="website" v-model="website" class="block w-full mt-1 form-input" placeholder="https://your-site.com">
-                        </label>
-                    </div>
-                </div>
-                <input type="hidden" name="_gotcha">
-                <button type="submit" class="block w-full px-10 py-6 mt-4 mb-5 text-xl font-bold bg-gray-800 rounded-md text-accent md:mt-8">
-                    <span v-if="radioValue === 'quote'">Let's do this!</span>
-                    <span v-if="radioValue === 'message'">Send it, Sparky!</span>
-                </button>
-            </div>
-        </form>
+            <label class="inline-flex items-center ml-6">
+                <input v-model="input.radioValue" type="radio" class="text-black outline-red form-radio" name="message_type" id="is-quote" value="quote">
+                <span class="ml-2">Get a Quote</span>
+            </label>
+        </div>
     </div>
+
+
+
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/2 md:mr-5">
+            <label class="block mt-4" v-if="input.radioValue === 'quote'">
+                <span class="text-gray-700 block mb-2">Estimated budget (in USD)</span>
+                <input name="budget" id="budget" v-model="input.budget" class="w-full p-4 rounded-md" placeholder="$3000 - $5000">
+            </label>
+        </div>
+        <div class="md:w-1/2">
+            <label class="block mt-4" v-if="input.radioValue === 'quote'">
+                <span class="text-gray-700 block mb-2">Current site (if any)</span>
+                <input name="website" id="website" v-model="input.website" class="w-full p-4 rounded-md" placeholder="http://allthekingdoms.gov">
+            </label>
+        </div>
+    </div>
+
+      <label class="block mt-6">
+        <span class="text-gray-700" v-if="input.radioValue === 'quote'" for="message">What do you need help with?</span>
+        <span class="text-gray-700" v-if="input.radioValue === 'message'" for="message">Message</span>
+        <div v-if="input.radioValue === 'quote'">
+            <ClientOnly>
+            <vue-expand
+            v-model="input.message" 
+            :handler="input.handler" 
+            placeholder="Hi Chris, I need help with..." 
+            min-row="5"
+            v-focus />
+            </ClientOnly>
+        </div>
+        <div v-if="input.radioValue === 'message'">
+            <ClientOnly>
+            <vue-expand
+            v-model="input.message" 
+            :handler="input.handler" 
+            placeholder="Hey Chris! Love the fro dude! xoxo Dany"
+            min-row="3"
+            v-focus />
+            </ClientOnly>
+        </div>
+    </label>
+
+      <div v-if="loading" class="bg-white bg-opacity-90 h-full z-50 absolute inset-0 flex items-center justify-center">
+        <div class="text-center">
+          <h3 class="text-white text-3xl uppercase">Sending Message</h3>
+          <img src="/loading.gif" class="inline-block mx-auto" />
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center">
+        <button type="submit" class="pageclip-form__submit button block w-full h-24" aria-label="Send your message">
+          <span v-if="loading == false">
+            <span v-if="input.radioValue === 'quote'">Let's do this!</span>
+            <span v-if="input.radioValue === 'message'">Send it, Sparky!</span>
+          </span>
+          <span v-else class="w-full h-full flex items-center justify-center">
+            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+          </span>
+        </button>
+      </div>
+  </form>
 </template>
+
+
 
 <script>
     import Vue from 'vue';
 
-    export default {
-        name: 'Form',
-        components: {
-            VueExpand: () => import("vue-expand") 
-        },
-        data: function() {
-            return {
-                handler: new Vue(),
-                status: null,
-                name: null,
-                email: null,
-                budget: '',
-                website: '',
-                message: null,
-                radioValue: "message",
-                message_type: null,
-                message_type: this.radioValue
-            }
-        },
-        mounted(){
-            this.handler.$emit('focus')
-        },
-        methods: {
-            sendForm: function(event) {
-                event.preventDefault()
-
-                fetch('https://formcarry.com/s/iqNMdsHQ9Zt', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Accept: 'application/json'
-                },
-                body: JSON.stringify({ 
-                    name: this.name, 
-                    email: this.email, 
-                    message: this.message,
-                    budget: this.budget, 
-                    website: this.website
-                 })
-                })
-                .then(response => response.json())
-                .then(response => {
-                    if (response.code === 200) {
-                        this.status = 'success'
-                    } else {
-                        // Formcarry error
-                        this.status = 'error'
-                    }
-                })
-                // network error
-                .catch(() => (this.status = 'error'))
-            }
+export default {
+  name: "ContactForm",
+  components: {
+        VueExpand: () => import("vue-expand") 
+    },
+  data() {
+    return {
+      input: {
+        handler: new Vue(),
+        status: null,
+        name: null,
+        email: null,
+        budget: '',
+        website: '',
+        message: null,
+        radioValue: "message",
+        message_type: null,
+        message_type: this.radioValue
+      },
+      loading: false
+    };
+  },
+  metaInfo: {
+    script: [
+      { src: '/pageclip.js', async: true, defer: true, body: true }
+    ],
+  },
+  methods: {
+    async submit() {
+      this.loading = true
+      const data = this.input
+      window.Pageclip.send('m05qhlX2YJB9fXWwhr1EuTsdrFh6dNMH', 'Contact', data, function (error, response) {
+        if (error) {
+          return
         }
-    }
+        location.replace('/thanks')
+      })
+    },
+  }
+}
 </script>
 
 <style>
-.contact .vue-expand {
-    @apply block w-full mt-1 border-solid border border-gray-300 rounded-sm p-3 bg-white;
+.contact-form {
+  @apply relative bg-gray-100 p-10 rounded-md mt-10;
+  &:after {
+    content: '';
+    @apply hidden absolute inset-0 w-full h-full bg-white opacity-60 z-30;
+  }
+  & .container {
+    @apply relative z-30;
+  }
+  & input,
+  & textarea {
+    @apply bg-white placeholder-gray-700 border-b border-gray-200 rounded-md text-xl;
+  }
+  & .button {
+      @apply bg-gray-900 text-white mt-6 rounded-md;
+  }
 }
-.contact .vue-expand[min-row="3"] {
-    min-height: 200px;
-}
-.contact .vue-expand[min-row="5"] {
-    min-height: 300px;
-}
+
 </style>

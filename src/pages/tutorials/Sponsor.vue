@@ -1,7 +1,7 @@
 <template>
 	<Layout :sidebar="true" :top="false" :bottom="true">
 		<h1>Sponsor</h1>
-		<p>Learn a new skill, while giving back to the Community. Contributions from fine folks like yourself enable me to dedicate time to writing tutorials.</p>
+		<p class="mt-6">Learn a new skill, while giving back to the Community. Contributions from fine folks like yourself enable me to dedicate time to writing tutorials.</p>
 		<template slot="bottom-shelf">
 			<SponsorForm class="mx-6 md:mx-10 lg:mx-20" />
 		</template>

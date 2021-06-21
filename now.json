@@ -2,25 +2,5 @@
     "routes": [
         { "handle": "filesystem" },
         { "src": "/(.*)", "status": 404, "dest": "/404.html" }
-    ],
-	"env": {
-        "SF_GA": "@sf-ga",
-        "SF_GHOST_KEY": "@sf-ghost-key",
-        "SF_GHOST_URL": "@sf-ghost-url",
-        "SF_TUTORIALS_SHEET_ID": "@sf-tutorials-sheet-id",
-        "SF_GOOGLE_API_KEY": "@sf-google-api-key",
-        "SF_BASE_PATH": "http://localhost:8080/",
-        "SF_API_HOST": "@sf-api-host"
-    },
-    "build": {
-        "env": {
-            "SF_GA": "@sf-ga",
-            "SF_GHOST_KEY": "@sf-ghost-key",
-            "SF_GHOST_URL": "@sf-ghost-url",
-            "SF_TUTORIALS_SHEET_ID": "@sf-tutorials-sheet-id",
-            "SF_GOOGLE_API_KEY": "@sf-google-api-key",
-            "SF_BASE_PATH": "https://smokeyfro.com",
-            "SF_API_HOST": "@sf-api-host"
-        }
-    }
+    ]
 }

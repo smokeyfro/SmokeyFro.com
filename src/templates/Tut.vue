@@ -4,10 +4,10 @@
 			<g-image :src="$page.post.cover" :alt="$page.post.title" />
 		</template>
 		<article>
-			<h1 class="mb-6">{{ $page.post.title }}</h1>
-			<p>{{ $page.post.description }}</p>
+			<h1 class="mb-6" v-if="$page.post.title">{{ $page.post.title }}</h1>
+			<p v-if="$page.post.description">{{ $page.post.description }}</p>
 			<div class="mb-10 markdown" v-html="$page.post.content" />
-			<nav>
+			<nav v-if="$page.post.tags">
 				<g-link class="mb-4 mr-4" :to="tag.path" v-for="tag in $page.post.tags" v-bind:key="tag.id">#{{ tag.name }}</g-link>
 			</nav>
 			<!-- <Comments /> -->

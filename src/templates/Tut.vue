@@ -1,12 +1,12 @@
 <template>
 	<Layout :sidebar="true" :top="true" :bottom="false">
 		<template slot="top-shelf">
-			<g-image :src="$page.post.coverImage" :alt="$page.post.title" />
+			<!--<g-image :src="$page.post.coverImage" :alt="$page.post.title" />-->
 		</template>
 		<article>
 			<h1>{{ $page.post.title }}</h1>
 			<p>{{ $page.post.description }}</p>
-			<div class="mb-10 markdown" v-html="$page.post.html" />
+			<div class="mb-10 markdown" v-html="$page.post.content" />
 			<nav>
 				<g-link class="mb-4 mr-4" :to="tag.path" v-for="tag in $page.post.tags" v-bind:key="tag.id">#{{ tag.name }}</g-link>
 			</nav>
@@ -50,10 +50,10 @@ export default {
 					property: "og:description",
 					content: this.$page.post.excerpt
 				},
-				{
-					property: "og:image",
-					content: this.$page.post.og_image
-				},
+				// {
+				// 	property: "og:image",
+				// 	content: this.$page.post.og_image
+				// },
 				{
 					property: "og:type",
 					content: 'article'
@@ -82,10 +82,10 @@ export default {
 					name: "twitter:title",
 					content: this.$page.post.title
 				},
-				{
-					name: "twitter:image:src",
-					content: this.$page.post.og_image
-				},
+				// {
+				// 	name: "twitter:image:src",
+				// 	content: this.$page.post.og_image
+				// },
 				{
 					property: "twitter:url",
 					content: this.postUrl
@@ -125,20 +125,15 @@ export default {
 
 <page-query>
 query Post ($path: String) {
-	post: ghostPost(path: $path) {
+	post (path: $path) {
 		title
 		slug
 		path
 		id
-		html
+		content
 		excerpt
-		og_image
-		tags {
-			name
-			path
-		}
-		coverImage: feature_image
-		date: published_at (format: "D. MMMM YYYY")
+		tags
+		date (format: "D. MMMM YYYY")
 	}
 }
 </page-query>

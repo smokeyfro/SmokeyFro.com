@@ -18,7 +18,7 @@ export default {
 	computed: {
 		filteredTuts() {
 			return this.$static.tuts.edges.filter(edge => {
-				return edge.node.primary_tag.slug === this.tag;
+				return edge.node.topic.slug === this.tag;
 			});
 		}
 	}
@@ -27,13 +27,12 @@ export default {
 
 <static-query>
 query FilteredTuts {
-	tuts: allGhostPost {
+	tuts: allPost {
 		edges {
 			node {
 				title
-				primary_tag {
-					name
-					slug
+				topic {
+					title
 					path
 				}
 				path

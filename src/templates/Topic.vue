@@ -5,11 +5,11 @@
 		<template slot="bottom-shelf">
 		<div class="grid mx-6 mt-10 mb-10 grid-gap-4 md:gap-8 grid-cols1 md:grid-cols-2 lg:grid-cols-3 md:mx-10 lg:mx-20">
 			<article v-for="edge in $page.topic.belongsTo.edges" :key="edge.node.id">
-				<figure class="md:mb-5 card-image" v-if="edge.node.coverImage">
+				<!--<figure class="md:mb-5 card-image" v-if="edge.node.coverImage">
 					<g-link :to="`${edge.node.path}`" class="image">
 						<g-image :src="edge.node.coverImage" width="364" height="244" fit="cover" />
 					</g-link>
-				</figure>
+				</figure>-->
 				<h2 class="mt-3 text-2xl" v-if="edge.node.title">
 					{{ edge.node.title }}
 				</h2>
@@ -32,27 +32,22 @@
 
 <page-query>
 query Tag ($id: ID!) {
-	topic: ghostTag (id: $id) {
-		title: name
+	topic (id: $id) {
+		title
 		belongsTo {
 			totalCount
 			edges {
 				node {
-					...on GhostPost {
+					...on Tutorial {
 						id
 						title
-						tags {
-							id
-							title: name
-							path
-						}
-						primary_tag {
-							title: name
+						tags
+						topic {
+							title
 							path
 						}
 						path
-						description: excerpt
-						coverImage: feature_image
+						excerpt
 					}
 				}
 			}

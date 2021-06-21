@@ -61,11 +61,9 @@ export default {
 
 <page-query>
 query Tags {
-	tags: allGhostTag {
+	tags: allTag {
 		edges {
 			node {
-					name
-					slug
 					id
 					belongsTo {
 							totalCount

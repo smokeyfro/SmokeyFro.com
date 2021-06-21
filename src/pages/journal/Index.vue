@@ -32,11 +32,11 @@ export default {
 
 <page-query>
 	query Journal {
-		posts: allGhostPage {
+		posts: allPost {
 			edges {
 				node {
 						title
-						date: published_at (format: "D MMMM, YYYY")
+						date (format: "D MMMM, YYYY")
 						path
 						excerpt
 				}

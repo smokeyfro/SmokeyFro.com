@@ -2,8 +2,8 @@
 	<Layout :sidebar="true" :top="false" :bottom="false">
 		<article class="mb-12">
 			<h1>{{ $page.post.title }}</h1>
-			<p v-html="$page.post.description" />
-			<div v-html="$page.post.html" />
+			<p v-html="$page.post.excerpt" />
+			<div v-html="$page.post.content" />
 			<nav>
 				<g-link :to="tag.path" v-for="tag in $page.post.tags" v-bind:key="tag.id">#{{ tag.name }}</g-link>
 			</nav>
@@ -53,13 +53,13 @@ export default {
 
 <page-query>
 query Post ($path: String) {
-	post: ghostPage(path: $path) {
+	post (path: $path) {
 		title
 		slug
 		id
-		html
-		description: excerpt
-		date: published_at (format: "D. MMMM YYYY")
+		content
+		excerpt
+		date (format: "D. MMMM YYYY")
 	}
 }
 </page-query>

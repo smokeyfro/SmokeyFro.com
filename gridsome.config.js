@@ -62,7 +62,7 @@ module.exports = {
     ],
     GhostTag: [
       {
-        path: '/journal/topics/:slug',
+        path: '/tutorials/:slug',
         component: './src/templates/Topic.vue'
       }
     ],
@@ -274,9 +274,9 @@ module.exports = {
         contentKey: process.env.SF_GHOST_KEY,
         version: 'v4',
         routes: {
-          post: '/tutorials/:slug',
           page: '/journal/:slug',
-          tag: '/journal/tag/:slug'
+          post: '/tutorials/:slug',
+          tag: '/tutorials/:slug'
         }
       }
     },

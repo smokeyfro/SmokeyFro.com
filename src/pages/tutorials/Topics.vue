@@ -40,7 +40,7 @@ export default {
 	},
 	data() {
 		return {
-			tagUrlPrefix: "/tuts/about/"
+			tagUrlPrefix: "/tutorials/"
 		};
 	},
 	computed: {
@@ -66,8 +66,23 @@ query Tags {
 			node {
 					id
 					name
+					slug
 					belongsTo {
-							totalCount
+						totalCount
+						edges {
+							node {
+								...on GhostPage {
+									id
+									title
+									primary_tag {
+										name
+										path
+									}
+									path
+									excerpt
+								}
+							}
+						}
 					}
 			}
 		}

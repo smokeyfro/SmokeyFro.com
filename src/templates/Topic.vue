@@ -1,6 +1,6 @@
 <template>
 	<Layout :sidebar="true" :top="false" :bottom="true">
-		<h1>{{ $page.topic.belongsTo.totalCount }} <span v-if="$page.topic.belongsTo.totalCount > 1">tutorials</span> <span v-if="$page.topic.belongsTo.totalCount == 1">tutorial</span> tagged with <mark class="p-3 py-1 bg-yellow-200">{{ $page.topic.title }}</mark></h1>
+		<h1>{{ $page.topic.belongsTo.totalCount }} <span v-if="$page.topic.belongsTo.totalCount > 1">tutorials</span> <span v-if="$page.topic.belongsTo.totalCount == 1">tutorial</span> tagged with <mark class="p-3 py-1 bg-yellow-200">{{ $page.topic.name }}</mark></h1>
 		<p v-if="$page.topic.description">{{ $page.topic.description }}</p>
 		<template slot="bottom-shelf">
 		<div class="grid mx-6 mt-10 mb-10 grid-gap-4 md:gap-8 grid-cols1 md:grid-cols-2 lg:grid-cols-3 md:mx-10 lg:mx-20">
@@ -25,26 +25,23 @@
 			<NavTuts />
 		</template>
 		<template slot="repo_link">
-			<a href="https://github.com/smokeyfro/smokeyfro/blob/master/src/pages/work/Rates.vue">Source</a>
+			<a href="https://github.com/smokeyfro/smokeyfro/blob/master/src/templates/Topic.vue">Source</a>
 		</template>
 	</Layout>
 </template>
 
 <page-query>
-query Tag ($id: ID!) {
-	ghostTag (id: $id) {
+query ($id: ID!) {
+	topic: ghostTag (id: $id) {
 		name
+		slug
 		belongsTo {
 			totalCount
 			edges {
 				node {
-					...on GhostPage {
+					... on GhostPage {
 						id
 						title
-						primary_tag {
-							name
-							path
-						}
 						path
 						excerpt
 					}

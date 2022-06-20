@@ -22,6 +22,7 @@
 background-image: url(/chris-manson.svg);
 background-repeat: no-repeat;
 background-color: #ffc8002e;
+background-position: bottom left;
 }
 .error-page main {
     padding-top: 2rem;

@@ -1,23 +1,8 @@
 <template>
 	<Video top="true">
 		<h1 class="mt-12">{{ $page.post.title }}</h1>
-		<p class="mb-12" v-html="$page.post.excerpt" />
-		<!-- <Comments /> -->
-		<template slot="top-shelf">
-			<ClientOnly>
-				<videoplayer>
-					<div class="video plyr__video-embed">
-						<iframe
-							:src="videoUrl"
-							allowfullscreen
-							allowtransparency
-							allow="autoplay"
-							sandbox="allow-scripts allow-same-origin"
-						></iframe>
-					</div>
-				</videoplayer>
-			</ClientOnly>
-		</template>
+		<p class="mb-5" v-html="$page.post.excerpt" />
+		<div class="mb-12" v-html="$page.post.content" />
 		<template slot="navgroup">
 			Work
 		</template>
@@ -33,16 +18,11 @@
 <script>
 import NavAbout from "@/components/NavAbout";
 import Video from "~/layouts/Video.vue";
-//import '../../node_modules/plyr/dist/plyr.css'
-
-// import Comments from "@/components/Comments";
 
 export default {
 	components: {
         NavAbout,
-		Video,
-		// Comments,
-		videoplayer: () => import("vue-plyr/dist/vue-plyr.ssr.js")
+		Video
 	},
 	metaInfo() {
 		return {
@@ -55,10 +35,6 @@ export default {
 	computed: {
 		config() {
 			return config;
-		},
-		videoUrl() {
-			let videoId = this.$page.post.video_id;
-			return `https://www.youtube.com/embed/${videoId}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1`
 		}
 	}
 };
@@ -73,8 +49,6 @@ query Post ($path: String) {
 		excerpt
         duration
         content
-        video_url
-		video_id
 	}
 }
 </page-query>

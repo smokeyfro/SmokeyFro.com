@@ -1,2 +1,3 @@
 /themes/*
-  X-Frame-Options: ALLOW-FROM https://wp.smokeyfro.com/
+  X-Frame-Options: ALLOW-FROM https://wp.smokeyfro.com
+  Access-Control-Allow-Origin: ALLOW-FROM https://play.google.com

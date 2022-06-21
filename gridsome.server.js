@@ -250,8 +250,10 @@ module.exports = function (api) {
       ['isbn:9780345317582', { isbn: "9780345317582", short_title: "", status: 1, review: "I first read this series when I was in highschool and have been a fan of Terry Brooks' writing ever since.", category: "fantasy", tags: ["landover", "fantasy", "series"] }],
       // Princess of Landover
       // ['isbn:', { isbn: "", short_title: "", status: 1, review: "I first read this series when I was in highschool and have been a fan of Terry Brooks' writing ever since.", category: "fantasy", tags: ["landover", "fantasy", "series"] }],
-
-      
+      ['isbn:9780553564945', { isbn: "9780553564945", short_title: "The Magician: Apprentice", status: 1, review: "", category: "fantasy", tags: ["magician", "fantasy", "series"] }],
+      ['isbn:9780553564938', { isbn: "9780553564938", short_title: "The Magician: Master", status: 1, review: "", category: "fantasy", tags: ["magician", "fantasy", "series"] }],
+      ['isbn:9780586064177', { isbn: "9780586064177", short_title: "Silverthorn", status: 1, review: "", category: "fantasy", tags: ["magician", "fantasy", "series"] }],
+      ['isbn:9780586066881', { isbn: "9780586066881", short_title: "A Darkness At Sethanon", status: 1, review: "", category: "fantasy", tags: ["magician", "fantasy", "series"] }],
       // Illustrated cookbook of ingredients
       ['isbn:9780756667306', { isbn: "9780756667306", short_title: "", status: 1, review: "", category: "cooking", tags: ["recipes", "ingredients", "illustrated"] }],
       // 
@@ -259,15 +261,15 @@ module.exports = function (api) {
       // gordon ramseys ultimate cookery course
       ['isbn:9781444756692', { isbn: "9781444756692", short_title: "", status: 1, review: "", category: "cooking", tags: ["recipes", "basics", "course"] }],
       // slow bread real bread  
-      ['isbn:9781848997370', { isbn: "9781848997370", short_title: "", status: 1, review: "", category: "cooking", tags: ["recipes", "baking", "bread"] }],
+      ['isbn:9781848997370', { isbn: "9781848997370", short_title: "Slow Dough: Real Bread", status: 1, review: "", category: "cooking", tags: ["recipes", "baking", "bread"] }],
       // Salt, fat, acid, heat
       ['isbn:9781476753836', { isbn: "9781476753836", short_title: "Salt, Fat, Acid, Heat", status: 2, review: "", category: "cooking", tags: ["recipes", "cooking", "food-science"] }],
 
       
       // Soup bible
-      // ['isbn:9780760790458', { isbn: "9780760790458", short_title: "", status: 1, review: "", category: "cooking", tags: ["recipes", "soup", "reference"] }],
+      ['isbn:9780760790458', { isbn: "9780760790458", short_title: "", status: 1, review: "", category: "cooking", tags: ["recipes", "soup", "reference"] }],
       // The kitchen garden cookbook
-      // ['isbn:9780756671884', { isbn: "9780756671884", short_title: "", status: 1, review: "", category: "cooking", tags: ["recipes", "garden", "reference"] }],
+      ['isbn:9780756671884', { isbn: "9780756671884", short_title: "", status: 1, review: "", category: "cooking", tags: ["recipes", "garden", "reference"] }],
 
       // Kitchen herb garden
       ['isbn:9780804852302', { isbn: "9780804852302", short_title: "", status: 0, review: "", category: "gardening", tags: ["kitchen", "herbs", "garden"] }],

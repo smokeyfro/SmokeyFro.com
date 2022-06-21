@@ -34,7 +34,7 @@ gallery:
   full: "/media/projects/mzango-attractions.jpg"
   alt: "Mzango - Attractions"
   title: "Mzango Attractions Page"
-url: https://mzango.com
+url: https://mzango.vercel.app/
 status: Online
 services: ['UI Design','Front-end Development','Wireframing','Workflow Optimisation']
 tools: ['Affinity Designer','VSCode']

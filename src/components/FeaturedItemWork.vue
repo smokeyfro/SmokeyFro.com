@@ -1,6 +1,6 @@
 <template>
 	<article class="h-auto bg-gray-100 rounded-md md:rounded-none md:bg-transparent md:flex md:items-center md:justify-start md:item">
-		<g-link :to="`${post.path}`" v-if="post.image" class="block overflow-hidden border featured-image rounded-t-md md:mr-10 md:w-1/2">
+		<g-link :to="`${post.path}`" v-if="post.image" class="block overflow-hidden border featured-image rounded-t-md md:mr-10 md:w-2/3">
 			<g-image :src="post.image.src" :alt="post.image.alt" class="w-full" />
 		</g-link>
 		<div class="p-6 pt-4 md:w-1/3 summary md:p-0">

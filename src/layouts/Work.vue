@@ -11,17 +11,15 @@
 				<slot name="secondary-nav" />
 			</aside>
 			<main class="relative z-30 w-full h-screen overflow-hidden overflow-y-scroll">
-				<vuescroll>
 					<div v-if="top">
 						<slot name="top-shelf" />
 					</div>
-					<div class="px-5 pt-4 md:px-10 lg:px-20 lg:pt-12 md:pt-6">
+					<div class="px-5 pt-4 lg:pt-12 md:pt-6">
 						<slot />
 					</div>
-					<div v-if="bottom">
+					<div class="bottom-shelf" v-if="bottom">
 						<slot name="bottom-shelf" />
 					</div>					
-				</vuescroll>
 			</main>
 		</div>
 	</div>
@@ -33,7 +31,6 @@ import NavMobile from "~/components/NavMobile.vue"
 import NavTertiary from "~/components/NavTertiary.vue"
 import Logo from "~/components/Logo.vue"
 import { mixin as clickaway } from 'vue-clickaway'
-import vuescroll from 'vuescroll/dist/vuescroll-native';
 
 export default {
     mixins: [ clickaway ],
@@ -47,8 +44,7 @@ export default {
 		NavMobile,
 		NavTertiary,
 		NavMobile,
-		Logo,
-		vuescroll
+		Logo
 	},
 	data() {
 		return {

@@ -8,11 +8,7 @@
                 <ul class="text-lg">
                     <li><strong>Dell XPS 15" </strong>My primary work station</li>
                     <li><strong>Apple Macbook Pro 15" <sup>'12</sup></strong> My old mac, now mostly used for testing</li>
-                    <li><strong>Apple Macbook Pro 15" <sup>'18</sup> </strong> My new mac that crapped the bed</li>
-                    <li><strong>Huawei P20 Pro </strong>Primary phone / camera</li>
-                    <li><strong>Huawei Mate Tablet </strong>Testing / reading</li>
-                    <li><strong>Apple iPad (2nd Gen) - </strong>Testing</li>
-                    <li><strong>Apple iPhone SE </strong>Testing</li>
+                    <li><strong>Old Nokia </strong>Basic comms</li>
                 </ul>
             </div>
             <div>

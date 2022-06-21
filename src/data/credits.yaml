@@ -1,5 +1,5 @@
 credits:
-  - title: Code
+  - title: Stack
     links:
     - title: Gridsome
       desc: JAMstack static site generator based on Vue.js.
@@ -13,6 +13,9 @@ credits:
     - title: Markdown
       desc: Markdown is a lightweight markup language with plain-text-formatting syntax.
       url: https://en.wikipedia.org/wiki/Markdown
+    - title: Vercel
+      desc: Specialised jamstack hosting, which I use to host this site.
+      url: https://vercel.com
   - title: Graphics
     links:
     - title: Hero Patterns
@@ -47,18 +50,7 @@ credits:
     - title: Plugin- Tailwind CSS
       desc: A utility-first CSS framework for rapidly building custom user interfaces.
       url: https://gridsome.org/plugins/gridsome-plugin-tailwindcss
-  - title: Hosting
-    links:
-    - title: Zeit Now
-      desc: Specialised JAMstack hosting, which I use to host this site.
-      url: https://zeit.co
-    - title: Digital Ocean
-      desc: Affordable hosting for developers, which I use to host my php-based apps.
-      url: https://digitalocean.com
-    - title: RunCloud
-      desc: A service which makes managing your DigitalOcean droplets a breeze.
-      url: https://runcloud.io
-  - title: Node
+  - title: Tools
     links:
     - title: SVGOMG
       desc: Node.js tool for optimizing SVG files.
@@ -66,9 +58,6 @@ credits:
     - title: TinyPNG
       desc: Smart PNG and JPEG compression.
       url: http://tinypng.org/
-    - title: Sendy
-      desc: Self-hosted newsletter email marketing tool.
-      url: https://sendy.co/
     - title: Github
       desc: Version controlled code hosting for developers.
       url: https://github.com/smokeyfro/SmokeyFro.com
@@ -92,6 +81,3 @@ credits:
     - title: Vue Clickaway
       desc: Reusable clickaway directive for reusable Vue.js components.
       url: https://www.npmjs.com/package/vue-clickaway
-    - title: Vue Drawer Layout
-      desc: A simple DrawerLayout component for Vue.
-      url: https://www.npmjs.com/package/vue-drawer-layout

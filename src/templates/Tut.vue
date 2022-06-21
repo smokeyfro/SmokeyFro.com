@@ -5,7 +5,7 @@
 		</template>
 		<article>
 			<h1 class="mb-6" v-if="$page.post.title">{{ $page.post.title }}</h1>
-			<p v-if="$page.post.description">{{ $page.post.description }}</p>
+			<p v-if="$page.post.excerpt">{{ $page.post.excerpt }}</p>
 			<div class="mb-10 markdown" v-html="$page.post.content" />
 			<nav v-if="$page.post.tags">
 				<g-link class="mb-4 mr-4" :to="tag.path" v-for="tag in $page.post.tags" v-bind:key="tag.id">#{{ tag.name }}</g-link>
@@ -124,8 +124,8 @@ export default {
 </script>
 
 <page-query>
-query Post ($path: String) {
-	post: ghostPage (path: $path) {
+query Post ($id: ID!) {
+	post: ghostPage (id: $id) {
 		title
 		slug
 		path
@@ -133,6 +133,10 @@ query Post ($path: String) {
 		cover (width: 1280, height: 500, quality: 90)
 		content: html
 		excerpt
+		tags {
+			name
+			path
+		}
 		primary_tag {
 			name
 			path
@@ -141,6 +145,10 @@ query Post ($path: String) {
 	}
 }
 </page-query>
-
+<style>
+blockquote {
+    @apply bg-gray-100 p-10 text-2xl italic my-8 font-serif;
+}
+</style>
 <style src="../css/templates/tutorial.css"></style>
 <style src="../css/prism.css"></style>

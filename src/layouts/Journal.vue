@@ -6,9 +6,6 @@
 			<NavMobile />
 			<NavTertiary />
 		</header>
-        <aside class="relative z-40 flex items-center dark:bg-gray-900 sm:justify-center">
-			<NavJournal />
-		</aside>
 		<main class="relative z-30 w-full overflow-x-hidden overflow-y-auto md:h-screen">
             <div class="max-w-2xl mx-6 md:mx-10 lg:mx-20">
                 <div class="mt-10">
@@ -54,3 +51,9 @@ query {
   }
 }
 </static-query>
+
+<style>
+.journal main {
+    width: 900px;
+}
+</style>

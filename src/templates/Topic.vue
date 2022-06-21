@@ -13,7 +13,7 @@
 				<h2 class="mt-3 text-2xl" v-if="edge.node.title">
 					{{ edge.node.title }}
 				</h2>
-				<p class="mb-2 text-base">{{ edge.node.description }}</p>
+				<p class="mb-2 text-base">{{ edge.node.excerpt }}</p>
 				<p><g-link :to="`${edge.node.path}`" class="text-sm">Continue reading</g-link></p>
 			</article>
 		</div>
@@ -31,10 +31,11 @@
 </template>
 
 <page-query>
-query ($id: ID!) {
-	topic: ghostTag (id: $id) {
+query ($path: String) {
+	topic: ghostTag (path: $path) {
 		name
 		slug
+		id
 		belongsTo {
 			totalCount
 			edges {

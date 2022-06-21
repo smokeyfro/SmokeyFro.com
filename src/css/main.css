@@ -26,13 +26,16 @@ main {
     }
     & ul:not(.reset) li,
     & ol:not(.reset) li {
-        @apply mb-3;
+        @apply mb-2 text-lg;
         list-style: circle;
     }
     & pre {
         background-color: #fdf6e3;
         padding: 1rem 1.25rem;
         white-space: pre-wrap;
+    }
+    & blockquote {
+        @apply bg-gray-100 p-5 mb-5 rounded-md text-lg border-l-2 border-gray-300;
     }
     & div.code-toolbar > .toolbar button {
         background: #111!important;

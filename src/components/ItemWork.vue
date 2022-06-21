@@ -1,8 +1,8 @@
 <template>
 	<article class="item">
 		<a :href="`${post.path}`" class="image">
-			<div class="card-image" v-if="post.thumb">
-				<Browser :image="post.thumb" />
+			<div class="card-image" v-if="post.image">
+				<Browser :image="post.image" />
 			</div>
 		</a>
 		<div class="summary">

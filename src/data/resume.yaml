@@ -28,6 +28,11 @@ contact:
     stackoverflow: smokeyfro
 
 projects:
+  - name: EdenHub
+    status: Ongoing
+    url: https://edenhub.org
+    image: na
+    summary: Non-profit I co-founded which is focussed on food security and community development.
   - name: JammeryHQ
     status: WIP
     url: https://jammeryhq.com
@@ -40,11 +45,17 @@ projects:
     summary: The gardening app I always wanted.
   - name: Mzango
     status: WIP
-    url: https://mzango.com
+    url: https://mzango.vercel.app
     image: na
     summary: Backpackers guide to South Africa where the traveller is not the product.
 
 experience:
+- id: 7
+  company: EdenHub
+  role: Technical Director / Co-founder
+  location: Garden Route
+  date: Jun 2021 - Present
+  summary: Working as the technical lead, I've been responsible for setting up our digital infrustructure, design and development of our site and the multi-vendor marketplace
 - id: 7
   company: SmokeyFro
   role: Freelancer

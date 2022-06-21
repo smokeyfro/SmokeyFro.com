@@ -40,7 +40,7 @@ export default {
 	},
 	data() {
 		return {
-			tagUrlPrefix: "/tutorials/"
+			tagUrlPrefix: "/tutorials/topic/"
 		};
 	},
 	computed: {

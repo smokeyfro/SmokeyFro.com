@@ -1,12 +1,12 @@
 <template>
 	<Work :sidebar="true" :top="false" :bottom="true">
-		<article class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-6 md:mb-10"> 
+		<article class="px-10 mb-6 md:mb-10"> 
 			<div class="content">
 				<h1 class="mb-5">{{ $page.post.title }}</h1>
 				<p class="mb-5">{{ $page.post.excerpt }}</p>
 				<p class="mb-10 mt-10"><a v-if="$page.post.status === 'Online'" :href="$page.post.url" target="_blank" class="btn btn-large btn-primary">View the site <img src="/external.svg" class="inline-block w-3 h-3" /></a></p>
 				
-				<div class="w-full border-t border-b border-gray-300 pt-6 my-5">
+				<div class="w-full pt-6 my-5">
 					<ul class="grid grid-cols-2 p-0 m-0 mb-6 reset">
 						<li v-if="$page.post.company" class="p-0 m-0 mb-3 truncate"><strong class="block">Company</strong>{{ $page.post.company }}</li>
 						<li v-if="$page.post.contact" class="p-0 m-0 mb-3"><strong class="block">Contact</strong>{{ $page.post.contact }}</li>
@@ -20,28 +20,28 @@
 
 				<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
 					<div v-if="$page.post.services">
-						<h2 class="uppercase text-base font-bold my-3">Skills Used</h2>
+						<h2 class="text-base font-bold my-3">Skills Used</h2>
 						<ul class="text-lg">
 							<li v-for="service in $page.post.services" :key="service">{{ service }}</li>
 						</ul>
 					</div>
 					<div v-if="$page.post.stack">
-						<h2 class="uppercase text-base font-bold my-3">Stack</h2>
+						<h2 class="text-base font-bold my-3">Stack</h2>
 						<ul class="flex flex-wrap items-center justify-start list-reset tags">
 							<li v-for="stack in $page.post.stack" :key="stack">{{ stack }}</li>
 						</ul>
 					</div>
 				</div>
-				<div class="markdown  border-t border-gray-300 pt-6 my-5" v-if="$page.post.content != false">
-					<h2 class="uppercase text-base font-bold my-3">About</h2>
+				<div class="markdown pt-6 my-5" v-if="$page.post.content != false">
+					<h2 class="text-base font-bold my-3">About</h2>
 					<div class="text-xl" v-html="$page.post.content" />
 				</div>
 			</div>
 			<div class="gallery">
-				<div v-if="$page.post.gallery != ''" class="mx-6 mb-24 md:mx-10 lg:mx-20">
-					<div class="grid w-full grid-cols-1 gap-6 mt-6 mb-6 album-grid md:mb-20 md:mt-10 md:grid-cols-2" :class="$page.post.albumClass">
-						<a v-for="(photo, $index) in $page.post.gallery" :key="$index" :href="photo.full.src" :title="photo.title" data-fslightbox="gallery" class="bg-white transform rotate-6 shadow-sm block overflow-hidden transition-all duration-300 ease-in-out border border-gray-300 p-2 border-solid ring-4 ring-gray-200 ring-opacity-100 rounded-xl opacity-100 md:h-40 lg:h-64 hover:opacity-75 hover:border-accent hover:shadow-xl image">
-							<g-image :src="photo.thumb.src"  :alt="photo.alt" width="250" height="100" class="object-cover w-full h-full rounded-md" />
+				<div v-if="$page.post.gallery != ''" class="">
+					<div class="grid w-full grid-cols-1 gap-6 mt-6 mb-6 album-grid md:mb-20 md:mt-10 md:grid-cols-3" :class="$page.post.albumClass">
+						<a v-for="(photo, $index) in $page.post.gallery" :key="$index" :href="photo.full.src" :title="photo.title" data-fslightbox="gallery" class="bg-white shadow-sm block overflow-hidden transition-all duration-300 ease-in-out border border-gray-300 p-2 border-solid ring-4 ring-gray-200 ring-opacity-100 rounded-xl opacity-100 md:h-40 lg:h-64 hover:opacity-75 hover:border-accent hover:shadow-xl image">
+							<g-image :src="photo.thumb.src"  :alt="photo.alt" width="250" height="100" fit="cover" class="object-cover w-full h-full rounded-md" />
 						</a>
 					</div>
 				</div>

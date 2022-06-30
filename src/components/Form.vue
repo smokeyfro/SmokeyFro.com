@@ -1,7 +1,5 @@
 <template>
-<form action="https://send.pageclip.co/m05qhlX2YJB9fXWwhr1EuTsdrFh6dNMH/Contact" class="pageclip-form contact-form border-none mt-0 pt-0 px-6 lg:px-0 lg:max-w-4xl mx-auto" method="post">
-
-<!--<form @submit.prevent="submit" method="post" accept-charset="utf-8" class="contact-form border-none mt-0 pt-0 px-6 lg:px-0 lg:max-w-4xl mx-auto">-->
+<form action="https://formsubmit.co/chris@smokeyfro.com" method="POST" class="contact-form border-none mt-0 pt-0 px-6 lg:px-0 lg:max-w-4xl mx-auto">
     <div class="relative mt-0">
         <div class="flex flex-col md:flex-row">
             <div class="md:w-1/2 md:mr-5">
@@ -13,26 +11,22 @@
             <div class="md:w-1/2">
                 <label class="block mt-4">
                     <span class="text-gray-700 block mb-2">Email address</span>
-                    <input name="email" id="email" v-model="input.email" class="w-full p-4 rounded-md" placeholder="Eg: dany@allthekingdoms.gov">
+                    <input name="email" type="email" id="email" v-model="input.email" class="w-full p-4 rounded-md" placeholder="Eg: dany@allthekingdoms.gov">
                 </label>
             </div>
         </div>
-
-      <div class="my-4">
-        <div class="mt-2">
-            <label class="inline-flex items-center">
-                <input v-model="input.radioValue" type="radio" class="text-black outline-red form-radio" name="message_type" id="is-message" value="message">
-                <span class="ml-2">Say Hello</span>
-            </label>
-            <label class="inline-flex items-center ml-6">
-                <input v-model="input.radioValue" type="radio" class="text-black outline-red form-radio" name="message_type" id="is-quote" value="quote">
-                <span class="ml-2">Get a Quote</span>
-            </label>
-        </div>
-    </div>
-
-
-
+        <div class="my-4">
+          <div class="mt-2">
+              <label class="inline-flex items-center">
+                  <input v-model="input.radioValue" type="radio" class="text-black outline-red form-radio" name="message_type" id="is-message" value="message">
+                  <span class="ml-2">Say Hello</span>
+              </label>
+              <label class="inline-flex items-center ml-6">
+                  <input v-model="input.radioValue" type="radio" class="text-black outline-red form-radio" name="message_type" id="is-quote" value="quote">
+                  <span class="ml-2">Get a Quote</span>
+              </label>
+          </div>
+      </div>
       <div class="flex flex-col md:flex-row">
         <div class="md:w-1/2 md:mr-5">
             <label class="block mt-4" v-if="input.radioValue === 'quote'">
@@ -58,6 +52,7 @@
             :handler="input.handler" 
             placeholder="Hi Chris, I need help with..." 
             min-row="5"
+            name="product-details"
             v-focus />
             </ClientOnly>
         </div>
@@ -68,6 +63,7 @@
             :handler="input.handler" 
             placeholder="Hey Chris! Love the fro dude! xoxo Dany"
             min-row="3"
+            name="message"
             v-focus />
             </ClientOnly>
         </div>
@@ -80,8 +76,12 @@
         </div>
       </div>
     </div>
-    
-    <div class="text-center">
+    <input type="hidden" name="_next" value="http://localhost:8080/hifive">
+    <input type="hidden" name="_subject" value="New message the the SF site">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="_honey" style="display:none">
+  <div class="text-center">
+
         <button type="submit" class="pageclip-form__submit button block w-full h-24" aria-label="Send your message">
           <span v-if="loading == false">
             <span v-if="input.radioValue === 'quote'">Let's do this!</span>
@@ -102,7 +102,7 @@
 
 <script>
 import Vue from 'vue';
-const safeJsonStringify = require('safe-json-stringify');
+//const safeJsonStringify = require('safe-json-stringify');
 
 export default {
   name: "ContactForm",
@@ -126,23 +126,28 @@ export default {
       loading: false
     };
   },
-  metaInfo: {
-    script: [
-      { src: 'pageclip.js' }
-    ],
-  },
-  methods: {
-    async submit() {
-      this.loading = true
-      const data = safeJsonStringify ( this.input )
-      window.Pageclip.send('m05qhlX2YJB9fXWwhr1EuTsdrFh6dNMH', 'Contact', data, function (error, response) {
-        if (error) {
-          return 'There was an problem sending your message. Please email chris@smokeyfro.com directly.'
-        }
-        location.replace('/thanks')
-      })
-    },
-  }
+  // metaInfo: {
+  //   script: [
+  //     { src: 'https://s.pageclip.co/v1/pageclip.js' }
+  //   ],
+  // },
+  // methods: {
+  //   async submit() {
+  //     this.loading = true
+  //     const data = safeJsonStringify ( this.input )
+  //     window.Pageclip.send('m05qhlX2YJB9fXWwhr1EuTsdrFh6dNMH', 'Contact', data, function (error, response) {
+  //       if (error) {
+  //         return 'There was an problem sending your message. Please email chris@smokeyfro.com directly.'
+  //       }
+  //       location.replace('/thanks')
+  //     })
+  //   },
+  // },
+  // mounted() {
+  //     let pageclipScript = document.createElement("script")
+  //     pageclipScript.setAttribute('src', 'https://s.pageclip.co/v1/pageclip.js')
+  //     document.body.appendChild(pageclipScript)
+  // },
 }
 </script>
 

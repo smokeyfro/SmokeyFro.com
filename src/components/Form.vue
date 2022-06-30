@@ -102,6 +102,7 @@
 
 <script>
 import Vue from 'vue';
+const safeJsonStringify = require('safe-json-stringify');
 
 export default {
   name: "ContactForm",
@@ -127,13 +128,13 @@ export default {
   },
   metaInfo: {
     script: [
-      { src: 'https://s.pageclip.co/v1/pageclip.j' }
+      { src: 'pageclip.js' }
     ],
   },
   methods: {
     async submit() {
       this.loading = true
-      const data = this.input
+      const data = safeJsonStringify ( this.input )
       window.Pageclip.send('m05qhlX2YJB9fXWwhr1EuTsdrFh6dNMH', 'Contact', data, function (error, response) {
         if (error) {
           return 'There was an problem sending your message. Please email chris@smokeyfro.com directly.'

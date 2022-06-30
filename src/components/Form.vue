@@ -1,5 +1,7 @@
 <template>
-<form @submit.prevent="submit" method="POST" accept-charset="UTF-8" class="contact-form border-none mt-0 pt-0 px-6 lg:px-0 lg:max-w-4xl mx-auto">
+<!--<form action="https://send.pageclip.co/m05qhlX2YJB9fXWwhr1EuTsdrFh6dNMH/Contact" class="pageclip-form contact-form border-none mt-0 pt-0 px-6 lg:px-0 lg:max-w-4xl mx-auto" method="post">-->
+
+<form @submit.prevent="submit" method="post" accept-charset="utf-8" class="contact-form border-none mt-0 pt-0 px-6 lg:px-0 lg:max-w-4xl mx-auto">
     <div class="relative mt-0">
         <div class="flex flex-col md:flex-row">
             <div class="md:w-1/2 md:mr-5">
@@ -99,7 +101,7 @@
 
 
 <script>
-    import Vue from 'vue';
+import Vue from 'vue';
 
 export default {
   name: "ContactForm",
@@ -125,7 +127,7 @@ export default {
   },
   metaInfo: {
     script: [
-      { src: '/pageclip.js', async: true, defer: true, body: true }
+      { src: 'https://s.pageclip.co/v1/pageclip.j' }
     ],
   },
   methods: {
@@ -134,7 +136,7 @@ export default {
       const data = this.input
       window.Pageclip.send('m05qhlX2YJB9fXWwhr1EuTsdrFh6dNMH', 'Contact', data, function (error, response) {
         if (error) {
-          return
+          return 'There was an problem sending your message. Please email chris@smokeyfro.com directly.'
         }
         location.replace('/thanks')
       })
@@ -160,6 +162,11 @@ export default {
   & .button {
       @apply bg-gray-900 text-white mt-6 rounded-md;
   }
+}.pageclip-form__success__message {
+    background: #66ad66;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    color: #fff;
 }
-
 </style>

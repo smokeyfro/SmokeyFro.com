@@ -52,7 +52,7 @@
             :handler="input.handler" 
             placeholder="Hi Chris, I need help with..." 
             min-row="5"
-            name="product-details"
+            name="project-details"
             v-focus />
             </ClientOnly>
         </div>
@@ -76,7 +76,7 @@
         </div>
       </div>
     </div>
-    <input type="hidden" name="_next" value="http://localhost:8080/hifive">
+    <input type="hidden" name="_next" value="https://smokeyfro.com/hifive">
     <input type="hidden" name="_subject" value="New message the the SF site">
     <input type="hidden" name="_captcha" value="false">
     <input type="text" name="_honey" style="display:none">
@@ -101,7 +101,7 @@
 
 
 <script>
-import Vue from 'vue';
+//import Vue from 'vue';
 //const safeJsonStringify = require('safe-json-stringify');
 
 export default {
@@ -112,7 +112,7 @@ export default {
   data() {
     return {
       input: {
-        handler: new Vue(),
+        //handler: new Vue(),
         status: null,
         name: null,
         email: null,

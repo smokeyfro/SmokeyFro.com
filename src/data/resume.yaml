@@ -35,14 +35,24 @@ projects:
     summary: Non-profit I co-founded which is focussed on food security and community development.
   - name: JammeryHQ
     status: WIP
-    url: https://jammeryhq.com
+    url: https://edenhub.org
     image: na
-    summary: In collaboration with two other founders, we're building tools for the modern web.
+    summary: Online marketplace, support network for local producers, CSA program & other local community projects.
   - name: SavvyGarden
     status: Live
     url: https://savvygarden.app
     image: na
     summary: The gardening app I always wanted.
+  - name: Forest Glade Farm
+    status: Ongoing
+    url: 
+    image: na
+    summary: Small scale permaculure inspired farm in the Garden Route of South Africa.
+  - name: JammeryHQ
+    status: WIP
+    url: https://jammeryhq.com
+    image: na
+    summary: In collaboration with two other founders, we're building tools for the modern web.
   - name: Mzango
     status: WIP
     url: https://mzango.vercel.app

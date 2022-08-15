@@ -10,8 +10,7 @@ import ItemTheme from "@/components/ItemTheme"
 
 export default {
 	components: {
-        ItemTheme,
-        
+        ItemTheme       
     }
 }
 </script>

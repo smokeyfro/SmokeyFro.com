@@ -53,7 +53,7 @@ export default {
 	metaInfo: {
 		title: "Journal topics by SmokeyFro",
 		bodyAttrs: {
-			class: "journal topics"
+			class: "tutorials topics"
 		}
 	}
 };

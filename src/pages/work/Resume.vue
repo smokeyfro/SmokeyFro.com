@@ -24,7 +24,7 @@
 							</svg>
 							Print
 						</a>&nbsp;&nbsp;&nbsp;
-						<a href="/Chris-Rault-Resume-2020.pdf" download>
+						<a href="/Chris-Rault-Resume-2022-Edition.pdf" download>
 							<svg class="inline-block w-6" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
 							<defs />
 							<path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />

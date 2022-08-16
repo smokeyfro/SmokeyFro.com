@@ -272,7 +272,7 @@ module.exports = {
         typeName: 'Ghost',
         baseUrl: process.env.SF_GHOST_URL,
         contentKey: process.env.SF_GHOST_KEY,
-        version: 'v4',
+        version: 'v5.0',
         routes: {
           post: '/journal/:slug',
           tag: '/tutorials/topic/:slug',

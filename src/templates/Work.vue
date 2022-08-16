@@ -4,7 +4,7 @@
 			<div class="content">
 				<h1 class="mb-5">{{ $page.post.title }}</h1>
 				<p class="mb-5">{{ $page.post.excerpt }}</p>
-				<p class="mb-10 mt-10"><a v-if="$page.post.status === 'Online'" :href="$page.post.url" target="_blank" class="btn btn-large btn-primary">View the site <img src="/external.svg" class="inline-block w-3 h-3" /></a></p>
+				<p class="mb-10 mt-10"><a v-if="$page.post.status === 'Online'" :href="$page.post.url" target="_blank" class="btn btn-large btn-primary">View the site <img src="/external.svg" alt="External link" class="inline-block w-3 h-3" /></a></p>
 				
 				<div class="w-full pt-6 my-5">
 					<ul class="grid grid-cols-2 p-0 m-0 mb-6 reset">
@@ -38,7 +38,7 @@
 				</div>
 			</div>
 			<div class="gallery">
-				<div v-if="$page.post.gallery != ''" class="">
+				<div v-if="$page.post.gallery" class="">
 					<div class="grid w-full grid-cols-1 gap-6 mt-6 mb-6 album-grid md:mb-20 md:mt-10 md:grid-cols-3" :class="$page.post.albumClass">
 						<a v-for="(photo, $index) in $page.post.gallery" :key="$index" :href="photo.full.src" :title="photo.title" data-fslightbox="gallery" class="bg-white shadow-sm block overflow-hidden transition-all duration-300 ease-in-out border border-gray-300 p-2 border-solid ring-4 ring-gray-200 ring-opacity-100 rounded-xl opacity-100 md:h-40 lg:h-64 hover:opacity-75 hover:border-accent hover:shadow-xl image">
 							<g-image :src="photo.thumb.src"  :alt="photo.alt" width="250" height="100" fit="cover" class="object-cover w-full h-full rounded-md" />

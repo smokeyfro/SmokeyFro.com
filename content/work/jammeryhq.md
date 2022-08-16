@@ -2,20 +2,48 @@
 title: JammeryHQ
 slug: jammeryhq
 excerpt: Marketing site for my latest side-project, where myself and two other technical founders are building a suite of tools aimed at the Jamstack.
-featured: true
-thumb: "/media/work/jammery-layouts.jpg"
-image: "/media/work/jammery-layouts.jpg"
+featured: false
+thumb: "/media/work/jammeryhq-home.webp"
+image: "/media/work/jammeryhq-home.webp"
 gallery:
-- thumb: "/media/projects/jammery-components.jpg"
-  full: "/media/projects/jammery-components.jpg"
-  alt: "Jammery UI - Home"
-  title: "Jammery UI Home Page"
-url: https://jam-layouts.vercel.app
+- thumb: "/media/work/jammeryhq-home.webp"
+  full: "/media/work/jammeryhq-home.webp"
+  alt: "JammeryHQ - Home"
+  title: "JammeryHQ Home Page"
+- thumb: "/media/work/jammeryhq-starters.webp"
+  full: "/media/work/jammeryhq-starters.webp"
+  alt: "JammeryHQ - Starters"
+  title: "JammeryHQ Starters"
+- thumb: "/media/work/jammeryhq-starter.webp"
+  full: "/media/work/jammeryhq-starter.webp"
+  alt: "JammeryHQ - Starter"
+  title: "JammeryHQ Starter"
+- thumb: "/media/work/jammeryhq-starter-preview.webp"
+  full: "/media/work/jammeryhq-starter-preview.webp"
+  alt: "JammeryHQ - Starter Preview"
+  title: "JammeryHQ Starter Preview"
+- thumb: "/media/work/jammeryhq-starter-install.webp"
+  full: "/media/work/jammeryhq-starter-install.webp"
+  alt: "JammeryHQ - Starter Install Instructions"
+  title: "JammeryHQ Starter Install Instructions"
+- thumb: "/media/work/jammeryhq-plugins.webp"
+  full: "/media/work/jammeryhq-plugins.webp"
+  alt: "JammeryHQ - Starter Plugins"
+  title: "JammeryHQ Starter Plugins"
+- thumb: "/media/work/jammeryhq-blog.webp"
+  full: "/media/work/jammeryhq-blog.webp"
+  alt: "JammeryHQ - Starter Blog"
+  title: "JammeryHQ Starter Blog"
+- thumb: "/media/work/jammeryhq-post.webp"
+  full: "/media/work/jammeryhq-post.webp"
+  alt: "JammeryHQ - Starter Post"
+  title: "JammeryHQ Starter Post"
+url: https://jammeryhq.vercel.app/
 status: WIP
 services: ['UI Design','Front-end Development','Wireframing','Workflow Optimisation']
 tools: ['Figma','VSCode']
 stack: ['Gridsome','Vue.js','Tailwind CSS']
-testimonial: Testimonial
+testimonial: ''
 launch_date: 2021-04-01
 searchTerms: projects, gridsome, jamstack, vue, tailwind
 ---

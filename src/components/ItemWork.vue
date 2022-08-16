@@ -5,7 +5,7 @@
 				<Browser :image="post.image" />
 			</div>
 			<div class="card-image" v-else>
-				<Browser image="/default.jpg" :alt="post.title" />
+				<Browser image="/spacer.gif" :alt="post.title" />
 			</div>
 		</a>
 		<div class="summary">

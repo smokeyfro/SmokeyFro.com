@@ -3,11 +3,11 @@ title: EdenHub
 slug: edenhub
 excerpt: Marketing website for a non-profit that I co-founded focussed on ensuring the Eden Communities food security.
 featured: true
-thumb: "/media/work/edenhub-thumb.jpg"
-image: "/media/work/featured-edenhub.jpg"
+thumb: "/media/work/edenhub-org-home.png"
+image: "/media/work/edenhub-org-home.png"
 gallery:
-- thumb: "/media/projects/edenhub-home-thumb.jpg"
-  full: "/media/projects/edenhub-home.jpg"
+- thumb: "/media/work/edenhub-org-home.png"
+  full: "/media/work/edenhub-org-home.png"
   alt: "EdenHub - Home"
   title: "EdenHub Home Page"
 url: https://edenhub.co.za

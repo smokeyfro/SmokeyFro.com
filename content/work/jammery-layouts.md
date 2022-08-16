@@ -6,8 +6,8 @@ featured: true
 thumb: "/media/work/jammery-layouts.jpg"
 image: "/media/work/jammery-layouts.jpg"
 gallery:
-- thumb: "/media/projects/jammery-components.jpg"
-  full: "/media/projects/jammery-components.jpg"
+- thumb: "/media/work/jammery-component.jpg"
+  full: "/media/work/jammery-component.jpg"
   alt: "Jammery UI - Home"
   title: "Jammery UI Home Page"
 url: https://jam-layouts.vercel.app

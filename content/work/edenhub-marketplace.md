@@ -5,14 +5,14 @@ excerpt: Multi-vendor marketplace connecting local small scale producers with th
 project_type: WordPress
 company: EdenHub
 contact: 
-featured: false
-thumb: ""
-image: ""
+featured: true
+thumb: "/media/work/edenhub-market-home.webp"
+image: "/media/work/edenhub-market-home.webp"
 gallery:
-- thumb: ""
-  full: ""
-  alt: ""
-  title: ""
+- thumb: "/media/work/edenhub-market-home.webp"
+  full: "/media/work/edenhub-market-home.webp"
+  alt: "EdenHub - Home"
+  title: "EdenHub - Home"
 url: https://edenhub.co.za
 status: Online
 services: ['UI Design','Front-end Development','Theme Development','Plugin Development']

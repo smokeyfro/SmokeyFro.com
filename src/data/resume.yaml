@@ -12,10 +12,10 @@ contact:
   - handle: smokeyfro
     email: chris@smokeyfro.com
     website: https://smokeyfro.com
-    phone: '+27767773705'
-    mobile: '+27767773705'
-    whatsapp: '+27767773705'
-    telegram: '+27767773705'
+    phone: '+27734014318'
+    mobile: '+27734014318'
+    whatsapp: '+27664553847'
+    telegram: ''
     skype: chris.rault.tbr
     github: https://github.com/smokeyfro
     twitter: https://twitter.com/smokeyfro
@@ -33,24 +33,14 @@ projects:
     url: https://edenhub.org
     image: na
     summary: Non-profit I co-founded which is focussed on food security and community development.
-  - name: JammeryHQ
-    status: WIP
-    url: https://edenhub.org
-    image: na
-    summary: Online marketplace, support network for local producers, CSA program & other local community projects.
   - name: SavvyGarden
     status: Live
     url: https://savvygarden.app
     image: na
-    summary: The gardening app I always wanted.
-  - name: Forest Glade Farm
-    status: Ongoing
-    url: 
-    image: na
-    summary: Small scale permaculure inspired farm in the Garden Route of South Africa.
+    summary: Permaculture-inspired tools for the SavvyGardener. Building the Gardeniing app I always wanted.
   - name: JammeryHQ
     status: WIP
-    url: https://jammeryhq.com
+    url: https://jammery.vercel.app
     image: na
     summary: In collaboration with two other founders, we're building tools for the modern web.
   - name: Mzango
@@ -104,14 +94,14 @@ experience:
   summary: I was recruited for a rigorous six month bootcamp then three months of Oracle training in Zimbabwe and later advanced web design at UCT. My responsibilities included building technical demos, prototypes and more.
 
 education:
-  - topic: Advanced Web Design
-    date: Jan 2001 - June 2002
-    location: Cape Town
-    organization: University of Cape Town
   - topic: National Senior Certificate
     date: Jan 1995 - Dec 1999
     location: George
     organization: Die Bult Highschool
+  - topic: Advanced Web Design
+    date: Jan 2001 - June 2002
+    location: Cape Town
+    organization: University of Cape Town
   # - topic: 50+ Sef-Paced Courses
   #   date: Jan 1995 - Dec 1999
   #   location: Online
@@ -122,13 +112,6 @@ education:
   #   organization: View the list
 
 references:
-
-  - name: Brandon McDonald
-    title: CEO
-    company: RPC Data
-    relation: Former Employer
-    image: /brandon-mcdonald.jpg
-    summary:
 
   - name: Madeline Puckette
     title: CEO
@@ -149,6 +132,13 @@ references:
     company: Coffee Group
     relation: Organizer CMS Expo
     image: /john-coonen.jpg
+    summary:
+
+  - name: Brandon McDonald
+    title: CEO
+    company: RPC Data
+    relation: Former Employer
+    image: /brandon-mcdonald.jpg
     summary:
 
 skills:

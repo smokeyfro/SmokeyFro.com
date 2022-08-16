@@ -30,6 +30,7 @@
 							<path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
 							</svg> Download PDF
 						</a>
+						<a href="https://linkedin.com/in/chrisrault" class="ml-5" target="_blank" rel="nofollow noopen">LinkedIn</a>
 					</p>
 				</div>	
 			</div>
@@ -60,15 +61,15 @@
 				</div>
 				<div class="mx-6 mt-20 md:mx-10 projects-wrap">
 					<h2>My Side Projects</h2>
-					<div class="grid grid-cols-1 gap-8 mt-5 md:grid-cols-3 projects">
+					<div class="grid grid-cols-1 gap-8 mt-5 md:grid-cols-2 projects">
 						<div v-for="({ name, status, url, summary, image }, i) in resume.projects" :key="i">
 							<div>
 								<h3 class="mb-0 text-2xl">{{ name }}</h3>
 								<span :class="status" class="status">{{ status }}</span>
 							</div>
-							<p class="mb-2 text-base" v-if="summary" v-html="summary" />
+							<p class="mb-2 text-base md:w-1/2" v-if="summary" v-html="summary" />
 							<p class="m-0 text-sm" v-if="url">
-								<a :href="url" :title="name" class="link">{{ url }}</a>
+								<a :href="url" :title="name" class="link" target="_blank">{{ url }}</a>
 							</p>
 						</div>
 					</div>
@@ -98,7 +99,7 @@
 				</div>
 				<div class="mx-6 mt-20 mb-24 md:mx-10">
 					<h2 class="mb-6">Contact Info</h2>
-					<ul class="grid grid-cols-2 gap-4 ml-0 list-none reset lg:grid-cols-4 contact-info" v-for="({ website, handle, email, phone, skype, telegram, linkedin }, i) in resume.contact" :key="i">
+					<ul class="grid grid-cols-2 gap-4 ml-0 list-none reset lg:grid-cols-4 contact-info" v-for="({ website, handle, email, phone, whatsapp, instagram, linkedin }, i) in resume.contact" :key="i">
 						<li>
 							<span class="block text-sm text-gray-600">Website</span>
 							<strong>{{ website}}</strong>
@@ -112,12 +113,12 @@
 							<strong>{{ phone }}</strong>
 						</li>
 						<li>
-							<span class="block text-sm text-gray-600">Skype</span>
-							<strong>{{ skype }}</strong>
+							<span class="block text-sm text-gray-600">Whatsapp</span>
+							<strong>{{ whatsapp }}</strong>
 						</li>
 						<li>
-							<span class="block text-sm text-gray-600">Telegram</span>
-							<strong>{{ telegram }}</strong>
+							<span class="block text-sm text-gray-600">Instagram</span>
+							<strong><a :href="instagram" target="_blank">View my snaps</a></strong>
 						</li>
 						<li>
 							<span class="block text-sm text-gray-600">On the web</span>

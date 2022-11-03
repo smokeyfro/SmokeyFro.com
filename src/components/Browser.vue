@@ -4,7 +4,7 @@
     <span class="browser-menu"></span>
     <div class="browser-content">
       <iframe v-if="url" :src="url" class="w-full h-screen"></iframe>
-      <g-image v-if="image" :src="image" :alt="alt" fit="cover" class="w-full"></g-image>
+      <g-image v-if="image" :src="image" width="525" height="295" :alt="alt" fit="cover" class="w-full"></g-image>
     </div>
   </div>
 </template>

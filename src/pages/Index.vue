@@ -20,9 +20,6 @@
 			<nav id="menu">
 				<div class="flex flex-col items-start justify-start h-screen bg-white release-notes">
 					<h2 class="p-6 m-0 -mt-1 text-lg ">🎉 Recent Updates</h2>
-					<!-- <button class="absolute top-0 right-0 mt-5 mr-5 rounded-full hover:bg-transparent hover:text-accent" @click="handleToggleDrawer">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
-					</button> -->
 					<div class="h-full overflow-hidden">
 						<vuescroll>
 						<article class="box-content p-6 mb-0 odd:bg-gray-200 even:bg-white" v-for="note in $static.notes.edges" :key="note.node.id">

@@ -46,7 +46,6 @@ export default {
 		NavPrimary,
 		NavMobile,
 		NavTertiary,
-		NavMobile,
 		Logo,
 		vuescroll
 	},
@@ -75,8 +74,8 @@ export default {
 		}
 	},
 	mounted() {
-		var outputCss = this.randomCss;
-		var outputQuote = this.randomQuote;
+		let outputCss = this.randomCss;
+		let outputQuote = this.randomQuote;
 		setTimeout(console.log.bind(console, '%c \n  %c' + outputQuote + ' %c  \n', 'background: none;', outputCss, 'background: none;'));
 	},
     created(){

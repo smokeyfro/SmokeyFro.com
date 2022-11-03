@@ -1,5 +1,5 @@
 <template>
-	<Layout :sidebar="false" :top="true" bottom="false" class="md:h-screen">
+	<Home :sidebar="false" :top="true" bottom="false" class="md:h-screen">
 		<template slot="top-shelf">
 		<div class="block md:w-full md:grid md:gap-0 content md:h-screen">
 			<HomeImage />
@@ -48,10 +48,11 @@
 				</div>
 			</nav>
 		</Sidebar>
-	</Layout>
+	</Home>
 </template>
 
 <script>
+	import Home from "@/layouts/Home";
 	import HomeImage from "~/components/HomeImage.vue";
 	import Burger from "~/components/Burger.vue";
 	import Sidebar from "~/components/Sidebar.vue";
@@ -60,6 +61,7 @@
 
 	export default {
 		components: {
+			Home,
 			HomeImage,
 			Burger,
 			Sidebar,

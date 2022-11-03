@@ -15,7 +15,7 @@
 					<div v-if="top">
 						<slot name="top-shelf" />
 					</div>
-					<div class="px-5 pt-4 lg:max-w-screen-lg md:px-10 lg:px-20 lg:pt-12 md:pt-6">
+					<div class="px-5 md:px-10 lg:px-20 lg:max-w-screen-lg">
 						<slot />
 					</div>
 					<div v-if="bottom">

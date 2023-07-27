@@ -12,14 +12,12 @@ contact:
   - handle: smokeyfro
     email: chris@smokeyfro.com
     website: https://smokeyfro.com
-    phone: '+27734014318'
-    mobile: '+27734014318'
-    whatsapp: '+27664553847'
+    phone: '+27716397423'
+    mobile: '+27716397423'
+    whatsapp: '+27716397423'
     telegram: ''
-    skype: chris.rault.tbr
     github: https://github.com/smokeyfro
     twitter: https://twitter.com/smokeyfro
-    facebook: https://www.facebook.com/chris.rault
     instagram: https://instagram.com/smokeyfro
     pinterest: https://pinterest.com/smokeyfro/
     youtube: smokeyfro
@@ -35,7 +33,7 @@ projects:
     summary: Non-profit I co-founded which is focussed on food security and community development.
   - name: SavvyGarden
     status: Live
-    url: https://savvygarden.app
+    url: https://savvygarden.vercel.app/
     image: na
     summary: Permaculture-inspired tools for the SavvyGardener. Building the Gardeniing app I always wanted.
   - name: JammeryHQ
@@ -50,12 +48,18 @@ projects:
     summary: Backpackers guide to South Africa where the traveller is not the product.
 
 experience:
-- id: 7
+- id: 9
+  company: SmokeyFro
+  role: Freelance Consultant
+  location: Garden Route
+  date: Jul 2022 - Present
+  summary: Back to freelancing, working on a number of exciting projects using the jamstack. Current preferred stack is Nuxt 3 paired with Directus as the headless cms.
+- id: 8
   company: EdenHub
   role: Technical Director / Co-founder
   location: Garden Route
-  date: Jun 2021 - Present
-  summary: Working as the technical lead, I've been responsible for setting up our digital infrustructure, design and development of our site and the multi-vendor marketplace
+  date: Jun 2021 - June 2022
+  summary: Working as the technical lead, I was responsible for setting up our digital infrustructure, design and development of our site and the multi-vendor marketplace.
 - id: 7
   company: SmokeyFro
   role: Freelancer
